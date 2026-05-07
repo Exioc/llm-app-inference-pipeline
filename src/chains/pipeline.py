@@ -1,35 +1,23 @@
-from langchain_core.runnables import RunnablePassthrough, RunnableLambda
-from langchain_ollama import ChatOllama
-from src.prompts.templates import APP_ANALYSIS_PROMPT, APP_ANALYSIS_PROMPT_WITH_EXAMPLE
-from src.models.schema import AppAnalysis, PipelineState
-
 import os  
 import json
+import base64
 from pathlib import Path
 from typing import Callable
 from datetime import datetime
 
-RESULTS_BASE_DIR = Path("results")
+from langchain_ollama import ChatOllama
+from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 
-api_key = os.getenv("OLLAMA_API_KEY")
-url = os.getenv("OLLAMA_BASE_URL")
-modell = os.getenv("LLM_MODEL")
-temperature = float(os.getenv("TEMPERATURE"))
+from src.prompts.templates import APP_ANALYSIS_PROMPT, APP_ANALYSIS_PROMPT_WITH_EXAMPLE
+from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL, LLM_MODEL, TEMPERATURE
+from src.models.schema import AppAnalysis, PipelineState
 
 
 # ──────────────────────────────── Hilfsfunktion ────────────────────────────────
 
-def initialize_run_folder(state: PipelineState) -> PipelineState:
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = RESULTS_BASE_DIR / timestamp
-    run_dir.mkdir(parents=True, exist_ok=True)
-    state["run_dir"] = str(run_dir)
-    return state
-
 def save_stage(state: PipelineState, stage_name: str) -> PipelineState:
-    run_dir = Path(state.get("run_dir", str(RESULTS_BASE_DIR)))
-    timestamp = datetime.now().strftime("%H%M%S_%f")
-    path = run_dir / f"{stage_name}.json"
+    storage_path = Path(state.get("storage_path", "results/unknown_run"))
+    path = storage_path / f"{stage_name}.json"
     
     # Pydantic zu Dict Konvertierung für JSON
     serializable_state = {}
@@ -46,21 +34,42 @@ def save_stage(state: PipelineState, stage_name: str) -> PipelineState:
 
 # ──────────────────────────────── Pipeline ────────────────────────────────
 
-def stage_1_logic(state: PipelineState) -> str:
-    return f"Stage 1 hat den Titel '{state['app_title']}' empfangen."
+def stage_1_preprocessing(input_dict: dict) -> PipelineState:
+    app: AppBaseModel = input_dict["app_data"]
+    storage_path: str = input_dict["storage_path"]
+    llm_model: str = input_dict["llm_model"]
+    temperature: float = input_dict["temperature"]
 
-def stage_3_logic(state: PipelineState) -> str:
-    analysis = state['stage2_result']
-    count = len(analysis.features)
-    return f"Stage 3 hat {count} Features aus Stage 2 erhalten und validiert."
+    # Base64 Decoding
+    def safe_decode(b64_str):
+        try:
+            return base64.b64decode(b64_str).decode('utf-8')
+        except:
+            return b64_str
+
+    # Flatten permissions: Category -> List of strings
+    flattened_perms = {
+        item.category: item.permissions 
+        for item in app.permissions
+    }
+
+    return PipelineState(
+        pkg=app.pkg,
+        label=safe_decode(app.label),
+        description=safe_decode(app.description.long),
+        permissions_map=flattened_perms,
+        storage_path=storage_path,
+        model=llm_model,
+        temperature=temperature,
+    )
 
 def build_pipeline():
 
     llm = ChatOllama(
-        model=modell,
-        temperature=1.0,
-        base_url=url,
-        client_kwargs={ "headers": { "Authorization": f"Bearer {api_key}"}}
+        model=LLM_MODEL,
+        temperature=TEMPERATURE,
+        base_url=OLLAMA_BASE_URL,
+        client_kwargs={ "headers": { "Authorization": f"Bearer {OLLAMA_API_KEY}"}}
     )
 
     structured_llm = llm.with_structured_output(AppAnalysis)
@@ -70,23 +79,14 @@ def build_pipeline():
 
     pipeline = (
 
-        # Run-Ordner erstellen
-        RunnableLambda(initialize_run_folder)
+        # Stage 1 (Preprocessing)
+        RunnableLambda(stage_1_preprocessing)
+        | RunnableLambda(lambda x: save_stage(x, "01_stage1_preprocessing"))
 
-        # 1. Input speichern
-        | RunnableLambda(lambda x: save_stage(x, "00_input"))
-        
-        # 2. Stage 1 ausführen und Ergebnis speichern
-        | RunnablePassthrough.assign(stage1_result=RunnableLambda(stage_1_logic))
-        | RunnableLambda(lambda x: save_stage(x, "01_stage1"))
-        
-        # 3. Stage 2 (Analyse) ausführen und Ergebnis speichern
+        # Stage 2 (Functionality extraction)
         | RunnablePassthrough.assign(stage2_result=analysis_chain)
-        | RunnableLambda(lambda x: save_stage(x, "02_stage2"))
+        | RunnableLambda(lambda x: save_stage(x, "02_stage2_functionality_extraction"))
         
-        # 4. Stage 3 ausführen und Endzustand speichern
-        | RunnablePassthrough.assign(stage3_result=RunnableLambda(stage_3_logic))
-        | RunnableLambda(lambda x: save_stage(x, "03_final"))
     )
     
     return pipeline

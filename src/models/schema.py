@@ -1,6 +1,80 @@
 from typing import TypedDict, Optional, List, Any
 from pydantic import BaseModel, Field
 
+# Appmetadata Model
+
+class Price(BaseModel):
+    amount: float
+    currency: str
+
+class AppDate(BaseModel):
+    date: str
+    timestamp: int
+
+class SDKInfo(BaseModel):
+    target: int
+    min: Optional[int] = None
+
+class Category(BaseModel):
+    id: str
+    name: str
+
+class SupportInfo(BaseModel):
+    website: Optional[str] = None
+    email: Optional[str] = None
+    address: Optional[str] = None
+
+class DeveloperInfo(BaseModel):
+    id: str
+    name: str
+    legalName: Optional[str] = None
+    website: Optional[str] = None
+    email: Optional[str] = None
+    address: Optional[str] = None
+    phone: Optional[str] = None
+
+class AppDescription(BaseModel):
+    long: str = Field(..., description="Base64 encoded long description")
+    short: str = Field(..., description="Base64 encoded short description")
+
+class PermissionItem(BaseModel):
+    category: str
+    permissions: List[str]
+
+class DataSafetyItem(BaseModel):
+    category: str
+    data: List[dict] 
+
+class DataSafety(BaseModel):
+    dataDeletable: bool
+    dataEncrypted: bool
+    independentlyReviewed: bool
+    sharedData: List[DataSafetyItem] = []
+    collectedData: List[DataSafetyItem] = []
+
+class AppBaseModel(BaseModel):
+    pkg: str
+    label: str = Field(..., description="Base64 encoded label")
+    version: Optional[str] = None
+    downloads: int
+    rating: Optional[float] = None
+    reviewCount: Optional[int] = None
+    inAppPurchases: Optional[str] = None
+    ageRating: str
+    containsAds: bool
+    price: Price
+    published: AppDate
+    updated: AppDate
+    sdk: SDKInfo
+    category: Category
+    availableInDe: bool
+    supportInfo: SupportInfo
+    developerInfo: DeveloperInfo
+    privacyPolicy: Optional[str] = None
+    description: AppDescription
+    permissions: List[PermissionItem] = []
+    datasafety: Optional[DataSafety] = None
+
 class FeatureExtraction(BaseModel):
     """Einzelne Funktionalität mit Begründung."""
     functionality: str = Field(description="Name der extrahierten Funktionalität")
@@ -13,20 +87,21 @@ class AppAnalysis(BaseModel):
 
 # PipelineState (TypedDict)
 class PipelineState(TypedDict, total=False):
-    # Path/Timestamp 
-    run_dir: str
-
-    #Template
-    template_name: str
-
-    #LLM
-    llm_model: str
-
-    # Input Felder
-    app_title: str
-    app_description: str
     
-    # Ergebnisse der Stufen
+    # Storage Path 
+    storage_path= str
+
+    # 
+    model: str
+    temperature: float
+
+    # App Metadata
+    pkg: str
+    label: str
+    description: str
+    permissions_map: Dict[str, List[str]] = Field(default_factory=dict)
+
+    # Results for each stage
     stage1_result: str
     stage2_result: AppAnalysis
     stage3_result: str

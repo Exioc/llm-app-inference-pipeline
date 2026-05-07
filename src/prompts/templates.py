@@ -72,8 +72,8 @@ APP_ANALYSIS_PROMPT_WITH_EXAMPLE = ChatPromptTemplate.from_messages([
 
     ("human", (
         "Analysiere nun die folgende App:\n\n"
-        "Titel: {app_title}\n"
-        "Beschreibung: {app_description}\n\n"
+        "Titel: {label}\n"
+        "Beschreibung: {description}\n\n"
         "Extrahiere alle Features mit Beschreibung und deinem Reasoning."
     ))
 ])
