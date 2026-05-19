@@ -2,21 +2,6 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import AIMessage
 import json
 
-
-APP_ANALYSIS_PROMPT = ChatPromptTemplate.from_messages([
-    ("system", (
-        "Du bist ein erfahrener Product Owner und Business Analyst. "
-        "Deine Aufgabe ist es, aus einer App-Beschreibung alle technischen Funktionalitäten zu extrahieren. "
-        "Antworte strikt im vorgegebenen JSON-Format."
-    )),
-    ("human", (
-        "Analysiere die folgende App:\n\n"
-        "Titel: {app_title}\n"
-        "Beschreibung: {app_description}\n\n"
-        "Extrahiere alle Features mit Beschreibung und deinem Reasoning."
-    ))
-])
-
 EXAMPLE_FEATURES = [
     {
         "functionality": "Schritterkennung",

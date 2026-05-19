@@ -4,7 +4,7 @@ from pathlib import Path
 from datetime import datetime
 
 from src.models.schema import AppBaseModel
-from src.chains.pipeline import build_pipeline
+from src.chains.pipeline import build_app
 from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY
 
 # Helper-function to read a specific line from a JSONL file
@@ -47,39 +47,43 @@ def save_stage(app: AppBaseModel, stage_name: str, run_dir: str = "results/unkno
 
 def main() -> None:
     
-    # Argument Parser einrichten
+    # Create argument parser
     parser = argparse.ArgumentParser(description="Liest eine App-Metadaten-Zeile aus einer JSONL-Datei.")
     
-    # Positionale Argumente definieren
+    # Define required input arguments
     parser.add_argument("path", type=str, help="Pfad zur .jsonl Datei")
     parser.add_argument("index", type=int, help="Index der Zeile (beginnend bei 0)")
 
+    # Parse command-line arguments
     args = parser.parse_args()
 
     # Extract the specified line from the JSONL file
     app_data = get_jsonl_line(args.path, args.index)
 
     # Create AppBaseModel instance from the extracted data
-    app = AppBaseModel(**app_data)
+    app_data = AppBaseModel(**app_data)
 
     # Initialize run folder and save input
     storage_path = initialize_run_folder()
-    save_stage(app, "00_Metadata", storage_path)
+    save_stage(app_data, "00_Metadata", storage_path)
+    
+    #____________________________________________________________
 
     # Build the pipeline
-    pipeline = build_pipeline()
+    app = build_app()
 
     # Input for the pipeline
-    initial_input = {"app_data": app, "storage_path": storage_path, "llm_model": LLM_MODEL, "temperature": TEMPERATURE}
+    initial_input = {
+        "metadata": app_data,
+        "llm_model": LLM_MODEL,
+        "temperature": float(TEMPERATURE),
+        "storage_path": storage_path
+    }
 
     # Start the pipeline
-    final_state = pipeline.invoke(initial_input)
-
-    # Ausgabe der Ergebnisse
-    #print(f"Input: {final_state['label']}")
-    #print(f"Stage 1 Log: {final_state['stage1_result']}")
-    #print(f"Stage 2 Features: {final_state['stage2_result'].features[0].functionality}")
-    #print(f"Stage 3 Log: {final_state['stage3_result']}")
+    print("Start analyze")
+    final_state = app.invoke(initial_input)
+    print("Finish analyze")
 
 if __name__ == "__main__":
     main()

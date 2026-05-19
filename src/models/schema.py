@@ -1,4 +1,4 @@
-from typing import TypedDict, Optional, List, Any
+from typing import TypedDict, Dict, Optional, List, Any
 from pydantic import BaseModel, Field
 
 # Appmetadata Model
@@ -85,23 +85,22 @@ class AppAnalysis(BaseModel):
     """Das finale JSON-Format."""
     features: List[FeatureExtraction] = Field(description="Liste aller extrahierten Funktionalitäten")
 
-# PipelineState (TypedDict)
+# PipelineState 
 class PipelineState(TypedDict, total=False):
-    
-    # Storage Path 
-    storage_path= str
 
-    # 
-    model: str
-    temperature: float
+    # Raw input
+    metadata: AppBaseModel
 
-    # App Metadata
+    # App metadata
     pkg: str
     label: str
-    description: str
+    description_long: str
     permissions_map: Dict[str, List[str]] = Field(default_factory=dict)
 
-    # Results for each stage
-    stage1_result: str
-    stage2_result: AppAnalysis
-    stage3_result: str
+    # Results from stages
+    functionality_result: AppAnalysis
+
+    # Execution config
+    llm_model: str
+    temperature: float
+    storage_path: str
