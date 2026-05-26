@@ -1,8 +1,7 @@
 from typing import TypedDict, Dict, Optional, List, Any
 from pydantic import BaseModel, Field
 
-# Appmetadata Model
-
+# Metadata model
 class Price(BaseModel):
     amount: float
     currency: str
@@ -52,7 +51,7 @@ class DataSafety(BaseModel):
     sharedData: List[DataSafetyItem] = []
     collectedData: List[DataSafetyItem] = []
 
-class AppBaseModel(BaseModel):
+class AppMetadata(BaseModel):
     pkg: str
     label: str = Field(..., description="Base64 encoded label")
     version: Optional[str] = None
@@ -75,21 +74,20 @@ class AppBaseModel(BaseModel):
     permissions: List[PermissionItem] = []
     datasafety: Optional[DataSafety] = None
 
-class FeatureExtraction(BaseModel):
-    """Einzelne Funktionalität mit Begründung."""
+# Output model for functionality extraction
+class FunctionalityExtraction(BaseModel):
     functionality: str = Field(description="Name der extrahierten Funktionalität")
     description: str = Field(description="Kurze Beschreibung, was die Funktion tut")
     reasoning: str = Field(description="Textpassage und logische Herleitung, warum diese Funktion existiert")
 
-class AppAnalysis(BaseModel):
-    """Das finale JSON-Format."""
-    features: List[FeatureExtraction] = Field(description="Liste aller extrahierten Funktionalitäten")
+class FunctionalityResult(BaseModel):
+    features: List[FunctionalityExtraction] = Field(description="Liste aller extrahierten Funktionalitäten")
 
-# PipelineState 
+# State for the Pipeline
 class PipelineState(TypedDict, total=False):
 
     # Raw input
-    metadata: AppBaseModel
+    metadata: AppMetadata
 
     # App metadata
     pkg: str
@@ -98,7 +96,7 @@ class PipelineState(TypedDict, total=False):
     permissions_map: Dict[str, List[str]] = Field(default_factory=dict)
 
     # Results from stages
-    functionality_result: AppAnalysis
+    functionality_result: FunctionalityResult
 
     # Execution config
     llm_model: str

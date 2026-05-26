@@ -35,7 +35,7 @@ EXAMPLE_FEATURES = [
     }
 ]
 
-APP_ANALYSIS_PROMPT_WITH_EXAMPLE = ChatPromptTemplate.from_messages([
+FUNCTIONALITY_EXTRACTION_PROMPT = ChatPromptTemplate.from_messages([
     ("system", (
         "Du bist ein erfahrener Product Owner und Business Analyst. "
         "Deine Aufgabe ist es, aus einer App-Beschreibung alle technischen Funktionalitäten zu extrahieren. "

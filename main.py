@@ -3,8 +3,8 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-from src.models.schema import AppBaseModel
-from src.chains.pipeline import build_app
+from src.pipeline.state import AppMetadata
+from src.pipeline.graph import build_app
 from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY
 
 # Helper-function to read a specific line from a JSONL file
@@ -36,7 +36,7 @@ def initialize_run_folder() -> str:
     return str(run_dir)
 
 # Helper-function to save the input
-def save_stage(app: AppBaseModel, stage_name: str, run_dir: str = "results/unknown_run") -> None:
+def save_stage(app: AppMetadata, stage_name: str, run_dir: str = "results/unknown_run") -> None:
     run_dir = Path(run_dir)
     run_dir.mkdir(parents=True, exist_ok=True)
 
@@ -60,8 +60,8 @@ def main() -> None:
     # Extract the specified line from the JSONL file
     app_data = get_jsonl_line(args.path, args.index)
 
-    # Create AppBaseModel instance from the extracted data
-    app_data = AppBaseModel(**app_data)
+    # Create a AppMetadata instance from the extracted data
+    app_data = AppMetadata(**app_data)
 
     # Initialize run folder and save input
     storage_path = initialize_run_folder()
