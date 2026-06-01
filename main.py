@@ -5,6 +5,7 @@ from datetime import datetime
 
 from src.pipeline.state import AppMetadata
 from src.pipeline.graph import build_app
+from src.utils.notify_me import notification
 from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY
 
 # Helper-function to read a specific line from a JSONL file
@@ -81,9 +82,10 @@ def main() -> None:
     }
 
     # Start the pipeline
-    print("Start analyze")
+    print(f"Start analyze ({datetime.now().strftime('%H:%M')})")
     final_state = app.invoke(initial_input)
-    print("Finish analyze")
+    print(f"Finish analyze ({datetime.now().strftime('%H:%M')})")
+    notification.send()
 
 if __name__ == "__main__":
     main()

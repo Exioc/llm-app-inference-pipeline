@@ -4,3 +4,4 @@ langchain-ollama>=0.3
 python-dotenv>=1.0
 pydantic>=2.0
 langgraph
+notify-py

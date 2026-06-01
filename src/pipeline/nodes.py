@@ -3,7 +3,7 @@ import base64
 
 from src.pipeline.state import PipelineState
 from src.utils.save_stage import save_stage
-from src.prompts.templates import FUNCTIONALITY_EXTRACTION_PROMPT
+from src.prompts.functionality_prompts import FUNCTIONALITY_EXTRACTION_PROMPT
 from src.models.llm import function_llm
 
 def preprocess_node(state: PipelineState):
@@ -50,7 +50,18 @@ def functionality_node(state: PipelineState):
     #now = datetime.now()
     #print(now.strftime("%H:%M:%S"))
 
-    result = function_llm.invoke(messages)
+    try:
+        result = function_llm.invoke(messages)
+    except Exception as e:
+        print("LLM invocation or parsing failed:", repr(e))
+        # Try to show raw LLM output if the parser attached it
+        try:
+            from langchain_core.exceptions import OutputParserException
+            if isinstance(e, OutputParserException) and hasattr(e, 'llm_output'):
+                print("Raw LLM output:\n", e.llm_output)
+        except Exception:
+            pass
+        raise
 
     #now = datetime.now()
     #print(now.strftime("%H:%M:%S"))
