@@ -1,5 +1,4 @@
 import base64
-#from datetime import datetime
 
 from src.pipeline.state import PipelineState
 from src.utils.save_stage import save_stage
@@ -47,9 +46,6 @@ def functionality_node(state: PipelineState):
         "description": state["description_long"]
     })
 
-    #now = datetime.now()
-    #print(now.strftime("%H:%M:%S"))
-
     try:
         result = function_llm.invoke(messages)
     except Exception as e:
@@ -62,9 +58,6 @@ def functionality_node(state: PipelineState):
         except Exception:
             pass
         raise
-
-    #now = datetime.now()
-    #print(now.strftime("%H:%M:%S"))
     
     temp_state = {**state, **result.model_dump()}
     save_stage(temp_state, "02_functionality_extraction")

@@ -7,162 +7,136 @@ GOOGLE_ONE_DESCRIPTION = "The Google One app lets you automatically back up your
 GOOGLE_ONE_OUTPUT = {
   "features": [
     {
-        "functionality": "Automatisierte Datensicherung",
-        "description": "Die App sichert im Hintergrund automatisch persönliche Smartphone-Inhalte wie Fotos, Kontakte und Textnachrichten. Für diese kostenlose Basissicherung stellt die App ein Speicherlimit von 15 GB pro Google-Konto bereit.",
-        "reasoning": "Der Befehl 'Automatically back up the important things' in Verbindung mit der Zuweisung von '15 GB of storage' belegt eine automatisierte Daten-Upload-Funktion. Aus diesem Grund muss in der App ein Hintergrunddienst implementiert sein, der lokale Systemdaten ausliest und an Cloud-Server überträgt.",
-        "source_quotes": [
-        "The Google One app lets you automatically back up your phone",
-        "Automatically back up the important things on your phone, like photos, contacts and messages using your 15 GB of storage that comes with every Google account."
-        ]
-    },
-    {
-        "functionality": "Zentralisiertes Speicher-Management",
-        "description": "Die App bietet eine zentrale Verwaltungsoberfläche, um den verbrauchten und verfügbaren Cloud-Speicherplatz über die verschiedenen Google-Dienste (Drive, Gmail und Photos) hinweg zu überwachen.",
-        "reasoning": "Die Formulierung 'Manage your existing Google account storage across...' zeigt, dass die App als Aggregator fungiert. Aus diesem Grund muss eine Dashboard-Schnittstelle existieren, die Speicherdaten aus separaten Google-Ökosystemen ausliest und visuell zusammenfasst.",
-        "source_quotes": [
-        "manage your Google cloud storage.",
-        "Manage your existing Google account storage across Google Drive, Gmail and Google Photos."
-        ]
-    },
-    {
-        "functionality": "Datenwiederherstellung (Disaster Recovery)",
-        "description": "Ermöglicht es dem Nutzer, im Falle eines Geräteverlusts, Schadens oder Smartphone-Wechsels, die zuvor in der Cloud gesicherten Daten vollständig auf einem neuen Android-Gerät einzuspielen.",
-        "reasoning": "Das Szenario 'If you break, lose or upgrade... you can restore everything' beschreibt einen klassischen Recovery-Prozess. Aus diesem Grund muss eine dedizierte technische Routine zur Daten-Abfrage und lokalen System-Wiederherstellung integriert sein.",
-        "source_quotes": [
+      "functionality": "Automated Phone Backup & Recovery",
+      "description": "The app automatically backs up important phone data such as photos, contacts, and messages to the user's Google cloud storage, allowing for easy restoration of this data to a new Android device in case of loss, breakage, or upgrade. This feature utilizes the 15 GB of storage that comes with every Google account.",
+      "reasoning": "The text directly states 'Automatically back up the important things on your phone, like photos, contacts and messages using your 15 GB of storage' and connects it with the conditional restoration sentence 'If you break, lose or upgrade your phone, you can restore everything'. Combining these direct text facts proves the existence of an automated backup and disaster recovery framework.",
+      "source_quotes": [
+        "Automatically back up the important things on your phone, like photos, contacts and messages using your 15 GB of storage that comes with every Google account.",
         "If you break, lose or upgrade your phone, you can restore everything to your new Android device."
-        ]
+      ]
     },
     {
-        "functionality": "Skalierbares Speicher-Upgrade",
-        "description": "Nutzer können ein kostenpflichtiges Google One Abonnement abschließen, um das Speicherplatz-Limit flexibel über verschiedene Abonnement-Stufen (Tarifpläne) hinweg an ihren individuellen Bedarf anzupassen.",
-        "reasoning": "Die Aufforderung 'Upgrade to a Google One membership' kombiniert mit 'Choose the plan' beweist, dass die App eine Schnittstelle zu einem Bezahlsystem besitzt. Aus diesem Grund muss eine In-App-Kaufabwicklung und eine dynamische Speicher-Skalierung auf Serverebene existieren.",
-        "source_quotes": [
+      "functionality": "Cross-Service Cloud Storage Management",
+      "description": "The app allows users to manage their existing Google account storage allocation collectively across three specific Google ecosystem services: Google Drive, Gmail, and Google Photos.",
+      "reasoning": "The text explicitly mentions 'Manage your existing Google account storage across Google Drive, Gmail and Google Photos', directly proving the existence of a cross-service storage maintenance feature based on clear evidence of its operational scope.",
+      "source_quotes": [
+        "Manage your existing Google account storage across Google Drive, Gmail and Google Photos."
+      ]
+    },
+    {
+      "functionality": "Scalable Subscription Storage Plans",
+      "description": "An upgrade pathway that allows users to transition into a Google One membership to obtain additional storage beyond the initial 15 GB restriction, enabling them to select and customize a higher capacity storage plan tailored for memories, projects, and digital files.",
+      "reasoning": "The text pairs the explicit upgrade trigger 'Upgrade to a Google One membership to get even more' with the user-choice directive 'Choose the plan that works best for you' to accommodate 'as much storage as you need'. This multi-fact combination logically infers a scalable premium subscription and tier-selection system.",
+      "source_quotes": [
         "Upgrade to a Google One membership to get even more:",
         "Get as much storage as you need for your important memories, projects and digital files. Choose the plan that works best for you."
-        ]
+      ]
     }
-    ]
+  ]
 }
+
 SAMSUNG_HEALTH_LABEL = "Samsung Health"
 
 SAMSUNG_HEALTH_DESCRIPTION = "Start healthy habits for yourself with Samsung Health on Wear OS Powered by Samsung.<br><br>Samsung Health has various features to help you manage your health. As the app allows you to automatically record many activities, creating a healthy lifestyle is easier and simpler than ever.<br><br>Check various health records on the Samsung Health home screen. Easily add and edit the items that you want to manage such as daily steps, activity time, and body weight, simply by long pressing the screen.<br><br>Samsung Health helps you record and manage your fitness activities, such as running, cycling, swimming, etc. Also, Galaxy Watch wearables user can now exercise more effectively through Life Fitness, Technogym and Corehealth.<br><br>Develop healthy eating habits with Samsung Health, with which you can record your meals and snacks every day.<br><br>Work hard and always maintain your best condition with Samsung Health. Set goals that work for your own level, and keep track of your daily condition including your activity amount, workout intensity, state of sleep, heart rate, stress, oxygen level in the blood, etc. <br><br>Monitor your sleep patterns in more detail with Galaxy Watch. Make your mornings more refreshing by improving the quality of your sleep through sleep levels and sleep scores.<br><br>Challenge yourself against your friends and family to become healthier in a more fun and interactive way with Samsung Health Together.<br><br>Samsung Health has prepared videos of expert coaches who will teach you new fitness programs including stretching, weight loss, endurance training, and more.<br><br>Discover powerful meditation tools on Mindfulness that will help you relieve stress throughout your day.<br><br>(Some contents are only available through an optional paid subscription. Content is available in English, German, Spanish, French, Portuguese and Korean.)<br><br>Women&#39;s health offers helpful support in menstrual cycle tracking, related symptom management and personalized insights and contents through your partner, Glow. The Galaxy and other wearables are now ready to support the women we love every step of their way.<br><br>Requires Wear OS 2.0(Android 11) or later. Some mobile devices are not synced. Detailed features may vary depending on the user’s country of residence, region, network carrier, model of the device, etc.<br><br>Supports over 70 languages, including English, French, and Chinese. An English language version is available for the rest of the world.<br><br>Please note that Samsung Health is intended for fitness and wellness purposes only and is not intended for use in the diagnosis of disease or other conditions, or in the cure, mitigation, treatment, or prevention of disease.<br><br>The following permissions are required for the app service. For optional permissions, the default functionality of the service is turned on, but not allowed.<br><br>Required permissions<br>- Body Sensors : Used to measure heart rate, oxygen saturation, and stress. <br>- Physical activity : Used to count your steps and detect workouts.<br><br>Optional permissions<br>- Location : Your location data is collected when you are using the exercises tracker and the steps tracker.<br>- Files and media : You can import/export your exercise data, save exercise photos, save/load food photos."
 
 SAMSUNG_HEALTH_OUTPUT = {
   "features": [
-    { 
-      "functionality": "Automatisierte Aktivitätsverfolgung",
-      "description": "Die App erfasst sportliche und alltägliche Aktivitäten im Hintergrund automatisch, um dem Nutzer die Dokumentation seines Lebensstils ohne manuelle Eingaben zu erleichtern.",
-      "reasoning": "Aus der Formulierung 'automatically record many activities' lässt sich ableiten, dass die App über eine Sensor-gestützte Hintergrund-Erkennung verfügt. Da das Ziel als 'easier and simpler than ever' beschrieben wird, muss ein technischer Automatismus existieren, der dem Nutzer die manuelle Protokollierung abnimmt.",
+    {
+      "functionality": "Automated and Manual Fitness Tracking",
+      "description": "The app allows users to record and manage physical activities both automatically in the background and through targeted tracking for various sports such as running, cycling, and swimming.",
+      "reasoning": "The text combines the fact that the app 'allows you to automatically record many activities' with the explicit capability to 'record and manage your fitness activities, such as running, cycling, swimming, etc.'. This multi-fact combination directly proves an activity tracking framework.",
       "source_quotes": [
-        "Samsung Health has various features to help you manage your health.",
-        "As the app allows you to automatically record many activities, creating a healthy lifestyle is easier and simpler than ever."
+        "As the app allows you to automatically record many activities, creating a healthy lifestyle is easier and simpler than ever.",
+        "Samsung Health helps you record and manage your fitness activities, such as running, cycling, swimming, etc."
       ]
     },
-    { 
-      "functionality": "Zentrales Gesundheits-Dashboard",
-      "description": "Die App bietet eine Übersichtsseite auf dem Startbildschirm, um verschiedene persönliche Gesundheitsdaten wie tägliche Schritte und die Aktivitätszeit direkt einzusehen.", 
-      "reasoning": "Der direkte Aufruf 'Check various health records on the home screen' beweist, dass die App über eine zentrale Benutzeroberfläche (Dashboard) verfügt, die als Sammelbecken für unterschiedliche Messwerte dient. Aus diesem Grund muss eine visuelle Anzeige-Funktion für diese Daten existieren.",
+    {
+      "functionality": "Customizable Health Dashboard",
+      "description": "A central home screen where users can view various health records and personalize the display by adding or editing tracked items like daily steps, activity time, and body weight via a long press.",
+      "reasoning": "The text explicitly links the ability to 'Check various health records on the Samsung Health home screen' with the option to 'Easily add and edit the items that you want to manage... simply by long pressing the screen'. Combining these facts proves that a customizable overview dashboard exists.",
       "source_quotes": [
-        "Check various health records on the home screen.",
-        "such as daily steps and activity time."
-      ] 
+        "Check various health records on the Samsung Health home screen.",
+        "Easily add and edit the items that you want to manage such as daily steps, activity time, and body weight, simply by long pressing the screen."
+      ]
     },
-    { 
-      "functionality": "Dashboard-Personalisierung",
-      "description": "Nutzer können die auf dem Startbildschirm angezeigten Widgets und Datenfelder flexibel hinzufügen oder bearbeiten, um die Verwaltung ihrer Gesundheitswerte individuell anzupassen.",
-      "reasoning": "Die Handlungsaufforderung 'Easily add and edit the items' zeigt, dass der Startbildschirm kein starres Layout hat. Da der Nutzer Elemente selbst verwalten kann ('that you want to manage'), muss eine technische Konfigurations- und Editier-Funktion innerhalb der Benutzeroberfläche existieren.",
-      "source_quotes": [
-        "Easily add and edit the items that you want to manage such as daily steps and activity time."
-      ] 
-    },
-    { 
-      "functionality": "Manuelle und sensorbasierte Aktivitätsaufzeichnung",
-      "description": "Die App ermöglicht die Dokumentation und das Tracking verschiedener Sportarten wie Laufen, Radfahren und Schwimmen.",
-      "reasoning": "Die Handlungsaufforderung 'Record and manage your fitness activities' beweist, dass die App über Module zur Datenerfassung und Speicherung von Workouts verfügt. Da spezifische Outdoor- und Indoor-Sportarten ('running, cycling, swimming') genannt werden, muss eine entsprechende Tracking-Infrastruktur in der App existieren.",
-      "source_quotes": [
-        "Record and manage your fitness activities, such as running, cycling, swimming, etc."
-      ] 
-    },
-    { 
-      "functionality": "Synchronisation mit Studio-Fitnessgeräten (Hardware-gebunden, Drittanbieter-Integration)",
-      "description": "In Kombination mit einer Galaxy Watch ermöglicht die App eine Verbindung zu externen Fitnessgeräten von Herstellern wie Life Fitness, Technogym und Corehealth, um Trainingsdaten zu synchronisieren.",
-      "reasoning": "Der Verweis, dass Nutzer 'through Life Fitness, Technogym and Corehealth' effektiver trainieren können, lässt darauf schließen, dass eine IoT-Schnittstelle oder API zu diesen spezifischen Drittanbieter-Ökosystemen existiert. Aus diesem Grund muss eine Kopplungs- oder Datentransfer-Funktion für externe Fitnessgeräte vorhanden sein.", 
+    {
+      "functionality": "Gym Equipment Synchronization (Hardware-Bound & Third-Party Integration)",
+      "description": "Enables Galaxy Watch users to connect and synchronize workout data with compatible external fitness equipment ecosystems from manufacturers like Life Fitness, Technogym, and Corehealth.",
+      "reasoning": "The text explicitly notes that 'Galaxy Watch wearables user can now exercise more effectively through Life Fitness, Technogym and Corehealth'. Since this requires both a wearable device and the integration of outside vendor ecosystems, it operates as a combined hardware-bound and third-party integration.",
       "source_quotes": [
         "Also, Galaxy Watch wearables user can now exercise more effectively through Life Fitness, Technogym and Corehealth."
       ]
     },
-    { 
-      "functionality": "Ernährungs- und Mahlzeitentracking",
-      "description": "Die App bietet Funktionen zur digitalen Protokollierung der täglichen Hauptmahlzeiten und Zwischenmahlzeiten, um den Nutzer beim Aufbau gesunder Essgewohnheiten zu unterstützen.",
-      "reasoning": "Die Handlungsaufforderung 'recording your daily meals and snacks' belegt direkt die Existenz eines Eingabe- und Protokollierungssystems für Lebensmittel. Aus diesem Grund muss in der App eine Datenbankstruktur sowie eine Benutzeroberfläche zur Erfassung von Nährwerten und Kalorien existieren.",
+    {
+      "functionality": "Nutritional Log",
+      "description": "Provides features for users to digitally log their meals and snacks every day to assist in developing healthy eating habits.",
+      "reasoning": "The text explicitly states the capability to develop habits 'with which you can record your meals and snacks every day', serving as direct evidence confirming a nutritional logging function.",
       "source_quotes": [
-        "Create healthy eating habits by recording your daily meals and snacks with Samsung Health."
+        "Develop healthy eating habits with Samsung Health, with which you can record your meals and snacks every day."
       ]
     },
-    { 
-      "functionality": "Zielsetzung und Vitaldaten-Verfolgung",
-      "description": "Die App ermöglicht es, individuelle Ziele zu setzen und die tägliche Aktivität, Workout-Intensität, Herzfrequenz, Stress und den Sauerstoffgehalt im Blut zu überwachen.", 
-      "reasoning": "Aus den Formulierungen zur Zielanpassung ('Set goals') und der lückenlosen Überwachung diverser Vitalwerte ('heart rate, stress, oxygen level') lässt sich eine zentrale Funktion zum persönlichen Gesundheitsmanagement ableiten. Aus diesem Grund müssen Schnittstellen zu biometrischen Sensoren existieren.",
+    {
+      "functionality": "Goal Setting & Holistic Vital Signs Monitoring",
+      "description": "Allows users to set customized fitness goals and keep track of their daily condition and biometrics, including activity amount, workout intensity, state of sleep, heart rate, stress, and blood oxygen levels.",
+      "reasoning": "The text pairs the directive to 'Set goals that work for your own level' with the explicit instruction to 'keep track of your daily condition including your activity amount, workout intensity, state of sleep, heart rate, stress, oxygen level in the blood, etc.', proving a comprehensive condition monitoring system exists.",
       "source_quotes": [
-        "Set goals that work for your own level",
-        "keep track of your daily condition including your activity amount, workout intensity, heart rate, stress, oxygen level in the blood, etc."
-      ] 
+        "Set goals that work for your own level, and keep track of your daily condition including your activity amount, workout intensity, state of sleep, heart rate, stress, oxygen level in the blood, etc."
+      ]
     },
-    { 
-      "functionality": "Schlafüberwachung und -analyse (Hardware-gebunden)",
-      "description": "In Verbindung mit einer kompatiblen Smartwatch (Galaxy Watch) ermöglicht die App eine detaillierte Analyse von Schlafmustern, Schlafphasen und die Berechnung eines Schlaf-Scores zur Verbesserung der Schlafqualität.", 
-      "reasoning": "Der Text beschreibt das Feature explizit als Kopplungsfunktion mit einer externen Smartwatch ('with Galaxy Watch'), um Schlafmuster zu überwachen. Aus diesem Grund muss eine Bluetooth- oder Synchronisationsschnittstelle zur Hardware existieren.", 
+    {
+      "functionality": "Advanced Sleep Quality Analysis (Hardware-Bound)",
+      "description": "Monitors detailed sleep patterns via a compatible Galaxy Watch wearable to provide insights into sleep levels and sleep scores, aimed at improving overall sleep quality.",
+      "reasoning": "The text directly states the ability to 'Monitor your sleep patterns in more detail with Galaxy Watch' to improve quality 'through sleep levels and sleep scores'. The explicit requirement of a Galaxy Watch ecosystem device proves that this feature is structurally hardware-bound.",
       "source_quotes": [
         "Monitor your sleep patterns in more detail with Galaxy Watch.",
-        "improving the quality of your sleep through sleep levels and sleep scores"
-      ] 
+        "Make your mornings more refreshing by improving the quality of your sleep through sleep levels and sleep scores."
+      ]
     },
-    { 
-      "functionality": "Soziale Herausforderungen (Samsung Health Together)",
-      "description": "Die App bietet eine interaktive Plattform, um sich in Fitness-Herausforderungen mit Freunden und Familienmitgliedern zu messen und gemeinsam gesundheitliche Ziele zu verfolgen.",
-      "reasoning": "Der Aufruf 'Challenge yourself against your friends' beweist die Existenz einer sozialen Interaktionskomponente (Gamification), die über die reine Eigennutzung der App hinausgeht. Aus diesem Grund muss eine Netzwerk- und Kontakte-Schnittstelle existieren.",
+    {
+      "functionality": "Social Challenges (Samsung Health Together)",
+      "description": "An interactive, gamified platform within the app that allows users to compete against family and friends to encourage healthy behaviors.",
+      "reasoning": "The text explicitly introduces 'Samsung Health Together' to 'Challenge yourself against your friends and family', directly proving a social competition feature exists.",
       "source_quotes": [
         "Challenge yourself against your friends and family to become healthier in a more fun and interactive way with Samsung Health Together."
-      ] 
-    },
-    {
-      "functionality": "Video-basiertes Fitness-Coaching",
-      "description": "Die App stellt angeleitete Trainingsvideos von professionellen Trainern bereit, die verschiedene Fitnessprogramme wie Dehnübungen und Gewichtsreduktion abdecken.", 
-      "reasoning": "Die explizite Nennung von 'videos' in Kombination mit 'expert coaches' belegt, dass die App nicht nur Textpläne anbietet, sondern eine visuelle, angeleitete Coaching-Funktion besitzt. Aus diesem Grund muss eine Videostreaming-Komponente implementiert sein.", 
-      "source_quotes": [
-        "Samsung Health has prepared videos of expert coaches who will teach you new fitness programs including stretching, weight loss, and more."
-      ]
-    },
-    { 
-      "functionality": "Achtsamkeits- und Meditationsübungen",
-      "description": "Die App stellt Meditationswerkzeuge und Achtsamkeitsübungen bereit, die den Nutzer dabei unterstützen, alltäglichen Stress abzubauen.",
-      "reasoning": "Der direkte Aufruf 'Discover meditation tools' in Kombination mit dem Zweck 'help you relieve stress' belegt die Existenz einer funktionalen Unterstützung zur Stressbewältigung. Aus diesem Grund existiert ein Audio- oder Text-basiertes Entspannungsmodul.",
-      "source_quotes": [
-        "Discover meditation tools on Mindfulness that will help you relieve stress throughout your day."
-      ] 
-    },
-    { 
-      "functionality": "Menstruations- und Zyklustracking (Drittanbieter-Integration)",
-      "description": "In Kooperation mit dem Partner 'Natural Cycles' bietet die App Funktionen zur Protokollierung des Menstruationszyklus, zur Verwaltung damit verbundener Symptome sowie personalisierte Auswertungen und Inhalte.",
-      "reasoning": "Die Formulierung 'helpful support in menstrual cycle tracking' in Verbindung mit dem Verweis 'through your partner, Natural Cycles' belegt, dass die App Zyklusdaten verarbeitet, das Feature jedoch auf einer externen Software-Integration basiert.", 
-      "source_quotes": [
-        "Cycle tracking offers helpful support in menstrual cycle tracking, related symptom management and personalized insights and contents through your partner, Natural Cycles."
-      ] 
-    },
-    {
-      "functionality": "Hardware-basierte Datensicherheit (Samsung Knox Integration)", 
-      "description": "Die App integriert eine hardwaregestützte Sicherheitsarchitektur, um private Gesundheitsdaten auf Systemebene vor unbefugtem Zugriff zu schützen. Dieses Sicherheitsfeature ist exklusiv für Geräte ab dem Veröffentlichungsjahr 2016 verfügbar und wird auf gerooteten Smartphones aus Sicherheitsgründen blockiert.",
-      "reasoning": "Der Begriff 'Knox enabled Samsung Health service' belegt die Integration einer hardwarenahen Sicherheitskomponente. Die Phrasen 'released after August 2016' und 'not be available from rooted mobile' dienen als direkte Belege für die technischen Hardware- und Software-Einschränkungen dieses Features.",
-      "source_quotes": [
-        "Samsung Health protects your private health data securely.",
-        "All Samsung Galaxy models released after August 2016, Knox enabled Samsung Health service will be available.",
-        "Please note that Knox enabled Samsung Health service will not be available from rooted mobile."
       ]
     },
     {
-      "functionality": "Globale Sprachunterstützung",
-      "description": "Die App bietet eine mehrsprachige Benutzeroberfläche mit Unterstützung für über 70 Sprachen, darunter Englisch, Französisch und Chinesisch, um eine weltweite Nutzbarkeit zu gewährleisten.",
-      "reasoning": "Die explizite Angabe 'Supports over 70 languages' belegt direkt die technische Fähigkeit der App, die Benutzeroberfläche dynamisch an verschiedene Landessprachen anzupassen. Der Zusatz über die englische Version für den 'rest of the world' bestätigt zudem die Existenz eines globalen Fallback-Systems.",
+      "functionality": "Video-Based Expert Coaching",
+      "description": "Provides training videos hosted by expert coaches covering specific fitness programs such as stretching, weight loss, and endurance training.",
+      "reasoning": "The text states that the app 'has prepared videos of expert coaches who will teach you new fitness programs', which serves as direct text evidence for a video coaching feature.",
+      "source_quotes": [
+        "Samsung Health has prepared videos of expert coaches who will teach you new fitness programs including stretching, weight loss, and endurance training."
+      ]
+    },
+    {
+      "functionality": "Mindfulness Stress Relief Tools",
+      "description": "A dedicated wellness module providing meditation tools designed to assist users in daily stress relief.",
+      "reasoning": "The text explicitly mentions discovering 'powerful meditation tools on Mindfulness', which is direct evidence proving a meditation feature is present.",
+      "source_quotes": [
+        "Discover powerful meditation tools on Mindfulness that will help you relieve stress throughout your day."
+      ]
+    },
+    {
+      "functionality": "Menstrual Cycle Tracking (Third-Party Integration)",
+      "description": "Provides supportive tools for tracking menstrual cycles, managing related symptoms, and delivering personalized insights via the partner ecosystem 'Glow' on compatible devices.",
+      "reasoning": "The text explicitly highlights 'menstrual cycle tracking, related symptom management and personalized insights... through your partner, Glow'. The structural reliance on an external company confirms that this is a dedicated third-party integration feature.",
+      "source_quotes": [
+        "Women's health offers helpful support in menstrual cycle tracking, related symptom management and personalized insights and contents through your partner, Glow. The Galaxy and other wearables are now ready to support the women we love every step of their way."
+      ]
+    },
+    {
+      "functionality": "Regional Content and Subscription Gating",
+      "description": "A filtering mechanism where some video/mindfulness contents are locked behind an optional paid subscription, and specific features vary based on the user's country, region, network carrier, or device model.",
+      "reasoning": "The text combines two distinct conditional warnings: 'Some contents are only available through an optional paid subscription' and 'Detailed features may vary depending on the user’s country of residence, region...'. This proves the existence of a dynamic content and feature gating system.",
+      "source_quotes": [
+        "(Some contents are only available through an optional paid subscription. Content is available in English, German, Spanish, French, Portuguese and Korean.)",
+        "Detailed features may vary depending on the user’s country of residence, region, network carrier, model of the device, etc."
+      ]
+    },
+    {
+      "functionality": "Global Localization Architecture",
+      "description": "The application interface supports over 70 languages, including French and Chinese, with a global English version serving as the standard fallback for the rest of the world.",
+      "reasoning": "The text explicitly states 'Supports over 70 languages, including English, French, and Chinese' and outlines that an 'English language version is available for the rest of the world', confirming a localized interface framework.",
       "source_quotes": [
         "Supports over 70 languages, including English, French, and Chinese.",
         "An English language version is available for the rest of the world."
@@ -171,30 +145,104 @@ SAMSUNG_HEALTH_OUTPUT = {
   ]
 }
 
+PETAL_MAPS_GPS_AND_NAVIGATION_LABEL = "Petal Maps GPS & Navigation"
 
-# GOOGLE_ONE_OUTPUT = [
-#     {
-#         "functionality": "Automatische Sicherung von Telefoninhalten",
-#         "description": "Die App sichert automatisch wichtige Inhalte auf dem Telefon, wie Fotos, Kontakte und Nachrichten im Cloud-Speicher.",
-#         "reasoning": "Der Text erwähnt explizit 'Automatically back up the important things on your phone, like photos, contacts and messages', was auf eine zentrale, automatisierte Datensicherungsfunktion hinweist."
-#     },
+PETAL_MAPS_GPS_AND_NAVIGATION_DESCRIPTION = "Petal Maps is a unique map that lets you explore the world around you in new ways. Available in over 160 countries and regions, it provides real-time traffic conditions, lane-level guidance, nearby services, various map layers, traffic events, place favorites, and loads more.<br><br>Real-time traffic data for faster and safer travel<br>· Recommends the quickest, shortest, and least congested route based on a combination of real-time traffic conditions and your personal preferences. You can even add multiple stops to your routes.<br>· Explore your route options and familiarize yourself with the way in advance.<br>· Provides accurate lane-level guidance for more precise navigation, helping you find your way through a wide variety of complex scenarios with ease.<br>· Allows you to report police locations, road closures, accidents, and more. You&#39;ll be able to see things reported by other users too.<br>· Supports navigating via HUAWEI WATCH 3, GT2, and GT3 series watches, with multiple modes of travel available – including walking, cycling, and public transportation.<br>· Lets you download offline maps so you can keep navigating even without an Internet connection.<br><br>Information for tons of local businesses<br>· Discover great local businesses through recommendations. You can even use voice search to find places to eat, drink, and hang out.<br>· Conveniently search for gas stations, parking lots, and loads more – allowing you to travel worry-free.<br>· Organize your favorite places by dividing them into separate lists with their own icons.<br>· Keep your devices in sync with each other by syncing your data to the cloud with HUAWEI Mobile Cloud or Dropbox.<br><br>Maintain the map together<br>· Help others decide where to go by rating and reviewing places on the map.<br>· Add new places and report or edit incorrect information.<br><br>You can send us questions and suggestions in the following ways. Your feedback will be dealt with as soon as possible.<br>Provide feedback in the app via Me &gt; Help &gt; Feedback.<br>Other channels:<br>Facebook-https://www.facebook.com/petalmapsglobal<br>Twitter-https://twitter.com/petalmaps<br>Instagram-https://www.instagram.com/petalmaps/<br><br>*Some features are only available in certain countries/regions"
 
-#     {
-#         "functionality": "Verwaltung des Cloud-Speichers",
-#         "description": "Die App ermöglicht die Verwaltung des Google Cloud-Speichers über verschiedene Dienste wie Google Drive, Gmail und Google Photos.",
-#         "reasoning": "Der Text erwähnt 'manage your existing Google account storage across Google Drive, Gmail and Google Photos', was auf eine umfassende Speicher-Verwaltungsfunktion hinweist."
-#     },
-
-#     {
-#         "functionality": "Wiederherstellung von Sicherungen",
-#         "description": "Die App ermöglicht die Wiederherstellung der gesicherten Daten auf einem neuen Android-Gerät.",
-#         "reasoning": "Der Text erwähnt 'If you break, lose or upgrade your phone, you can restore everything to your new Android device.', was darauf schließen lässt, dass eine Wiederherstellungs-Funktion vorhanden ist."
-#     },
-
-#     {
-#         "functionality": "Anpassbarer Cloud-Speicher",
-#         "description": "Die App bietet die Möglichkeit, den Speicherplatz flexibel anzupassen.",
-#         "reasoning": "Der Text erwähnt 'Get as much storage as you need […] Choose the plan that works best for you. ', was auf eine flexible Speicheranpassung hinweist."
-#     }
-# ]
-
+PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
+  "features": [
+    {
+      "functionality": "Real-Time Traffic Updates & Route Optimization",
+      "description": "The app provides real-time traffic data to recommend the quickest, shortest, and least congested route based on current conditions and personal preferences. It supports exploring routes in advance and adding multiple stops.",
+      "reasoning": "The text explicitly mentions 'real-time traffic data' and recommending paths based on 'traffic conditions', which directly proves the existence of a dynamic traffic-routing feature.",
+      "source_quotes": [
+        "Real-time traffic data for faster and safer travel",
+        "Recommends the quickest, shortest, and least congested route based on a combination of real-time traffic conditions and your personal preferences. You can even add multiple stops to your routes.",
+        "Explore your route options and familiarize yourself with the way in advance."
+      ]
+    },
+    {
+      "functionality": "Lane-Level Guidance",
+      "description": "The app offers precise driving directions that include specific lane information to help users navigate through complex road scenarios with ease.",
+      "reasoning": "The text explicitly uses the phrase 'accurate lane-level guidance', which is a direct reference confirming that this specific navigation feature is present in the app.",
+      "source_quotes": [
+        "Provides accurate lane-level guidance for more precise navigation, helping you find your way through a wide variety of complex scenarios with ease."
+      ]
+    },
+    {
+      "functionality": "Crowdsourced Incident Reporting",
+      "description": "An interface that allows users to actively report police locations, road closures, and accidents, as well as view reports submitted by other users.",
+      "reasoning": "The text explicitly states 'Allows you to report police locations...' and that you can 'see things reported by other users', which proves the existence of a community reporting tool.",
+      "source_quotes": [
+        "Allows you to report police locations, road closures, accidents, and more. You'll be able to see things reported by other users too."
+      ]
+    },
+    {
+      "functionality": "Multi-Mode Wearable Navigation",
+      "description": "Supports navigation directly via compatible HUAWEI WATCH models (3, GT2, GT3 series) across multiple travel modes including walking, cycling, and public transportation.",
+      "reasoning": "The text explicitly mentions 'Supports navigating via HUAWEI WATCH' and lists 'multiple modes of travel', directly confirming both smart watch compatibility and multi-mode routing.",
+      "source_quotes": [
+        "Supports navigating via HUAWEI WATCH 3, GT2, and GT3 series watches, with multiple modes of travel available – including walking, cycling, and public transportation."
+      ]
+    },
+    {
+      "functionality": "Offline Maps",
+      "description": "Allows users to download map data directly to their device so they can continue to navigate without any active internet connection.",
+      "reasoning": "The text explicitly mentions the ability to 'download offline maps' to 'keep navigating even without an Internet connection', which directly confirms an offline navigation capability.",
+      "source_quotes": [
+        "Lets you download offline maps so you can keep navigating even without an Internet connection."
+      ]
+    },
+    {
+      "functionality": "Local Business Discovery",
+      "description": "Provides recommendations and search tools to help users discover local businesses and essential services like restaurants, gas stations, and parking lots.",
+      "reasoning": "The text explicitly mentions finding 'local businesses through recommendations' and searching for 'gas stations, parking lots', which directly confirms a business discovery and point-of-interest search feature.",
+      "source_quotes": [
+        "Discover great local businesses through recommendations.",
+        "Conveniently search for gas stations, parking lots, and loads more – allowing you to travel worry-free."
+      ]
+    },
+    {
+      "functionality": "Voice Search Input",
+      "description": "An alternative, hands-free search feature that allows users to find places and businesses using voice commands.",
+      "reasoning": "The text explicitly states 'You can even use voice search to find places', which is a direct reference confirming that a voice-controlled input method exists.",
+      "source_quotes": [
+        "You can even use voice search to find places to eat, drink, and hang out."
+      ]
+    },
+    {
+      "functionality": "Place Organization & Cloud Syncing",
+      "description": "Allows users to organize favorite places into separate lists with custom icons and synchronize this data across devices using HUAWEI Mobile Cloud or Dropbox.",
+      "reasoning": "The text explicitly mentions 'organize your favorite places' and 'syncing your data to the cloud with HUAWEI Mobile Cloud or Dropbox', directly proving that both organization lists and cloud synchronization exist.",
+      "source_quotes": [
+        "Organize your favorite places by dividing them into separate lists with their own icons.",
+        "Keep your devices in sync with each other by syncing your data to the cloud with HUAWEI Mobile Cloud or Dropbox."
+      ]
+    },
+    {
+      "functionality": "Community-Driven Map Maintenance",
+      "description": "Enables users to rate and review places on the map, add entirely new locations, and report or edit incorrect information.",
+      "reasoning": "The text explicitly mentions allowing users to 'Add new places and report or edit incorrect information', which directly confirms a user-contributed map editing and review system.",
+      "source_quotes": [
+        "Help others decide where to go by rating and reviewing places on the map.",
+        "Add new places and report or edit incorrect information."
+      ]
+    },
+    {
+      "functionality": "In-App Feedback Mechanism",
+      "description": "A dedicated support route within the app menu structure (Me > Help > Feedback) allowing users to send questions and suggestions directly to the developers.",
+      "reasoning": "The text explicitly states 'Provide feedback in the app via Me > Help > Feedback', which directly proves that a native feedback interface is built into the application.",
+      "source_quotes": [
+        "Provide feedback in the app via Me > Help > Feedback."
+      ]
+    },
+    {
+      "functionality": "Regional Feature Restriction",
+      "description": "A condition where specific functionalities within the app are restricted or only made available based on the user's country or region.",
+      "reasoning": "The text explicitly notes that '*Some features are only available in certain countries/regions', which is an indirect but clear reference confirming that a geographical feature-restriction mechanism is active.",
+      "source_quotes": [
+        "*Some features are only available in certain countries/regions"
+      ]
+    }
+  ]
+}

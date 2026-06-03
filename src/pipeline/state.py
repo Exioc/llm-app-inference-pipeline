@@ -74,83 +74,48 @@ class AppMetadata(BaseModel):
     permissions: List[PermissionItem] = []
     datasafety: Optional[DataSafety] = None
 
-# Output model for functionality extraction
-# class FunctionalityExtraction(BaseModel):
-#     functionality: str = Field(description="Name der extrahierten Funktionalität")
-#     description: str = Field(description="Beschreibung, was die Funktionalität in der App macht")
-#     reasoning: str = Field(description=(
-#         "Logische Herleitung, warum diese Funktion existiert, welche zwingend "
-#         "ein direktes, wortwörtliches Zitat (in Anführungszeichen) aus dem "
-#         "Originaltext als Textbeleg enthalten muss."
-#     )
-# )
-
-# Output model for functionality extraction
-# class FunctionalityExtraction(BaseModel):
-#     functionality: str = Field(
-#         description="Prägnanter Name der extrahierten Funktionalität (z.B. 'Zentrales Gesundheits-Dashboard')."
-#     )
-#     description: str = Field(
-#         description="Detaillierte deutsche Beschreibung, was die Funktionalität in der App macht, inklusive genannter Einschränkungen oder Partner-Integrationen."
-#     )
-#     reasoning: str = Field(
-#         description=(
-#             "Analytische und logische Begründung, warum diese spezifische Funktion existiert. "
-#             "Muss der Kausalität folgen: Welche technische/funktionale Eigenschaft lässt sich aus "
-#             "den Schlüsselwörtern ableiten und warum MUSS das Feature aus diesem Grund existieren? "
-#             "Keine reine Wiederholung des Textes und keine wörtlichen Zitate hier einfügen."
-#         )
-#     )
-#     source_quotes: List[str] = Field(
-#         description=(
-#             "Eine Liste, die ausschließlich die originalen, unveränderten und wortwörtlichen "
-#             "englischen Sätze oder Satzfragmente aus dem Quelltext enthält, die als direkter "
-#             "Beweis für die Existenz dieses Features dienen."
-#         )
-# )
-
-# class FunctionalityExtraction(BaseModel):
-#     functionality: str = Field(
-#         description="Prägnanter Name der extrahierten Funktionalität."
-#     )
-#     description: str = Field(
-#         description="Detaillierte deutsche Beschreibung der App-Funktion, inklusive Einschränkungen oder Zusatzinfos."
-#     )
-#     reasoning: str = Field(
-#         description=(
-#             "Analytische Begründung, warum das Feature existiert. MUSS ein kurzes, "
-#             "wesentliches Schlüsselwort oder Satzfragment (in Anführungszeichen) enthalten "
-#             "und logisch herleiten, warum daraus die Existenz des Features folgt."
-#         )
-#     )
-#     source_quotes: List[str] = Field(
-#         description=(
-#             "Liste der ausführlichen, originalen englischen Sätze aus dem Text. "
-#             "Enthält sowohl den Kernbeleg für das Feature als auch Sätze mit "
-#             "relevanten Zusatzinformationen oder Einschränkungen."
-#         )
-#     )
-
 class FunctionalityExtraction(BaseModel):
     functionality: str = Field(
-        description="A descriptive name for the extracted functionality."
+        description="A clear, meaningful, and distinct name for the extracted feature or functionality in English."
     )
     description: str = Field(
-        description="A detailed description of the app's features, including limitations or additional information."
+        description=(
+            "A highly detailed, comprehensive English description of what the feature does, "
+            "including its full scope, limitations, restrictions, and specific conditions mentioned in the text."
+        )
     )
     reasoning: str = Field(
         description=(
-            "Analytical justification for why the feature exists. MUST include a short, essential keyword or phrase (in quotation marks) and logically explain why this justifies the feature's existence."
+            "A concise explanation proving why this feature exists by connecting one or multiple clues "
+            "from the text. Aggregated Deduction Rule: Compile all relevant observations (Fact 1, Fact 2, ..., Fact N) "
+            "to justify your conclusion. This proof must be either:\n"
+            "1. DIRECT EVIDENCE: Show how the combination of explicit text mentions directly yields the feature.\n"
+            "2. LOGICAL INFERENCE: Show how multiple indirect contextual facts logically interlock to imply the "
+            "unspoken feature (e.g., Fact 1: 'stay in touch' + Fact 2: 'share images' -> infers a multimedia messaging tool exists).\n"
+            "Do not invent underlying software architecture, APIs, or unmentioned technical components. "
+            "Focus strictly on mapping the documented facts to the feature's existence."
         )
     )
     source_quotes: List[str] = Field(
         description=(
-            "A list of the detailed, original sentences from the text. It includes both the key evidence for the feature and sentences containing relevant additional information or caveats."
+            "A list of the original, unaltered sentences from the text that served as the basis or context for this extraction."
         )
     )
 
 class FunctionalityResult(BaseModel):
-    features: List[FunctionalityExtraction] = Field(description="List of all extracted functionalities")
+    features: List[FunctionalityExtraction] = Field(
+        description=(
+            "List of all extracted features. Granularity rule: Bundle sub-features that belong together "
+            "and cannot stand alone (e.g., chat messaging + typing indicators). Isolate into a separate feature "
+            "ONLY if a completely distinct capability or unique interaction method (e.g., voice/video calling) "
+            "is introduced."
+        )
+    )
+
+class FunctionalityResult(BaseModel):
+    features: List[FunctionalityExtraction] = Field(
+        description="List of all extracted functionalities."
+    )
 
 # State for the Pipeline
 class PipelineState(TypedDict, total=False):
