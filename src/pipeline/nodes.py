@@ -1,9 +1,13 @@
 import base64
 
+#from src.pipeline.state import PipelineState, PermissionGroupsContainer, PermissionGroupsResult
 from src.pipeline.state import PipelineState
+from src.schemas.permissions_groups import PermissionGroupsContainer, PermissionGroupsResult
 from src.utils.save_stage import save_stage
-from src.prompts.functionality_prompts import FUNCTIONALITY_EXTRACTION_PROMPT
-from src.models.llm import function_llm
+from src.prompts.functionality_prompt import FUNCTIONALITY_EXTRACTION_PROMPT
+from src.prompts.permission_groups_prompt import PERMISSION_GROUPS_PROMPT
+from src.models.llm import function_llm, group_llm
+from langchain_core.prompts import ChatPromptTemplate
 
 def preprocess_node(state: PipelineState):
     metadata = state["metadata"]
@@ -50,7 +54,6 @@ def functionality_node(state: PipelineState):
         result = function_llm.invoke(messages)
     except Exception as e:
         print("LLM invocation or parsing failed:", repr(e))
-        # Try to show raw LLM output if the parser attached it
         try:
             from langchain_core.exceptions import OutputParserException
             if isinstance(e, OutputParserException) and hasattr(e, 'llm_output'):
@@ -63,3 +66,57 @@ def functionality_node(state: PipelineState):
     save_stage(temp_state, "02_functionality_extraction")
 
     return {"functionality_result": result}
+
+def state_transformer_node(state: PipelineState):
+    transformed_features = []
+    
+    func_result = state["functionality_result"]
+    
+    for full_feature in func_result.features:
+        clean_container = PermissionGroupsContainer(
+            title=full_feature.functionality, 
+            description=full_feature.description,
+            groups=[]
+        )
+        transformed_features.append(clean_container)
+        
+    wrapped_result = PermissionGroupsResult(features=transformed_features)
+    
+    state_update = {
+        "group_permissions_result": wrapped_result.model_dump(),
+        "current_group_index": 0 
+    }
+    
+    temp_state = {**state, **state_update}
+    save_stage(temp_state, "03_state_transformation")
+    
+    return state_update
+
+def group_filter_node(state: PipelineState) -> dict:
+
+    # Get the current feature index and the corresponding feature details from the state
+    idx = state["current_group_index"]
+    features_list = state["group_permissions_result"]["features"]
+    current_feature = features_list[idx]
+
+    messages = PERMISSION_GROUPS_PROMPT.invoke({
+        "label": current_feature["title"],
+        "description": current_feature["description"]
+    })
+
+    result = group_llm.invoke(messages)      
+   
+    updated_features = [item.copy() for item in features_list]
+    
+    updated_features[idx]["groups"] = result.groups
+    
+    state_update = {
+        "group_permissions_result": {"features": updated_features},
+        "current_group_index": idx + 1
+    }
+    
+    return state_update
+
+def save_groups_node(state: PipelineState):
+    save_stage(state, "04_group_permission")
+    return {}

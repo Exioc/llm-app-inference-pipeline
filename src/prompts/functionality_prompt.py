@@ -2,7 +2,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import AIMessage
 import json
 
-from src.prompts.few_shot import (
+from src.prompts.functionality_few_shot import (
     GOOGLE_ONE_LABEL,
     GOOGLE_ONE_DESCRIPTION,
     GOOGLE_ONE_OUTPUT,
@@ -72,10 +72,6 @@ FUNCTIONALITY_EXTRACTION_PROMPT = ChatPromptTemplate.from_messages([
     # Beispiel 3 (Maps & Navigation)
     ("human", "Now analyze the following app:\nTitle: " + PETAL_MAPS_GPS_AND_NAVIGATION_LABEL + "\nDescription: " + PETAL_MAPS_GPS_AND_NAVIGATION_DESCRIPTION),
     AIMessage(content=json.dumps(PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT, ensure_ascii=False)),
-
-    # Beispiel 4
-
-    # Beispiel 5
 
     # -------------------------------------------------------------
     # ENDE FEW-SHOT BEISPIELE

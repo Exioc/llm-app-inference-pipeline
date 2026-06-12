@@ -3,7 +3,8 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-from src.pipeline.state import AppMetadata
+#from src.pipeline.state import AppMetadata
+from src.schemas.app_metadata import AppMetadata
 from src.pipeline.graph import build_app
 from src.utils.notify_me import notification
 from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY
@@ -83,7 +84,7 @@ def main() -> None:
 
     # Start the pipeline
     print(f"Start analyze ({datetime.now().strftime('%H:%M')})")
-    final_state = app.invoke(initial_input)
+    #final_state = app.invoke(initial_input)
     print(f"Finish analyze ({datetime.now().strftime('%H:%M')})")
     notification.send()
 

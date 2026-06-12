@@ -1,0 +1,86 @@
+[
+  {
+    "group_name": "ACTIVITY_RECOGNITION",
+    "description": "Used for permissions that are associated with activity recognition."
+  },
+  {
+    "group_name": "CALENDAR",
+    "description": "Used for runtime permissions related to user's calendar."
+  },
+  {
+    "group_name": "CALL_LOG",
+    "description": "Used for permissions that are associated telephony features."
+  },
+  {
+    "group_name": "CAMERA",
+    "description": "Used for permissions that are associated with accessing camera or capturing images/video from the device."
+  },
+  {
+    "group_name": "CONTACTS",
+    "description": "Used for runtime permissions related to contacts and profiles on this device."
+  },
+  {
+    "group_name": "LOCATION",
+    "description": "Used for permissions that allow accessing the device location."
+  },
+  {
+    "group_name": "MICROPHONE",
+    "description": "Used for permissions that are associated with accessing microphone audio from the device."
+  },
+  {
+    "group_name": "NEARBY_DEVICES",
+    "description": "Required to be able to discover and connect to nearby Bluetooth devices."
+  },
+  {
+    "group_name": "NOTIFICATIONS",
+    "description": "Used for permissions that are associated with posting notifications"
+  },
+  {
+    "group_name": "PHONE",
+    "description": "Used for permissions that are associated telephony features."
+  },
+  {
+    "group_name": "READ_MEDIA_AURAL",
+    "description": "Required to be able to read audio files from shared storage."
+  },
+  {
+    "group_name": "READ_MEDIA_VISUAL",
+    "description": "Required to be able to read image and video files from shared storage."
+  },
+  {
+    "group_name": "SENSORS",
+    "description": "Used for permissions that are associated with accessing body or environmental sensors."
+  },
+  {
+    "group_name": "SMS",
+    "description": "Used for runtime permissions related to user's SMS messages."
+  },
+  {
+    "group_name": "STORAGE",
+    "description": "Used for runtime permissions related to the shared external storage."
+  },
+  {
+    "group_name": "NETWORK_AND_CONNECTIVITY",
+    "description": "Used for low-risk permissions that allow applications to open network sockets, view or change Wi-Fi and Bluetooth connection states."
+  },
+  {
+    "group_name": "FOREGROUND_SERVICES",
+    "description": "Used for permissions that allow regular applications to launch specialized foreground services (e.g., for data synchronization, media playback, or sensor tracking)."
+  },
+  {
+    "group_name": "COMPANION_DEVICES",
+    "description": "Used for permissions related to setting up, managing, and interacting with companion hardware like smartwatches or smart glasses."
+  },
+  {
+    "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+    "description": "Used for permissions associated with controlling the application lifecycle, updating packages, scheduling background jobs, or modifying data sync parameters."
+  },
+  {
+    "group_name": "USER_INTERFACE_AND_HARDWARE",
+    "description": "Used for low-risk permissions that alter user interface elements (like wallpapers, status bars, and shortcuts) or interact with basic physical hardware functions (like vibration and audio settings)."
+  },
+  {
+    "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+    "description": "Used for normal permissions that interact with standard security integrations, credential management, non-sensitive biometric checks, and non-intrusive screen monitoring indicators."
+  }
+]
