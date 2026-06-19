@@ -11,7 +11,7 @@ def main():
 
     try:
         response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()  # wirft Fehler bei 4xx/5xx
+        response.raise_for_status()
 
         data = response.json()
 

@@ -122,28 +122,13 @@
     ]
   },
   {
-    "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
-    "description": "Bundles all permissions required for discovering, connecting, and communicating with physical hardware in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, or NFC.",
+    "group_name": "NEARBY_DEVICES",
+    "description": "Required to be able to discover and connect to nearby devices using protocols like Bluetooth, Wi-Fi Direct, UWB, or local networks.",
     "permissions": [
       {
-        "id": "BLUETOOTH",
-        "protection_level": "normal",
-        "description": "Allows applications to connect to paired bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_ADMIN",
-        "protection_level": "normal",
-        "description": "Allows applications to discover and pair bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_SCAN",
-        "protection_level": "dangerous",
-        "description": "Required to be able to discover and pair nearby Bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_CONNECT",
-        "protection_level": "dangerous",
-        "description": "Required to be able to connect to paired Bluetooth devices."
+        "id": "ACCESS_LOCAL_NETWORK",
+        "protection_level": "dangerous/Local Network Definition",
+        "description": "Required to be able to advertise and connect to local network devices. A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections. See also:"
       },
       {
         "id": "BLUETOOTH_ADVERTISE",
@@ -151,24 +136,19 @@
         "description": "Required to be able to advertise to nearby Bluetooth devices."
       },
       {
+        "id": "BLUETOOTH_CONNECT",
+        "protection_level": "dangerous",
+        "description": "Required to be able to connect to paired Bluetooth devices."
+      },
+      {
+        "id": "BLUETOOTH_SCAN",
+        "protection_level": "dangerous",
+        "description": "Required to be able to discover and pair nearby Bluetooth devices."
+      },
+      {
         "id": "NEARBY_WIFI_DEVICES",
         "protection_level": "dangerous",
         "description": "Required to be able to advertise and connect to nearby devices via Wi-Fi."
-      },
-      {
-        "id": "NFC",
-        "protection_level": "normal",
-        "description": "Allows applications to perform I/O operations over NFC."
-      },
-      {
-        "id": "NFC_PREFERRED_PAYMENT_INFO",
-        "protection_level": "normal",
-        "description": "Allows applications to receive NFC preferred payment service information."
-      },
-      {
-        "id": "NFC_TRANSACTION_EVENT",
-        "protection_level": "normal",
-        "description": "Allows applications to receive NFC transaction events."
       },
       {
         "id": "RANGING",
@@ -355,23 +335,13 @@
     ]
   },
   {
-    "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
-    "description": "Used for permissions handling IP-based data transport, global internet routing, Wi-Fi/Ethernet interface states, and local network socket communication.",
+    "group_name": "NETWORK_AND_CONNECTIVITY",
+    "description": "Used for low-risk permissions that allow applications to open network sockets, view or change Wi-Fi and Bluetooth connection states.",
     "permissions": [
-      {
-        "id": "INTERNET",
-        "protection_level": "normal",
-        "description": "Allows applications to open network sockets."
-      },
       {
         "id": "ACCESS_NETWORK_STATE",
         "protection_level": "normal",
         "description": "Allows applications to access information about networks."
-      },
-      {
-        "id": "CHANGE_NETWORK_STATE",
-        "protection_level": "normal",
-        "description": "Allows applications to change network connectivity state."
       },
       {
         "id": "ACCESS_WIFI_STATE",
@@ -379,9 +349,19 @@
         "description": "Allows applications to access information about Wi-Fi networks."
       },
       {
-        "id": "CHANGE_WIFI_STATE",
+        "id": "BLUETOOTH",
         "protection_level": "normal",
-        "description": "Allows applications to change Wi-Fi connectivity state."
+        "description": "Allows applications to connect to paired bluetooth devices."
+      },
+      {
+        "id": "BLUETOOTH_ADMIN",
+        "protection_level": "normal",
+        "description": "Allows applications to discover and pair bluetooth devices."
+      },
+      {
+        "id": "CHANGE_NETWORK_STATE",
+        "protection_level": "normal",
+        "description": "Allows applications to change network connectivity state."
       },
       {
         "id": "CHANGE_WIFI_MULTICAST_STATE",
@@ -389,9 +369,29 @@
         "description": "Allows applications to enter Wi-Fi Multicast mode."
       },
       {
-        "id": "ACCESS_LOCAL_NETWORK",
-        "protection_level": "dangerous/Local Network Definition",
-        "description": "Required to be able to advertise and connect to local network devices. A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections."
+        "id": "CHANGE_WIFI_STATE",
+        "protection_level": "normal",
+        "description": "Allows applications to change Wi-Fi connectivity state."
+      },
+      {
+        "id": "INTERNET",
+        "protection_level": "normal",
+        "description": "Allows applications to open network sockets."
+      },
+      {
+        "id": "NFC",
+        "protection_level": "normal",
+        "description": "Allows applications to perform I/O operations over NFC."
+      },
+      {
+        "id": "NFC_PREFERRED_PAYMENT_INFO",
+        "protection_level": "normal",
+        "description": "Allows applications to receive NFC preferred payment service information."
+      },
+      {
+        "id": "NFC_TRANSACTION_EVENT",
+        "protection_level": "normal",
+        "description": "Allows applications to receive NFC transaction events."
       },
       {
         "id": "USE_LOOPBACK_INTERFACE",

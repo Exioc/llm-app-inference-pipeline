@@ -1,8 +1,7 @@
 from langchain_ollama import ChatOllama
 from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL, LLM_MODEL, TEMPERATURE
-#from src.pipeline.state import FunctionalityResult, SingleFeatureGroup
-from src.schemas.functionality import FunctionalityResult
-from src.schemas.permissions_groups import SingleFeatureGroups
+from src.schemas.func_result_schema import FunctionalityResult
+from src.schemas.group_result_schema import SingleFeatureGroupsResult
 
 # Define LLM with Ollama and structured output
 llm = ChatOllama(
@@ -14,4 +13,4 @@ llm = ChatOllama(
 
 function_llm = llm.with_structured_output(FunctionalityResult)
 
-group_llm = llm.with_structured_output(SingleFeatureGroups)
+group_llm = llm.with_structured_output(SingleFeatureGroupsResult)

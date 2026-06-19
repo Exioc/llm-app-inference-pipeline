@@ -4,10 +4,10 @@ from pathlib import Path
 from datetime import datetime
 
 #from src.pipeline.state import AppMetadata
-from src.schemas.app_metadata import AppMetadata
+from src.schemas.app_data_schema import AppMetadata
 from src.pipeline.graph import build_app
 from src.utils.notify_me import notification
-from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY
+from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY, load_permission_groups ,load_permissions_by_groups, LANGSMITH_TRACING
 
 # Helper-function to read a specific line from a JSONL file
 def get_jsonl_line(file_path: str, line_number: int):
@@ -68,7 +68,12 @@ def main() -> None:
     # Initialize run folder and save input
     storage_path = initialize_run_folder()
     save_stage(app_data, "00_Metadata", storage_path)
-    
+
+    #____________________________________________________________
+
+    permission_groups_model = load_permission_groups()
+    permissions_by_group_model = load_permissions_by_groups()
+
     #____________________________________________________________
 
     # Build the pipeline
@@ -79,12 +84,20 @@ def main() -> None:
         "metadata": app_data,
         "llm_model": LLM_MODEL,
         "temperature": float(TEMPERATURE),
-        "storage_path": storage_path
+        "storage_path": storage_path,
+        "current_group_index": 0
     }
 
-    # Start the pipeline
+    # Start the pipelin
+    if LANGSMITH_TRACING == "true": print("tracing is active")
     print(f"Start analyze ({datetime.now().strftime('%H:%M')})")
-    #final_state = app.invoke(initial_input)
+    final_state = app.invoke(
+        initial_input,
+        {"configurable": {
+            "permission_groups": permission_groups_model,
+            "permissions_by_group": permissions_by_group_model
+        }}
+    )
     print(f"Finish analyze ({datetime.now().strftime('%H:%M')})")
     notification.send()
 

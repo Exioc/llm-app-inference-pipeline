@@ -28,7 +28,7 @@
   },
   {
     "group_name": "CALL_LOG",
-    "description": "Used for runtime permissions associated with accessing and modifying the device's call history.",
+    "description": "Used for permissions that are associated telephony features.",
     "permissions": [
       {
         "id": "READ_CALL_LOG",
@@ -97,16 +97,6 @@
         "id": "ACCESS_MEDIA_LOCATION",
         "protection_level": "dangerous",
         "description": "Allows an application to access any geographic locations persisted in the user's shared collection."
-      },
-      {
-        "id": "ACCESS_LOCATION_EXTRA_COMMANDS",
-        "protection_level": "normal",
-        "description": "Allows an application to access extra location provider commands."
-      },
-      {
-        "id": "USE_LOCATION_BUTTON",
-        "protection_level": "normal",
-        "description": "Allows an app use location button, which grants temporary location permission when a user clicks the button."
       }
     ]
   },
@@ -122,28 +112,13 @@
     ]
   },
   {
-    "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
-    "description": "Bundles all permissions required for discovering, connecting, and communicating with physical hardware in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, or NFC.",
+    "group_name": "NEARBY_DEVICES",
+    "description": "Required to be able to discover and connect to nearby Bluetooth devices.",
     "permissions": [
       {
-        "id": "BLUETOOTH",
-        "protection_level": "normal",
-        "description": "Allows applications to connect to paired bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_ADMIN",
-        "protection_level": "normal",
-        "description": "Allows applications to discover and pair bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_SCAN",
-        "protection_level": "dangerous",
-        "description": "Required to be able to discover and pair nearby Bluetooth devices."
-      },
-      {
-        "id": "BLUETOOTH_CONNECT",
-        "protection_level": "dangerous",
-        "description": "Required to be able to connect to paired Bluetooth devices."
+        "id": "ACCESS_LOCAL_NETWORK",
+        "protection_level": "dangerous/Local Network Definition",
+        "description": "Required to be able to advertise and connect to local network devices. A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections. See also:"
       },
       {
         "id": "BLUETOOTH_ADVERTISE",
@@ -151,24 +126,19 @@
         "description": "Required to be able to advertise to nearby Bluetooth devices."
       },
       {
+        "id": "BLUETOOTH_CONNECT",
+        "protection_level": "dangerous",
+        "description": "Required to be able to connect to paired Bluetooth devices."
+      },
+      {
+        "id": "BLUETOOTH_SCAN",
+        "protection_level": "dangerous",
+        "description": "Required to be able to discover and pair nearby Bluetooth devices."
+      },
+      {
         "id": "NEARBY_WIFI_DEVICES",
         "protection_level": "dangerous",
         "description": "Required to be able to advertise and connect to nearby devices via Wi-Fi."
-      },
-      {
-        "id": "NFC",
-        "protection_level": "normal",
-        "description": "Allows applications to perform I/O operations over NFC."
-      },
-      {
-        "id": "NFC_PREFERRED_PAYMENT_INFO",
-        "protection_level": "normal",
-        "description": "Allows applications to receive NFC preferred payment service information."
-      },
-      {
-        "id": "NFC_TRANSACTION_EVENT",
-        "protection_level": "normal",
-        "description": "Allows applications to receive NFC transaction events."
       },
       {
         "id": "RANGING",
@@ -190,22 +160,12 @@
         "id": "POST_NOTIFICATIONS",
         "protection_level": "dangerous",
         "description": "Allows an app to post notifications"
-      },
-      {
-        "id": "POST_PROMOTED_NOTIFICATIONS",
-        "protection_level": "normal|appops",
-        "description": "Required for apps to post promoted notifications. This is required in addition to (not instead of) POST_NOTIFICATIONS."
-      },
-      {
-        "id": "USE_FULL_SCREEN_INTENT",
-        "protection_level": "normal",
-        "description": "Required for apps targeting Build.VERSION_CODES.Q that want to use notification full screen intents."
       }
     ]
   },
   {
     "group_name": "PHONE",
-    "description": "Used for runtime permissions associated with active telephony features, call management, and cellular state routing.",
+    "description": "Used for permissions that are associated telephony features.",
     "permissions": [
       {
         "id": "ACCEPT_HANDOVER",
@@ -246,16 +206,11 @@
         "id": "USE_SIP",
         "protection_level": "dangerous",
         "description": "Allows an application to use SIP service."
-      },
-      {
-        "id": "MANAGE_OWN_CALLS",
-        "protection_level": "normal",
-        "description": "Allows a calling application which manages its own calls through the self-managed ConnectionService APIs. See PhoneAccount.CAPABILITY_SELF_MANAGED for more information on the self-managed ConnectionService APIs."
       }
     ]
   },
   {
-    "group_name": "MEDIA_AURAL",
+    "group_name": "READ_MEDIA_AURAL",
     "description": "Required to be able to read audio files from shared storage.",
     "permissions": [
       {
@@ -266,7 +221,7 @@
     ]
   },
   {
-    "group_name": "MEDIA_VISUAL",
+    "group_name": "READ_MEDIA_VISUAL",
     "description": "Required to be able to read image and video files from shared storage.",
     "permissions": [
       {
@@ -299,11 +254,6 @@
         "id": "BODY_SENSORS_BACKGROUND",
         "protection_level": "dangerous",
         "description": "Allows an application to access data from sensors that the user uses to measure what is happening inside their body, such as heart rate. If you're requesting this permission, you must also request BODY_SENSORS. Requesting this permission by itself doesn't give you Body sensors access. This is a hard restricted permission which cannot be held by an app until the installer on record allowlists the permission. For more details see PackageInstaller.SessionParams.setWhitelistedRestrictedPermissions(Set)."
-      },
-      {
-        "id": "HIGH_SAMPLING_RATE_SENSORS",
-        "protection_level": "normal",
-        "description": "Allows an app to access sensor data with a sampling rate greater than 200 Hz."
       }
     ]
   },
@@ -355,23 +305,13 @@
     ]
   },
   {
-    "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
-    "description": "Used for permissions handling IP-based data transport, global internet routing, Wi-Fi/Ethernet interface states, and local network socket communication.",
+    "group_name": "NETWORK_AND_CONNECTIVITY",
+    "description": "Used for low-risk permissions that allow applications to open network sockets, view or change Wi-Fi and Bluetooth connection states.",
     "permissions": [
-      {
-        "id": "INTERNET",
-        "protection_level": "normal",
-        "description": "Allows applications to open network sockets."
-      },
       {
         "id": "ACCESS_NETWORK_STATE",
         "protection_level": "normal",
         "description": "Allows applications to access information about networks."
-      },
-      {
-        "id": "CHANGE_NETWORK_STATE",
-        "protection_level": "normal",
-        "description": "Allows applications to change network connectivity state."
       },
       {
         "id": "ACCESS_WIFI_STATE",
@@ -379,9 +319,19 @@
         "description": "Allows applications to access information about Wi-Fi networks."
       },
       {
-        "id": "CHANGE_WIFI_STATE",
+        "id": "BLUETOOTH",
         "protection_level": "normal",
-        "description": "Allows applications to change Wi-Fi connectivity state."
+        "description": "Allows applications to connect to paired bluetooth devices."
+      },
+      {
+        "id": "BLUETOOTH_ADMIN",
+        "protection_level": "normal",
+        "description": "Allows applications to discover and pair bluetooth devices."
+      },
+      {
+        "id": "CHANGE_NETWORK_STATE",
+        "protection_level": "normal",
+        "description": "Allows applications to change network connectivity state."
       },
       {
         "id": "CHANGE_WIFI_MULTICAST_STATE",
@@ -389,9 +339,29 @@
         "description": "Allows applications to enter Wi-Fi Multicast mode."
       },
       {
-        "id": "ACCESS_LOCAL_NETWORK",
-        "protection_level": "dangerous/Local Network Definition",
-        "description": "Required to be able to advertise and connect to local network devices. A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections."
+        "id": "CHANGE_WIFI_STATE",
+        "protection_level": "normal",
+        "description": "Allows applications to change Wi-Fi connectivity state."
+      },
+      {
+        "id": "INTERNET",
+        "protection_level": "normal",
+        "description": "Allows applications to open network sockets."
+      },
+      {
+        "id": "NFC",
+        "protection_level": "normal",
+        "description": "Allows applications to perform I/O operations over NFC."
+      },
+      {
+        "id": "NFC_PREFERRED_PAYMENT_INFO",
+        "protection_level": "normal",
+        "description": "Allows applications to receive NFC preferred payment service information."
+      },
+      {
+        "id": "NFC_TRANSACTION_EVENT",
+        "protection_level": "normal",
+        "description": "Allows applications to receive NFC transaction events."
       },
       {
         "id": "USE_LOOPBACK_INTERFACE",
@@ -514,7 +484,7 @@
   },
   {
     "group_name": "APP_AND_SYSTEM_MANAGEMENT",
-    "description": "Used for permissions associated with controlling the application lifecycle, managing package installation states, scheduling background tasks, and adjusting system resource optimization.",
+    "description": "Used for permissions associated with controlling the application lifecycle, updating packages, scheduling background jobs, or modifying data sync parameters.",
     "permissions": [
       {
         "id": "BROADCAST_STICKY",
@@ -540,6 +510,16 @@
         "id": "QUERY_ALL_PACKAGES",
         "protection_level": "normal",
         "description": "Allows query of any normal app on the device, regardless of manifest declarations."
+      },
+      {
+        "id": "READ_SYNC_SETTINGS",
+        "protection_level": "normal",
+        "description": "Allows applications to read the sync settings."
+      },
+      {
+        "id": "READ_SYNC_STATS",
+        "protection_level": "normal",
+        "description": "Allows applications to read the sync stats."
       },
       {
         "id": "RECEIVE_BOOT_COMPLETED",
@@ -575,17 +555,32 @@
         "id": "WAKE_LOCK",
         "protection_level": "normal",
         "description": "Allows using PowerManager WakeLocks to keep processor from sleeping or screen from dimming."
+      },
+      {
+        "id": "WRITE_SYNC_SETTINGS",
+        "protection_level": "normal",
+        "description": "Allows applications to write the sync settings."
       }
     ]
   },
   {
-    "group_name": "SYSTEM_UI_AND_PERIPHERALS",
-    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, and window layers) or control basic hardware peripherals and audio/vibration policies.",
+    "group_name": "USER_INTERFACE_AND_HARDWARE",
+    "description": "Used for low-risk permissions that alter user interface elements (like wallpapers, status bars, and shortcuts) or interact with basic physical hardware functions (like vibration and audio settings).",
     "permissions": [
+      {
+        "id": "ACCESS_LOCATION_EXTRA_COMMANDS",
+        "protection_level": "normal",
+        "description": "Allows an application to access extra location provider commands."
+      },
       {
         "id": "ACCESS_NOTIFICATION_POLICY",
         "protection_level": "normal",
         "description": "Marker permission for applications that wish to access notification policy. This permission is not supported on managed profiles."
+      },
+      {
+        "id": "CAPTURE_KEYBOARD",
+        "protection_level": "normal",
+        "description": "Allows the currently focused application to be able to consume keys before Android system get chance to process system keys and shortcuts. The keys are always sent to the currently focussed application, this permission allows the focussed application to receive the keys that are normally consumed by the system for shortcuts, allowing it to have custom shortcut behavior primarily for use cases like virtual machine apps where the host OS wants to handle the shortcuts differently. Certain shortcuts and system keys like Home, Overview, Power, etc are never sent to the currently focused application and are always consumed by the system. User can escape out of the capture mode by long pressing the Escape key or simply navigating out of the application. See also:"
       },
       {
         "id": "DISABLE_KEYGUARD",
@@ -598,14 +593,29 @@
         "description": "Allows an application to expand or collapse the status bar."
       },
       {
+        "id": "HIGH_SAMPLING_RATE_SENSORS",
+        "protection_level": "normal",
+        "description": "Allows an app to access sensor data with a sampling rate greater than 200 Hz."
+      },
+      {
         "id": "INSTALL_SHORTCUT",
         "protection_level": "normal",
         "description": "Allows an application to install a shortcut in Launcher. In Android O (API level 26) and higher, the INSTALL_SHORTCUT broadcast no longer has any effect on your app because it's a private, implicit broadcast. Instead, you should create an app shortcut by using the requestPinShortcut() method from the ShortcutManager class."
       },
       {
+        "id": "MANAGE_OWN_CALLS",
+        "protection_level": "normal",
+        "description": "Allows a calling application which manages its own calls through the self-managed ConnectionService APIs. See PhoneAccount.CAPABILITY_SELF_MANAGED for more information on the self-managed ConnectionService APIs."
+      },
+      {
         "id": "MODIFY_AUDIO_SETTINGS",
         "protection_level": "normal",
         "description": "Allows an application to modify global audio settings."
+      },
+      {
+        "id": "POST_PROMOTED_NOTIFICATIONS",
+        "protection_level": "normal|appops",
+        "description": "Required for apps to post promoted notifications. This is required in addition to (not instead of) POST_NOTIFICATIONS."
       },
       {
         "id": "READ_COLOR_ZONES",
@@ -633,6 +643,16 @@
         "description": "Allows using the device's IR transmitter, if available."
       },
       {
+        "id": "USE_FULL_SCREEN_INTENT",
+        "protection_level": "normal",
+        "description": "Required for apps targeting Build.VERSION_CODES.Q that want to use notification full screen intents."
+      },
+      {
+        "id": "USE_LOCATION_BUTTON",
+        "protection_level": "normal",
+        "description": "Allows an app use location button, which grants temporary location permission when a user clicks the button."
+      },
+      {
         "id": "USE_PINNED_WINDOWING_LAYER",
         "protection_level": "normal",
         "description": "Allows an application to use ActivityManager.AppTask.WINDOWING_LAYER_PINNED for its Tasks, typically requested via ActivityManager.AppTask.requestWindowingLayer(int, Executor, OutcomeReceiver). Granting this permission allows an app to request its task be placed above normal application windows. To ensure system integrity and a consistent user experience, the system imposes several restrictions on tasks using this layer. These may include, but are not limited to: See the API documentation for ActivityManager.AppTask.requestWindowingLayer(int, Executor, OutcomeReceiver) for the full documentation."
@@ -646,7 +666,7 @@
   },
   {
     "group_name": "SECURITY_AND_PRIVACY_NORMAL",
-    "description": "Used for non-dangerous permissions interacting with system security integrations, credential management, biometric authentication, and application integrity protections against screen capturing.",
+    "description": "Used for normal permissions that interact with standard security integrations, credential management, non-sensitive biometric checks, and non-intrusive screen monitoring indicators.",
     "permissions": [
       {
         "id": "ACCESS_HIDDEN_PROFILES",
@@ -679,6 +699,11 @@
         "description": "Allows an application to get notified when it is being recorded."
       },
       {
+        "id": "READ_ASSIST_STRUCTURE_SCREEN_CONTENT",
+        "protection_level": "normal",
+        "description": "Allows an assistant application to read screen content in the AssistStructure. Note: Beginning with ERROR(C android.os.Build.VERSION_CODES.CINNAMON_BUN /Android C android.os.Build.VERSION_CODES.CINNAMON_BUN) This permission is required by any VoiceInteractionService that wishes to receive screen content in the AssistStructure when the assistant's VoiceInteractionService is invoked either via hotword detection or from the system. If this permission is not held, the AssistStructure will only obtain window data and will omit any screen content from the provided AssistStructure."
+      },
+      {
         "id": "REQUEST_PASSWORD_COMPLEXITY",
         "protection_level": "normal",
         "description": "Allows an application to request the screen lock complexity and prompt users to update the screen lock to a certain complexity level."
@@ -692,43 +717,6 @@
         "id": "USE_FINGERPRINT",
         "protection_level": "normal",
         "description": "Allows an app to use fingerprint hardware."
-      }
-    ]
-  },
-  {
-    "group_name": "ACCOUNT_SYNC",
-    "description": "Used for permissions that manage background data synchronization parameters and account sync statistics.",
-    "permissions": [
-      {
-        "id": "READ_SYNC_SETTINGS",
-        "protection_level": "normal",
-        "description": "Allows applications to read the sync settings."
-      },
-      {
-        "id": "READ_SYNC_STATS",
-        "protection_level": "normal",
-        "description": "Allows applications to read the sync stats."
-      },
-      {
-        "id": "WRITE_SYNC_SETTINGS",
-        "protection_level": "normal",
-        "description": "Allows applications to write the sync settings."
-      }
-    ]
-  },
-  {
-    "group_name": "ACCESSIBILITY_AND_INPUT",
-    "description": "Used for highly sensitive UI capabilities that monitor screen content, read assist structures, or intercept low-level hardware inputs.",
-    "permissions": [
-      {
-        "id": "CAPTURE_KEYBOARD",
-        "protection_level": "normal",
-        "description": "Allows the currently focused application to be able to consume keys before Android system get chance to process system keys and shortcuts. The keys are always sent to the currently focussed application, this permission allows the focussed application to receive the keys that are normally consumed by the system for shortcuts, allowing it to have custom shortcut behavior primarily for use cases like virtual machine apps where the host OS wants to handle the shortcuts differently. Certain shortcuts and system keys like Home, Overview, Power, etc are never sent to the currently focused application and are always consumed by the system. User can escape out of the capture mode by long pressing the Escape key or simply navigating out of the application."
-      },
-      {
-        "id": "READ_ASSIST_STRUCTURE_SCREEN_CONTENT",
-        "protection_level": "normal",
-        "description": "Allows an assistant application to read screen content in the AssistStructure. Note: Beginning with ERROR(C android.os.Build.VERSION_CODES.CINNAMON_BUN /Android C android.os.Build.VERSION_CODES.CINNAMON_BUN) This permission is required by any VoiceInteractionService that wishes to receive screen content in the AssistStructure when the assistant's VoiceInteractionService is invoked either via hotword detection or from the system. If this permission is not held, the AssistStructure will only obtain window data and will omit any screen content from the provided AssistStructure."
       }
     ]
   }

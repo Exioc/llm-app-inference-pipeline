@@ -53,12 +53,11 @@ HUMAN_PROMPT = (
     "Do not invent or hypothesize about underlying technical systems, APIs, or software architectures."
 )
 
-# 3. Baue das Template zusammen und übergib die Variablen als Rollen-Tupel
-FUNCTIONALITY_EXTRACTION_PROMPT = ChatPromptTemplate.from_messages([
+FUNCTIONALITY_PROMPT = ChatPromptTemplate.from_messages([
     ("system", SYSTEM_PROMPT),
     
     # -------------------------------------------------------------
-    # START FEW-SHOT BEISPIELE (Der Dialog-Wechsel)
+    # START FEW-SHOT BEISPIELE 
     # -------------------------------------------------------------
 
     # Beispiel 1 (Productivity)

@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 from dotenv import load_dotenv
-from src.schemas.data import PermissionGroupList, PermissionGroupDetailList
+from src.schemas.driod_data_schema import PermissionGroupList, PermissionGroupDetailList
 
 load_dotenv()
 
@@ -26,16 +26,20 @@ OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL")
 LLM_MODEL = os.getenv("LLM_MODEL")
 TEMPERATURE = float(os.getenv("TEMPERATURE", "1.0"))
 
-if not PERMISSION_GROUPS_PATH.exists():
-    raise FileNotFoundError(f"File not found: {PERMISSION_GROUPS_PATH}")
-else:         
-    with open(PERMISSION_GROUPS_PATH, "r", encoding="utf-8") as f:
-        raw_data = json.load(f)
-        group_list_model = PermissionGroupList(groups=raw_data)
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING")
 
-if not PERMISSIONS_BY_GROUP_PATH.exists():
-    raise FileNotFoundError(f"File not found: {PERMISSIONS_BY_GROUP_PATH}")
-else:         
-    with open(PERMISSIONS_BY_GROUP_PATH, "r", encoding="utf-8") as f:
-        raw_data = json.load(f)
-        permissions_by_group_model = PermissionGroupDetailList(groups_details=raw_data)
+def load_permission_groups() -> PermissionGroupList:
+    if not PERMISSION_GROUPS_PATH.exists():
+        raise FileNotFoundError(f"File not found: {PERMISSION_GROUPS_PATH}")
+    else:         
+        with open(PERMISSION_GROUPS_PATH, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+            return PermissionGroupList(groups=raw_data)
+
+def load_permissions_by_groups() -> PermissionGroupDetailList:
+    if not PERMISSIONS_BY_GROUP_PATH.exists():
+        raise FileNotFoundError(f"File not found: {PERMISSIONS_BY_GROUP_PATH}")
+    else:         
+        with open(PERMISSIONS_BY_GROUP_PATH, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+            return PermissionGroupDetailList(groups_details=raw_data)

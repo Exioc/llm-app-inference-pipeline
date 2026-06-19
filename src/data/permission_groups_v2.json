@@ -28,8 +28,8 @@
     "description": "Used for permissions that are associated with accessing microphone audio from the device."
   },
   {
-    "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
-    "description": "Bundles all permissions required for discovering, connecting, and communicating with physical hardware in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, or NFC."
+    "group_name": "NEARBY_DEVICES",
+    "description": "Required to be able to discover and connect to nearby devices using protocols like Bluetooth, Wi-Fi Direct, UWB, or local networks."
   },
   {
     "group_name": "NOTIFICATIONS",
@@ -60,7 +60,7 @@
     "description": "Used for runtime permissions related to the shared external storage."
   },
   {
-    "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+    "group_name": "NETWORK_AND_CONNECTIVITY",
     "description": "Used for low-risk permissions that allow applications to open network sockets, view or change Wi-Fi and Bluetooth connection states."
   },
   {
