@@ -2,12 +2,14 @@ from pathlib import Path
 import json
 
 
-def save_stage(state: PipelineState, stage_name: str):
+def save_stage(state: PipelineState, name: str, flag=False):
+    if flag:
+        storage_path = Path(state.get("subdirectory_path", "results/unknown_run"))
+    else:
+        storage_path = Path(state.get("storage_path", "results/unknown_run"))
+    path = storage_path / f"{name}.json"
     
-    storage_path = Path(state.get("storage_path", "results/unknown_run"))
-    path = storage_path / f"{stage_name}.json"
-    
-    # Pydantic zu Dict Konvertierung für JSON
+    # Convert pydantic models to dicts for JSON serialization
     serializable_state = {}
     for key, value in state.items():
         if hasattr(value, "model_dump"):

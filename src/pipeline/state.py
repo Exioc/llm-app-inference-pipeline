@@ -29,3 +29,4 @@ class PipelineState(TypedDict, total=False):
     llm_model: str
     temperature: float
     storage_path: str
+    subdirectory_path: str

@@ -31,9 +31,12 @@ def get_jsonl_line(file_path: str, line_number: int):
         return None
 
 # Helper-function to initialize a run folder for saving results
-def initialize_run_folder() -> str:
-    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    run_dir = RESULTS_BASE_DIR / timestamp
+def initialize_run_folder(path=None) -> str:
+    if path is None:
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        run_dir = RESULTS_BASE_DIR / timestamp
+    else: 
+        run_dir = Path(path)
     run_dir.mkdir(parents=True, exist_ok=True)
     return str(run_dir)
 
@@ -67,6 +70,7 @@ def main() -> None:
 
     # Initialize run folder and save input
     storage_path = initialize_run_folder()
+    subdirectory_path = initialize_run_folder(storage_path + "/run_group")
     save_stage(app_data, "00_Metadata", storage_path)
 
     #____________________________________________________________
@@ -85,6 +89,7 @@ def main() -> None:
         "llm_model": LLM_MODEL,
         "temperature": float(TEMPERATURE),
         "storage_path": storage_path,
+        "subdirectory_path": subdirectory_path,
         "current_group_index": 0
     }
 
