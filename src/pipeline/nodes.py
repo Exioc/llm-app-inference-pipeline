@@ -6,8 +6,13 @@ from src.utils.save_stage import save_stage
 from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
 from src.models.llm import function_llm, group_llm
+
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableConfig
+
+from langgraph.constants import Send
+import operator
+from typing import Annotated, TypedDict
 
 def preprocess_node(state: PipelineState):
     metadata = state["metadata"]
@@ -121,3 +126,16 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
         save_stage(temp_state, "03_group_permission")
 
     return state_update
+
+    # def parallel_router(state: PipelineState):
+    # # Wir erstellen für jedes Feature einen eigenen, parallelen "Send"-Befehl
+    # # Send("Name_des_Ziel_Nodes", "Input_für_diesen_spezifischen_Node")
+    # return [
+    #     Send("group_node", {"features": [feature], "accumulated_results": []}) 
+    #     for feature in state["features"]
+    # ]
+
+    # class PipelineState(TypedDict):
+    # features: list[dict]          # Wird von Node A befüllt
+    # # Der Reducer sammelt die parallelen Ergebnisse atomar auf:
+    # accumulated_results: Annotated[list[dict], operator.add]

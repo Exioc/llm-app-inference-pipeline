@@ -3,11 +3,11 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-#from src.pipeline.state import AppMetadata
 from src.schemas.app_data_schema import AppMetadata
 from src.pipeline.graph import build_app
 from src.utils.notify_me import notification
-from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY, load_permission_groups ,load_permissions_by_groups, LANGSMITH_TRACING
+from src.config.config import RESULTS_BASE_DIR, LLM_MODEL, TEMPERATURE, OLLAMA_BASE_URL, OLLAMA_API_KEY, LANGSMITH_TRACING, load_permission_groups ,load_permissions_by_groups, llm_group_config
+from src.utils.create_llm import create_llm_pool
 
 # Helper-function to read a specific line from a JSONL file
 def get_jsonl_line(file_path: str, line_number: int):
@@ -75,6 +75,7 @@ def main() -> None:
 
     #____________________________________________________________
 
+    llm_group_list = create_llm_pool(llm_group_config)
     permission_groups_model = load_permission_groups()
     permissions_by_group_model = load_permissions_by_groups()
 
@@ -99,6 +100,7 @@ def main() -> None:
     final_state = app.invoke(
         initial_input,
         {"configurable": {
+            "llm_group_list": llm_group_list,
             "permission_groups": permission_groups_model,
             "permissions_by_group": permissions_by_group_model
         }}

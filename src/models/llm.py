@@ -14,3 +14,16 @@ llm = ChatOllama(
 function_llm = llm.with_structured_output(FunctionalityResult)
 
 group_llm = llm.with_structured_output(SingleFeatureGroupsResult)
+
+def create_llms(model_names):
+    llms = {}
+
+    for i, model in enumerate(model_names, start=1):
+        llms[f"llm_{i}"] = ChatOllama(
+            model=model,
+            temperature=TEMPERATURE,
+            base_url=OLLAMA_BASE_URL,
+            client_kwargs={ "headers": { "Authorization": f"Bearer {OLLAMA_API_KEY}"}}
+        )
+
+    return llms

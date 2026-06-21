@@ -1,0 +1,19 @@
+{
+  "models": [
+    {
+      "model": "llama3.2",
+      "temperature": 1.0,
+      "role": "group"
+    },
+    {
+      "model": "nemotron3",
+      "temperature": 1.0,
+      "role": "group"
+    },
+    {
+      "model": "gemma4:26b",
+      "temperature": 1.0,
+      "role": "group"
+    }
+  ]
+}
