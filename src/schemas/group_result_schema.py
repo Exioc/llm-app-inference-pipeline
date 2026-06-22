@@ -33,6 +33,10 @@ class PermissionGroupsContainer(BaseModel):
         description="The detailed, multi-sentence description of what the feature does."
     )
 
+    inferred_by_model: str = Field(
+        description="Which model was used to perform the inference "
+    )
+
     inferences: List[GroupInference] = Field(
         default_factory=list,
         description=(

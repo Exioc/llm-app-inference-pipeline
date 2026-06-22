@@ -100,6 +100,7 @@ def main() -> None:
     final_state = app.invoke(
         initial_input,
         {"configurable": {
+            "current_branch_index": 0,
             "llm_group_list": llm_group_list,
             "permission_groups": permission_groups_model,
             "permissions_by_group": permissions_by_group_model

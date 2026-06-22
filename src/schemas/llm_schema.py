@@ -9,4 +9,4 @@ class ConfiguredLLM(BaseModel):
     model: str          
     temperature: float
     role: str
-    instance: BaseChatModel | Runnable # KORREKTUR: Erlaube BaseChatModel ODER ein Runnable (das strukturierte LLM)
+    instance: BaseChatModel | Runnable # Erlaube BaseChatModel ODER ein Runnable (das strukturierte LLM)
