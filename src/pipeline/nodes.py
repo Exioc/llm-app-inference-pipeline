@@ -14,6 +14,7 @@ from langgraph.constants import Send
 import operator
 from typing import Annotated, TypedDict
 from src.schemas.llm_schema import ConfiguredLLM
+from src.utils.save_dict_to_json import save_dict_to_json
 
 def preprocess_node(state: PipelineState):
     metadata = state["metadata"]
@@ -142,7 +143,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     idx = config["configurable"].get("current_branch_index", 0)
 
     # 2. Aktuelles Feature holen
-    #idx = state["current_group_index"]
+    idx = state["current_group_index"]
     functionality_features = state["functionality_result"].features
     current_feature = functionality_features[idx]
 
@@ -172,30 +173,61 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     
     state_update = {
         "group_permissions_result": PermissionGroupsResult(features=updated_features),
-        "current_llm_model": target_model_name
-        #"current_group_index": idx + 1
+        "current_llm_model": target_model_name,
+        "current_group_index": idx + 1
     }
-    next_idx = idx + 1
-    config["configurable"]["current_branch_index"] = next_idx
+
+    #next_idx = idx + 1
+    #config["configurable"]["current_branch_index"] = next_idx
 
     # 6. Deine originale Speicher-Logik nach der letzten Iteration dieses Modells
-    #if state_update["current_group_index"] == state["number_of_features"]:
-    if next_idx == state["number_of_features"]:
-        temp_state = {**state, **state_update}
-        # Wir hängen den Modellnamen an den Dateinamen, damit sich die Speicherstände nicht überschreiben
-        save_stage(temp_state, f"{target_model_name}", True)
+    #if state["current_group_index"] == state["number_of_features"]:
+    
+    if state_update["current_group_index"] == state["number_of_features"]:
+        save_output = {
+            "group_permissions_result": PermissionGroupsResult(features=updated_features)
+        }
+        save_dict_to_json(save_output, state.get("subdirectory_path", "results/unknown_run"), f"{target_model_name}.json")
+
+    # if state_update["current_group_index"] == state["number_of_features"]:
+    #     temp_state = {**state, **state_update}
+    #     # Wir hängen den Modellnamen an den Dateinamen, damit sich die Speicherstände nicht überschreiben
+    #     save_stage(temp_state, f"{target_model_name}", True)
         
     return state_update
 
 def aggregate_node(state: PipelineState) -> dict:
-    # Hier kommen ALLE Ergebnisse aller Modelle zusammen!
-    all_inferences = state.get("group_permissions_result", [])
+    # 1. Hol das Pydantic-Ergebnis aus dem State
+    raw_results = state.get("group_permissions_result")
     
-    print(f"Aggriere {len(all_inferences)} Ergebnisse aus den parallelen LLM-Läufen...")
+    # 2. Wir ziehen die Features als rohe Dictionaries heraus
+    all_inferences_dicts = []
     
-    # Beispiel-Logik: Gruppiere die Vorhersagen nach Feature-Titel
+    if raw_results:
+        # Fall A: Es liefen mehrere Branches und der Reducer hat ein PermissionGroupsResult geliefert
+        # Oder es lief nur ein Branch und lieferte direkt das PermissionGroupsResult
+        if hasattr(raw_results, "features"):
+            # Wir wandeln jedes Feature-Pydantic-Modell in ein normales Dict um
+            all_inferences_dicts = [
+                f if isinstance(f, dict) else f.model_dump() 
+                for f in raw_results.features
+            ]
+        # Fall B: Sicherheitsnetz, falls es doch als Liste von Objekten reinkommt
+        elif isinstance(raw_results, list):
+            for res in raw_results:
+                if hasattr(res, "features"):
+                    all_inferences_dicts.extend([
+                        f if isinstance(f, dict) else f.model_dump() for f in res.features
+                    ])
+                elif isinstance(res, dict):
+                    all_inferences_dicts.extend(res.get("features", []))
+
+    # Jetzt ist 'all_inferences_dicts' GARANTIERT eine flache Liste aus Dicts!
+    print(f"Aggriere {len(all_inferences_dicts)} Ergebnisse aus den parallelen LLM-Läufen...")
+    
+    # Deine originale Logik funktioniert jetzt wieder zu 100 %, da 'entry' ein Dict ist!
     aggregated_features = {}
-    for entry in all_inferences:
+    for entry in all_inferences_dicts:
         title = entry["title"]
         if title not in aggregated_features:
             aggregated_features[title] = {
@@ -206,15 +238,28 @@ def aggregate_node(state: PipelineState) -> dict:
         
         # Sammle, welches Modell welche Inferences gezogen hat
         aggregated_features[title]["raw_model_outputs"].append({
-            "model": entry["inferred_by_model"],
+            "model": entry.get("inferred_by_model", "unknown_model"),
             "inferences": entry["inferences"]
         })
     
-    # Hier kannst du jetzt ein finales "Mehrheits-Voting" berechnen 
-    # oder die Daten für dein finales JSON-Schema aufbereiten.
+    # Finales JSON-Schema aufbereiten
     final_features_list = list(aggregated_features.values())
-    
-    # Wir speichern das bereinigte, finale Ergebnis in einem neuen State-Key ab
+
+    state_update = {
+        "final_aggregated_result": final_features_list,
+        "group_permissions_result": PermissionGroupsResult(features=[])
+    }
+
+    # Hier fügen wir die Rückgabe sauber in den restlichen State ein
+    temp_state = {
+        **state,
+        **state_update
+    }
+
+    # Speichern des aggregierten Zwischenstands
+    save_stage(temp_state, "03_group_permission_arg")
+
+    # Speichern im neuen State-Key
     return {
         "final_aggregated_result": final_features_list
     }

@@ -4,6 +4,11 @@
       "model": "llama3.3:70b",
       "temperature": 1.0,
       "role": "group"
+    },
+    {
+      "model": "nemotron3:33b",
+      "temperature": 1.0,
+      "role": "group"
     }
   ]
 }

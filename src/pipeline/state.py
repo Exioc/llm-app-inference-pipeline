@@ -24,6 +24,11 @@ def merge_permission_results(left: PermissionGroupsResult, right: PermissionGrou
 def take_last_reducer(left: str, right: str) -> str:
     return right or left
 
+def take_any_index_reducer(left: int | None, right: int | None) -> int:
+    if right is not None:
+        return right
+    return left if left is not None else 0
+
 # State for the Pipeline
 class PipelineState(TypedDict, total=False):
 
@@ -42,7 +47,7 @@ class PipelineState(TypedDict, total=False):
 
     # Result from group permission filter
     group_permissions_result: Annotated[PermissionGroupsResult, merge_permission_results]
-    current_group_index: int
+    current_group_index: Annotated[int, take_any_index_reducer]
 
     # Execution config
     llm_model: str

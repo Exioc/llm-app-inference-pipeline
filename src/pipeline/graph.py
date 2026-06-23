@@ -25,8 +25,8 @@ def route_dynamic_group_nodes(state: PipelineState, config: RunnableConfig):
         # Wir isolieren den State für jedes LLM komplett
         node_state_arguments = {
             **state,
-            "current_llm_model": configured_llm.model
-            #"current_group_index": 0
+            "current_llm_model": configured_llm.model,
+            "current_group_index": 0
             #"group_permissions_result": []
         }
         
@@ -36,8 +36,8 @@ def route_dynamic_group_nodes(state: PipelineState, config: RunnableConfig):
 
 def decide_group_loop(state: PipelineState, config: RunnableConfig) -> str:
     current_idx = config["configurable"].get("current_branch_index", 0)
-    #if state.get("current_group_index", 0) < state.get("number_of_features", 0):
-    if current_idx < state.get("number_of_features", 0):
+    #if current_idx < state.get("number_of_features", 0):
+    if state.get("current_group_index", 0) < state.get("number_of_features", 0):
         return "loop"
     else:
         return "end"
