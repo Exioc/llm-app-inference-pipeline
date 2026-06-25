@@ -3,17 +3,18 @@ from langgraph.constants import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.llm import ConfiguredLLM
+from src.models.llm_worker import LLMWorker
+from src.schemas.llm import LLMConfig
 from src.pipeline.state import PipelineState
-from src.pipeline.nodes import preprocess_node, functionality_node, group_node, aggregate_node
+from src.pipeline.nodes import preprocess_node, functionality_node, group_node, group_aggregate_node
 
 logger = logging.getLogger(__name__)
 
 def route_to_all_models_and_features(state: PipelineState, config: RunnableConfig) -> list[Send]:
 
     # Get the list of configured LLMs from the config
-    llm_group_list: list[ConfiguredLLM] = config["configurable"].get("llm_group_list", [])
-    model_names = [llm.model for llm in llm_group_list]
+    llm_group_list: list[LLMWorker] = config["configurable"].get("llm_group_list", [])
+    model_names = [llm.config.model for llm in llm_group_list]
     
     # Get the number of features to process from the state
     num_features = state.get("number_of_features", 0)
@@ -45,7 +46,7 @@ def build_app():
     workflow.add_node("preprocess", preprocess_node)
     workflow.add_node("function", functionality_node)
     workflow.add_node("group", group_node)
-    workflow.add_node("aggregate", aggregate_node)
+    workflow.add_node("aggregate", group_aggregate_node)
 
     # Edges
     workflow.add_edge(START, "preprocess")

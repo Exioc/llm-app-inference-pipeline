@@ -30,6 +30,9 @@ class FunctionalityExtractionContainer(BaseModel):
     )
 
 class FunctionalityResult(BaseModel):
+    inferred_by_model: str = Field(
+        description="Which model was used to perform the inference "
+    )
     features: List[FunctionalityExtractionContainer] = Field(
         description=(
             "List of all extracted features. Granularity rule: Bundle sub-features that belong together "

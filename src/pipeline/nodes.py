@@ -2,12 +2,12 @@ import logging
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
+from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
 from src.utils.save_state import save_state
 from src.utils.b64_decode import b64_decode
 from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
-from src.models.llm import function_llm
 from src.schemas.group_result import (
     PermissionGroupsResult,
     GroupInferenceAggregate,
@@ -17,7 +17,7 @@ from src.schemas.group_result import (
 
 logger = logging.getLogger(__name__)
 
-def preprocess_node(state: PipelineState):
+def preprocess_node(state: PipelineState) -> dict:
     metadata = state["metadata"]
 
     # Base64 Decoding
@@ -34,8 +34,6 @@ def preprocess_node(state: PipelineState):
         "pkg": metadata.pkg,
         "label": label,
         "description_long": description,
-        "llmodel": state["llm_model"],
-        "temperature": state["temperature"],
         "storage_path": state["storage_path"],
         "permissions_map": flattened_perms,
         "metadata": None
@@ -48,48 +46,41 @@ def preprocess_node(state: PipelineState):
     return updates
         
 
-def functionality_node(state: PipelineState):
+def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
+    # Get LLM
+    llm_group_list = config["configurable"].get("llm_func_list", [])
+    llm = llm_group_list[0]
+
     messages = FUNCTIONALITY_PROMPT.invoke({
         "label": state["label"],
         "description": state["description_long"]
     })
 
-    try:
-        result = function_llm.invoke(messages)
-    except Exception as e:
-        # Use logger.error for failures. 
-        logger.error(f"LLM invocation or parsing failed: {repr(e)}")
+    result = llm.run(messages)
+    result.inferred_by_model = llm.config.model
     
-        try:
-            if isinstance(e, OutputParserException) and hasattr(e, 'llm_output'):
-                # Log the raw text that failed the parsing stage
-                logger.error(f"Raw LLM output:\n{e.llm_output}")
-        except Exception:
-            pass
-        raise
-    
-    number = len(result.features)
+    number_of_features = len(result.features) if result.features else 0
 
     temp_state = {
         **state, 
         **result.model_dump(),
-        "number_of_features": number
+        "number_of_features": number_of_features
     }
     save_state(temp_state, "02_functionality_extraction")
 
-    logger.info(f"Feature extraction finished. Found {number} features.")
+    logger.info(f"Feature extraction finished. Found {number_of_features} features.")
 
     return {
         "functionality_result": result,
-        "number_of_features": number
+        "number_of_features": number_of_features
     }
 
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     # Get the target model
     target_model_name = state["current_llm_model"]
     llm_group_list = config["configurable"].get("llm_group_list", [])
-    chosen_llm = next((item for item in llm_group_list if item.model == target_model_name), None)
-    group_llm = chosen_llm.instance 
+    chosen_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
+    group_llm = chosen_llm
     
     # Get the permission groups as JSON string for the prompt
     permission_groups = config["configurable"].get("permission_groups")
@@ -107,8 +98,8 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     })
     
     # Make the LLM call to infer permission groups for the current feature
-    result = group_llm.invoke(messages)      
-   
+    result = group_llm.run(messages)
+
     # Save the result as a new entry in the state
     new_feature_entry = {
         "title": current_feature.functionality,       
@@ -121,7 +112,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
         "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
     }
 
-def aggregate_node(state: PipelineState) -> dict:
+def group_aggregate_node(state: PipelineState) -> dict:
     logger.info("Group analysis finished across all instances.")
    
     # Get data from the state

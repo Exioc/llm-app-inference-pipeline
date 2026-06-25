@@ -1,4 +1,4 @@
-from typing import TypedDict, Dict, Optional, List, Any, Annotated
+from typing import TypedDict, Dict, List, Annotated
 
 from src.schemas.app_data import AppMetadata
 from src.schemas.group_result import PermissionGroupsAggregateResult, PermissionGroupsResult
@@ -22,6 +22,8 @@ def take_any_index_reducer(left: int | None, right: int | None) -> int:
 # State for the Pipeline
 class PipelineState(TypedDict, total=False):
 
+    storage_path: str
+
     # Raw input
     metadata: AppMetadata
 
@@ -37,13 +39,8 @@ class PipelineState(TypedDict, total=False):
 
     # Result from group permission filter
     group_permissions_result: Annotated[PermissionGroupsResult, merge_permission_results]
-
-    # Execution config
-    llm_model: str
-    temperature: float
-    storage_path: str
-
+    # Helper information 
     current_llm_model: Annotated[str, take_last_reducer]
     current_feature_index: Annotated[int, take_any_index_reducer]
-    final_aggregated_result: list
+
     permission_groups_aggregate_result: PermissionGroupsAggregateResult

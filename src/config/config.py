@@ -14,6 +14,7 @@ DIR = Path(__file__).resolve().parent.parent
 #Paths
 PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
+LLM_FUNC_CONFIG_PATH = Path(DIR /"config/presets/llm_func_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
 RESULTS_BASE_DIR = Path("results")
 UNKNOWN_RUN_DIR = RESULTS_BASE_DIR / "unknown_run"
@@ -25,8 +26,6 @@ UNKNOWN_RUN_DIR.mkdir(parents=True, exist_ok=True)
 # Load environment variables
 OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY")
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL")
-LLM_MODEL = os.getenv("LLM_MODEL")
-TEMPERATURE = float(os.getenv("TEMPERATURE", "1.0"))
 LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING")
 
 class ExcludeHTTPXFilter(logging.Filter):
@@ -82,4 +81,5 @@ def load_llm_config(path: Path) -> list[dict]:
         data = json.load(f)
     return data.get("models", [])
 
+llm_func_config =  load_llm_config(LLM_FUNC_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)

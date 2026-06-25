@@ -7,15 +7,14 @@ from src.utils.b64_decode import b64_decode
 from src.utils.notify_me import notification
 from src.utils.initialize_run_folder import initialize_run_folder
 from src.utils.get_jsonl_line import get_jsonl_line
-from src.utils.create_llm import create_llm_pool
+from src.utils.create_llm_pool import create_llm_pool
 from src.schemas.app_data import AppMetadata
 from src.config.config import (
-    LLM_MODEL,
-    TEMPERATURE,
     LANGSMITH_TRACING,
     load_permission_groups,
     load_permissions,
     setup_logging,
+    llm_func_config,
     llm_group_config,
 )
 
@@ -46,6 +45,7 @@ def main() -> None:
     save_state(app_data, "00_Metadata", storage_path)
 
     # Create LLM pool based on the configuration
+    llm_func_list = create_llm_pool(llm_func_config)
     llm_group_list = create_llm_pool(llm_group_config)
 
     # Load permission groups and permissions
@@ -58,8 +58,6 @@ def main() -> None:
     # Input for the pipeline
     initial_input = {
         "metadata": app_data,
-        "llm_model": LLM_MODEL,
-        "temperature": float(TEMPERATURE),
         "storage_path": storage_path
     }
 
@@ -73,7 +71,7 @@ def main() -> None:
         initial_input,
         {
             "configurable": {
-                "current_branch_index": 0,
+                "llm_func_list": llm_func_list,
                 "llm_group_list": llm_group_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
