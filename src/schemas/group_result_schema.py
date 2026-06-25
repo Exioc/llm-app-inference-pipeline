@@ -40,10 +40,35 @@ class PermissionGroupsContainer(BaseModel):
     inferences: List[GroupInference] = Field(
         default_factory=list,
         description=(
-            "The detailed Android permission group inferences for this feature. "
-            "Initialized as an empty list, filled with rich metadata (reasoning, quotes) by the filter node."
+          "The detailed Android permission group inferences for this feature." 
+          "Initialized as an empty list and filled with metadata including reasoning models by the group node."
         )
     )
 
 class PermissionGroupsResult(BaseModel):
     features: List[PermissionGroupsContainer]
+
+class GroupInferenceAggregate(GroupInference):
+    models_inferred: List[str] = Field(
+        default_factory=list,
+        description="List of all LLM model names that inferred this group."
+    )
+
+class PermissionGroupsAggregateContainer(BaseModel):
+    title: str = Field(
+        description="The distinct English name of the extracted app feature."
+    )
+    description: str = Field(
+        description="The detailed, multi-sentence description of what the feature does."
+    )
+
+    inferences: List[GroupInferenceAggregate] = Field(
+        default_factory=list,
+        description=(
+            "Contains all Android permission groups inferred for this feature, together with metadata including reasoning and the LLM models that contributed to each inference." 
+            "Empty if no groups were inferred."
+        )
+    )
+
+class PermissionGroupsAggregateResult(BaseModel):
+    features: List[PermissionGroupsAggregateContainer]

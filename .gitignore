@@ -219,6 +219,7 @@ __marimo__/
 
 # Project-specific
 results/
+logs/
 
 # OS-Specific
 .directory

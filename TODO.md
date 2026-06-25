@@ -1,0 +1,7 @@
+- [ ] Sort function for save_state
+- [ ] Few-shots for group
+- [ ] Clean up State Model
+- [ ] Clean legacy code & prints
+- [ ] Refactor project & naming
+- [ ] Add stage flags
+- [ ] Add try-except handling

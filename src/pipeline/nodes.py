@@ -1,33 +1,28 @@
-import base64
-
-from src.pipeline.state import PipelineState
-from src.schemas.group_result_schema import PermissionGroupsContainer, PermissionGroupsResult
-from src.utils.save_stage import save_stage
-from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
-from src.prompts.group_prompt import GROUP_PROMPT
-from src.models.llm import function_llm, group_llm
-
-from langchain_core.prompts import ChatPromptTemplate
+import logging
+from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
-from langgraph.constants import Send
-import operator
-from typing import Annotated, TypedDict
-from src.schemas.llm_schema import ConfiguredLLM
-from src.utils.save_dict_to_json import save_dict_to_json
+from src.pipeline.state import PipelineState
+from src.utils.save_state import save_state
+from src.utils.b64_decode import b64_decode
+from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
+from src.prompts.group_prompt import GROUP_PROMPT
+from src.models.llm import function_llm
+from src.schemas.group_result_schema import (
+    PermissionGroupsResult,
+    GroupInferenceAggregate,
+    PermissionGroupsAggregateContainer,
+    PermissionGroupsAggregateResult
+)
+
+logger = logging.getLogger(__name__)
 
 def preprocess_node(state: PipelineState):
     metadata = state["metadata"]
 
     # Base64 Decoding
-    def safe_decode(b64_str):
-        try:
-            return base64.b64decode(b64_str).decode('utf-8')
-        except:
-            return b64_str
-
-    label = safe_decode(metadata.label)
-    description = safe_decode(metadata.description.long)
+    label = b64_decode(metadata.label)
+    description = b64_decode(metadata.description.long)
 
     # Flatten permissions: Category -> List of strings
     flattened_perms = {
@@ -46,7 +41,9 @@ def preprocess_node(state: PipelineState):
         "metadata": None
     }
     temp_state = {**state, **updates}
-    save_stage(temp_state, "01_preprocessing")
+    save_state(temp_state, "01_preprocessing")
+
+    logger.info("Preprocessing finished.")
 
     return updates
         
@@ -60,11 +57,13 @@ def functionality_node(state: PipelineState):
     try:
         result = function_llm.invoke(messages)
     except Exception as e:
-        print("LLM invocation or parsing failed:", repr(e))
+        # Use logger.error for failures. 
+        logger.error(f"LLM invocation or parsing failed: {repr(e)}")
+    
         try:
-            from langchain_core.exceptions import OutputParserException
             if isinstance(e, OutputParserException) and hasattr(e, 'llm_output'):
-                print("Raw LLM output:\n", e.llm_output)
+                # Log the raw text that failed the parsing stage
+                logger.error(f"Raw LLM output:\n{e.llm_output}")
         except Exception:
             pass
         raise
@@ -76,91 +75,41 @@ def functionality_node(state: PipelineState):
         **result.model_dump(),
         "number_of_features": number
     }
+    save_state(temp_state, "02_functionality_extraction")
 
-    save_stage(temp_state, "02_functionality_extraction")
+    logger.info(f"Feature extraction finished. Found {number} features.")
 
     return {
         "functionality_result": result,
         "number_of_features": number
     }
 
-# def group_node(state: PipelineState, config: RunnableConfig) -> dict:
-#     permission_groups = config["configurable"].get("permission_groups")
-#     context_string = permission_groups.model_dump_json(indent=2)
-    
-#     idx = state["current_group_index"]
-    
-#     # Get the current feature
-#     functionality_features = state["functionality_result"].features
-#     current_feature = functionality_features[idx]
-
-#     # Get previous group results to maintain state across iterations
-#     current_group_results = state.get("group_permissions_result", {}).get("features", [])
-#     updated_features = [item.copy() for item in current_group_results]
-
-#     # LLM-call with context of all permission groups and the current feature
-#     messages = GROUP_PROMPT.invoke({
-#         "allowed_context": context_string,
-#         "label": current_feature.functionality,
-#         "description": current_feature.description
-#     })
-#     result = group_llm.invoke(messages)      
-   
-#     # Create a new entry for the current feature with its inferred permissions groups
-#     new_feature_entry = {
-#         "title": current_feature.functionality,       
-#         "description": current_feature.description,   
-#         "inferences": [item.model_dump() for item in result.inferences]
-#     }
-    
-#     # Add the new feature entry to the list of features
-#     updated_features.append(new_feature_entry)
-    
-#     # Return state
-#     state_update = {
-#         "group_permissions_result": {"features": updated_features},
-#         "current_group_index": idx + 1
-#     }
-
-#     # Save state answer after last iteration
-#     if state_update["current_group_index"] == state["number_of_features"]:
-#         temp_state = {**state, **state_update}
-#         save_stage(temp_state, "03_group_permission")
-
-#     return state_update
-
-# Nested Loop / Parallel-Map-with-Internal-Loop
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
-    permission_groups = config["configurable"].get("permission_groups")
-    context_string = permission_groups.model_dump_json(indent=2)
-    
-    # 1. Dynamisches LLM für diesen spezifischen Ast holen
+    # Get the target model
     target_model_name = state["current_llm_model"]
-    llm_group_list: list[ConfiguredLLM] = config["configurable"].get("llm_group_list", [])
+    llm_group_list = config["configurable"].get("llm_group_list", [])
     chosen_llm = next((item for item in llm_group_list if item.model == target_model_name), None)
     group_llm = chosen_llm.instance 
     
-    idx = config["configurable"].get("current_branch_index", 0)
-
-    # 2. Aktuelles Feature holen
-    idx = state["current_group_index"]
-    functionality_features = state["functionality_result"].features
-    current_feature = functionality_features[idx]
-
-    # Get previous group results to maintain state across iterations
-    #current_group_results = state.get("group_permissions_result", {}).get("features", [])
-    current_group_results = getattr(state.get("group_permissions_result"), "features", [])
-    updated_features = [item.copy() for item in current_group_results]
-
-    # --- LLM Aufruf ---
+    # Get the permission groups as JSON string for the prompt
+    permission_groups = config["configurable"].get("permission_groups")
+    context_string = permission_groups.model_dump_json(indent=2)
+    
+    # Get the target feature for this node
+    feature_idx = state["current_feature_index"]
+    current_feature = state["functionality_result"].features[feature_idx]
+    
+    # Prepare the prompt for the LLM
     messages = GROUP_PROMPT.invoke({
         "allowed_context": context_string,
         "label": current_feature.functionality,
         "description": current_feature.description
     })
+    
+    # Make the LLM call to infer permission groups for the current feature
     result = group_llm.invoke(messages)      
    
-    # 4. Neuen Eintrag für das aktuelle Feature erstellen
+    # Save the result as a new entry in the state
     new_feature_entry = {
         "title": current_feature.functionality,       
         "description": current_feature.description,
@@ -168,98 +117,106 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
         "inferences": [item.model_dump() for item in result.inferences]
     }
     
-    # Das neue Feature an die Historie DIESES Modells anhängen
-    updated_features.append(new_feature_entry)
-    
-    state_update = {
-        "group_permissions_result": PermissionGroupsResult(features=updated_features),
-        "current_llm_model": target_model_name,
-        "current_group_index": idx + 1
+    return {
+        "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
     }
-
-    #next_idx = idx + 1
-    #config["configurable"]["current_branch_index"] = next_idx
-
-    # 6. Deine originale Speicher-Logik nach der letzten Iteration dieses Modells
-    #if state["current_group_index"] == state["number_of_features"]:
-    
-    if state_update["current_group_index"] == state["number_of_features"]:
-        save_output = {
-            "group_permissions_result": PermissionGroupsResult(features=updated_features)
-        }
-        save_dict_to_json(save_output, state.get("subdirectory_path", "results/unknown_run"), f"{target_model_name}.json")
-
-    # if state_update["current_group_index"] == state["number_of_features"]:
-    #     temp_state = {**state, **state_update}
-    #     # Wir hängen den Modellnamen an den Dateinamen, damit sich die Speicherstände nicht überschreiben
-    #     save_stage(temp_state, f"{target_model_name}", True)
-        
-    return state_update
 
 def aggregate_node(state: PipelineState) -> dict:
-    # 1. Hol das Pydantic-Ergebnis aus dem State
-    raw_results = state.get("group_permissions_result")
+    logger.info("Group analysis finished across all instances.")
+   
+    # Get data from the state
+    raw_result = state.get("group_permissions_result")
+    if not raw_result:
+        return {"permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=[])}
     
-    # 2. Wir ziehen die Features als rohe Dictionaries heraus
-    all_inferences_dicts = []
-    
-    if raw_results:
-        # Fall A: Es liefen mehrere Branches und der Reducer hat ein PermissionGroupsResult geliefert
-        # Oder es lief nur ein Branch und lieferte direkt das PermissionGroupsResult
-        if hasattr(raw_results, "features"):
-            # Wir wandeln jedes Feature-Pydantic-Modell in ein normales Dict um
-            all_inferences_dicts = [
-                f if isinstance(f, dict) else f.model_dump() 
-                for f in raw_results.features
-            ]
-        # Fall B: Sicherheitsnetz, falls es doch als Liste von Objekten reinkommt
-        elif isinstance(raw_results, list):
-            for res in raw_results:
-                if hasattr(res, "features"):
-                    all_inferences_dicts.extend([
-                        f if isinstance(f, dict) else f.model_dump() for f in res.features
-                    ])
-                elif isinstance(res, dict):
-                    all_inferences_dicts.extend(res.get("features", []))
+    # Get features list from the raw result, handling both object and dict cases
+    features_list = getattr(raw_result, "features", []) if hasattr(raw_result, "features") else raw_result.get("features", [])
 
-    # Jetzt ist 'all_inferences_dicts' GARANTIERT eine flache Liste aus Dicts!
-    print(f"Aggriere {len(all_inferences_dicts)} Ergebnisse aus den parallelen LLM-Läufen...")
-    
-    # Deine originale Logik funktioniert jetzt wieder zu 100 %, da 'entry' ein Dict ist!
-    aggregated_features = {}
-    for entry in all_inferences_dicts:
-        title = entry["title"]
-        if title not in aggregated_features:
-            aggregated_features[title] = {
+    # Dict to hold aggregated data: {feature_title: {group_name: {reasoning, models_inferred}}}
+    aggregated_data: Dict[str, Dict[str, Any]] = {}
+
+    # Iterate over each feature container to aggregate group inferences
+    for container in features_list:
+        # Extract title, description, model name, and inferences, handling both Pydantic objects and dicts
+        title = getattr(container, "title", None) or container.get("title")
+        description = getattr(container, "description", None) or container.get("description")
+        model_name = getattr(container, "inferred_by_model", None) or container.get("inferred_by_model")
+        inferences = getattr(container, "inferences", []) or container.get("inferences", [])
+
+        if not title:
+            continue
+
+        # Initialize the feature entry in the aggregated data if it doesn't exist
+        if title not in aggregated_data:
+            aggregated_data[title] = {
                 "title": title,
-                "description": entry["description"],
-                "raw_model_outputs": []
+                "description": description,
+                "groups_map": {}
             }
+
+        # Iterate over each inference to aggregate group names and reasoning
+        for inf in inferences:
+            if isinstance(inf, dict):
+                g_name = inf.get("group_name")
+                reasoning = inf.get("reasoning")
+            else:
+                g_name = getattr(inf, "group_name", None)
+                reasoning = getattr(inf, "reasoning", None)
+
+            if not g_name:
+                continue
+
+            # Remove spaces and convert to uppercase for normalization, if the llm model copy the group name directly
+            normalized_g_name = g_name.replace(" ", "").upper()
+
+            # if the group name is not already in the map for this feature, initialize it
+            if normalized_g_name not in aggregated_data[title]["groups_map"]:
+                aggregated_data[title]["groups_map"][normalized_g_name] = {
+                    "group_name": normalized_g_name,
+                    "reasoning": reasoning,
+                    "models_inferred": []
+                }
+
+            # Add the llm model name to the list of models that inferred this group
+            if model_name and model_name not in aggregated_data[title]["groups_map"][normalized_g_name]["models_inferred"]:
+                aggregated_data[title]["groups_map"][normalized_g_name]["models_inferred"].append(model_name)
+
+    # Now convert the aggregated data into the final output format
+    final_features: List[PermissionGroupsAggregateContainer] = []
+
+    for title, data in aggregated_data.items():
+        container_inferences: List[GroupInferenceAggregate] = []
         
-        # Sammle, welches Modell welche Inferences gezogen hat
-        aggregated_features[title]["raw_model_outputs"].append({
-            "model": entry.get("inferred_by_model", "unknown_model"),
-            "inferences": entry["inferences"]
-        })
-    
-    # Finales JSON-Schema aufbereiten
-    final_features_list = list(aggregated_features.values())
+        for norm_name, group_data in data["groups_map"].items():
+            container_inferences.append(
+                GroupInferenceAggregate(
+                    group_name=group_data["group_name"],
+                    reasoning=group_data["reasoning"],
+                    models_inferred=group_data["models_inferred"]
+                )
+            )
+
+        final_features.append(
+            PermissionGroupsAggregateContainer(
+                title=data["title"],
+                description=data["description"],
+                inferences=container_inferences
+            )
+        )
 
     state_update = {
-        "final_aggregated_result": final_features_list,
-        "group_permissions_result": PermissionGroupsResult(features=[])
+        "permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=final_features)
     }
 
-    # Hier fügen wir die Rückgabe sauber in den restlichen State ein
     temp_state = {
         **state,
         **state_update
     }
 
-    # Speichern des aggregierten Zwischenstands
-    save_stage(temp_state, "03_group_permission_arg")
+    save_state(temp_state, "03_group_permission_arg")
 
-    # Speichern im neuen State-Key
+    logger.info("Aggregation group node analysis finished across all instances.")
+
     return {
-        "final_aggregated_result": final_features_list
+        "permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=final_features)
     }

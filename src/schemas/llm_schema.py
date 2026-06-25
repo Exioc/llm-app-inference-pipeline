@@ -3,10 +3,10 @@ from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.runnables import Runnable
 
 class ConfiguredLLM(BaseModel):
-    # Erlaubt es Pydantic, komplexe Objekte wie die von LangChain zu verwalten
+    # Arbitrary types allowed for BaseChatModel and Runnable
     model_config = ConfigDict(arbitrary_types_allowed=True)
     
     model: str          
     temperature: float
     role: str
-    instance: BaseChatModel | Runnable # Erlaube BaseChatModel ODER ein Runnable (das strukturierte LLM)
+    instance: BaseChatModel | Runnable
