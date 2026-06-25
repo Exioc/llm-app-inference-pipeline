@@ -1,8 +1,8 @@
 from langchain_ollama import ChatOllama
-from src.schemas.llm_schema import ConfiguredLLM
+from src.schemas.llm import ConfiguredLLM
 from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL
-from src.schemas.func_result_schema import FunctionalityResult
-from src.schemas.group_result_schema import SingleFeatureGroupsResult
+from src.schemas.func_result import FunctionalityResult
+from src.schemas.group_result import SingleFeatureGroupsResult
 
 def create_llm_pool(model_setup: list[dict]) -> list[ConfiguredLLM]:
     llm_pool = []

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from pydantic import BaseModel
 from src.pipeline.state import PipelineState
-from src.schemas.app_data_schema import AppMetadata
+from src.schemas.app_data import AppMetadata
 
 
 def save_state(state: PipelineState | AppMetadata, name: str, path=None) -> None:

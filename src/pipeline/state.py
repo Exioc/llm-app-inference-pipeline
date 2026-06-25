@@ -1,8 +1,8 @@
 from typing import TypedDict, Dict, Optional, List, Any, Annotated
 
-from src.schemas.app_data_schema import AppMetadata
-from src.schemas.group_result_schema import PermissionGroupsAggregateResult, PermissionGroupsResult
-from src.schemas.func_result_schema import FunctionalityResult
+from src.schemas.app_data import AppMetadata
+from src.schemas.group_result import PermissionGroupsAggregateResult, PermissionGroupsResult
+from src.schemas.func_result import FunctionalityResult
 
 
 def merge_permission_results(left: PermissionGroupsResult, right: PermissionGroupsResult) -> PermissionGroupsResult:

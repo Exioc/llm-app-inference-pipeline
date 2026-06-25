@@ -1,7 +1,7 @@
 from langchain_ollama import ChatOllama
 from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL, LLM_MODEL, TEMPERATURE
-from src.schemas.func_result_schema import FunctionalityResult
-from src.schemas.group_result_schema import SingleFeatureGroupsResult
+from src.schemas.func_result import FunctionalityResult
+from src.schemas.group_result import SingleFeatureGroupsResult
 
 # Define LLM with Ollama and structured output
 llm = ChatOllama(

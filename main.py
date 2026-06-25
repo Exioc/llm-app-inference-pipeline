@@ -8,7 +8,7 @@ from src.utils.notify_me import notification
 from src.utils.initialize_run_folder import initialize_run_folder
 from src.utils.get_jsonl_line import get_jsonl_line
 from src.utils.create_llm import create_llm_pool
-from src.schemas.app_data_schema import AppMetadata
+from src.schemas.app_data import AppMetadata
 from src.config.config import (
     LLM_MODEL,
     TEMPERATURE,

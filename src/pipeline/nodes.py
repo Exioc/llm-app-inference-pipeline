@@ -8,7 +8,7 @@ from src.utils.b64_decode import b64_decode
 from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
 from src.models.llm import function_llm
-from src.schemas.group_result_schema import (
+from src.schemas.group_result import (
     PermissionGroupsResult,
     GroupInferenceAggregate,
     PermissionGroupsAggregateContainer,

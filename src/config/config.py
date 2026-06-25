@@ -5,7 +5,7 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
-from src.schemas.driod_data_schema import PermissionGroupList, PermissionGroupDetailList
+from src.schemas.driod_data import PermissionGroupList, PermissionGroupDetailList
 
 load_dotenv()
 

@@ -3,7 +3,7 @@ from langgraph.constants import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.llm_schema import ConfiguredLLM
+from src.schemas.llm import ConfiguredLLM
 from src.pipeline.state import PipelineState
 from src.pipeline.nodes import preprocess_node, functionality_node, group_node, aggregate_node
 
