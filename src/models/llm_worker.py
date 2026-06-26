@@ -2,8 +2,8 @@ from langchain_core.prompt_values import PromptValue
 from langchain_core.runnables import Runnable
 from langchain_ollama import ChatOllama
 from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL
-from src.schemas.func_result import FunctionalityResult
-from src.schemas.group_result import SingleFeatureGroupsResult
+from src.schemas.func_result import FunctionalityOutput
+from src.schemas.group_result import SingleFeatureGroupsOutput
 from src.schemas.llm import LLMConfig
 
 class LLMWorker:
@@ -21,9 +21,9 @@ class LLMWorker:
             client_kwargs={"headers": {"Authorization": f"Bearer {OLLAMA_API_KEY}"}}
         )
         if self.config.role == "function": 
-            return llm.with_structured_output(FunctionalityResult)
+            return llm.with_structured_output(FunctionalityOutput)
         elif self.config.role == "group": 
-            return llm.with_structured_output(SingleFeatureGroupsResult)
+            return llm.with_structured_output(SingleFeatureGroupsOutput)
         else:
             return llm
 

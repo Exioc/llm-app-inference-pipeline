@@ -29,9 +29,32 @@ class FunctionalityExtractionContainer(BaseModel):
         )
     )
 
+class FunctionalityOutput(BaseModel):
+    features: List[FunctionalityExtractionContainer] = Field(
+        description=(
+            "List of all extracted features. Granularity rule: Bundle sub-features that belong together "
+            "and cannot stand alone (e.g., chat messaging + typing indicators). Isolate into a separate feature "
+            "ONLY if a completely distinct capability or unique interaction method (e.g., voice/video calling) "
+            "is introduced."
+        )
+    )
+
+class FunctionalityOutput(BaseModel):
+    features: List[FunctionalityExtractionContainer] = Field(
+        description=(
+            "List of all extracted features. Granularity rule: Bundle sub-features that belong together "
+            "and cannot stand alone (e.g., chat messaging + typing indicators). Isolate into a separate feature "
+            "ONLY if a completely distinct capability or unique interaction method (e.g., voice/video calling) "
+            "is introduced."
+        )
+    )
+
 class FunctionalityResult(BaseModel):
     inferred_by_model: str = Field(
         description="Which model was used to perform the inference "
+    )
+    number_of_features: int = Field(
+        description="Number of features found"
     )
     features: List[FunctionalityExtractionContainer] = Field(
         description=(

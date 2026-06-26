@@ -17,7 +17,7 @@ class GroupInference(BaseModel):
         )
     )
 
-class SingleFeatureGroupsResult(BaseModel):
+class SingleFeatureGroupsOutput(BaseModel):
     inferences: List[GroupInference] = Field(
         description=(
             "A list containing each inferred permission group along with its logical reasoning. "
@@ -46,8 +46,17 @@ class PermissionGroupsContainer(BaseModel):
     )
 
 class PermissionGroupsResult(BaseModel):
+    tmp_model: Optional[str] = Field(
+        default=None,
+        description="Temporary holder for the specific LLM model name assigned to this parallel execution branch."
+    )
+    tmp_feature_idx: Optional[int] = Field(
+        default=None,
+        description="Temporary zero-based index pointing to the exact feature array element processed by this task."
+    )
     features: List[PermissionGroupsContainer]
 
+# Aggregation
 class GroupInferenceAggregate(GroupInference):
     models_inferred: List[str] = Field(
         default_factory=list,

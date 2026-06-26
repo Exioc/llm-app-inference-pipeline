@@ -3,8 +3,8 @@ from langgraph.constants import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
+from src.schemas.group_result import PermissionGroupsResult
 from src.models.llm_worker import LLMWorker
-from src.schemas.llm import LLMConfig
 from src.pipeline.state import PipelineState
 from src.pipeline.nodes import preprocess_node, functionality_node, group_node, group_aggregate_node
 
@@ -17,23 +17,30 @@ def route_to_all_models_and_features(state: PipelineState, config: RunnableConfi
     model_names = [llm.config.model for llm in llm_group_list]
     
     # Get the number of features to process from the state
-    num_features = state.get("number_of_features", 0)
+    num_features = state["functionality_result"].number_of_features
     
     sends = []
     
     # Cross product of model names and feature indices to create Send objects for each combination
     for model_name in model_names:
         for idx in range(num_features):
+
+            permissiongroupsresult = PermissionGroupsResult(
+                tmp_model=model_name,
+                tmp_feature_idx=idx,
+                features=state.get("features", []) 
+            )
+
             sends.append(
                 Send(
                     "group", 
-                    {   **state,
-                        "current_llm_model": model_name,
-                        "current_feature_index": idx
+                    {
+                        **state,
+                        "permission_groups_result": permissiongroupsresult 
                     }
                 )
             )
-            
+
     logger.info(f"Analyzing groups via {len(sends)} parallel instances across {len(model_names)} LLM models.")
     return sends
 

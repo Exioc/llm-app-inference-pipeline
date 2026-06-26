@@ -2,7 +2,7 @@ import logging
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
-from src.models.llm_worker import LLMWorker
+from src.schemas.func_result import FunctionalityResult
 from src.pipeline.state import PipelineState
 from src.utils.save_state import save_state
 from src.utils.b64_decode import b64_decode
@@ -17,7 +17,31 @@ from src.schemas.group_result import (
 
 logger = logging.getLogger(__name__)
 
-def preprocess_node(state: PipelineState) -> dict:
+import functools
+
+def auto_save(step_name: str):
+    """Decorator, der den State nach Ausführung des Nodes automatisch speichert."""
+    def decorator(node_func):
+        @functools.wraps(node_func)
+        def wrapper(state, config, *args, **kwargs):
+            # 1. Führe den eigentlichen Node aus
+            result = node_func(state, config, *args, **kwargs)
+            
+            # 2. Berechne den neuen temporären Zustand für die JSON-Datei
+            # (Wir simulieren das Update, das LangGraph gleich machen wird)
+            temp_state = {**state, **result}
+            
+            # 3. Automatisch speichern!
+            save_state(temp_state, step_name)
+            
+            # 4. Gib das Ergebnis ganz normal an LangGraph weiter
+            return result
+        return wrapper
+    return decorator
+
+
+@auto_save("01_preprocessing")
+def preprocess_node(state: PipelineState, config=None) -> dict:
     metadata = state["metadata"]
 
     # Base64 Decoding
@@ -38,15 +62,14 @@ def preprocess_node(state: PipelineState) -> dict:
         "permissions_map": flattened_perms,
         "metadata": None
     }
-    temp_state = {**state, **updates}
-    save_state(temp_state, "01_preprocessing")
 
     logger.info("Preprocessing finished.")
 
     return updates
         
-
+@auto_save("02_functionality_extraction")
 def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
+
     # Get LLM
     llm_group_list = config["configurable"].get("llm_func_list", [])
     llm = llm_group_list[0]
@@ -56,28 +79,27 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
         "description": state["description_long"]
     })
 
-    result = llm.run(messages)
-    result.inferred_by_model = llm.config.model
+    llm_output = llm.run(messages)
+
+    number_of_features = len(llm_output.features) if llm_output.features else 0
+
+    final_result = FunctionalityResult(
+        inferred_by_model=llm.config.model,
+        number_of_features=number_of_features,
+        features=llm_output.features
+    )
     
-    number_of_features = len(result.features) if result.features else 0
-
-    temp_state = {
-        **state, 
-        **result.model_dump(),
-        "number_of_features": number_of_features
-    }
-    save_state(temp_state, "02_functionality_extraction")
-
     logger.info(f"Feature extraction finished. Found {number_of_features} features.")
 
     return {
-        "functionality_result": result,
-        "number_of_features": number_of_features
+        "functionality_result": final_result
     }
 
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
+
     # Get the target model
-    target_model_name = state["current_llm_model"]
+    #target_model_name = state["current_llm_model"]
+    target_model_name = state["permission_groups_result"].tmp_model
     llm_group_list = config["configurable"].get("llm_group_list", [])
     chosen_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
     group_llm = chosen_llm
@@ -87,7 +109,8 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     context_string = permission_groups.model_dump_json(indent=2)
     
     # Get the target feature for this node
-    feature_idx = state["current_feature_index"]
+    #feature_idx = state["current_feature_index"]
+    feature_idx = state["permission_groups_result"].tmp_feature_idx
     current_feature = state["functionality_result"].features[feature_idx]
     
     # Prepare the prompt for the LLM
@@ -112,7 +135,8 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
         "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
     }
 
-def group_aggregate_node(state: PipelineState) -> dict:
+@auto_save("03_group_permission_arg")
+def group_aggregate_node(state: PipelineState, config=None) -> dict:
     logger.info("Group analysis finished across all instances.")
    
     # Get data from the state
@@ -194,17 +218,6 @@ def group_aggregate_node(state: PipelineState) -> dict:
                 inferences=container_inferences
             )
         )
-
-    state_update = {
-        "permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=final_features)
-    }
-
-    temp_state = {
-        **state,
-        **state_update
-    }
-
-    save_state(temp_state, "03_group_permission_arg")
 
     logger.info("Aggregation group node analysis finished across all instances.")
 
