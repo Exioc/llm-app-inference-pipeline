@@ -1,4 +1,5 @@
 import logging
+import functools
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
@@ -17,10 +18,8 @@ from src.schemas.group_result import (
 
 logger = logging.getLogger(__name__)
 
-import functools
 
 def auto_save(step_name: str):
-    """Decorator, der den State nach Ausführung des Nodes automatisch speichert."""
     def decorator(node_func):
         @functools.wraps(node_func)
         def wrapper(state, config, *args, **kwargs):

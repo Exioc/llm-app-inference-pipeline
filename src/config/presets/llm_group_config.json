@@ -4,6 +4,16 @@
       "model": "deepseek-r1:70b",
       "temperature": 1.0,
       "role": "group"
+    },
+    {
+      "model": "llama4:16x17b",
+      "temperature": 1.0,
+      "role": "group"
+    },
+    {
+      "model": "qwen3.6:35b",
+      "temperature": 1.0,
+      "role": "group"
     }
   ]
 }
