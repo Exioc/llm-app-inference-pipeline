@@ -75,6 +75,7 @@ def main() -> None:
                 "llm_group_list": llm_group_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
+                "group_filter": True
             }
         },
     )

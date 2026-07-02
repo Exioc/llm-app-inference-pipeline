@@ -1,4 +1,6 @@
 import logging
+import math 
+import threading
 import functools
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
@@ -17,26 +19,32 @@ from src.schemas.group_result import (
 )
 
 logger = logging.getLogger(__name__)
-
+global_semaphore = None
 
 def auto_save(step_name: str):
     def decorator(node_func):
         @functools.wraps(node_func)
         def wrapper(state, config, *args, **kwargs):
-            # 1. Führe den eigentlichen Node aus
+            # Execute the real node 
             result = node_func(state, config, *args, **kwargs)
             
-            # 2. Berechne den neuen temporären Zustand für die JSON-Datei
-            # (Wir simulieren das Update, das LangGraph gleich machen wird)
+            # Merge the result into the state
             temp_state = {**state, **result}
             
-            # 3. Automatisch speichern!
+            # Save the state after the node execution
             save_state(temp_state, step_name)
             
-            # 4. Gib das Ergebnis ganz normal an LangGraph weiter
+            # Return the real result of the node
             return result
         return wrapper
     return decorator
+
+
+def create_global_semaphore(number: int):
+    
+    global global_semaphore
+    
+    global_semaphore = threading.Semaphore(number)
 
 
 @auto_save("01_preprocessing")
@@ -96,104 +104,122 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
 
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    # Get the target model
-    #target_model_name = state["current_llm_model"]
-    target_model_name = state["permission_groups_result"].tmp_model
-    llm_group_list = config["configurable"].get("llm_group_list", [])
-    chosen_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
-    group_llm = chosen_llm
-    
-    # Get the permission groups as JSON string for the prompt
-    permission_groups = config["configurable"].get("permission_groups")
-    context_string = permission_groups.model_dump_json(indent=2)
-    
-    # Get the target feature for this node
-    #feature_idx = state["current_feature_index"]
-    feature_idx = state["permission_groups_result"].tmp_feature_idx
-    current_feature = state["functionality_result"].features[feature_idx]
-    
-    # Prepare the prompt for the LLM
-    messages = GROUP_PROMPT.invoke({
-        "allowed_context": context_string,
-        "label": current_feature.functionality,
-        "description": current_feature.description
-    })
-    
-    # Make the LLM call to infer permission groups for the current feature
-    result = group_llm.run(messages)
+    with global_semaphore:
+        
+        # Get the target model
+        target_model_name = state["permission_groups_result"].tmp_model
+        llm_group_list = config["configurable"].get("llm_group_list", [])
+        group_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
+        
+        # Get the target feature for this node
+        feature_idx = state["permission_groups_result"].tmp_feature_idx
+        current_feature = state["functionality_result"].features[feature_idx]
 
-    # Save the result as a new entry in the state
-    new_feature_entry = {
-        "title": current_feature.functionality,       
-        "description": current_feature.description,
-        "inferred_by_model": target_model_name,   
-        "inferences": [item.model_dump() for item in result.inferences]
-    }
+        logger.info(f"Model_name:{target_model_name} | Feature:{feature_idx+1}")
+
+        # Get the permission groups as JSON string for the prompt
+        permission_groups = config["configurable"].get("permission_groups")
+        context_string = permission_groups.model_dump_json(indent=2)
+        
+        # Prepare the prompt for the LLM
+        messages = GROUP_PROMPT.invoke({
+            "allowed_context": context_string,
+            "label": current_feature.functionality,
+            "description": current_feature.description
+        })
+        
+        # Make the LLM call to infer permission groups for the current feature
+        result = group_llm.run(messages)
+
+        # Save the result as a new entry in the state
+        new_feature_entry = {
+            "title": current_feature.functionality,       
+            "description": current_feature.description,
+            "inferred_by_model": target_model_name,   
+            "inferences": [item.model_dump() for item in result.inferences]
+        }
     
     return {
         "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
     }
 
 @auto_save("03_group_permission_arg")
-def group_aggregate_node(state: PipelineState, config=None) -> dict:
+def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
     logger.info("Group analysis finished across all instances.")
-   
+
+    apply_filter = config["configurable"].get("group_filter", False)
+
+    llm_group_list = config["configurable"].get("llm_group_list", [])
+    number_of_models = len(llm_group_list)
+
     # Get data from the state
     raw_result = state.get("group_permissions_result")
     if not raw_result:
         return {"permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=[])}
     
-    # Get features list from the raw result, handling both object and dict cases
-    features_list = getattr(raw_result, "features", []) if hasattr(raw_result, "features") else raw_result.get("features", [])
+    # Get features list from the raw result
+    features_list = getattr(raw_result, "features", [])
 
     # Dict to hold aggregated data: {feature_title: {group_name: {reasoning, models_inferred}}}
     aggregated_data: Dict[str, Dict[str, Any]] = {}
 
     # Iterate over each feature container to aggregate group inferences
-    for container in features_list:
-        # Extract title, description, model name, and inferences, handling both Pydantic objects and dicts
-        title = getattr(container, "title", None) or container.get("title")
-        description = getattr(container, "description", None) or container.get("description")
-        model_name = getattr(container, "inferred_by_model", None) or container.get("inferred_by_model")
-        inferences = getattr(container, "inferences", []) or container.get("inferences", [])
-
-        if not title:
+    for feature in features_list:
+        if not feature.title:
             continue
 
-        # Initialize the feature entry in the aggregated data if it doesn't exist
-        if title not in aggregated_data:
-            aggregated_data[title] = {
-                "title": title,
-                "description": description,
-                "groups_map": {}
-            }
+        # Add Feature entry if it doesn't exist
+        feature_entry = aggregated_data.setdefault(feature.title, {
+            "title": feature.title,
+            "description": feature.description,
+            "groups_map": {}
+        })
 
-        # Iterate over each inference to aggregate group names and reasoning
-        for inf in inferences:
-            if isinstance(inf, dict):
-                g_name = inf.get("group_name")
-                reasoning = inf.get("reasoning")
-            else:
-                g_name = getattr(inf, "group_name", None)
-                reasoning = getattr(inf, "reasoning", None)
-
-            if not g_name:
+        for inf in feature.inferences or []:
+            if not inf.group_name:
                 continue
 
-            # Remove spaces and convert to uppercase for normalization, if the llm model copy the group name directly
-            normalized_g_name = g_name.replace(" ", "").upper()
+            # Normalize group name by removing spaces and converting to uppercase becaause an LLM model copy the name with with spaces
+            normalized_g_name = inf.group_name.replace(" ", "").upper()
 
-            # if the group name is not already in the map for this feature, initialize it
-            if normalized_g_name not in aggregated_data[title]["groups_map"]:
-                aggregated_data[title]["groups_map"][normalized_g_name] = {
-                    "group_name": normalized_g_name,
-                    "reasoning": reasoning,
-                    "models_inferred": []
+            # Add group entry if it doesn't exist
+            group_entry = feature_entry["groups_map"].setdefault(normalized_g_name, {
+                "group_name": normalized_g_name,
+                "reasoning": inf.reasoning,
+                "models_inferred": []
+            })
+
+            # Add the model name to the list
+            if feature.inferred_by_model and feature.inferred_by_model not in group_entry["models_inferred"]:
+                group_entry["models_inferred"].append(feature.inferred_by_model)
+
+
+    if apply_filter:
+
+        aggregated_data_majority = {}
+        
+        for title, feature_data in aggregated_data.items():
+            # Ein neues, leeres Körbchen für die Gruppen, die den Vote bestehen
+            filtered_groups = {}
+            
+            # 1. FEHLER BEHOBEN: Wir iterieren direkt über die groups_map
+            for g_name, g_data in feature_data["groups_map"].items():
+                
+                # Berechnung der Mehrheit (g_data ist jetzt garantiert ein Dict)
+                if len(g_data["models_inferred"]) >= math.ceil(number_of_models / 2):
+                    filtered_groups[g_name] = g_data
+
+            # 2. LOGIK-FEHLER BEHOBEN: Nur wenn das Feature danach noch 
+            # gültige Gruppen besitzt, übernehmen wir es in das Endergebnis
+            if filtered_groups:
+                aggregated_data_majority[title] = {
+                    "title": feature_data["title"],
+                    "description": feature_data["description"],
+                    "groups_map": filtered_groups
                 }
+                
+        aggregated_data = aggregated_data_majority
 
-            # Add the llm model name to the list of models that inferred this group
-            if model_name and model_name not in aggregated_data[title]["groups_map"][normalized_g_name]["models_inferred"]:
-                aggregated_data[title]["groups_map"][normalized_g_name]["models_inferred"].append(model_name)
 
     # Now convert the aggregated data into the final output format
     final_features: List[PermissionGroupsAggregateContainer] = []
@@ -218,7 +244,10 @@ def group_aggregate_node(state: PipelineState, config=None) -> dict:
             )
         )
 
-    logger.info("Aggregation group node analysis finished across all instances.")
+    logger.info(
+        f"Aggregation group node analysis finished across all instances. "
+        f"(Majority filter active: {apply_filter})"
+    )
 
     return {
         "permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=final_features)

@@ -56,7 +56,7 @@ class PermissionGroupsResult(BaseModel):
     )
     features: List[PermissionGroupsContainer]
 
-# Aggregation
+# Aggregation (Groupname and Reasoning from GroupInference)
 class GroupInferenceAggregate(GroupInference):
     models_inferred: List[str] = Field(
         default_factory=list,

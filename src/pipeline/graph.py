@@ -6,7 +6,7 @@ from langchain_core.runnables import RunnableConfig
 from src.schemas.group_result import PermissionGroupsResult
 from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
-from src.pipeline.nodes import preprocess_node, functionality_node, group_node, group_aggregate_node
+from src.pipeline.nodes import create_global_semaphore, preprocess_node, functionality_node, group_node, group_aggregate_node
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +18,9 @@ def route_to_all_models_and_features(state: PipelineState, config: RunnableConfi
     
     # Get the number of features to process from the state
     num_features = state["functionality_result"].number_of_features
+
+    # Create Global Semaphore to limit the number of concurrent threads
+    create_global_semaphore(num_features)
     
     sends = []
     
@@ -41,7 +44,7 @@ def route_to_all_models_and_features(state: PipelineState, config: RunnableConfi
                 )
             )
 
-    logger.info(f"Analyzing groups via {len(sends)} parallel instances across {len(model_names)} LLM models.")
+    logger.info(f"Analyzing groups using {len(sends)} instances across {len(model_names)} LLM models.")
     return sends
 
 
