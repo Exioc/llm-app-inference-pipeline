@@ -1,16 +1,26 @@
 from typing import TypedDict, Dict, List, Annotated
 
 from src.schemas.app_data import AppMetadata
-from src.schemas.group_result import PermissionGroupsAggregateResult, PermissionGroupsResult
 from src.schemas.func_result import FunctionalityResult
+from src.schemas.perm_result import PermissionAggregateResult, PermissionsResult
+from src.schemas.group_result import PermissionGroupsAggregateResult, PermissionGroupsResult
 
-def merge_permission_results(left: PermissionGroupsResult, right: PermissionGroupsResult) -> PermissionGroupsResult:
+def merge_group_results(left: PermissionGroupsResult, right: PermissionGroupsResult) -> PermissionGroupsResult:
     if not left: return right
     if not right: return left
     
     combined_features = left.features + right.features
     
     return PermissionGroupsResult(features=combined_features)
+
+def merge_permission_results(left: PermissionsResult, right: PermissionsResult) -> PermissionsResult:
+    if not left: return right
+    if not right: return left
+    
+    # Kombiniert die Listen der PermissionsContainer nahtlos
+    combined_features = left.features + right.features
+    
+    return PermissionsResult(features=combined_features)
 
 # State for the Pipeline
 class PipelineState(TypedDict, total=False):
@@ -31,7 +41,13 @@ class PipelineState(TypedDict, total=False):
     functionality_result: FunctionalityResult
 
     # Result from group permission filter
-    group_permissions_result: Annotated[PermissionGroupsResult, merge_permission_results]
+    group_permissions_result: Annotated[PermissionGroupsResult, merge_group_results]
 
     # Aggregation of permission groups
     permission_groups_aggregate_result: PermissionGroupsAggregateResult
+
+    # Result from permission filter
+    permissions_result: Annotated[PermissionsResult, merge_permission_results]
+    
+    # Aggregation of permissions
+    permissions_aggregate_result: PermissionAggregateResult

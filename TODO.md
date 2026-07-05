@@ -1,7 +1,6 @@
 - [ ] Sort function for save_state
 - [ ] Few-shots for group
-- [ ] Clean up State Model
-- [ ] Clean legacy code & prints
+- [ ] Renaming group_permission_result
 - [ ] Refactor project & naming
 - [ ] Add stage flags
 - [ ] Add try-except handling

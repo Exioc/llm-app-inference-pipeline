@@ -16,6 +16,7 @@ PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
 LLM_FUNC_CONFIG_PATH = Path(DIR /"config/presets/llm_func_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
+LLM_PERM_CONFIG_PATH = Path(DIR /"config/presets/llm_perm_config.json")
 RESULTS_BASE_DIR = Path("results")
 UNKNOWN_RUN_DIR = RESULTS_BASE_DIR / "unknown_run"
 
@@ -83,3 +84,4 @@ def load_llm_config(path: Path) -> list[dict]:
 
 llm_func_config =  load_llm_config(LLM_FUNC_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)
+llm_perm_config =  load_llm_config(LLM_PERM_CONFIG_PATH)

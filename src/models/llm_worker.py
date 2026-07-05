@@ -4,6 +4,7 @@ from langchain_ollama import ChatOllama
 from src.config.config import OLLAMA_API_KEY, OLLAMA_BASE_URL
 from src.schemas.func_result import FunctionalityOutput
 from src.schemas.group_result import SingleFeatureGroupsOutput
+from src.schemas.perm_result import SingleFeaturePermissionsOutput
 from src.schemas.llm import LLMConfig
 
 class LLMWorker:
@@ -24,6 +25,8 @@ class LLMWorker:
             return llm.with_structured_output(FunctionalityOutput)
         elif self.config.role == "group": 
             return llm.with_structured_output(SingleFeatureGroupsOutput)
+        elif self.config.role == "permission": 
+            return llm.with_structured_output(SingleFeaturePermissionsOutput)
         else:
             return llm
 

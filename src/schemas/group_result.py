@@ -34,7 +34,7 @@ class PermissionGroupsContainer(BaseModel):
     )
 
     inferred_by_model: str = Field(
-        description="Which model was used to perform the inference "
+        description="The name of the LLM model used to perform the inference."
     )
 
     inferences: List[GroupInference] = Field(
@@ -80,4 +80,7 @@ class PermissionGroupsAggregateContainer(BaseModel):
     )
 
 class PermissionGroupsAggregateResult(BaseModel):
+    total_number_of_groups: int = Field(
+        description="Total number of groups found"
+    )
     features: List[PermissionGroupsAggregateContainer]
