@@ -2,8 +2,8 @@ from pydantic import BaseModel, Field
 from typing import List
 
 class FunctionalityExtractionContainer(BaseModel):
-    functionality: str = Field(
-        description="A clear, meaningful, and distinct name for the extracted feature or functionality in English."
+    title: str = Field(
+        description="A clear, meaningful, and distinct name for the extracted feature in English."
     )
     description: str = Field(
         description=(

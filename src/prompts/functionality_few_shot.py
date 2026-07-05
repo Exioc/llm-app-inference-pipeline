@@ -7,7 +7,7 @@ GOOGLE_ONE_DESCRIPTION = "The Google One app lets you automatically back up your
 GOOGLE_ONE_OUTPUT = {
   "features": [
     {
-      "functionality": "Automated Phone Backup & Recovery",
+      "title": "Automated Phone Backup & Recovery",
       "description": "The app automatically backs up important phone data such as photos, contacts, and messages to the user's Google cloud storage, allowing for easy restoration of this data to a new Android device in case of loss, breakage, or upgrade. This feature utilizes the 15 GB of storage that comes with every Google account.",
       "reasoning": "The text directly states 'Automatically back up the important things on your phone, like photos, contacts and messages using your 15 GB of storage' and connects it with the conditional restoration sentence 'If you break, lose or upgrade your phone, you can restore everything'. Combining these direct text facts proves the existence of an automated backup and disaster recovery framework.",
       "source_quotes": [
@@ -16,7 +16,7 @@ GOOGLE_ONE_OUTPUT = {
       ]
     },
     {
-      "functionality": "Cross-Service Cloud Storage Management",
+      "title": "Cross-Service Cloud Storage Management",
       "description": "The app allows users to manage their existing Google account storage allocation collectively across three specific Google ecosystem services: Google Drive, Gmail, and Google Photos.",
       "reasoning": "The text explicitly mentions 'Manage your existing Google account storage across Google Drive, Gmail and Google Photos', directly proving the existence of a cross-service storage maintenance feature based on clear evidence of its operational scope.",
       "source_quotes": [
@@ -24,7 +24,7 @@ GOOGLE_ONE_OUTPUT = {
       ]
     },
     {
-      "functionality": "Scalable Subscription Storage Plans",
+      "title": "Scalable Subscription Storage Plans",
       "description": "An upgrade pathway that allows users to transition into a Google One membership to obtain additional storage beyond the initial 15 GB restriction, enabling them to select and customize a higher capacity storage plan tailored for memories, projects, and digital files.",
       "reasoning": "The text pairs the explicit upgrade trigger 'Upgrade to a Google One membership to get even more' with the user-choice directive 'Choose the plan that works best for you' to accommodate 'as much storage as you need'. This multi-fact combination logically infers a scalable premium subscription and tier-selection system.",
       "source_quotes": [
@@ -42,7 +42,7 @@ SAMSUNG_HEALTH_DESCRIPTION = "Start healthy habits for yourself with Samsung Hea
 SAMSUNG_HEALTH_OUTPUT = {
   "features": [
     {
-      "functionality": "Automated and Manual Fitness Tracking",
+      "title": "Automated and Manual Fitness Tracking",
       "description": "The app allows users to record and manage physical activities both automatically in the background and through targeted tracking for various sports such as running, cycling, and swimming.",
       "reasoning": "The text combines the fact that the app 'allows you to automatically record many activities' with the explicit capability to 'record and manage your fitness activities, such as running, cycling, swimming, etc.'. This multi-fact combination directly proves an activity tracking framework.",
       "source_quotes": [
@@ -51,7 +51,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Customizable Health Dashboard",
+      "title": "Customizable Health Dashboard",
       "description": "A central home screen where users can view various health records and personalize the display by adding or editing tracked items like daily steps, activity time, and body weight via a long press.",
       "reasoning": "The text explicitly links the ability to 'Check various health records on the Samsung Health home screen' with the option to 'Easily add and edit the items that you want to manage... simply by long pressing the screen'. Combining these facts proves that a customizable overview dashboard exists.",
       "source_quotes": [
@@ -60,7 +60,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Gym Equipment Synchronization (Hardware-Bound & Third-Party Integration)",
+      "title": "Gym Equipment Synchronization (Hardware-Bound & Third-Party Integration)",
       "description": "Enables Galaxy Watch users to connect and synchronize workout data with compatible external fitness equipment ecosystems from manufacturers like Life Fitness, Technogym, and Corehealth.",
       "reasoning": "The text explicitly notes that 'Galaxy Watch wearables user can now exercise more effectively through Life Fitness, Technogym and Corehealth'. Since this requires both a wearable device and the integration of outside vendor ecosystems, it operates as a combined hardware-bound and third-party integration.",
       "source_quotes": [
@@ -68,7 +68,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Nutritional Log",
+      "title": "Nutritional Log",
       "description": "Provides features for users to digitally log their meals and snacks every day to assist in developing healthy eating habits.",
       "reasoning": "The text explicitly states the capability to develop habits 'with which you can record your meals and snacks every day', serving as direct evidence confirming a nutritional logging function.",
       "source_quotes": [
@@ -76,7 +76,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Goal Setting & Holistic Vital Signs Monitoring",
+      "title": "Goal Setting & Holistic Vital Signs Monitoring",
       "description": "Allows users to set customized fitness goals and keep track of their daily condition and biometrics, including activity amount, workout intensity, state of sleep, heart rate, stress, and blood oxygen levels.",
       "reasoning": "The text pairs the directive to 'Set goals that work for your own level' with the explicit instruction to 'keep track of your daily condition including your activity amount, workout intensity, state of sleep, heart rate, stress, oxygen level in the blood, etc.', proving a comprehensive condition monitoring system exists.",
       "source_quotes": [
@@ -84,7 +84,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Advanced Sleep Quality Analysis (Hardware-Bound)",
+      "title": "Advanced Sleep Quality Analysis (Hardware-Bound)",
       "description": "Monitors detailed sleep patterns via a compatible Galaxy Watch wearable to provide insights into sleep levels and sleep scores, aimed at improving overall sleep quality.",
       "reasoning": "The text directly states the ability to 'Monitor your sleep patterns in more detail with Galaxy Watch' to improve quality 'through sleep levels and sleep scores'. The explicit requirement of a Galaxy Watch ecosystem device proves that this feature is structurally hardware-bound.",
       "source_quotes": [
@@ -93,7 +93,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Social Challenges (Samsung Health Together)",
+      "title": "Social Challenges (Samsung Health Together)",
       "description": "An interactive, gamified platform within the app that allows users to compete against family and friends to encourage healthy behaviors.",
       "reasoning": "The text explicitly introduces 'Samsung Health Together' to 'Challenge yourself against your friends and family', directly proving a social competition feature exists.",
       "source_quotes": [
@@ -101,7 +101,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Video-Based Expert Coaching",
+      "title": "Video-Based Expert Coaching",
       "description": "Provides training videos hosted by expert coaches covering specific fitness programs such as stretching, weight loss, and endurance training.",
       "reasoning": "The text states that the app 'has prepared videos of expert coaches who will teach you new fitness programs', which serves as direct text evidence for a video coaching feature.",
       "source_quotes": [
@@ -109,7 +109,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Mindfulness Stress Relief Tools",
+      "title": "Mindfulness Stress Relief Tools",
       "description": "A dedicated wellness module providing meditation tools designed to assist users in daily stress relief.",
       "reasoning": "The text explicitly mentions discovering 'powerful meditation tools on Mindfulness', which is direct evidence proving a meditation feature is present.",
       "source_quotes": [
@@ -117,7 +117,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Menstrual Cycle Tracking (Third-Party Integration)",
+      "title": "Menstrual Cycle Tracking (Third-Party Integration)",
       "description": "Provides supportive tools for tracking menstrual cycles, managing related symptoms, and delivering personalized insights via the partner ecosystem 'Glow' on compatible devices.",
       "reasoning": "The text explicitly highlights 'menstrual cycle tracking, related symptom management and personalized insights... through your partner, Glow'. The structural reliance on an external company confirms that this is a dedicated third-party integration feature.",
       "source_quotes": [
@@ -125,7 +125,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Regional Content and Subscription Gating",
+      "title": "Regional Content and Subscription Gating",
       "description": "A filtering mechanism where some video/mindfulness contents are locked behind an optional paid subscription, and specific features vary based on the user's country, region, network carrier, or device model.",
       "reasoning": "The text combines two distinct conditional warnings: 'Some contents are only available through an optional paid subscription' and 'Detailed features may vary depending on the user’s country of residence, region...'. This proves the existence of a dynamic content and feature gating system.",
       "source_quotes": [
@@ -134,7 +134,7 @@ SAMSUNG_HEALTH_OUTPUT = {
       ]
     },
     {
-      "functionality": "Global Localization Architecture",
+      "title": "Global Localization Architecture",
       "description": "The application interface supports over 70 languages, including French and Chinese, with a global English version serving as the standard fallback for the rest of the world.",
       "reasoning": "The text explicitly states 'Supports over 70 languages, including English, French, and Chinese' and outlines that an 'English language version is available for the rest of the world', confirming a localized interface framework.",
       "source_quotes": [
@@ -152,7 +152,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_DESCRIPTION = "Petal Maps is a unique map that let
 PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
   "features": [
     {
-      "functionality": "Real-Time Traffic Updates & Route Optimization",
+      "title": "Real-Time Traffic Updates & Route Optimization",
       "description": "The app provides real-time traffic data to recommend the quickest, shortest, and least congested route based on current conditions and personal preferences. It supports exploring routes in advance and adding multiple stops.",
       "reasoning": "The text explicitly mentions 'real-time traffic data' and recommending paths based on 'traffic conditions', which directly proves the existence of a dynamic traffic-routing feature.",
       "source_quotes": [
@@ -162,7 +162,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Lane-Level Guidance",
+      "title": "Lane-Level Guidance",
       "description": "The app offers precise driving directions that include specific lane information to help users navigate through complex road scenarios with ease.",
       "reasoning": "The text explicitly uses the phrase 'accurate lane-level guidance', which is a direct reference confirming that this specific navigation feature is present in the app.",
       "source_quotes": [
@@ -170,7 +170,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Crowdsourced Incident Reporting",
+      "title": "Crowdsourced Incident Reporting",
       "description": "An interface that allows users to actively report police locations, road closures, and accidents, as well as view reports submitted by other users.",
       "reasoning": "The text explicitly states 'Allows you to report police locations...' and that you can 'see things reported by other users', which proves the existence of a community reporting tool.",
       "source_quotes": [
@@ -178,7 +178,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Multi-Mode Wearable Navigation",
+      "title": "Multi-Mode Wearable Navigation",
       "description": "Supports navigation directly via compatible HUAWEI WATCH models (3, GT2, GT3 series) across multiple travel modes including walking, cycling, and public transportation.",
       "reasoning": "The text explicitly mentions 'Supports navigating via HUAWEI WATCH' and lists 'multiple modes of travel', directly confirming both smart watch compatibility and multi-mode routing.",
       "source_quotes": [
@@ -186,7 +186,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Offline Maps",
+      "title": "Offline Maps",
       "description": "Allows users to download map data directly to their device so they can continue to navigate without any active internet connection.",
       "reasoning": "The text explicitly mentions the ability to 'download offline maps' to 'keep navigating even without an Internet connection', which directly confirms an offline navigation capability.",
       "source_quotes": [
@@ -194,7 +194,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Local Business Discovery",
+      "title": "Local Business Discovery",
       "description": "Provides recommendations and search tools to help users discover local businesses and essential services like restaurants, gas stations, and parking lots.",
       "reasoning": "The text explicitly mentions finding 'local businesses through recommendations' and searching for 'gas stations, parking lots', which directly confirms a business discovery and point-of-interest search feature.",
       "source_quotes": [
@@ -203,7 +203,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Voice Search Input",
+      "title": "Voice Search Input",
       "description": "An alternative, hands-free search feature that allows users to find places and businesses using voice commands.",
       "reasoning": "The text explicitly states 'You can even use voice search to find places', which is a direct reference confirming that a voice-controlled input method exists.",
       "source_quotes": [
@@ -211,7 +211,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Place Organization & Cloud Syncing",
+      "title": "Place Organization & Cloud Syncing",
       "description": "Allows users to organize favorite places into separate lists with custom icons and synchronize this data across devices using HUAWEI Mobile Cloud or Dropbox.",
       "reasoning": "The text explicitly mentions 'organize your favorite places' and 'syncing your data to the cloud with HUAWEI Mobile Cloud or Dropbox', directly proving that both organization lists and cloud synchronization exist.",
       "source_quotes": [
@@ -220,7 +220,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Community-Driven Map Maintenance",
+      "title": "Community-Driven Map Maintenance",
       "description": "Enables users to rate and review places on the map, add entirely new locations, and report or edit incorrect information.",
       "reasoning": "The text explicitly mentions allowing users to 'Add new places and report or edit incorrect information', which directly confirms a user-contributed map editing and review system.",
       "source_quotes": [
@@ -229,7 +229,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "In-App Feedback Mechanism",
+      "title": "In-App Feedback Mechanism",
       "description": "A dedicated support route within the app menu structure (Me > Help > Feedback) allowing users to send questions and suggestions directly to the developers.",
       "reasoning": "The text explicitly states 'Provide feedback in the app via Me > Help > Feedback', which directly proves that a native feedback interface is built into the application.",
       "source_quotes": [
@@ -237,7 +237,7 @@ PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT = {
       ]
     },
     {
-      "functionality": "Regional Feature Restriction",
+      "title": "Regional Feature Restriction",
       "description": "A condition where specific functionalities within the app are restricted or only made available based on the user's country or region.",
       "reasoning": "The text explicitly notes that '*Some features are only available in certain countries/regions', which is an indirect but clear reference confirming that a geographical feature-restriction mechanism is active.",
       "source_quotes": [

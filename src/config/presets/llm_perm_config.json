@@ -6,7 +6,7 @@
       "role": "permission"
     },
     {
-      "model": "llama4:16x17b",
+      "model": "llama3.3:70b",
       "temperature": 1.0,
       "role": "permission"
     },
@@ -16,17 +16,7 @@
       "role": "permission"
     },
     {
-      "model": "gemma4:31b",
-      "temperature": 1.0,
-      "role": "permission"
-    },
-    {
       "model": "nemotron-3-super:120b",
-      "temperature": 1.0,
-      "role": "permission"
-    },
-    {
-      "model": "gpt-oss:20b",
       "temperature": 1.0,
       "role": "permission"
     }

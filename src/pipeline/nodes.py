@@ -132,7 +132,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
         # Prepare the prompt for the LLM
         messages = GROUP_PROMPT.invoke({
             "allowed_context": context_string,
-            "label": current_feature.functionality,
+            "label": current_feature.title,
             "description": current_feature.description
         })
         
@@ -141,7 +141,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
 
         # Save the result as a new entry in the state
         new_feature_entry = {
-            "title": current_feature.functionality,       
+            "title": current_feature.title,       
             "description": current_feature.description,
             "inferred_by_model": target_model_name,   
             "inferences": [item.model_dump() for item in result.inferences]
@@ -301,7 +301,8 @@ def permission_node(state: PipelineState, config: RunnableConfig) -> dict:
         new_feature_entry = {
             "title": current_feature.title,       
             "description": current_feature.description,
-            "inferred_by_model": target_model_name,   
+            "inferred_by_model": target_model_name, 
+            "group_name": group_name,  
             "inferences": [item.model_dump() for item in result.inferences]
         }
     

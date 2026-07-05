@@ -35,6 +35,9 @@ class PermissionsContainer(BaseModel):
     inferred_by_model: str = Field(
         description="The name of the LLM model used to perform the inference."
     )
+    group_name: str = Field(
+        description="The name of the Android permission group being analyzed."
+    )
     inferences: List[PermissionInference] = Field(
         default_factory=list,
         description=(

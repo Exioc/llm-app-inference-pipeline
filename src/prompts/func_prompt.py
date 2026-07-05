@@ -34,7 +34,7 @@ SYSTEM_PROMPT = (
     "or different interaction method (e.g., video streaming or file storage) is introduced.\n\n"
     
     "OUTPUT LANGUAGE:\n"
-    "All fields within the schema (functionality, description, reasoning) MUST be written in English. Respond exclusively "
+    "All fields within the schema (title, description, reasoning) MUST be written in English. Respond exclusively "
     "using the enforced JSON output schema."
 )
 
