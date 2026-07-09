@@ -21,8 +21,9 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
     num_features = state["functionality_result"].number_of_features
 
     # Create Global Semaphore to limit the number of concurrent threads
-    create_global_semaphore(num_features)
-    
+    #create_global_semaphore(num_features)
+    create_global_semaphore(3)
+
     sends = []
     
     # Cross product of model names and feature indices to create Send objects for each combination
@@ -59,7 +60,8 @@ def route_permission_node(state: PipelineState, config: RunnableConfig) -> list[
     features_list = aggregate_result.features if aggregate_result else []
     
     # Set the Semaphore to the number of features to process
-    create_global_semaphore(len(features_list))
+    #create_global_semaphore(len(features_list))
+    create_global_semaphore(3)
     
     sends = []
     
@@ -107,6 +109,7 @@ def build_app():
 
     # Edges
     workflow.add_edge(START, "preprocess")
+    #workflow.add_edge("preprocess", END)
     workflow.add_edge("preprocess", "function")
     workflow.add_edge("group", "group_arg")
     workflow.add_edge("permission", "permission_arg")

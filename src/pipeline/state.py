@@ -1,5 +1,6 @@
 from typing import TypedDict, Dict, List, Annotated
 
+from src.schemas.perm_map import ProcessedPermissions
 from src.schemas.app_data import AppMetadata
 from src.schemas.func_result import FunctionalityResult
 from src.schemas.perm_result import PermissionAggregateResult, PermissionsResult
@@ -35,7 +36,8 @@ class PipelineState(TypedDict, total=False):
     pkg: str
     label: str
     description_long: str
-    permissions_map: Dict[str, List[str]]
+    #permissions_map: Dict[str, List[str]]
+    permissions_map: ProcessedPermissions
 
     # Results from functionality extraction 
     functionality_result: FunctionalityResult

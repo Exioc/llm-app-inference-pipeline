@@ -5,6 +5,8 @@ import functools
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
+from src.schemas.perm_map import AppPermission, ProcessedPermissions
+from src.schemas.app_data import PermissionItem
 from src.schemas.func_result import FunctionalityResult
 from src.pipeline.state import PipelineState
 from src.utils.save_state import save_state
@@ -59,23 +61,72 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
     metadata = state["metadata"]
 
     # Base64 Decoding
-    label = b64_decode(metadata.label)
+    title = b64_decode(metadata.label)
     description = b64_decode(metadata.description.long)
 
     # Flatten permissions: Category -> List of strings
-    flattened_perms = {
-        item.category: item.permissions 
-        for item in metadata.permissions
-    }
+    # flattened_perms = {
+    #     item.category: item.permissions 
+    #     for item in metadata.permissions
+    # }
 
+    permissions_mapping = config["configurable"].get("permissions_mapping", [])
+
+    # 1. Hol die Raw-Daten aus dem State oder Input
+    # (Laut deiner Definition eine Liste von PermissionItem-Objekten)
+    raw_permissions: List[PermissionItem] = metadata.permissions
+    
+    # Hier legen wir das leere Dictionary an, das wir gleich befüllen
+    temp_permissions_map = {}
+    
+    # 2. Durchlaufe jede Kategorie aus den Raw-Daten
+    for item in raw_permissions:
+        category_name = item.category
+        
+        # Falls die Kategorie noch nicht existiert, erstelle eine leere Liste
+        if category_name not in temp_permissions_map:
+            temp_permissions_map[category_name] = []
+            
+        # 3. Durchlaufe jedes Text-Label in dieser Kategorie
+        for label in item.permissions:
+            
+            # 4. Abgleich mit deinem großen Mapping-Modell
+            # (Ersetze 'permission_mapping' mit deiner globalen Variable/Instanz)
+            if label in permissions_mapping.permissions:
+                # Wenn das Label im Mapping existiert, holen wir uns den echten Namen
+                technical_name = permissions_mapping.permissions[label].name
+            else:
+                # Fallback, falls Google mal ein neues Label einführt, das du noch nicht im Mapping hast
+                technical_name = f"android.permission.UNKNOWN_{label.upper().replace(' ', '_')}"
+            
+            # 5. Erstelle das AppPermission-Objekt und füge es der Kategorie hinzu
+            app_perm = AppPermission(
+                name=technical_name,
+                label=label
+            )
+            temp_permissions_map[category_name].append(app_perm)
+            
+    # 6. Verpacke das fertige Dictionary in dein ProcessedPermissions-Modell
+    final_processed_permissions = ProcessedPermissions(permissions_map=temp_permissions_map)
+    
     updates = {
         "pkg": metadata.pkg,
-        "label": label,
+        "label": title,
         "description_long": description,
         "storage_path": state["storage_path"],
-        "permissions_map": flattened_perms,
+        "permissions_map": final_processed_permissions,
         "metadata": None
     }
+
+    # updates = {
+    #     "pkg": metadata.pkg,
+    #     "label": label,
+    #     "description_long": description,
+    #     "storage_path": state["storage_path"],
+    #     "permissions_map": flattened_perms,
+    #     "permissions_map": final_processed_permission,
+    #     "metadata": None
+    # }
 
     logger.info("Preprocessing finished.")
 
@@ -111,41 +162,41 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
 
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    with global_semaphore:
-        
-        # Get the target model
-        target_model_name = state["permission_groups_result"].tmp_model
-        llm_group_list = config["configurable"].get("llm_group_list", [])
-        group_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
-        
-        # Get the target feature for this node
-        feature_idx = state["permission_groups_result"].tmp_feature_idx
-        current_feature = state["functionality_result"].features[feature_idx]
+    # Get the target model
+    target_model_name = state["permission_groups_result"].tmp_model
+    llm_group_list = config["configurable"].get("llm_group_list", [])
+    group_llm = next((item for item in llm_group_list if item.config.model == target_model_name), None)
+    
+    # Get the target feature for this node
+    feature_idx = state["permission_groups_result"].tmp_feature_idx
+    current_feature = state["functionality_result"].features[feature_idx]
 
-        #logger.info(f"Model:{target_model_name} | Feature:{feature_idx+1}")
+    
+
+    # Get the permission groups as JSON string for the prompt
+    permission_groups = config["configurable"].get("permission_groups")
+    context_string = permission_groups.model_dump_json(indent=2)
+    
+    # Prepare the prompt for the LLM
+    messages = GROUP_PROMPT.invoke({
+        "allowed_context": context_string,
+        "label": current_feature.title,
+        "description": current_feature.description
+    })
+
+    with global_semaphore:
         logger.info(f"Analyze feature {feature_idx+1} using {target_model_name}")
 
-        # Get the permission groups as JSON string for the prompt
-        permission_groups = config["configurable"].get("permission_groups")
-        context_string = permission_groups.model_dump_json(indent=2)
-        
-        # Prepare the prompt for the LLM
-        messages = GROUP_PROMPT.invoke({
-            "allowed_context": context_string,
-            "label": current_feature.title,
-            "description": current_feature.description
-        })
-        
         # Make the LLM call to infer permission groups for the current feature
         result = group_llm.run(messages)
 
-        # Save the result as a new entry in the state
-        new_feature_entry = {
-            "title": current_feature.title,       
-            "description": current_feature.description,
-            "inferred_by_model": target_model_name,   
-            "inferences": [item.model_dump() for item in result.inferences]
-        }
+    # Save the result as a new entry in the state
+    new_feature_entry = {
+        "title": current_feature.title,       
+        "description": current_feature.description,
+        "inferred_by_model": target_model_name,   
+        "inferences": [item.model_dump() for item in result.inferences]
+    }
     
     return {
         "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
@@ -257,6 +308,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
     )
 
     return {
+        "functionality_result": None,
         "permission_groups_aggregate_result": PermissionGroupsAggregateResult(
             features=final_features,
             total_number_of_groups=total
@@ -264,47 +316,45 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
     }
 
 def permission_node(state: PipelineState, config: RunnableConfig) -> dict:
+ 
+    # Get the target model
+    target_model_name = state["permissions_result"].tmp_model
+    llm_perm_list = config["configurable"].get("llm_perm_list", [])
+    perm_llm = next((item for item in llm_perm_list if item.config.model == target_model_name), None)
+    
+    # Get the target feature for this node
+    feature_idx = state["permissions_result"].tmp_feature_idx
+    current_feature = state["permission_groups_aggregate_result"].features[feature_idx]
 
+    group_name = state["permissions_result"].tmp_group_name
+
+    # Get the permission groups as JSON string for the prompt
+    all_permissions = config["configurable"].get("permissions")
+    permission = next((perm for perm in all_permissions.groups_details if perm.group_name == group_name),None)
+    context_string = permission.model_dump_json(indent=2)
+    
+    # Prepare the prompt for the LLM
+    messages = PERM_PROMPT.invoke({
+        "allowed_context": context_string,
+        "group_name": group_name,
+        "label": current_feature.title,
+        "description": current_feature.description
+    })
+    
     with global_semaphore:
-        
-        # Get the target model
-        target_model_name = state["permissions_result"].tmp_model
-        llm_perm_list = config["configurable"].get("llm_perm_list", [])
-        perm_llm = next((item for item in llm_perm_list if item.config.model == target_model_name), None)
-        
-        # Get the target feature for this node
-        feature_idx = state["permissions_result"].tmp_feature_idx
-        current_feature = state["permission_groups_aggregate_result"].features[feature_idx]
-
-        group_name = state["permissions_result"].tmp_group_name
-
-        #logger.info(f"Model:{target_model_name} | Feature:{feature_idx+1} | Group:{group_name}")
         logger.info(f"Analyze feature {feature_idx+1} using the group {group_name} and the {target_model_name}")
 
-        # Get the permission groups as JSON string for the prompt
-        all_permissions = config["configurable"].get("permissions")
-        permission = next((perm for perm in all_permissions.groups_details if perm.group_name == group_name),None)
-        context_string = permission.model_dump_json(indent=2)
-        
-        # Prepare the prompt for the LLM
-        messages = PERM_PROMPT.invoke({
-            "allowed_context": context_string,
-            "group_name": group_name,
-            "label": current_feature.title,
-            "description": current_feature.description
-        })
-        
         # Make the LLM call to infer permission groups for the current feature
         result = perm_llm.run(messages)
 
-        # Save the result as a new entry in the state
-        new_feature_entry = {
-            "title": current_feature.title,       
-            "description": current_feature.description,
-            "inferred_by_model": target_model_name, 
-            "group_name": group_name,  
-            "inferences": [item.model_dump() for item in result.inferences]
-        }
+    # Save the result as a new entry in the state
+    new_feature_entry = {
+        "title": current_feature.title,       
+        "description": current_feature.description,
+        "inferred_by_model": target_model_name, 
+        "group_name": group_name,  
+        "inferences": [item.model_dump() for item in result.inferences]
+    }
     
     return {
         "permissions_result": PermissionsResult(features=[new_feature_entry])
@@ -413,6 +463,8 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
     )
 
     return {
+        "group_permissions_result": None,
+        "permission_groups_aggregate_result": None,
         "permission_aggregate_result": PermissionAggregateResult(
             features=final_features
         )

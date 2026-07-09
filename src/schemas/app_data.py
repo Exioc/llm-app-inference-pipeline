@@ -10,7 +10,7 @@ class AppDate(BaseModel):
     timestamp: int | None = None
 
 class SDKInfo(BaseModel):
-    target: int
+    target: Optional[int] = None
     min: Optional[int] = None
 
 class Category(BaseModel):

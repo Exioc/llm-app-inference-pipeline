@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
+from src.schemas.perm_map import AndroidPermissionsModel
 from src.schemas.driod_data import PermissionGroupList, PermissionGroupDetailList
 
 load_dotenv()
@@ -14,6 +15,7 @@ DIR = Path(__file__).resolve().parent.parent
 #Paths
 PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
+PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
 LLM_FUNC_CONFIG_PATH = Path(DIR /"config/presets/llm_func_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
 LLM_PERM_CONFIG_PATH = Path(DIR /"config/presets/llm_perm_config.json")
@@ -81,6 +83,16 @@ def load_llm_config(path: Path) -> list[dict]:
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data.get("models", [])
+
+def load_permissions_mapping() -> AndroidPermissionsModel:
+    if not PERMISSIONS_MAPPING_PATH.exists():
+        raise FileNotFoundError(f"File not found: {PERMISSIONS_MAPPING_PATH}")
+
+    else:
+        with open(PERMISSIONS_MAPPING_PATH, "r", encoding="utf-8") as file:
+            raw_data = json.load(file)
+        return AndroidPermissionsModel(**raw_data)
+        
 
 llm_func_config =  load_llm_config(LLM_FUNC_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)

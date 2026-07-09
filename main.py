@@ -13,6 +13,7 @@ from src.config.config import (
     LANGSMITH_TRACING,
     load_permission_groups,
     load_permissions,
+    load_permissions_mapping,
     setup_logging,
     llm_func_config,
     llm_group_config,
@@ -54,6 +55,8 @@ def main() -> None:
     permission_groups_model = load_permission_groups()
     permissions_model = load_permissions()
 
+    permissions_mapping = load_permissions_mapping()
+
     # Build the pipeline
     app = build_app()
 
@@ -78,8 +81,9 @@ def main() -> None:
                 "llm_perm_list": llm_perm_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
-                "group_filter": True,
-                "permission_filter": True
+                "permissions_mapping": permissions_mapping,
+                "group_filter": False,
+                "permission_filter": False
             }
         },
     )
