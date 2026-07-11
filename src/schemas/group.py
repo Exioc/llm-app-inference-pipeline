@@ -17,7 +17,7 @@ class GroupInference(BaseModel):
         )
     )
 
-class SingleFeatureGroupsOutput(BaseModel):
+class GroupResponse(BaseModel):
     inferences: List[GroupInference] = Field(
         description=(
             "A list containing each inferred permission group along with its logical reasoning. "
@@ -25,7 +25,7 @@ class SingleFeatureGroupsOutput(BaseModel):
         )
     )
 
-class PermissionGroupsContainer(BaseModel):
+class FeatureGroups(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
     )
@@ -45,7 +45,7 @@ class PermissionGroupsContainer(BaseModel):
         )
     )
 
-class PermissionGroupsResult(BaseModel):
+class FeatureGroupsResult(BaseModel):
     tmp_model: Optional[str] = Field(
         default=None,
         description="Temporary holder for the specific LLM model name assigned to this parallel execution branch."
@@ -54,7 +54,8 @@ class PermissionGroupsResult(BaseModel):
         default=None,
         description="Temporary zero-based index pointing to the exact feature array element processed by this task."
     )
-    features: List[PermissionGroupsContainer]
+    features: List[FeatureGroups]
+
 
 # Aggregation (Groupname and Reasoning from GroupInference)
 class GroupInferenceAggregate(GroupInference):
@@ -63,7 +64,7 @@ class GroupInferenceAggregate(GroupInference):
         description="List of all LLM model names that inferred this group."
     )
 
-class PermissionGroupsAggregateContainer(BaseModel):
+class FeatureGroupsAggregate(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
     )
@@ -79,8 +80,8 @@ class PermissionGroupsAggregateContainer(BaseModel):
         )
     )
 
-class PermissionGroupsAggregateResult(BaseModel):
+class FeatureGroupsAggregateResult(BaseModel):
     total_number_of_groups: int = Field(
         description="Total number of groups found"
     )
-    features: List[PermissionGroupsAggregateContainer]
+    features: List[FeatureGroupsAggregate]

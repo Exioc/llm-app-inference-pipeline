@@ -3,11 +3,20 @@ from langgraph.constants import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.perm_result import PermissionsResult
-from src.schemas.group_result import PermissionGroupsResult
+from src.schemas.permission import FeaturePermissionResult
+from src.schemas.group import FeatureGroupsResult
 from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
-from src.pipeline.nodes import create_global_semaphore, permission_aggregate_node, permission_node, preprocess_node, functionality_node, group_node, group_aggregate_node
+from src.pipeline.nodes import (
+    create_global_semaphore, 
+    preprocess_node, 
+    functionality_node, 
+    group_node, 
+    group_aggregate_node, 
+    permission_node, 
+    permission_aggregate_node, 
+    transform_permission_node,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +27,7 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
     model_names = [llm.config.model for llm in llm_group_list]
     
     # Get the number of features to process from the state
-    num_features = state["functionality_result"].number_of_features
+    num_features = state["feature_result"].number_of_features
 
     # Create Global Semaphore to limit the number of concurrent threads
     #create_global_semaphore(num_features)
@@ -30,7 +39,7 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
     for model_name in model_names:
         for idx in range(num_features):
 
-            permissiongroupsresult = PermissionGroupsResult(
+            featuregroupsresult = FeatureGroupsResult(
                 tmp_model=model_name,
                 tmp_feature_idx=idx,
                 features=[]
@@ -41,7 +50,7 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
                     "group", 
                     {
                         **state,
-                        "permission_groups_result": permissiongroupsresult 
+                        "permission_groups_result": featuregroupsresult 
                     }
                 )
             )
@@ -52,11 +61,11 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
 def route_permission_node(state: PipelineState, config: RunnableConfig) -> list[Send]:
     
     # Get the permission list of configured LLMs from the config
-    llm_perm_list: list[LLMWorker] = config["configurable"].get("llm_perm_list", [])
-    model_names = [llm.config.model for llm in llm_perm_list]
+    llm_permission_list: list[LLMWorker] = config["configurable"].get("llm_permission_list", [])
+    model_names = [llm.config.model for llm in llm_permission_list]
     
     # Get the features from the previous stage
-    aggregate_result = state.get("permission_groups_aggregate_result")
+    aggregate_result = state.get("feature_groups_aggregate_result")
     features_list = aggregate_result.features if aggregate_result else []
     
     # Set the Semaphore to the number of features to process
@@ -72,7 +81,7 @@ def route_permission_node(state: PipelineState, config: RunnableConfig) -> list[
                 group_name = inference.group_name
                 
                 if group_name != "NONE":
-                    permissionsresult = PermissionsResult(
+                    permissionsresult = FeaturePermissionResult(
                         tmp_model=model_name,
                         tmp_feature_idx=idx,
                         tmp_group_name=group_name,
@@ -105,6 +114,7 @@ def build_app():
     workflow.add_node("group_arg", group_aggregate_node)
     workflow.add_node("permission", permission_node)
     workflow.add_node("permission_arg", permission_aggregate_node)
+    workflow.add_node("transform_permission", transform_permission_node)
     
 
     # Edges
@@ -113,7 +123,8 @@ def build_app():
     workflow.add_edge("preprocess", "function")
     workflow.add_edge("group", "group_arg")
     workflow.add_edge("permission", "permission_arg")
-    workflow.add_edge("permission_arg", END)
+    workflow.add_edge("permission_arg", "transform_permission")
+    workflow.add_edge("transform_permission", END)
     
     # Conditional edges
     workflow.add_conditional_edges(

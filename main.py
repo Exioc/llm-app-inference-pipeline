@@ -15,9 +15,9 @@ from src.config.config import (
     load_permissions,
     load_permissions_mapping,
     setup_logging,
-    llm_func_config,
+    llm_feature_config,
     llm_group_config,
-    llm_perm_config
+    llm_permission_config
 )
 
 logger = logging.getLogger(__name__)
@@ -47,9 +47,9 @@ def main() -> None:
     save_state(app_data, "00_Metadata", storage_path)
 
     # Create LLM pool based on the configuration
-    llm_func_list = create_llm_pool(llm_func_config)
+    llm_feature_list = create_llm_pool(llm_feature_config)
     llm_group_list = create_llm_pool(llm_group_config)
-    llm_perm_list = create_llm_pool(llm_perm_config)
+    llm_permission_list = create_llm_pool(llm_permission_config)
 
     # Load permission groups and permissions
     permission_groups_model = load_permission_groups()
@@ -76,9 +76,9 @@ def main() -> None:
         initial_input,
         {
             "configurable": {
-                "llm_func_list": llm_func_list,
+                "llm_feature_list": llm_feature_list,
                 "llm_group_list": llm_group_list,
-                "llm_perm_list": llm_perm_list,
+                "llm_permission_list": llm_permission_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
                 "permissions_mapping": permissions_mapping,

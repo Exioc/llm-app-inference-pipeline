@@ -17,7 +17,7 @@ class PermissionInference(BaseModel):
         )
     )
 
-class SingleFeaturePermissionsOutput(BaseModel):
+class PermissionResponse(BaseModel):
     inferences: List[PermissionInference] = Field(
         description=(
             "A list containing each inferred permission along with its logical reasoning. "
@@ -25,7 +25,7 @@ class SingleFeaturePermissionsOutput(BaseModel):
         )
     )
 
-class PermissionsContainer(BaseModel):
+class FeaturePermission(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
     )
@@ -46,7 +46,7 @@ class PermissionsContainer(BaseModel):
         )
     )
 
-class PermissionsResult(BaseModel):
+class FeaturePermissionResult(BaseModel):
     tmp_model: Optional[str] = Field(
         default=None,
         description="Temporary holder for the specific LLM model name assigned to this parallel execution branch."
@@ -59,7 +59,7 @@ class PermissionsResult(BaseModel):
         default=None,
         description="Temporary holder for the specific Android permission group name processed by this task branch."
     )
-    features: List[PermissionsContainer] = Field(
+    features: List[FeaturePermission] = Field(
         description="The list of extracted app features containing their finalized Android permission inferences."
     )
 
@@ -70,7 +70,7 @@ class PermissionInferenceAggregate(PermissionInference):
         description="List of all LLM model names that inferred this permission."
     )
 
-class PermissionAggregateContainer(BaseModel):
+class FeaturePermissionAggregate(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
     )
@@ -86,5 +86,5 @@ class PermissionAggregateContainer(BaseModel):
         )
     )
 
-class PermissionAggregateResult(BaseModel):
-    features: List[PermissionAggregateContainer]
+class FeaturePermissionAggregateResult(BaseModel):
+    features: List[FeaturePermissionAggregate]

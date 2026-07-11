@@ -1,7 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List
 
-class FunctionalityExtractionContainer(BaseModel):
+class Feature(BaseModel):
     title: str = Field(
         description="A clear, meaningful, and distinct name for the extracted feature in English."
     )
@@ -29,8 +29,8 @@ class FunctionalityExtractionContainer(BaseModel):
         )
     )
 
-class FunctionalityOutput(BaseModel):
-    features: List[FunctionalityExtractionContainer] = Field(
+class FeatureResponse(BaseModel):
+    features: List[Feature] = Field(
         description=(
             "List of all extracted features. Granularity rule: Bundle sub-features that belong together "
             "and cannot stand alone (e.g., chat messaging + typing indicators). Isolate into a separate feature "
@@ -39,14 +39,14 @@ class FunctionalityOutput(BaseModel):
         )
     )
 
-class FunctionalityResult(BaseModel):
+class FeatureResult(BaseModel):
     inferred_by_model: str = Field(
         description="Which model was used to perform the inference "
     )
     number_of_features: int = Field(
         description="Number of features found"
     )
-    features: List[FunctionalityExtractionContainer] = Field(
+    features: List[Feature] = Field(
         description=(
             "List of all extracted features. Granularity rule: Bundle sub-features that belong together "
             "and cannot stand alone (e.g., chat messaging + typing indicators). Isolate into a separate feature "

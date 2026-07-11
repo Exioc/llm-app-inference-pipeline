@@ -5,8 +5,8 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
-from src.schemas.perm_map import AndroidPermissionsModel
-from src.schemas.driod_data import PermissionGroupList, PermissionGroupDetailList
+from src.schemas.permission_mapping import AndroidPermissionsModel
+from src.schemas.android_data import PermissionGroupList, PermissionGroupDetailList
 
 load_dotenv()
 
@@ -16,9 +16,9 @@ DIR = Path(__file__).resolve().parent.parent
 PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
 PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
-LLM_FUNC_CONFIG_PATH = Path(DIR /"config/presets/llm_func_config.json")
+LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
-LLM_PERM_CONFIG_PATH = Path(DIR /"config/presets/llm_perm_config.json")
+LLM_PERMISSION_CONFIG_PATH = Path(DIR /"config/presets/llm_permission_config.json")
 RESULTS_BASE_DIR = Path("results")
 UNKNOWN_RUN_DIR = RESULTS_BASE_DIR / "unknown_run"
 
@@ -94,6 +94,6 @@ def load_permissions_mapping() -> AndroidPermissionsModel:
         return AndroidPermissionsModel(**raw_data)
         
 
-llm_func_config =  load_llm_config(LLM_FUNC_CONFIG_PATH)
+llm_feature_config =  load_llm_config(LLM_FEATURE_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)
-llm_perm_config =  load_llm_config(LLM_PERM_CONFIG_PATH)
+llm_permission_config =  load_llm_config(LLM_PERMISSION_CONFIG_PATH)

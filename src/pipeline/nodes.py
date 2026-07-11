@@ -5,26 +5,26 @@ import functools
 from typing import Dict, Any, List
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.perm_map import AppPermission, ProcessedPermissions
+from src.schemas.permission_mapping import AppPermission, ProcessedPermissions
 from src.schemas.app_data import PermissionItem
-from src.schemas.func_result import FunctionalityResult
+from src.schemas.feature import FeatureResult
 from src.pipeline.state import PipelineState
 from src.utils.save_state import save_state
 from src.utils.b64_decode import b64_decode
 from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
 from src.prompts.perm_prompt import PERM_PROMPT
-from src.schemas.group_result import (
-    PermissionGroupsResult,
+from src.schemas.group import (
+    FeatureGroupsResult,
     GroupInferenceAggregate,
-    PermissionGroupsAggregateContainer,
-    PermissionGroupsAggregateResult
+    FeatureGroupsAggregate,
+    FeatureGroupsAggregateResult
 )
-from src.schemas.perm_result import (
-    PermissionAggregateResult,
+from src.schemas.permission import (
+    FeaturePermissionAggregateResult,
     PermissionInferenceAggregate,
-    PermissionAggregateContainer,
-    PermissionsResult
+    FeaturePermissionAggregate,
+    FeaturePermissionResult
 )
 
 logger = logging.getLogger(__name__)
@@ -63,12 +63,6 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
     # Base64 Decoding
     title = b64_decode(metadata.label)
     description = b64_decode(metadata.description.long)
-
-    # Flatten permissions: Category -> List of strings
-    # flattened_perms = {
-    #     item.category: item.permissions 
-    #     for item in metadata.permissions
-    # }
 
     permissions_mapping = config["configurable"].get("permissions_mapping", [])
 
@@ -118,16 +112,6 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
         "metadata": None
     }
 
-    # updates = {
-    #     "pkg": metadata.pkg,
-    #     "label": label,
-    #     "description_long": description,
-    #     "storage_path": state["storage_path"],
-    #     "permissions_map": flattened_perms,
-    #     "permissions_map": final_processed_permission,
-    #     "metadata": None
-    # }
-
     logger.info("Preprocessing finished.")
 
     return updates
@@ -136,8 +120,8 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
 def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     # Get LLM
-    llm_group_list = config["configurable"].get("llm_func_list", [])
-    llm = llm_group_list[0]
+    llm_feature_list = config["configurable"].get("llm_feature_list", [])
+    llm = llm_feature_list[0]
 
     messages = FUNCTIONALITY_PROMPT.invoke({
         "label": state["label"],
@@ -148,7 +132,7 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     number_of_features = len(llm_output.features) if llm_output.features else 0
 
-    final_result = FunctionalityResult(
+    final_result = FeatureResult(
         inferred_by_model=llm.config.model,
         number_of_features=number_of_features,
         features=llm_output.features
@@ -157,7 +141,7 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
     logger.info(f"Feature extraction finished. Found {number_of_features} features.")
 
     return {
-        "functionality_result": final_result
+        "feature_result": final_result
     }
 
 def group_node(state: PipelineState, config: RunnableConfig) -> dict:
@@ -169,7 +153,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     
     # Get the target feature for this node
     feature_idx = state["permission_groups_result"].tmp_feature_idx
-    current_feature = state["functionality_result"].features[feature_idx]
+    current_feature = state["feature_result"].features[feature_idx]
 
     
 
@@ -199,7 +183,7 @@ def group_node(state: PipelineState, config: RunnableConfig) -> dict:
     }
     
     return {
-        "group_permissions_result": PermissionGroupsResult(features=[new_feature_entry])
+        "feature_groups_result": FeatureGroupsResult(features=[new_feature_entry])
     }
 
 @auto_save("03_group_permission_arg")
@@ -211,9 +195,9 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
     number_of_models = len(llm_group_list)
 
     # Get data from the state
-    raw_result = state.get("group_permissions_result")
+    raw_result = state.get("feature_groups_result")
     if not raw_result:
-        return {"permission_groups_aggregate_result": PermissionGroupsAggregateResult(features=[])}
+        return {"feature_groups_aggregate_result": FeatureGroupsAggregateResult(features=[])}
     
     # Get features list from the raw result
     features_list = getattr(raw_result, "features", [])
@@ -277,7 +261,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
 
     # Convert the aggregated data into the final Pydantic target model
-    final_features: List[PermissionGroupsAggregateContainer] = []
+    final_features: List[FeatureGroupsAggregate] = []
 
     total = 0
     for title, data in aggregated_data.items():
@@ -295,7 +279,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
             )
 
         final_features.append(
-            PermissionGroupsAggregateContainer(
+            FeatureGroupsAggregate(
                 title=data["title"],
                 description=data["description"],
                 inferences=container_inferences
@@ -308,8 +292,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
     )
 
     return {
-        "functionality_result": None,
-        "permission_groups_aggregate_result": PermissionGroupsAggregateResult(
+        "feature_groups_aggregate_result": FeatureGroupsAggregateResult(
             features=final_features,
             total_number_of_groups=total
         )
@@ -319,12 +302,12 @@ def permission_node(state: PipelineState, config: RunnableConfig) -> dict:
  
     # Get the target model
     target_model_name = state["permissions_result"].tmp_model
-    llm_perm_list = config["configurable"].get("llm_perm_list", [])
-    perm_llm = next((item for item in llm_perm_list if item.config.model == target_model_name), None)
+    llm_permission_list = config["configurable"].get("llm_permission_list", [])
+    perm_llm = next((item for item in llm_permission_list if item.config.model == target_model_name), None)
     
     # Get the target feature for this node
     feature_idx = state["permissions_result"].tmp_feature_idx
-    current_feature = state["permission_groups_aggregate_result"].features[feature_idx]
+    current_feature = state["feature_groups_aggregate_result"].features[feature_idx]
 
     group_name = state["permissions_result"].tmp_group_name
 
@@ -357,7 +340,7 @@ def permission_node(state: PipelineState, config: RunnableConfig) -> dict:
     }
     
     return {
-        "permissions_result": PermissionsResult(features=[new_feature_entry])
+        "permissions_result": FeaturePermissionResult(features=[new_feature_entry])
     }
 
 @auto_save("04_permission_arg")
@@ -365,13 +348,13 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
 
     apply_filter = config["configurable"].get("permission_filter", False)
 
-    llm_perm_list = config["configurable"].get("llm_perm_list", [])
-    number_of_models = len(llm_perm_list)
+    llm_permission_list = config["configurable"].get("llm_permission_list", [])
+    number_of_models = len(llm_permission_list)
 
     # Get data from the state
     raw_result = state.get("permissions_result")
     if not raw_result:
-        return {"permission_aggregate_result": PermissionAggregateResult(features=[])}
+        return {"permission_aggregate_result": FeaturePermissionAggregateResult(features=[])}
     
     # Get features list from the raw result
     features_list = getattr(raw_result, "features", [])
@@ -435,7 +418,7 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
         aggregated_data = aggregated_data_majority
 
     # Convert the aggregated data into the final Pydantic target model
-    final_features: List[PermissionAggregateContainer] = []
+    final_features: List[FeaturePermissionAggregate] = []
 
     for title, data in aggregated_data.items():
         container_inferences: List[PermissionInferenceAggregate] = []
@@ -450,7 +433,7 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
             )
 
         final_features.append(
-            PermissionAggregateContainer(
+            FeaturePermissionAggregate(
                 title=data["title"],
                 description=data["description"],
                 inferences=container_inferences
@@ -463,9 +446,21 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
     )
 
     return {
-        "group_permissions_result": None,
-        "permission_groups_aggregate_result": None,
-        "permission_aggregate_result": PermissionAggregateResult(
+        "feature_permission_aggregate_result": FeaturePermissionAggregateResult(
             features=final_features
         )
+    }
+
+@auto_save("05_transform_permission")
+def transform_permission_node(state: PipelineState, config: RunnableConfig) -> dict:
+    permission_list = []
+    feature_permission_aggregate_result = state.get("feature_permission_aggregate_result")
+    features = feature_permission_aggregate_result.features if feature_permission_aggregate_result else []
+    for feature in features:
+        for inference in feature.inferences:
+                if inference.permission_name:
+                    permission_list.append(inference.permission_name)
+
+    return {
+        "permissions_list": permission_list
     }

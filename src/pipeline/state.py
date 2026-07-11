@@ -1,27 +1,26 @@
 from typing import TypedDict, Dict, List, Annotated
 
-from src.schemas.perm_map import ProcessedPermissions
+from src.schemas.permission_mapping import ProcessedPermissions
 from src.schemas.app_data import AppMetadata
-from src.schemas.func_result import FunctionalityResult
-from src.schemas.perm_result import PermissionAggregateResult, PermissionsResult
-from src.schemas.group_result import PermissionGroupsAggregateResult, PermissionGroupsResult
+from src.schemas.feature import FeatureResult
+from src.schemas.permission import FeaturePermissionAggregateResult, FeaturePermissionResult
+from src.schemas.group import FeatureGroupsAggregateResult, FeatureGroupsResult
 
-def merge_group_results(left: PermissionGroupsResult, right: PermissionGroupsResult) -> PermissionGroupsResult:
+def merge_group_results(left: FeatureGroupsResult, right: FeatureGroupsResult) -> FeatureGroupsResult:
     if not left: return right
     if not right: return left
     
     combined_features = left.features + right.features
     
-    return PermissionGroupsResult(features=combined_features)
+    return FeatureGroupsResult(features=combined_features)
 
-def merge_permission_results(left: PermissionsResult, right: PermissionsResult) -> PermissionsResult:
+def merge_permission_results(left: FeaturePermissionResult, right: FeaturePermissionResult) -> FeaturePermissionResult:
     if not left: return right
     if not right: return left
     
-    # Kombiniert die Listen der PermissionsContainer nahtlos
     combined_features = left.features + right.features
     
-    return PermissionsResult(features=combined_features)
+    return FeaturePermissionResult(features=combined_features)
 
 # State for the Pipeline
 class PipelineState(TypedDict, total=False):
@@ -40,16 +39,19 @@ class PipelineState(TypedDict, total=False):
     permissions_map: ProcessedPermissions
 
     # Results from functionality extraction 
-    functionality_result: FunctionalityResult
+    feature_result: FeatureResult
 
     # Result from group permission filter
-    group_permissions_result: Annotated[PermissionGroupsResult, merge_group_results]
+    feature_groups_result: Annotated[FeatureGroupsResult, merge_group_results]
 
     # Aggregation of permission groups
-    permission_groups_aggregate_result: PermissionGroupsAggregateResult
+    feature_groups_aggregate_result: FeatureGroupsAggregateResult
 
     # Result from permission filter
-    permissions_result: Annotated[PermissionsResult, merge_permission_results]
+    permissions_result: Annotated[FeaturePermissionResult, merge_permission_results]
     
     # Aggregation of permissions
-    permissions_aggregate_result: PermissionAggregateResult
+    feature_permission_aggregate_result: FeaturePermissionAggregateResult
+
+    # List of Permission (cleaned)
+    permissions_list: List[str]
