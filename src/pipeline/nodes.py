@@ -50,9 +50,7 @@ def auto_save(step_name: str):
 
 
 def create_global_semaphore(number: int):
-    
     global global_semaphore
-    
     global_semaphore = threading.Semaphore(number)
 
 
@@ -66,41 +64,38 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
 
     permissions_mapping = config["configurable"].get("permissions_mapping", [])
 
-    # 1. Hol die Raw-Daten aus dem State oder Input
-    # (Laut deiner Definition eine Liste von PermissionItem-Objekten)
-    raw_permissions: List[PermissionItem] = metadata.permissions
+    # Get permissions labels from the metadata
+    permissions_labels: List[PermissionItem] = metadata.permissions
     
-    # Hier legen wir das leere Dictionary an, das wir gleich befüllen
     temp_permissions_map = {}
     
-    # 2. Durchlaufe jede Kategorie aus den Raw-Daten
-    for item in raw_permissions:
+    # Iterate over each permission category
+    for item in permissions_labels:
         category_name = item.category
         
-        # Falls die Kategorie noch nicht existiert, erstelle eine leere Liste
+        # if the category is not in the map, initialize it with an empty list
         if category_name not in temp_permissions_map:
             temp_permissions_map[category_name] = []
             
-        # 3. Durchlaufe jedes Text-Label in dieser Kategorie
+        # Iterate over each permission label in the category
         for label in item.permissions:
             
-            # 4. Abgleich mit deinem großen Mapping-Modell
-            # (Ersetze 'permission_mapping' mit deiner globalen Variable/Instanz)
+            # Check if the real permission name exists in the mapping
             if label in permissions_mapping.permissions:
-                # Wenn das Label im Mapping existiert, holen wir uns den echten Namen
+                # Get the real android permission name from the mapping
                 technical_name = permissions_mapping.permissions[label].name
             else:
-                # Fallback, falls Google mal ein neues Label einführt, das du noch nicht im Mapping hast
+                # Fallback, if the label is not found in the mapping
                 technical_name = f"android.permission.UNKNOWN_{label.upper().replace(' ', '_')}"
             
-            # 5. Erstelle das AppPermission-Objekt und füge es der Kategorie hinzu
+            # Create an AppPermission instance and append it to the category list
             app_perm = AppPermission(
                 name=technical_name,
                 label=label
             )
             temp_permissions_map[category_name].append(app_perm)
             
-    # 6. Verpacke das fertige Dictionary in dein ProcessedPermissions-Modell
+    # Wrap the final permissions map in a ProcessedPermissions instance
     final_processed_permissions = ProcessedPermissions(permissions_map=temp_permissions_map)
     
     updates = {
@@ -314,6 +309,12 @@ def permission_node(state: PipelineState, config: RunnableConfig) -> dict:
     # Get the permission groups as JSON string for the prompt
     all_permissions = config["configurable"].get("permissions")
     permission = next((perm for perm in all_permissions.groups_details if perm.group_name == group_name),None)
+    if permission is None:
+        logger.warning(f"No permission group found for {group_name}. Skipping permission analysis for this group.")
+        return {
+            "permissions_result": FeaturePermissionResult(features=[])
+        }
+
     context_string = permission.model_dump_json(indent=2)
     
     # Prepare the prompt for the LLM
@@ -453,14 +454,15 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
 
 @auto_save("05_transform_permission")
 def transform_permission_node(state: PipelineState, config: RunnableConfig) -> dict:
-    permission_list = []
     feature_permission_aggregate_result = state.get("feature_permission_aggregate_result")
     features = feature_permission_aggregate_result.features if feature_permission_aggregate_result else []
+    
+    unique_permissions = set()
     for feature in features:
         for inference in feature.inferences:
-                if inference.permission_name:
-                    permission_list.append(inference.permission_name)
-
+            if inference.permission_name and inference.permission_name.strip().upper() != "NONE":    
+                unique_permissions.add(inference.permission_name.strip().upper())
+            
     return {
-        "permissions_list": permission_list
+        "permissions_list": list(unique_permissions)
     }

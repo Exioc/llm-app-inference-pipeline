@@ -2,12 +2,11 @@ from typing import Dict, List
 from pydantic import BaseModel, Field, model_validator
 
 class AppPermission(BaseModel):
-    name: str = Field(..., description="Der technische Android-Name, z.B. 'android.permission.ACCESS_WIFI_STATE'")
-    label: str = Field(..., description="Das lesbare Label, z.B. 'view Wi-Fi connections'")
+    name: str = Field(...,description="The technical Android permission name, e.g. 'android.permission.ACCESS_WIFI_STATE'")
+    label: str = Field(...,description="The human-readable permission label, e.g. 'view Wi-Fi connections'")
 
 class ProcessedPermissions(BaseModel):
-    # Das ist deine Struktur aus Option 1:
-    # Key = Kategorie (z.B. "Identity"), Value = Liste von AppPermission-Objekten
+    # Key = category (e.g., "Identity"), Value = list of AppPermission objects
     permissions_map: Dict[str, List[AppPermission]] = Field(default_factory=dict)
 
 class PermissionElement(BaseModel):
@@ -25,25 +24,24 @@ class AndroidPermissionsModel(BaseModel):
     @model_validator(mode="before")
     @classmethod
     def transform_keys_to_labels(cls, data: dict) -> dict:
-        # Falls "permissions" nicht im Input ist, machen wir nichts
+        # if permissions key is not present or is not a dictionary, return the data as is
         if "permissions" not in data or not isinstance(data["permissions"], dict):
             return data
 
         transformed_permissions = {}
         
+        # Change the key to label to make mapping easier.
         for old_key, perm_body in data["permissions"].items():
-            # Wir holen das Label. Wenn das Label im JSON leer ist (""), 
-            # nehmen wir als Fallback den echten Namen der Permission.
+            # Get the label from the permission body. If it's empty, fallback to the original permission name.
             new_key = perm_body.get("label") or perm_body.get("name") or old_key
             
-            # Falls im JSON das Feld "name" fehlt, fügen wir es zur Sicherheit hinzu,
-            # da dein PermissionElement-Modell es als Pflichtfeld verlangt.
-            if "name" not in perm_body:
-                perm_body["name"] = old_key
+            # if "name" not in perm_body:
+            #     perm_body["name"] = old_key
                 
+            # Save the permission body under the new key (label)
             transformed_permissions[new_key] = perm_body
 
-        # Wir ersetzen das alte Permissions-Dict mit unserem neuen, umgebauten Dict
+        # Replace the original permissions dict with the transformed one
         data["permissions"] = transformed_permissions
         return data
 
