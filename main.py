@@ -82,8 +82,8 @@ def main() -> None:
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
                 "permissions_mapping": permissions_mapping,
-                "group_filter": False,
-                "permission_filter": False
+                "group_filter": True,
+                "permission_filter": True
             }
         },
     )

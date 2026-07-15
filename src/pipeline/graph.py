@@ -31,7 +31,7 @@ def route_group_node(state: PipelineState, config: RunnableConfig) -> list[Send]
 
     # Create Global Semaphore to limit the number of concurrent threads
     #create_global_semaphore(num_features)
-    create_global_semaphore(3)
+    create_global_semaphore(5)
 
     sends = []
     
@@ -70,7 +70,7 @@ def route_permission_node(state: PipelineState, config: RunnableConfig) -> list[
     
     # Set the Semaphore to the number of features to process
     #create_global_semaphore(len(features_list))
-    create_global_semaphore(3)
+    create_global_semaphore(5)
     
     sends = []
     
