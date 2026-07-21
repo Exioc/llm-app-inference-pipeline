@@ -334,8 +334,6 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
     permissions_list = permission.model_dump()["permissions"]
     context_string = json.dumps(permissions_list, indent=2)
 
-    #context_string = permission.permissions.model_dump_json(indent=2)
-
     # Prepare the prompt for the LLM
     messages = PERMISSION_PROMPT.invoke({
         "allowed_context": context_string,

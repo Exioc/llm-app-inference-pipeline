@@ -36,14 +36,6 @@ class FeatureGroups(BaseModel):
     )
 
 class FeatureGroupsResult(BaseModel):
-    tmp_model: Optional[str] = Field(
-        default=None,
-        description="Temporary holder for the specific LLM model name assigned to this parallel execution branch."
-    )
-    tmp_feature_idx: Optional[int] = Field(
-        default=None,
-        description="Temporary zero-based index pointing to the exact feature array element processed by this task."
-    )
     features: List[FeatureGroups]
 
 

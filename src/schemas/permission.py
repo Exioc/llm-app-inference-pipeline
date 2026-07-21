@@ -37,18 +37,6 @@ class FeaturePermission(BaseModel):
     )
 
 class FeaturePermissionResult(BaseModel):
-    tmp_model: Optional[str] = Field(
-        default=None,
-        description="Temporary holder for the specific LLM model name assigned to this parallel execution branch."
-    )
-    tmp_feature_idx: Optional[int] = Field(
-        default=None,
-        description="Temporary zero-based index pointing to the exact feature array element processed by this task."
-    )
-    tmp_group_name: Optional[str] = Field(
-        default=None,
-        description="Temporary holder for the specific Android permission group name processed by this task branch."
-    )
     features: List[FeaturePermission] = Field(
         description="The list of extracted app features containing their finalized Android permission inferences."
     )

@@ -3,8 +3,6 @@ from langgraph.constants import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.permission import FeaturePermissionResult
-from src.schemas.group import FeatureGroupsResult
 from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
 from src.pipeline.nodes import (
