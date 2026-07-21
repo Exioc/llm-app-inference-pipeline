@@ -2,27 +2,17 @@ from pydantic import BaseModel, Field
 from typing import List, Optional
 
 class PermissionInference(BaseModel):
-    permission_name: Optional[str] = Field(
-        default=None,
-        description=(
-            "The exact name of the Android permission inferred from the allowed context (e.g., CAMERA, RECORD_AUDIO). "
-            "If the feature requires NO permissions at all, set this field strictly to 'NONE'."
-        )
+    permission_name: str = Field(
+        description="The exact name of the Android permission (e.g. CAMERA, RECORD_AUDIO) or 'NONE'."
     )
-    reasoning: Optional[str] = Field(
-        default=None,
-        description=(
-            "A concise, logical explanation proving why this specific permission is assumed to be necessary. "
-            "If the permission_name is 'NONE' (no permissions needed), set this field strictly to null."
-        )
+    reasoning: str = Field(
+        default="No permission required.",
+        description="Logical explanation for the permission. If permission_name is 'NONE', write 'No permission required.'"
     )
 
 class PermissionResponse(BaseModel):
     inferences: List[PermissionInference] = Field(
-        description=(
-            "A list containing each inferred permission along with its logical reasoning. "
-            "If the feature requires NO permissions, return exactly ONE entry where permission_name is 'NONE' and reasoning is null."
-        )
+        description="List of inferred permissions with reasoning."
     )
 
 class FeaturePermission(BaseModel):

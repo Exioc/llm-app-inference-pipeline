@@ -1,7 +1,7 @@
 {
   "models": [
     {
-      "model": "qwen3.5 122B",
+      "model": "qwen3.5:122B",
       "temperature": 1.0,
       "role": "feature"
     }

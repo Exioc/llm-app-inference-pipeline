@@ -1,6 +1,7 @@
 import argparse
 import logging
 
+from src.pipeline.nodes import create_global_semaphore
 from src.pipeline.graph import build_app
 from src.utils.save_state import save_state
 from src.utils.b64_decode import b64_decode
@@ -9,6 +10,7 @@ from src.utils.initialize_run_folder import initialize_run_folder
 from src.utils.get_jsonl_line import get_jsonl_line
 from src.utils.create_llm_pool import create_llm_pool
 from src.schemas.app_data import AppMetadata
+from src.schemas.filter_config import GroupFilterConfig, PermissionFilterConfig
 from src.config.config import (
     LANGSMITH_TRACING,
     load_permission_groups,
@@ -27,23 +29,30 @@ def main() -> None:
     setup_logging()
 
     # Create argument parser
-    parser = argparse.ArgumentParser(description="Liest eine App-Metadaten-Zeile aus einer JSONL-Datei.")
+    parser = argparse.ArgumentParser(description="Reads an app metadata line from a JSONL file.")
     
     # Define required input arguments
-    parser.add_argument("path", type=str, help="Pfad zur .jsonl Datei")
-    parser.add_argument("index", type=int, help="Index der Zeile (beginnend bei 0)")
+    parser.add_argument("metadata_path", type=str, help="Path to the JSONL file containing app metadata.")
+    parser.add_argument("index", type=int, help="Index of the line to read, start with 1.")
+    parser.add_argument("apk_path", type=str, help="Path to the APK file.")
 
     # Parse command-line arguments
     args = parser.parse_args()
 
     # Extract the specified line from the JSONL file
-    app_data = get_jsonl_line(args.path, args.index)
+    app_data = get_jsonl_line(args.metadata_path, args.index)
+
+    # Get the APK path from the command-line arguments
+    apk_path = args.apk_path
 
     # Create a AppMetadata instance from the extracted data
     app_data = AppMetadata(**app_data)
 
+    # Get name 
+    app_name = b64_decode(app_data.label)
+
     # Initialize run folder and save input
-    storage_path = initialize_run_folder()
+    storage_path = initialize_run_folder(app_name)
     save_state(app_data, "00_Metadata", storage_path)
 
     # Create LLM pool based on the configuration
@@ -57,13 +66,22 @@ def main() -> None:
 
     permissions_mapping = load_permissions_mapping()
 
+    # Create filter (default is enabled=False and threshold=0.5)
+    group_filter = GroupFilterConfig(enabled=False)
+    permission_filter = PermissionFilterConfig(enabled=False)
+
+    create_global_semaphore(1)
+
     # Build the pipeline
     app = build_app()
 
     # Input for the pipeline
     initial_input = {
         "metadata": app_data,
-        "storage_path": storage_path
+        "storage_path": storage_path,
+        "apk_path": apk_path,
+        "group_send_idx": -1,
+        "permission_send_idx": -1
     }
 
     # Start the pipelin
@@ -82,8 +100,8 @@ def main() -> None:
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
                 "permissions_mapping": permissions_mapping,
-                "group_filter": True,
-                "permission_filter": True
+                "group_filter": group_filter,
+                "permission_filter": permission_filter
             }
         },
     )

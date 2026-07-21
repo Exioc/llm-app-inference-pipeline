@@ -5,6 +5,7 @@ from src.schemas.app_data import AppMetadata
 from src.schemas.feature import FeatureResult
 from src.schemas.permission import FeaturePermissionAggregateResult, FeaturePermissionResult
 from src.schemas.group import FeatureGroupsAggregateResult, FeatureGroupsResult
+from src.schemas.validation import ValidationResults
 
 def merge_group_results(left: FeatureGroupsResult, right: FeatureGroupsResult) -> FeatureGroupsResult:
     if not left: return right
@@ -28,6 +29,12 @@ class PipelineState(TypedDict, total=False):
     # Storage path
     storage_path: str
 
+    # APK path
+    apk_path: str
+
+    group_send_idx: int
+    permission_send_idx: int
+
     # Raw input
     metadata: AppMetadata
 
@@ -35,8 +42,12 @@ class PipelineState(TypedDict, total=False):
     pkg: str
     label: str
     description_long: str
-    #permissions_map: Dict[str, List[str]]
+
+    # Map labels to permissions
     permissions_map: ProcessedPermissions
+
+    # Permission list from manifest file 
+    ground_truth_permissions: List[str]
 
     # Results from functionality extraction 
     feature_result: FeatureResult
@@ -55,3 +66,6 @@ class PipelineState(TypedDict, total=False):
 
     # List of Permission (cleaned)
     permissions_list: List[str]
+
+    # Validation
+    validation_results: ValidationResults

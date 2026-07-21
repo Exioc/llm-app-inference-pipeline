@@ -6,7 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from src.schemas.permission_mapping import AndroidPermissionsModel
-from src.schemas.android_data import PermissionGroupList, PermissionGroupDetailList
+from src.schemas.android_data import PermissionGroupSummaries, PermissionGroupCollection
 
 load_dotenv()
 
@@ -58,24 +58,30 @@ def setup_logging():
         format=log_format,
         handlers=[console_handler, file_handler]
     )
+
+    try:
+        from androguard.util import set_log
+        set_log("INFO")
+    except ImportError:
+        pass
     
     logging.info("Logging infrastructure successfully initialized.")
 
-def load_permission_groups() -> PermissionGroupList:
+def load_permission_groups() -> PermissionGroupSummaries:
     if not PERMISSION_GROUPS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSION_GROUPS_PATH}")
     else:         
         with open(PERMISSION_GROUPS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-            return PermissionGroupList(groups=raw_data)
+            return PermissionGroupSummaries(groups=raw_data)
 
-def load_permissions() -> PermissionGroupDetailList:
+def load_permissions() -> PermissionGroupCollection:
     if not PERMISSIONS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSIONS_PATH}")
     else:         
         with open(PERMISSIONS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-            return PermissionGroupDetailList(groups_details=raw_data)
+            return PermissionGroupCollection(groups=raw_data)
 
 def load_llm_config(path: Path) -> list[dict]:
     if not os.path.exists(path):

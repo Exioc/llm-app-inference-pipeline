@@ -21,12 +21,13 @@ class LLMWorker:
             base_url=OLLAMA_BASE_URL,
             client_kwargs={"headers": {"Authorization": f"Bearer {OLLAMA_API_KEY}"}}
         )
+
         if self.config.role == "feature": 
             return llm.with_structured_output(FeatureResponse)
         elif self.config.role == "group": 
-            return llm.with_structured_output(GroupResponse)
+            return llm.with_structured_output(GroupResponse,method="json_schema")
         elif self.config.role == "permission": 
-            return llm.with_structured_output(PermissionResponse)
+            return llm.with_structured_output(PermissionResponse,method="json_schema")
         else:
             return llm
 

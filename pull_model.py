@@ -11,7 +11,7 @@ headers = {
 }
 
 payload = {
-    "model": "mistral-medium-3.5:128b",
+    "model": "command-r-plus:104b",
 }
 
 response = requests.post(url, headers=headers, json=payload)
