@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
+from src.schemas.data_types_mapping import PermissionDataTypeMappingList
 from src.schemas.permission_mapping import AndroidPermissionsModel
 from src.schemas.android_data import PermissionGroupSummaries, PermissionGroupCollection
 
@@ -16,6 +17,7 @@ DIR = Path(__file__).resolve().parent.parent
 PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
 PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
+DATA_TYPES_MAPPING_PATH = Path(DIR /"data/permission_data_types_mapping_154.json")
 LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
 LLM_PERMISSION_CONFIG_PATH = Path(DIR /"config/presets/llm_permission_config.json")
@@ -98,6 +100,15 @@ def load_permissions_mapping() -> AndroidPermissionsModel:
         with open(PERMISSIONS_MAPPING_PATH, "r", encoding="utf-8") as file:
             raw_data = json.load(file)
         return AndroidPermissionsModel(**raw_data)
+
+def load_data_types_mapping() -> PermissionDataTypeMappingList:
+    if not DATA_TYPES_MAPPING_PATH.exists():
+        raise FileNotFoundError(f"File not found: {DATA_TYPES_MAPPING_PATH}")
+
+    else:
+        with open(DATA_TYPES_MAPPING_PATH, "r", encoding="utf-8") as file:
+            raw_data = json.load(file)
+        return PermissionDataTypeMappingList(mappings=raw_data)
         
 
 llm_feature_config =  load_llm_config(LLM_FEATURE_CONFIG_PATH)

@@ -7,6 +7,7 @@ from typing import Dict, Any, List
 from androguard.core.apk import APK
 from langchain_core.runnables import RunnableConfig
 
+from src.schemas.data_types_mapping import PermissionDataTypeMapping, PermissionDataTypeMappingList
 from src.schemas.filter_config import GroupFilterConfig, PermissionFilterConfig
 from src.schemas.permission_mapping import AppPermission, ProcessedPermissions
 from src.schemas.app_data import PermissionItem
@@ -256,7 +257,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
             
             for g_name, g_data in feature_data["groups_map"].items():
                 value = len(g_data["models_inferred"])
-                if value >= group_filter.treshold:
+                if value >= group_filter.threshold:
                     filtered_groups[g_name] = g_data
 
             if filtered_groups:
@@ -505,11 +506,44 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
             "inference":  perm in pred_set
         })
 
+    group_filter = config["configurable"].get("group_filter", GroupFilterConfig())
+    perm_filter = config["configurable"].get("permission_filter", PermissionFilterConfig())
+
     validation_results = {
             "metrics": metrics_dict,
+            "threshold_group": group_filter.threshold,
+            "threshold_permission": perm_filter.threshold,
             "comparison": table_rows
         }
     
     return {
         "validation_results": validation_results
+    }
+
+@auto_save("07_data_types")
+def data_types_node(state: PipelineState, config: RunnableConfig) -> dict:
+    data_types_mapping = config["configurable"].get(
+        "data_types_mapping", 
+        PermissionDataTypeMappingList()
+    )
+
+    permissions_list = state.get("permissions_list", [])
+    lookup = data_types_mapping.as_dict
+
+    result = []
+
+    for perm in permissions_list:
+        
+        data_types = lookup.get(perm)
+
+        if data_types: 
+            mapping_obj = PermissionDataTypeMapping(
+                permission=perm,
+                data_types=data_types
+            )
+            
+            result.append(mapping_obj.model_dump(by_alias=True))
+
+    return {
+        "data_types": result
     }

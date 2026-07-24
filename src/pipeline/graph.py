@@ -6,7 +6,8 @@ from langchain_core.runnables import RunnableConfig
 from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
 from src.pipeline.nodes import (
-    create_global_semaphore, 
+    create_global_semaphore,
+    data_types_node, 
     preprocess_node, 
     functionality_node,
     group_idx_node, 
@@ -89,7 +90,7 @@ def build_app():
     workflow.add_node("permission_arg", permission_aggregate_node)
     workflow.add_node("transform_permission", transform_permission_node)
     workflow.add_node("validation", validation_node)
-    
+    workflow.add_node("data_types", data_types_node)
 
     # Edges
     workflow.add_edge(START, "preprocess")
@@ -100,7 +101,8 @@ def build_app():
     workflow.add_edge("permission", "permission_idx")
     workflow.add_edge("permission_arg", "transform_permission")
     workflow.add_edge("transform_permission", "validation")
-    workflow.add_edge("validation", END)
+    workflow.add_edge("validation", "data_types")
+    workflow.add_edge("data_types", END)
     
     # Conditional edges
     workflow.add_conditional_edges(

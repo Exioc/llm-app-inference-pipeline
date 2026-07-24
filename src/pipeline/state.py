@@ -1,5 +1,6 @@
 from typing import TypedDict, Dict, List, Annotated
 
+from src.schemas.data_types_mapping import PermissionDataTypeMapping
 from src.schemas.permission_mapping import ProcessedPermissions
 from src.schemas.app_data import AppMetadata
 from src.schemas.feature import FeatureResult
@@ -69,3 +70,6 @@ class PipelineState(TypedDict, total=False):
 
     # Validation
     validation_results: ValidationResults
+
+    # DataTypes
+    data_types: list[PermissionDataTypeMapping]

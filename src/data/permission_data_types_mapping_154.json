@@ -1,0 +1,1150 @@
+[
+  {
+    "permission": "ACTIVITY_RECOGNITION",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Fitness info",
+        "description": "Information about a user's fitness, such as exercise or other physical activity."
+      }
+    ]
+  },
+  {
+    "permission": "READ_CALENDAR",
+    "dataTypes": [
+      {
+        "category": "Calendar",
+        "dataType": "Calendar events",
+        "description": "Information from a user’s calendar such as events, event notes, and attendees."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_CALENDAR",
+    "dataTypes": [
+      {
+        "category": "Calendar",
+        "dataType": "Calendar events",
+        "description": "Information from a user’s calendar such as events, event notes, and attendees."
+      }
+    ]
+  },
+  {
+    "permission": "READ_CALL_LOG",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_CALL_LOG",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "CAMERA",
+    "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Photos",
+        "description": "A user’s photos."
+      },
+      {
+        "category": "Photos and videos",
+        "dataType": "Videos",
+        "description": "A user’s videos."
+      }
+    ]
+  },
+  {
+    "permission": "GET_ACCOUNTS",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "User IDs",
+        "description": "Identifiers that relate to an identifiable person. For example, an account ID, account number, or account name."
+      }
+    ]
+  },
+  {
+    "permission": "READ_CONTACTS",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Name",
+        "description": "How a user refers to themselves, such as their first or last name, or nickname."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_CONTACTS",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Name",
+        "description": "How a user refers to themselves, such as their first or last name, or nickname."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+  "permission": "APPLY_PICTURE_PROFILE",
+  "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Photos",
+        "description": "A user’s photos."
+      }
+    ]
+  },
+  {
+    "permission": "READ_PROFILE",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Name",
+        "description": "How a user refers to themselves, such as their first or last name, or nickname."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "User IDs",
+        "description": "Identifiers that relate to an identifiable person. For example, an account ID, account number, or account name."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Address",
+        "description": "A user’s address, such as a mailing or home address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_PROFILE",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Name",
+        "description": "How a user refers to themselves, such as their first or last name, or nickname."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "User IDs",
+        "description": "Identifiers that relate to an identifiable person. For example, an account ID, account number, or account name."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Address",
+        "description": "A user’s address, such as a mailing or home address."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
+  },
+  {
+    "permission": "ACCESS_BACKGROUND_LOCATION",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      },
+      {
+        "category": "Location",
+        "dataType": "Precise location",
+        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
+      }
+    ]
+  },
+  {
+    "permission": "ACCESS_COARSE_LOCATION",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      }
+    ]
+  },
+  {
+    "permission": "ACCESS_FINE_LOCATION",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      },
+      {
+        "category": "Location",
+        "dataType": "Precise location",
+        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
+      }
+    ]
+  },
+  {
+    "permission": "ACCESS_MEDIA_LOCATION",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      },
+      {
+        "category": "Location",
+        "dataType": "Precise location",
+        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
+      }
+    ]
+  },
+  {
+    "permission": "ACCESS_LOCATION_EXTRA_COMMANDS",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_LOCATION_BUTTON",
+    "dataTypes": []
+  },
+  {
+    "permission": "RECORD_AUDIO",
+    "dataTypes": [
+      {
+        "category": "Audio files",
+        "dataType": "Voice or sound recordings",
+        "description": "A user’s voice such as a voicemail or a sound recording."
+      }
+    ]
+  },
+  {
+    "permission": "BLUETOOTH",
+    "dataTypes": []
+  },
+  {
+    "permission": "BLUETOOTH_ADMIN",
+    "dataTypes": []
+  },
+  {
+    "permission": "BLUETOOTH_SCAN",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      },
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "BLUETOOTH_CONNECT",
+    "dataTypes": [
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "BLUETOOTH_ADVERTISE",
+    "dataTypes": [
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "NEARBY_WIFI_DEVICES",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Approximate location",
+        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
+      },
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "NFC",
+    "dataTypes": []
+  },
+  {
+    "permission": "NFC_PREFERRED_PAYMENT_INFO",
+    "dataTypes": [
+      {
+        "category": "Financial info",
+        "dataType": "User payment info",
+        "description": "Information about a user’s financial accounts such as credit card number."
+      }
+    ]
+  },
+  {
+    "permission": "NFC_TRANSACTION_EVENT",
+    "dataTypes": [
+      {
+        "category": "Financial info",
+        "dataType": "User payment info",
+        "description": "Information about a user’s financial accounts such as credit card number."
+      },
+      {
+        "category": "Financial info",
+        "dataType": "Purchase history",
+        "description": "Information about purchases or transactions a user has made."
+      }
+    ]
+  },
+  {
+    "permission": "RANGING",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Precise location",
+        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
+      },
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "UWB_RANGING",
+    "dataTypes": [
+      {
+        "category": "Location",
+        "dataType": "Precise location",
+        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
+      },
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
+  },
+  {
+    "permission": "READ_NEARBY_STREAMING_POLICY",
+    "dataTypes": []
+  },
+  {
+    "permission": "POST_NOTIFICATIONS",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "App interactions",
+        "description": "Information about how a user interacts with the app. For example, the number of times they visit a page or sections they tap on."
+      }
+    ]
+  },
+  {
+    "permission": "POST_PROMOTED_NOTIFICATIONS",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "App interactions",
+        "description": "Information about how a user interacts with the app. For example, the number of times they visit a page or sections they tap on."
+      }
+    ]
+  },
+  {
+    "permission": "USE_FULL_SCREEN_INTENT",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCEPT_HANDOVER",
+    "dataTypes": []
+  },
+  {
+    "permission": "ADD_VOICEMAIL",
+    "dataTypes": []
+  },
+  {
+    "permission": "ANSWER_PHONE_CALLS",
+    "dataTypes": []
+  },
+  {
+    "permission": "CALL_PHONE",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "PROCESS_OUTGOING_CALLS",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "READ_PHONE_NUMBERS",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "READ_PHONE_STATE",
+    "dataTypes": [
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "USE_SIP",
+    "dataTypes": []
+  },
+  {
+    "permission": "MANAGE_OWN_CALLS",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_BASIC_PHONE_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_CELL_BROADCASTS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "READ_MEDIA_AUDIO",
+    "dataTypes": [
+      {
+        "category": "Audio files",
+        "dataType": "Music files",
+        "description": "A user’s music files."
+      },
+      {
+        "category": "Audio files",
+        "dataType": "Voice or sound recordings",
+        "description": "A user’s voice such as a voicemail or a sound recording."
+      },
+      {
+        "category": "Audio files",
+        "dataType": "Other audio files",
+        "description": "Any other user-created or user-provided audio files."
+      }
+    ]
+  },
+  {
+    "permission": "READ_MEDIA_IMAGES",
+    "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Photos",
+        "description": "A user’s photos."
+      }
+    ]
+  },
+  {
+    "permission": "READ_MEDIA_VIDEO",
+    "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Videos",
+        "description": "A user’s videos."
+      }
+    ]
+  },
+  {
+    "permission": "READ_MEDIA_VISUAL_USER_SELECTED",
+    "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Photos",
+        "description": "A user’s photos."
+      },
+      {
+        "category": "Photos and videos",
+        "dataType": "Videos",
+        "description": "A user’s videos."
+      }
+    ]
+  },
+  {
+    "permission": "BODY_SENSORS",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "BODY_SENSORS_BACKGROUND",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "HIGH_SAMPLING_RATE_SENSORS",
+    "dataTypes": []
+  },
+  {
+    "permission": "EYE_TRACKING_COARSE",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "EYE_TRACKING_FINE",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "FACE_TRACKING",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "HAND_TRACKING",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "HEAD_TRACKING",
+    "dataTypes": [
+      {
+        "category": "Health and fitness",
+        "dataType": "Health info",
+        "description": "Information about a user's health, such as medical records or symptoms."
+      }
+    ]
+  },
+  {
+    "permission": "SCENE_UNDERSTANDING_COARSE",
+    "dataTypes": []
+  },
+  {
+    "permission": "SCENE_UNDERSTANDING_FINE",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_SMS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Phone number",
+        "description": "A user’s phone number."
+      }
+    ]
+  },
+  {
+    "permission": "RECEIVE_MMS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "RECEIVE_SMS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "RECEIVE_WAP_PUSH",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "SEND_SMS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_SMS",
+    "dataTypes": [
+      {
+        "category": "Messages",
+        "dataType": "SMS or MMS",
+        "description": "A user’s text messages including the sender, recipients, and the content of the message."
+      }
+    ]
+  },
+  {
+    "permission": "READ_EXTERNAL_STORAGE",
+    "dataTypes": [
+      {
+        "category": "Photos and videos",
+        "dataType": "Photos",
+        "description": "A user’s photos."
+      },
+      {
+        "category": "Photos and videos",
+        "dataType": "Videos",
+        "description": "A user’s videos."
+      },
+      {
+        "category": "Audio files",
+        "dataType": "Music files",
+        "description": "A user’s music files."
+      },
+      {
+        "category": "Audio files",
+        "dataType": "Voice or sound recordings",
+        "description": "A user’s voice such as a voicemail or a sound recording."
+      },
+      {
+        "category": "Audio files",
+        "dataType": "Other audio files",
+        "description": "Any other user-created or user-provided audio files."
+      },
+      {
+        "category": "Files and docs",
+        "dataType": "Files and docs",
+        "description": "A user’s files or documents, or information about their files or documents such as file names."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_EXTERNAL_STORAGE",
+    "dataTypes": [
+      {
+        "category": "Files and docs",
+        "dataType": "Files and docs",
+        "description": "A user’s files or documents, or information about their files or documents such as file names."
+      }
+    ]
+  },
+  {
+    "permission": "INTERNET",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCESS_NETWORK_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "CHANGE_NETWORK_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCESS_WIFI_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "CHANGE_WIFI_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "CHANGE_WIFI_MULTICAST_STATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCESS_LOCAL_NETWORK",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_LOOPBACK_INTERFACE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_CAMERA",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_DATA_SYNC",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_HEALTH",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_LOCATION",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_MEDIA_PROCESSING",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_MICROPHONE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_PHONE_CALL",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_SPECIAL_USE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+    "dataTypes": []
+  },
+  {
+    "permission": "FOREGROUND_SERVICE_FILE_MANAGEMENT",
+    "dataTypes": []
+  },
+  {
+    "permission": "CALL_COMPANION_APP",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_COMPANION_PROFILE_GLASSES",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_COMPANION_PROFILE_WATCH",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_COMPANION_RUN_IN_BACKGROUND",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_COMPANION_USE_DATA_IN_BACKGROUND",
+    "dataTypes": []
+  },
+  {
+    "permission": "DELIVER_COMPANION_MESSAGES",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE",
+    "dataTypes": []
+  },
+  {
+    "permission": "BROADCAST_STICKY",
+    "dataTypes": []
+  },
+  {
+    "permission": "ENFORCE_UPDATE_OWNERSHIP",
+    "dataTypes": []
+  },
+  {
+    "permission": "GET_PACKAGE_SIZE",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "Installed apps",
+        "description": "Information about the apps installed on a user's device."
+      }
+    ]
+  },
+  {
+    "permission": "KILL_BACKGROUND_PROCESSES",
+    "dataTypes": []
+  },
+  {
+    "permission": "QUERY_ALL_PACKAGES",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "Installed apps",
+        "description": "Information about the apps installed on a user's device."
+      }
+    ]
+  },
+  {
+    "permission": "RECEIVE_BOOT_COMPLETED",
+    "dataTypes": []
+  },
+  {
+    "permission": "REORDER_TASKS",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_DELETE_PACKAGES",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "dataTypes": []
+  },
+  {
+    "permission": "RUN_USER_INITIATED_JOBS",
+    "dataTypes": []
+  },
+  {
+    "permission": "UPDATE_PACKAGES_WITHOUT_USER_ACTION",
+    "dataTypes": []
+  },
+  {
+    "permission": "WAKE_LOCK",
+    "dataTypes": []
+  },
+  {
+    "permission": "GET_TASKS",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "Installed apps",
+        "description": "Information about the apps installed on a user's device."
+      }
+    ]
+  },
+  {
+    "permission": "PERSISTENT_ACTIVITY",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_INSTALL_SESSIONS",
+    "dataTypes": [
+      {
+        "category": "App activity",
+        "dataType": "Installed apps",
+        "description": "Information about the apps installed on a user's device."
+      }
+    ]
+  },
+  {
+    "permission": "RESTART_PACKAGES",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCESS_NOTIFICATION_POLICY",
+    "dataTypes": []
+  },
+  {
+    "permission": "DISABLE_KEYGUARD",
+    "dataTypes": []
+  },
+  {
+    "permission": "EXPAND_STATUS_BAR",
+    "dataTypes": []
+  },
+  {
+    "permission": "INSTALL_SHORTCUT",
+    "dataTypes": []
+  },
+  {
+    "permission": "MODIFY_AUDIO_SETTINGS",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_COLOR_ZONES",
+    "dataTypes": []
+  },
+  {
+    "permission": "SET_ALARM",
+    "dataTypes": []
+  },
+  {
+    "permission": "SET_WALLPAPER",
+    "dataTypes": []
+  },
+  {
+    "permission": "SET_WALLPAPER_HINTS",
+    "dataTypes": []
+  },
+  {
+    "permission": "TRANSMIT_IR",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_PINNED_WINDOWING_LAYER",
+    "dataTypes": []
+  },
+  {
+    "permission": "VIBRATE",
+    "dataTypes": []
+  },
+  {
+    "permission": "FLASHLIGHT",
+    "dataTypes": []
+  },
+  {
+    "permission": "HIDE_OVERLAY_WINDOWS",
+    "dataTypes": []
+  },
+  {
+    "permission": "TV_IMPLICIT_ENTER_PIP",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_EXACT_ALARM",
+    "dataTypes": []
+  },
+  {
+    "permission": "ACCESS_HIDDEN_PROFILES",
+    "dataTypes": []
+  },
+  {
+    "permission": "CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS",
+    "dataTypes": []
+  },
+  {
+    "permission": "CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
+    "dataTypes": []
+  },
+  {
+    "permission": "CREDENTIAL_MANAGER_SET_ORIGIN",
+    "dataTypes": []
+  },
+  {
+    "permission": "DETECT_SCREEN_CAPTURE",
+    "dataTypes": []
+  },
+  {
+    "permission": "DETECT_SCREEN_RECORDING",
+    "dataTypes": []
+  },
+  {
+    "permission": "REQUEST_PASSWORD_COMPLEXITY",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_BIOMETRIC",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_FINGERPRINT",
+    "dataTypes": []
+  },
+  {
+    "permission": "QUERY_ADVANCED_PROTECTION_MODE",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_SYNC_SETTINGS",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_SYNC_STATS",
+    "dataTypes": []
+  },
+  {
+    "permission": "WRITE_SYNC_SETTINGS",
+    "dataTypes": []
+  },
+  {
+    "permission": "AUTHENTICATE_ACCOUNTS",
+    "dataTypes": []
+  },
+  {
+    "permission": "MANAGE_ACCOUNTS",
+    "dataTypes": []
+  },
+  {
+    "permission": "USE_CREDENTIALS",
+    "dataTypes": []
+  },
+  {
+    "permission": "CAPTURE_KEYBOARD",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_ASSIST_STRUCTURE_SCREEN_CONTENT",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_USER_DICTIONARY",
+    "dataTypes": []
+  },
+  {
+    "permission": "WRITE_USER_DICTIONARY",
+    "dataTypes": []
+  },
+  {
+    "permission": "READ_SOCIAL_STREAM",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      }
+    ]
+  },
+  {
+    "permission": "WRITE_SOCIAL_STREAM",
+    "dataTypes": [
+      {
+        "category": "Contacts",
+        "dataType": "Contacts",
+        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
+      }
+    ]
+  },
+  {
+    "permission": "SUBSCRIBED_FEEDS_READ",
+    "dataTypes": []
+  },
+  {
+    "permission": "SUBSCRIBED_FEEDS_WRITE",
+    "dataTypes": []
+  }
+]

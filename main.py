@@ -13,6 +13,7 @@ from src.schemas.app_data import AppMetadata
 from src.schemas.filter_config import GroupFilterConfig, PermissionFilterConfig
 from src.config.config import (
     LANGSMITH_TRACING,
+    load_data_types_mapping,
     load_permission_groups,
     load_permissions,
     load_permissions_mapping,
@@ -66,9 +67,11 @@ def main() -> None:
 
     permissions_mapping = load_permissions_mapping()
 
+    data_types_mapping = load_data_types_mapping()
+
     # Create filter (default is enabled=False and threshold=0.5)
-    group_filter = GroupFilterConfig(enabled=False)
-    permission_filter = PermissionFilterConfig(enabled=False)
+    group_filter = GroupFilterConfig(enabled=True,threshold=0.5)
+    permission_filter = PermissionFilterConfig(enabled=True,threshold=0.5)
 
     create_global_semaphore(1)
 
@@ -100,6 +103,7 @@ def main() -> None:
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
                 "permissions_mapping": permissions_mapping,
+                "data_types_mapping": data_types_mapping,
                 "group_filter": group_filter,
                 "permission_filter": permission_filter
             }

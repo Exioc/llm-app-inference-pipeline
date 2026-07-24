@@ -17,4 +17,6 @@ class ComparisonRow(TypedDict):
 
 class ValidationResults(TypedDict):
     metrics: MetricData
+    threshold_group: float
+    threshold_permission: float
     comparison: List[ComparisonRow]
