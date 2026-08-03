@@ -44,4 +44,4 @@ python main.py scraped_apps/google_one.jsonl 1 /path/to/google_one.apk
 The `LINE_NUMBER` parameter specifies which line from the JSONL file will be read and analyzed.
 The line numbering starts at **1**.
 
-There are already some scraped apps available in the `scraped_apps folder that can be used for testing and analysis.
+There are already some scraped apps available in the `scraped_apps` folder that can be used for testing and analysis.
