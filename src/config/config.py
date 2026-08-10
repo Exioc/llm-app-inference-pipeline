@@ -5,6 +5,7 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
+from src.schemas.permission_set import PermissionCatalog
 from src.schemas.data_types_mapping import PermissionDataTypeMappingList
 from src.schemas.permission_mapping import AndroidPermissionsModel
 from src.schemas.android_data import PermissionGroupSummaries, PermissionGroupCollection
@@ -14,8 +15,8 @@ load_dotenv()
 DIR = Path(__file__).resolve().parent.parent
 
 #Paths
-PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
-PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
+PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups_v2.json")
+PERMISSIONS_PATH = Path(DIR /"data/permissions_v2.json")
 PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
 DATA_TYPES_MAPPING_PATH = Path(DIR /"data/permission_data_types_mapping_154.json")
 LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")
@@ -92,6 +93,7 @@ def load_llm_config(path: Path) -> list[dict]:
         data = json.load(f)
     return data.get("models", [])
 
+# Mapped playstore labels to real android permission names 
 def load_permissions_mapping() -> AndroidPermissionsModel:
     if not PERMISSIONS_MAPPING_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSIONS_MAPPING_PATH}")
@@ -101,6 +103,7 @@ def load_permissions_mapping() -> AndroidPermissionsModel:
             raw_data = json.load(file)
         return AndroidPermissionsModel(**raw_data)
 
+# Mapped android permissions to data types
 def load_data_types_mapping() -> PermissionDataTypeMappingList:
     if not DATA_TYPES_MAPPING_PATH.exists():
         raise FileNotFoundError(f"File not found: {DATA_TYPES_MAPPING_PATH}")
@@ -109,8 +112,15 @@ def load_data_types_mapping() -> PermissionDataTypeMappingList:
         with open(DATA_TYPES_MAPPING_PATH, "r", encoding="utf-8") as file:
             raw_data = json.load(file)
         return PermissionDataTypeMappingList(mappings=raw_data)
-        
 
+def load_permissions_set() -> PermissionCatalog:
+    if not PERMISSIONS_PATH.exists():
+        raise FileNotFoundError(f"File not found: {PERMISSIONS_PATH}")
+    else:         
+        with open(PERMISSIONS_PATH, "r", encoding="utf-8") as f:
+            raw_data = json.load(f)
+            return PermissionCatalog.model_validate(raw_data)
+        
 llm_feature_config =  load_llm_config(LLM_FEATURE_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)
 llm_permission_config =  load_llm_config(LLM_PERMISSION_CONFIG_PATH)

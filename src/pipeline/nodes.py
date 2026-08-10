@@ -61,8 +61,10 @@ def create_global_semaphore(number: int):
 
 
 @auto_save("01_preprocessing")
-def preprocess_node(state: PipelineState, config=None) -> dict:
+def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     metadata = state["metadata"]
+    supported_apk_permissions = config["configurable"].get("supported_apk_permissions", False)
+    permissions_set = config["configurable"].get("permissions_set")
 
     # Base64 Decoding
     title = b64_decode(metadata.label)
@@ -110,6 +112,12 @@ def preprocess_node(state: PipelineState, config=None) -> dict:
 
     # Filter out permissions that do not start with "android.permission."
     ground_truth_permissions = [perm.removeprefix('android.permission.') for perm in permissions if perm.startswith("android.permission.")]
+    ground_truth_permissions = [perm.replace(' ', '') for perm in ground_truth_permissions if perm]
+    number = len(ground_truth_permissions)
+
+    if supported_apk_permissions:
+        ground_truth_permissions = [perm for perm in ground_truth_permissions if perm in permissions_set.permissions]
+        logger.info(f"Filtering ground truth: extracted known APK permissions from catalog ({number - len(ground_truth_permissions)} removed).")
 
     updates = {
         "pkg": metadata.pkg,
@@ -250,8 +258,6 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
         aggregated_data_majority = {}
 
-        majority_threshold = math.ceil(number_of_models / 2)
-        
         for title, feature_data in aggregated_data.items():
             filtered_groups = {}
             

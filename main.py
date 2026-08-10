@@ -17,6 +17,7 @@ from src.config.config import (
     load_permission_groups,
     load_permissions,
     load_permissions_mapping,
+    load_permissions_set,
     setup_logging,
     llm_feature_config,
     llm_group_config,
@@ -69,9 +70,11 @@ def main() -> None:
 
     data_types_mapping = load_data_types_mapping()
 
+    permissions_set = load_permissions_set()
+
     # Create filter (default is enabled=False and threshold=0.5)
-    group_filter = GroupFilterConfig(enabled=True,threshold=0.5)
-    permission_filter = PermissionFilterConfig(enabled=True,threshold=0.5)
+    group_filter = GroupFilterConfig(enabled=True,threshold=0.0)
+    permission_filter = PermissionFilterConfig(enabled=True,threshold=0.0)
 
     create_global_semaphore(1)
 
@@ -102,10 +105,12 @@ def main() -> None:
                 "llm_permission_list": llm_permission_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
+                "permissions_set": permissions_set,
                 "permissions_mapping": permissions_mapping,
                 "data_types_mapping": data_types_mapping,
                 "group_filter": group_filter,
-                "permission_filter": permission_filter
+                "permission_filter": permission_filter,
+                "supported_apk_permissions": False
             }
         },
     )

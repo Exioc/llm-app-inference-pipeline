@@ -221,6 +221,7 @@ __marimo__/
 results/
 logs/
 apks/
+test_data/
 
 # OS-Specific
 .directory

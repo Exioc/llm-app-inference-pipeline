@@ -55,7 +55,7 @@
   },
   {
     "group_name": "CONTACTS_AND_PROFILES",
-    "description": "Used for permissions related to contacts, user profiles, and profile picture management on this device.",
+    "description": "Used for permissions related to contacts, accounts, and personal user profiles on this device.",
     "permissions": [
       {
         "id": "GET_ACCOUNTS",
@@ -73,19 +73,14 @@
         "description": "Allows an application to write the user's contacts data."
       },
       {
-        "id": "APPLY_PICTURE_PROFILE",
-        "protection_level": "normal",
-        "description": "Allows the app to set or apply a profile picture."
-      },
-      {
         "id": "READ_PROFILE",
         "protection_level": "normal",
-        "description": "Allows the app to read the user's personal profile data."
+        "description": "Allows the app to query and read the user's personal profile data, which represents the user as a special single contact on the device.**"
       },
       {
         "id": "WRITE_PROFILE",
         "protection_level": "normal",
-        "description": "Allows the app to modify or write to the user's personal profile data."
+        "description": "Allows the app to insert or update the user's personal profile data, which represents the user as a special single contact on the device.**"
       }
     ]
   },
@@ -198,7 +193,7 @@
       {
         "id": "READ_NEARBY_STREAMING_POLICY",
         "protection_level": "normal",
-        "description": "Allows the app to read the device policy for nearby streaming."
+        "description": "Allows an application to read nearby streaming policy. The policy controls whether to allow the device to stream its notifications and apps to nearby devices. Applications that are not the device owner will need this permission to call DevicePolicyManager.getNearbyNotificationStreamingPolicy() or DevicePolicyManager.getNearbyAppStreamingPolicy()."
       }
     ]
   },
@@ -275,12 +270,12 @@
       {
         "id": "READ_BASIC_PHONE_STATE",
         "protection_level": "normal",
-        "description": "Allows the app to access the basic telephony features of the device."
+        "description": "Allows read only access to phone state with a non dangerous permission, including the information like cellular network type, software version."
       },
       {
         "id": "READ_CELL_BROADCASTS",
         "protection_level": "dangerous",
-        "description": "Allows the app to read cell broadcast messages received by your device. Cell broadcast alerts are delivered in some locations to warn you of emergency situations. Malicious apps may interfere with the performance or operation of your device when an emergency cell broadcast is received."
+        "description": "Allows the app to read cell broadcast messages received by your device. Cell broadcast alerts are delivered in some locations to warn you of emergency situations. Malicious apps may interfere with the performance or operation of your device when an emergency cell broadcast is received.*"
       }
     ]
   },
@@ -338,37 +333,37 @@
       {
         "id": "EYE_TRACKING_COARSE",
         "protection_level": "dangerous",
-        "description": "Allows the app to track your approximate eye gaze."
+        "description": "Representing the user's eye pose, status, and orientation, such as for use with avatars. Use this permission when low-precision eye tracking data is needed.**"
       },
       {
         "id": "EYE_TRACKING_FINE",
         "protection_level": "dangerous",
-        "description": "Allows the app to access precise eye gaze data."
+        "description": "Allows the app to access precise eye gaze data for selection, input, and user interactions.**"
       },
       {
         "id": "FACE_TRACKING",
         "protection_level": "dangerous",
-        "description": "Allows the app to access face tracking data."
+        "description": "Tracking and rendering facial expressions.**"
       },
       {
         "id": "HAND_TRACKING",
         "protection_level": "dangerous",
-        "description": "Allows the app to access hand tracking data."
+        "description": "Tracking hand joint poses and angular and linear velocities; Using a mesh representation of the user's hands.*"
       },
       {
         "id": "HEAD_TRACKING",
         "protection_level": "dangerous",
-        "description": "Allows the app to access head tracking data."
+        "description": "Allows the app to access head tracking data.*"
       },
       {
         "id": "SCENE_UNDERSTANDING_COARSE",
         "protection_level": "dangerous",
-        "description": "Allows the app to access tracking data about the environment directly around you."
+        "description": "Allows the app to access tracking data about the environment directly around you.*"
       },
       {
         "id": "SCENE_UNDERSTANDING_FINE",
         "protection_level": "dangerous",
-        "description": "Allows the app to access tracking data about the environment directly around you with very high detail."
+        "description": "Allows the app to access tracking data about the environment directly around you with very high detail.*"
       }
     ]
   },
@@ -404,7 +399,7 @@
       {
         "id": "WRITE_SMS",
         "protection_level": "normal",
-        "description": "Allows the app to write or modify SMS messages."
+        "description": "Allows an application to write, edit, or store SMS messages in the system SMS database.**"
       }
     ]
   },
@@ -460,7 +455,7 @@
       },
       {
         "id": "ACCESS_LOCAL_NETWORK",
-        "protection_level": "dangerous/Local Network Definition",
+        "protection_level": "dangerous",
         "description": "Required to be able to advertise and connect to local network devices. A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections."
       },
       {
@@ -547,7 +542,7 @@
       {
         "id": "FOREGROUND_SERVICE_FILE_MANAGEMENT",
         "protection_level": "normal|instant",
-        "description": "Allows the app to make use of foreground services with the type fileManagement"
+        "description": "Allows a regular application to use Service.startForeground with the type \"fileManagement\".**"
       }
     ]
   },
@@ -588,12 +583,12 @@
       {
         "id": "DELIVER_COMPANION_MESSAGES",
         "protection_level": "normal",
-        "description": "Allows a companion app to deliver companion messages to other devices."
+        "description": "Allows an application to deliver companion messages to system"
       },
       {
         "id": "REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE",
         "protection_level": "normal",
-        "description": "Allows a companion app to observe companion device presence when the devices are nearby or far-away."
+        "description": "Allows an application to subscribe to notifications about the presence status change of their associated companion device"
       }
     ]
   },
@@ -664,28 +659,28 @@
       {
         "id": "GET_TASKS",
         "protection_level": "normal",
-        "description": "Allows the app to retrieve information about currently and recently running tasks. This may allow the app to discover information about which applications are used on the device."
+        "description": "Allows the app to retrieve information about currently and recently running tasks. This may allow the app to discover information about which applications are used on the device.*"
       },
       {
         "id": "PERSISTENT_ACTIVITY",
         "protection_level": "normal",
-        "description": "Allows the app to make parts of itself persistent in memory.  This can limit memory available to other apps slowing down the phone."
+        "description": "Allows the app to make parts of itself persistent in memory.  This can limit memory available to other apps slowing down the phone.*"
       },
       {
         "id": "READ_INSTALL_SESSIONS",
         "protection_level": "normal",
-        "description": "Allows an application to read install sessions. This allows it to see details about active package installations."
+        "description": "Allows an application to read install sessions. This allows it to see details about active package installations.*"
       },
       {
         "id": "RESTART_PACKAGES",
         "protection_level": "normal",
-        "description": "Allows the app to end background processes of other apps. This may cause other apps to stop running."
+        "description": "Allows the app to end background processes of other apps. This may cause other apps to stop running.*"
       }
     ]
   },
   {
     "group_name": "SYSTEM_UI_AND_PERIPHERALS",
-    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight) and audio/vibration policies.",
+    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight), display rendering settings (like picture profiles), and audio/vibration policies.",
     "permissions": [
       {
         "id": "ACCESS_NOTIFICATION_POLICY",
@@ -750,22 +745,27 @@
       {
         "id": "FLASHLIGHT",
         "protection_level": "normal",
-        "description": "Allows the app to control the flashlight."
+        "description": "Allows the app to control the flashlight.**"
       },
       {
         "id": "HIDE_OVERLAY_WINDOWS",
         "protection_level": "normal",
-        "description": "This app can request that the system hides overlays originating from apps from being shown on top of it."
+        "description": "Allows an app to prevent non-system-overlay windows from being drawn on top of it"
       },
       {
         "id": "TV_IMPLICIT_ENTER_PIP",
         "protection_level": "normal",
-        "description": "Allows a TV application to implicitly enter picture-in-picture mode."
+        "description": "Allows an app to enter Picture-in-Picture mode when the user is not explicitly requesting it. This includes using ERROR(/PictureInPictureParams.Builder#setAutoEnterEnabled) as well as lifecycle methods such as ERROR(/Activity#onUserLeaveHint) and ERROR(/Activity#onPause) to enter PiP when the user leaves the app. This permission should only be used for certain PiP usage types."
       },
       {
         "id": "USE_EXACT_ALARM",
         "protection_level": "normal",
-        "description": "This app can schedule actions like alarms and reminders to notify you at a desired time in the future."
+        "description": "Allows apps to use exact alarms just like with SCHEDULE_EXACT_ALARM but without needing to request this permission from the user. This is only intended for use by apps that rely on exact alarms for their core functionality. Apps need to target API Build.VERSION_CODES.TIRAMISU or above to be able to request this permission."
+      },
+      {
+        "id": "APPLY_PICTURE_PROFILE",
+        "protection_level": "normal",
+        "description": "Allows an application to apply a MediaQualityManager PictureProfile to a rendering layer using MediaCodec or SurfaceControl.**"
       }
     ]
   },
@@ -821,7 +821,7 @@
       {
         "id": "QUERY_ADVANCED_PROTECTION_MODE",
         "protection_level": "normal",
-        "description": "Allows the app to query whether advanced protection mode is enabled on the device."
+        "description": "Allows an application to query the device's advanced protection mode status."
       }
     ]
   },
@@ -847,17 +847,17 @@
       {
         "id": "AUTHENTICATE_ACCOUNTS",
         "protection_level": "normal",
-        "description": "Allows the app to act as an AccountAuthenticator to authenticate accounts."
+        "description": "Allows an application to act as an AccountAuthenticator for the AccountManager, creating accounts and issuing tokens (deprecated in API 23).**"
       },
       {
         "id": "MANAGE_ACCOUNTS",
         "protection_level": "normal",
-        "description": "Allows the app to manage the list of accounts, including adding and removing accounts."
+        "description": "Allows an application to add, remove, and manage accounts in the AccountManager.**"
       },
       {
         "id": "USE_CREDENTIALS",
         "protection_level": "normal",
-        "description": "Allows the app to request authenticating tokens from the AccountManager."
+        "description": "Allows an application to request authentication tokens from the AccountManager (deprecated in API 23).**"
       }
     ]
   },
@@ -878,12 +878,12 @@
       {
         "id": "READ_USER_DICTIONARY",
         "protection_level": "normal",
-        "description": "Allows the app to read words, phrases, and settings stored in the user dictionary."
+        "description": "Allows an application to read the user's personal dictionary, including custom words, spellings, and shortcuts.**"
       },
       {
         "id": "WRITE_USER_DICTIONARY",
         "protection_level": "normal",
-        "description": "Allows the app to add new words or edit existing entries in the user dictionary."
+        "description": "Allows an application to write new words or edit existing entries in the user's personal dictionary.**"
       }
     ]
   },
@@ -894,12 +894,12 @@
       {
         "id": "READ_SOCIAL_STREAM",
         "protection_level": "normal",
-        "description": "Allows the app to read social stream updates and sync data."
+        "description": "Allows an application to read the user's social stream data, such as status updates and social feed items (deprecated in API 21).**"
       },
       {
         "id": "WRITE_SOCIAL_STREAM",
         "protection_level": "normal",
-        "description": "Allows the app to write or modify social stream updates."
+        "description": "Allows an application to write to the user's social stream data, such as status updates and social feed items (deprecated in API 21).**"
       }
     ]
   },
@@ -910,12 +910,12 @@
       {
         "id": "SUBSCRIBED_FEEDS_READ",
         "protection_level": "normal",
-        "description": "Allows the app to read details about subscribed feeds."
+        "description": "Allows an application to allow access to the subscribed feeds ContentProvider (deprecated in API 15).**"
       },
       {
         "id": "SUBSCRIBED_FEEDS_WRITE",
         "protection_level": "normal",
-        "description": "Allows the app to modify or write to subscribed feeds."
+        "description": "Allows an application to modify the subscribed feeds ContentProvider (deprecated in API 15).**"
       }
     ]
   }
