@@ -5,11 +5,11 @@
   },
   {
     "group_name": "CALENDAR",
-    "description": "Used for runtime permissions related to user's calendar."
+    "description": "Used for permissions related to user's calendar."
   },
   {
     "group_name": "CALL_LOG",
-    "description": "Used for runtime permissions associated with accessing and modifying the device's call history."
+    "description": "Used for permissions associated with accessing and modifying the device's call history."
   },
   {
     "group_name": "CAMERA",
@@ -57,7 +57,7 @@
   },
   {
     "group_name": "STORAGE",
-    "description": "Used for runtime permissions related to the shared external storage."
+    "description": "Used for permissions related to the shared external storage."
   },
   {
     "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
@@ -77,7 +77,7 @@
   },
   {
     "group_name": "SYSTEM_UI_AND_PERIPHERALS",
-    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight), display rendering settings (like picture profiles), and audio/vibration policies."
+    "description": "Used for permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight), display rendering settings (like picture profiles), and audio/vibration policies."
   },
   {
     "group_name": "SECURITY_AND_PRIVACY_NORMAL",
@@ -89,7 +89,7 @@
   },
   {
     "group_name": "ACCESSIBILITY_AND_INPUT",
-    "description": "Used for highly sensitive UI capabilities that monitor screen content, read assist structures, manage user input dictionaries, or intercept low-level hardware inputs."
+    "description": "Used for high-privilege system bindings and sensitive access modes (such as accessibility services and input methods) that allow monitoring screen content, reading assist structures, managing dictionaries, or intercepting user input."
   },
   {
     "group_name": "SOCIAL_STREAM",

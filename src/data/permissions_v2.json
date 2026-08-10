@@ -12,7 +12,7 @@
   },
   {
     "group_name": "CALENDAR",
-    "description": "Used for runtime permissions related to user's calendar.",
+    "description": "Used for permissions related to user's calendar.",
     "permissions": [
       {
         "id": "READ_CALENDAR",
@@ -28,7 +28,7 @@
   },
   {
     "group_name": "CALL_LOG",
-    "description": "Used for runtime permissions associated with accessing and modifying the device's call history.",
+    "description": "Used for permissions associated with accessing and modifying the device's call history.",
     "permissions": [
       {
         "id": "READ_CALL_LOG",
@@ -220,7 +220,7 @@
   },
   {
     "group_name": "PHONE",
-    "description": "Used for runtime permissions associated with active telephony features, call management, emergency cell broadcasts, and cellular state routing.",
+    "description": "Used for permissions associated with active telephony features, call management, emergency cell broadcasts, and cellular state routing.",
     "permissions": [
       {
         "id": "ACCEPT_HANDOVER",
@@ -369,7 +369,7 @@
   },
   {
     "group_name": "SMS",
-    "description": "Used for runtime permissions related to user's SMS messages.",
+    "description": "Used for permissions related to user's SMS messages.",
     "permissions": [
       {
         "id": "READ_SMS",
@@ -405,7 +405,7 @@
   },
   {
     "group_name": "STORAGE",
-    "description": "Used for runtime permissions related to the shared external storage.",
+    "description": "Used for permissions related to the shared external storage.",
     "permissions": [
       {
         "id": "READ_EXTERNAL_STORAGE",
@@ -680,7 +680,7 @@
   },
   {
     "group_name": "SYSTEM_UI_AND_PERIPHERALS",
-    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight), display rendering settings (like picture profiles), and audio/vibration policies.",
+    "description": "Used for permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like flashlight), display rendering settings (like picture profiles), and audio/vibration policies.",
     "permissions": [
       {
         "id": "ACCESS_NOTIFICATION_POLICY",
@@ -863,7 +863,7 @@
   },
   {
     "group_name": "ACCESSIBILITY_AND_INPUT",
-    "description": "Used for highly sensitive UI capabilities that monitor screen content, read assist structures, manage user input dictionaries, or intercept low-level hardware inputs.",
+    "description": "Used for high-privilege system bindings and sensitive access modes (such as accessibility services and input methods) that allow monitoring screen content, reading assist structures, managing dictionaries, or intercepting user input.",
     "permissions": [
       {
         "id": "CAPTURE_KEYBOARD",
