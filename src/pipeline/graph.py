@@ -6,7 +6,6 @@ from langchain_core.runnables import RunnableConfig
 from src.models.llm_worker import LLMWorker
 from src.pipeline.state import PipelineState
 from src.pipeline.nodes import (
-    create_global_semaphore,
     data_types_node, 
     preprocess_node, 
     functionality_node,

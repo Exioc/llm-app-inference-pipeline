@@ -110,7 +110,7 @@ def main() -> None:
                 "data_types_mapping": data_types_mapping,
                 "group_filter": group_filter,
                 "permission_filter": permission_filter,
-                "supported_apk_permissions": False
+                "supported_apk_permissions": True
             }
         },
     )

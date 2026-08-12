@@ -15,8 +15,8 @@ load_dotenv()
 DIR = Path(__file__).resolve().parent.parent
 
 #Paths
-PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups_v2.json")
-PERMISSIONS_PATH = Path(DIR /"data/permissions_v2.json")
+PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups_v3.json")
+PERMISSIONS_PATH = Path(DIR /"data/permissions_v3.json")
 PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
 DATA_TYPES_MAPPING_PATH = Path(DIR /"data/permission_data_types_mapping_154.json")
 LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")

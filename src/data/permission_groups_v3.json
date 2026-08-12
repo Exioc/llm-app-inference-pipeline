@@ -1,0 +1,94 @@
+[
+  {
+    "group_name": "ACTIVITY_RECOGNITION",
+    "description": "Used for permissions that are associated with activity recognition."
+  },
+  {
+    "group_name": "CALENDAR",
+    "description": "Used for permissions related to user's calendar."
+  },
+  {
+    "group_name": "CALL_LOG",
+    "description": "Used for permissions associated with accessing and modifying the device's call history."
+  },
+  {
+    "group_name": "CAMERA",
+    "description": "Used for permissions that are associated with accessing camera or capturing images/video from the device."
+  },
+  {
+    "group_name": "CONTACTS_AND_PROFILES",
+    "description": "Used for permissions related to accessing the user's contacts data and the list of accounts on the device."
+  },
+  {
+    "group_name": "LOCATION",
+    "description": "Used for permissions that allow accessing the device location."
+  },
+  {
+    "group_name": "MICROPHONE",
+    "description": "Used for permissions that are associated with accessing microphone audio from the device."
+  },
+  {
+    "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+    "description": "Bundles all permissions required for discovering, connecting, communicating, or enforcing policies with physical hardware or devices in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, NFC, or nearby streaming."
+  },
+  {
+    "group_name": "NOTIFICATIONS",
+    "description": "Used for permissions that are associated with posting notifications"
+  },
+  {
+    "group_name": "PHONE",
+    "description": "Used for permissions associated with active telephony features, call management, emergency cell broadcasts, and cellular state routing."
+  },
+  {
+    "group_name": "MEDIA_AURAL",
+    "description": "Required to be able to read audio files from shared storage."
+  },
+  {
+    "group_name": "MEDIA_VISUAL",
+    "description": "Required to be able to read image and video files from shared storage."
+  },
+  {
+    "group_name": "SENSORS",
+    "description": "Used for permissions that are associated with accessing body or environmental sensors, as well as spatial, head, face, eye, and hand tracking."
+  },
+  {
+    "group_name": "SMS",
+    "description": "Used for permissions related to user's SMS messages."
+  },
+  {
+    "group_name": "STORAGE",
+    "description": "Used for permissions related to the shared external storage."
+  },
+  {
+    "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+    "description": "Used for permissions handling IP-based data transport, global internet routing, Wi-Fi/Ethernet interface states, and local network socket communication."
+  },
+  {
+    "group_name": "FOREGROUND_SERVICES",
+    "description": "Used for permissions that allow regular applications to launch specialized foreground services (e.g., for data synchronization, media playback, sensor tracking, or file management)."
+  },
+  {
+    "group_name": "COMPANION_DEVICES",
+    "description": "Used for permissions related to setting up, managing, observing presence, and interacting with companion hardware like smartwatches or smart glasses."
+  },
+  {
+    "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+    "description": "Used for permissions associated with controlling the application lifecycle, managing package installation states, scheduling background tasks, retrieving task states, and adjusting system resource optimization."
+  },
+  {
+    "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+    "description": "Used for permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like IR transmitters) and audio/vibration policies."
+  },
+  {
+    "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+    "description": "Used for non-dangerous permissions interacting with system security integrations, credential management, biometric authentication, device protection modes, and application integrity protections against screen capturing."
+  },
+  {
+    "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+    "description": "Used for permissions that inspect background data synchronization statistics and configure account sync settings."
+  },
+  {
+    "group_name": "ACCESSIBILITY_AND_INPUT",
+    "description": "Used for permissions that allow reading screen content through assistant structures or capturing keyboard input and system shortcuts."
+  }
+]

@@ -21,7 +21,7 @@
   },
   {
     "permission": "WRITE_CALENDAR",
-    "marker": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Calendar",
@@ -32,7 +32,7 @@
   },
   {
     "permission": "READ_CALL_LOG",
-    "marker": "*,Contacts,Phone number",
+    "note": "*,Contacts,Phone number",
     "dataTypes": [
       {
         "category": "Contacts",
@@ -48,7 +48,7 @@
   },
   {
     "permission": "WRITE_CALL_LOG",
-    "marker": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Contacts",
@@ -129,7 +129,7 @@
   },
   {
     "permission": "WRITE_CONTACTS",
-    "marker": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Contacts",
@@ -165,7 +165,7 @@
   },
   {
     "permission": "ACCESS_BACKGROUND_LOCATION",
-    "marker": "*,Approximate location,Precise location",
+    "note": "*,Approximate location,Precise location",
     "dataTypes": [
       {
         "category": "Location",
@@ -319,7 +319,7 @@
   },
   {
     "permission": "ADD_VOICEMAIL",
-    "marker": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Audio files",
@@ -338,7 +338,7 @@
   },
   {
     "permission": "PROCESS_OUTGOING_CALLS",
-    "marker": "*,Phone number",
+    "note": "*,Phone number",
     "dataTypes": [
       {
         "category": "Contacts",
@@ -427,7 +427,7 @@
   },
   {
     "permission": "READ_MEDIA_VISUAL_USER_SELECTED",
-    "marker": "*,Photos,Videos",
+    "note": "*,Photos,Videos",
     "dataTypes": [
       {
         "category": "Photos and videos",
