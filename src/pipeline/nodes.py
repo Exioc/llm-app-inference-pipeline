@@ -1,8 +1,8 @@
 import logging
-import math 
 import threading
 import functools
 import json
+import html2text
 from typing import Dict, Any, List
 from androguard.core.apk import APK
 from langchain_core.runnables import RunnableConfig
@@ -70,6 +70,12 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     title = b64_decode(metadata.label)
     description = b64_decode(metadata.description.long)
 
+    h = html2text.HTML2Text()
+    h.ignore_links = False
+    h.ignore_images = True
+    h.body_width = 0  
+    md_description = h.handle(description)
+
     # permissions_mapping = config["configurable"].get("permissions_mapping", [])
 
     # # Get permissions labels from the metadata
@@ -122,7 +128,7 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     updates = {
         "pkg": metadata.pkg,
         "label": title,
-        "description_long": description,
+        "description_long": md_description,
         "storage_path": state["storage_path"],
         #"permissions_map": final_processed_permissions,
         "ground_truth_permissions": ground_truth_permissions,
