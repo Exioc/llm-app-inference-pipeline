@@ -36,7 +36,8 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-
+"android.permission.DUMMY",
+"android.permission.DUMMY"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.

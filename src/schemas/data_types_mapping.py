@@ -23,7 +23,6 @@ class PermissionDataTypeMapping(BaseModel):
     permission: str = Field(
         description="The permission name, e.g., 'NFC_TRANSACTION_EVENT'."
     )
-    note: str | None = None
     data_types: List[DataTypeDetail] = Field(
         alias="dataTypes",
         description="List of associated data types for this permission."

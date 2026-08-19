@@ -21,7 +21,6 @@
   },
   {
     "permission": "WRITE_CALENDAR",
-    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Calendar",
@@ -32,33 +31,23 @@
   },
   {
     "permission": "READ_CALL_LOG",
-    "note": "*,Contacts,Phone number",
+    "note": "It might only have access to call information and not to the associated contacts.",
     "dataTypes": [
       {
         "category": "Contacts",
         "dataType": "Contacts",
         "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
       }
     ]
   },
   {
     "permission": "WRITE_CALL_LOG",
-    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "It might only have access to call information and not to the associated contacts.",
     "dataTypes": [
       {
         "category": "Contacts",
         "dataType": "Contacts",
         "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
       }
     ]
   },
@@ -79,16 +68,17 @@
   },
   {
     "permission": "GET_ACCOUNTS",
+    "note": "Unclear if 'Get Account' lists email addresses",
     "dataTypes": [
-      {
-        "category": "Personal info",
-        "dataType": "Email address",
-        "description": "A user’s email address."
-      },
       {
         "category": "Personal info",
         "dataType": "User IDs",
         "description": "Identifiers that relate to an identifiable person. For example, an account ID, account number, or account name."
+      },
+      {
+        "category": "Personal info",
+        "dataType": "Email address",
+        "description": "A user’s email address."
       }
     ]
   },
@@ -99,73 +89,21 @@
         "category": "Contacts",
         "dataType": "Contacts",
         "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Name",
-        "description": "How a user refers to themselves, such as their first or last name, or nickname."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Email address",
-        "description": "A user’s email address."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Address",
-        "description": "A user’s address, such as a mailing or home address."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Other info",
-        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
       }
     ]
   },
   {
     "permission": "WRITE_CONTACTS",
-    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
     "dataTypes": [
       {
         "category": "Contacts",
         "dataType": "Contacts",
         "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Name",
-        "description": "How a user refers to themselves, such as their first or last name, or nickname."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Email address",
-        "description": "A user’s email address."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Address",
-        "description": "A user’s address, such as a mailing or home address."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Other info",
-        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
       }
     ]
   },
   {
     "permission": "ACCESS_BACKGROUND_LOCATION",
-    "note": "*,Approximate location,Precise location",
     "dataTypes": [
       {
         "category": "Location",
@@ -206,6 +144,7 @@
   },
   {
     "permission": "ACCESS_MEDIA_LOCATION",
+    "note": "This classification may be too broad, since it is unclear whether the two data types are intended solely for live locations.",
     "dataTypes": [
       {
         "category": "Location",
@@ -236,11 +175,6 @@
         "category": "Device or other IDs",
         "dataType": "Device or other IDs",
         "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
-      },
-      {
-        "category": "Location",
-        "dataType": "Approximate location",
-        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
       }
     ]
   },
@@ -256,6 +190,7 @@
   },
   {
     "permission": "BLUETOOTH_ADVERTISE",
+    "note": "*",
     "dataTypes": [
       {
         "category": "Device or other IDs",
@@ -271,43 +206,16 @@
         "category": "Device or other IDs",
         "dataType": "Device or other IDs",
         "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
-      },
-      {
-        "category": "Location",
-        "dataType": "Approximate location",
-        "description": "User or device physical location to an area greater than or equal to 3 square kilometers, such as the city a user is in, or location provided by Android’s ACCESS_COARSE_LOCATION permission."
       }
     ]
   },
   {
     "permission": "RANGING",
-    "dataTypes": [
-      {
-        "category": "Location",
-        "dataType": "Precise location",
-        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
-      },
-      {
-        "category": "Device or other IDs",
-        "dataType": "Device or other IDs",
-        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
-      }
-    ]
+    "dataTypes": []
   },
   {
     "permission": "UWB_RANGING",
-    "dataTypes": [
-      {
-        "category": "Location",
-        "dataType": "Precise location",
-        "description": "User or device physical location within an area less than 3 square kilometers, such as location provided by Android’s ACCESS_FINE_LOCATION permission."
-      },
-      {
-        "category": "Device or other IDs",
-        "dataType": "Device or other IDs",
-        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
-      }
-    ]
+    "dataTypes": []
   },
   {
     "permission": "POST_NOTIFICATIONS",
@@ -315,40 +223,61 @@
   },
   {
     "permission": "ACCEPT_HANDOVER",
-    "dataTypes": []
+    "note": "Receives Potential Information About the Call",
+    "dataTypes": [
+      {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
+      }
+    ]
   },
   {
     "permission": "ADD_VOICEMAIL",
-    "note": "*, The function that writes this actually has no access to the data itself. So you could say data_types: [ ]",
+    "note": "Receives Potential Information About the Call (Phone number)",
     "dataTypes": [
       {
         "category": "Audio files",
         "dataType": "Voice or sound recordings",
         "description": "A user’s voice such as a voicemail or a sound recording."
+      },
+      {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
       }
     ]
   },
   {
     "permission": "ANSWER_PHONE_CALLS",
-    "dataTypes": []
+    "note": "Receives Potential Information About the Call",
+    "dataTypes": [
+      {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
+      }
+    ]
   },
   {
     "permission": "CALL_PHONE",
-    "dataTypes": []
+    "note": "Receives Potential Information About the Call",
+    "dataTypes": [
+      {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
+      }
+    ]
   },
   {
     "permission": "PROCESS_OUTGOING_CALLS",
-    "note": "*,Phone number",
+    "note": "Receives Potential Information About the Call",
     "dataTypes": [
       {
-        "category": "Contacts",
-        "dataType": "Contacts",
-        "description": "Information about the user’s contacts such as contact names, message history, and social graph information like usernames, contact recency, contact frequency, interaction duration and call history."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
       }
     ]
   },
@@ -369,17 +298,24 @@
         "category": "Device or other IDs",
         "dataType": "Device or other IDs",
         "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
-      },
-      {
-        "category": "Personal info",
-        "dataType": "Phone number",
-        "description": "A user’s phone number."
       }
     ]
   },
   {
     "permission": "USE_SIP",
-    "dataTypes": []
+    "note": "Receives Potential Information About the Call",
+    "dataTypes": [
+       {
+      "category": "Personal info",
+      "dataType": "User IDs",
+      "description": "Identifiers that relate to an identifiable person. For example, an account ID, account number, or account name."
+      },
+      {
+      "category": "Personal info",
+      "dataType": "Phone number",
+      "description": "A user’s phone number."
+      }
+    ]
   },
   {
     "permission": "READ_CELL_BROADCASTS",
@@ -387,6 +323,7 @@
   },
   {
     "permission": "READ_MEDIA_AUDIO",
+    "note": "Specific data types like music or voice recordings can be omitted here, as the permission grants general access to audio files rather than specific categories.",
     "dataTypes": [
       {
         "category": "Audio files",
@@ -395,13 +332,13 @@
       },
       {
         "category": "Audio files",
-        "dataType": "Other audio files",
-        "description": "Any other user-created or user-provided audio files."
+        "dataType": "Voice or sound recordings",
+        "description": "A user’s voice such as a voicemail or a sound recording."
       },
       {
         "category": "Audio files",
-        "dataType": "Voice or sound recordings",
-        "description": "A user’s voice such as a voicemail or a sound recording."
+        "dataType": "Other audio files",
+        "description": "Any other user-created or user-provided audio files."
       }
     ]
   },
@@ -427,7 +364,6 @@
   },
   {
     "permission": "READ_MEDIA_VISUAL_USER_SELECTED",
-    "note": "*,Photos,Videos",
     "dataTypes": [
       {
         "category": "Photos and videos",
@@ -463,23 +399,63 @@
   },
   {
     "permission": "EYE_TRACKING_COARSE",
-    "dataTypes": []
+    "note": "Since the user is being tracked but there's no matching type, this acts as a taxonomy fallback.",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
   },
   {
     "permission": "EYE_TRACKING_FINE",
-    "dataTypes": []
+    "note": "Since the user is being tracked but there's no matching type, this acts as a taxonomy fallback. App interaction is mapped here because eye gaze is used for input and interaction.",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      },
+      {
+        "category": "App activity",
+        "dataType": "App interactions",
+        "description": "Information about how a user interacts with the app. For example, the number of times they visit a page or sections they tap on."
+      }
+    ]
   },
   {
     "permission": "FACE_TRACKING",
-    "dataTypes": []
+    "note": "Since the user is being tracked but there's no matching type, this acts as a taxonomy fallback.",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
   },
   {
     "permission": "HAND_TRACKING",
-    "dataTypes": []
+    "note": "Since the user is being tracked but there's no matching type, this acts as a taxonomy fallback.",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
   },
   {
     "permission": "HEAD_TRACKING",
-    "dataTypes": []
+    "note": "Since the user is being tracked but there's no matching type, this acts as a taxonomy fallback.",
+    "dataTypes": [
+      {
+        "category": "Personal info",
+        "dataType": "Other info",
+        "description": "Any other personal information such as date of birth, gender identity, veteran status, etc."
+      }
+    ]
   },
   {
     "permission": "SCENE_UNDERSTANDING_COARSE",
@@ -520,16 +496,6 @@
     ]
   },
   {
-    "permission": "RECEIVE_WAP_PUSH",
-    "dataTypes": [
-      {
-        "category": "Messages",
-        "dataType": "SMS or MMS",
-        "description": "A user’s text messages including the sender, recipients, and the content of the message."
-      }
-    ]
-  },
-  {
     "permission": "SEND_SMS",
     "dataTypes": [
       {
@@ -541,6 +507,7 @@
   },
   {
     "permission": "READ_EXTERNAL_STORAGE",
+    "note": "Specific data types like music or voice recordings can be omitted here, as the permission grants general access to audio files rather than specific categories.",
     "dataTypes": [
       {
         "category": "Photos and videos",
@@ -576,6 +543,7 @@
   },
   {
     "permission": "WRITE_EXTERNAL_STORAGE",
+    "note": "Specific data types like music or voice recordings can be omitted here, as the permission grants general access to audio files rather than specific categories.",
     "dataTypes": [
       {
         "category": "Photos and videos",
@@ -611,6 +579,13 @@
   },
   {
     "permission": "ACCESS_LOCAL_NETWORK",
-    "dataTypes": []
+    "note": "*",
+    "dataTypes": [
+      {
+        "category": "Device or other IDs",
+        "dataType": "Device or other IDs",
+        "description": "Identifiers that relate to an individual device, browser or app. For example, an IMEI number, MAC address, Widevine Device ID, Firebase installation ID, or advertising identifier."
+      }
+    ]
   }
 ]
