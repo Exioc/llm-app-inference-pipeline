@@ -57,7 +57,7 @@
           ]
         },
         {
-          "title": "Gym Equipment Synchronization (Hardware-Bound & Third-Party Integration)",
+          "title": "Gym Equipment Synchronization (Third-Party Hardware)",
           "description": "Enables Galaxy Watch users to connect and synchronize workout data with compatible external fitness equipment ecosystems from manufacturers like Life Fitness, Technogym, and Corehealth.",
           "reasoning": "The text explicitly notes that 'Galaxy Watch wearables user can now exercise more effectively through Life Fitness, Technogym and Corehealth'. Since this requires both a wearable device and the integration of outside vendor ecosystems, it operates as a combined hardware-bound and third-party integration.",
           "source_quotes": [
@@ -120,24 +120,6 @@
           "source_quotes": [
             "Women's health offers helpful support in menstrual cycle tracking, related symptom management and personalized insights and contents through your partner, Glow. The Galaxy and other wearables are now ready to support the women we love every step of their way."
           ]
-        },
-        {
-          "title": "Regional Content and Subscription Gating",
-          "description": "A filtering mechanism where some video/mindfulness contents are locked behind an optional paid subscription, and specific features vary based on the user's country, region, network carrier, or device model.",
-          "reasoning": "The text combines two distinct conditional warnings: 'Some contents are only available through an optional paid subscription' and 'Detailed features may vary depending on the user’s country of residence, region...'. This proves the existence of a dynamic content and feature gating system.",
-          "source_quotes": [
-            "(Some contents are only available through an optional paid subscription. Content is available in English, German, Spanish, French, Portuguese and Korean.)",
-            "Detailed features may vary depending on the user’s country of residence, region, network carrier, model of the device, etc."
-          ]
-        },
-        {
-          "title": "Global Localization Architecture",
-          "description": "The application interface supports over 70 languages, including French and Chinese, with a global English version serving as the standard fallback for the rest of the world.",
-          "reasoning": "The text explicitly states 'Supports over 70 languages, including English, French, and Chinese' and outlines that an 'English language version is available for the rest of the world', confirming a localized interface framework.",
-          "source_quotes": [
-            "Supports over 70 languages, including English, French, and Chinese.",
-            "An English language version is available for the rest of the world."
-          ]
         }
       ]
     }
@@ -159,7 +141,7 @@
         },
         {
           "title": "Lane-Level Guidance",
-          "description": "The app offers precise driving directions that include specific lane information to help users navigate through complex road scenarios with ease.",
+          "description": "Provides driving directions that include specific lane information to assist users in navigating complex road scenarios.",
           "reasoning": "The text explicitly uses the phrase 'accurate lane-level guidance', which is a direct reference confirming that this specific navigation feature is present in the app.",
           "source_quotes": [
             "Provides accurate lane-level guidance for more precise navigation, helping you find your way through a wide variety of complex scenarios with ease."
@@ -222,22 +204,6 @@
           "source_quotes": [
             "Help others decide where to go by rating and reviewing places on the map.",
             "Add new places and report or edit incorrect information."
-          ]
-        },
-        {
-          "title": "In-App Feedback Mechanism",
-          "description": "A dedicated support route within the app menu structure (Me > Help > Feedback) allowing users to send questions and suggestions directly to the developers.",
-          "reasoning": "The text explicitly states 'Provide feedback in the app via Me > Help > Feedback', which directly proves that a native feedback interface is built into the application.",
-          "source_quotes": [
-            "Provide feedback in the app via Me > Help > Feedback."
-          ]
-        },
-        {
-          "title": "Regional Feature Restriction",
-          "description": "A condition where specific functionalities within the app are restricted or only made available based on the user's country or region.",
-          "reasoning": "The text explicitly notes that '*Some features are only available in certain countries/regions', which is an indirect but clear reference confirming that a geographical feature-restriction mechanism is active.",
-          "source_quotes": [
-            "*Some features are only available in certain countries/regions"
           ]
         }
       ]
