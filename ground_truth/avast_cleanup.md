@@ -1,4 +1,5 @@
 # Avast Cleanup – Phone Cleaner
+<small>`pkg: com.avast.android.cleaner`</small>
 
 ---
 
@@ -63,13 +64,13 @@ Avast Cleanup uses accessibility permission to assist disabled and other users s
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Junk & residual cleaner | Detects and removes unnecessary files, temporary data, browser history, download folders, and app leftovers. Supports one-tap cleanup. |
-| Speicher-Analysator & -Manager | Analysiert den Speicherplatz, identifiziert unnötige Dateien und verwaltet große Dateien sowie Download-Ordner. |
+| Junk & residual cleaner | Detects and removes unnecessary files, temporary data, browser history, app leftovers, and junk files via a one-tap cleanup. |
+| Storage Analyzer & manager | Analyzes storage space to identify hidden files and allows users to manage large files and organize download folders. |
 | App Analyzer | Identifies individual app impact by tracking storage footprint, battery drain, mobile data usage, and background activity. |
 | App Remover | Identifies unused applications and supports batch uninstallation of multiple apps. |
 | Stop Background Apps | Allows stopping background applications. |
-| Photo cleaning | Scans the gallery to find and remove duplicate, similar, old, poor-quality (blurry/dark), and private chat photos. |
 | Photo cleaner | Detects and removes duplicate, similar, old, poor-quality (dark or blurry), and private chat photos. |
+| Photo Compression | Reduces photo file sizes using Low, Moderate, High, and Aggressive compression levels. |
 | System resource monitoring | Tracks and displays CPU, RAM, and storage usage to identify performance issues. |
 ---
 
@@ -78,22 +79,28 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "GET_PACKAGE_SIZE",
+  "KILL_BACKGROUND_PROCESSES",
+  "QUERY_ALL_PACKAGES",
+  "REQUEST_DELETE_PACKAGES"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Junk & residual cleaner | |
-| Speicher-Analysator & -Manager | |
-| App Analyzer | |
-| App Remover | |
-| Stop Background Apps | |
-| Photo cleaning | |
-| Photo cleaner | |
-| System resource monitoring | |
+| Junk & residual cleaner | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+| Storage Analyzer & manager | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+| App Analyzer |  `QUERY_ALL_PACKAGES` `GET_PACKAGE_SIZE`|
+| App Remover | `QUERY_ALL_PACKAGES` `REQUEST_DELETE_PACKAGES` |
+| Stop Background Apps | `KILL_BACKGROUND_PROCESSES`|
+| Photo cleaner | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` | 
+| Photo Compression | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` |
+| System resource monitoring | — |
 ---
 
 ## Permissions set 2
@@ -101,19 +108,16 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "FOREGROUND_SERVICE",
+  "GET_PACKAGE_SIZE",
+  "KILL_BACKGROUND_PROCESSES",
+  "QUERY_ALL_PACKAGES",
+  "REQUEST_DELETE_PACKAGES",
+  "VIBRATE"
 ]
 ```

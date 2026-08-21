@@ -1,4 +1,5 @@
 # Lyft
+<small>`pkg: me.lyft.android`</small>
 
 ---
 
@@ -24,22 +25,6 @@ By downloading the app, you agree to allow Lyft to collect your device's languag
 
 ---
 
-<!-- ## Features
-- **Upfront Booking & Pricing**: Route preview and exact price calculation based on destination input prior to booking.
-- **Customized Ride Options**: Selection of different service tiers based on pickup priority, price, and vehicle size.
-- **Micro-Mobility & Rentals**: In-app access to bikes, scooters, and rental cars.
-- **Public Transit Integration**: Search and navigation for local public transit routes.
---- -->
-
-<!-- ## Features
-| # | Feature Name | Description |
-|---|---|---|
-| 1 | Upfront Booking & Pricing | Route preview and exact price calculation based on destination input prior to booking. |
-| 2 | Customized Ride Options | Selection of different service tiers based on pickup priority, price, and vehicle size. |
-| 3 | Micro-Mobility & Rentals | In-app access to bikes, scooters, and rental cars. |
-| 4 | Public Transit Integration | Search and navigation for local public transit routes. |
---- -->
-
 ## Features
 | **Feature name**  | **Description** |
 |---|---|
@@ -55,18 +40,20 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+  "ACCESS_COARSE_LOCATION",
+  "ACCESS_FINE_LOCATION",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Upfront Booking & Pricing | `"android.permission.DUMMY"`|
-| Customized Ride Options | |
-| Micro-Mobility & Rentals | |
-| Public Transit Integration | |
+| Upfront Booking & Pricing | `INTERNET` `ACCESS_NETWORK_STATE`|
+| Customized Ride Options | `INTERNET` `ACCESS_NETWORK_STATE` `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+| Micro-Mobility & Rentals |`INTERNET` `ACCESS_NETWORK_STATE` |
+| Public Transit Integration | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
 
 ---
 
@@ -75,19 +62,19 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "GET_ACCOUNTS",
+  "ACCESS_COARSE_LOCATION",
+  "ACCESS_FINE_LOCATION",
+  "POST_NOTIFICATIONS",
+  "CALL_PHONE",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_LOCATION",
+  "WAKE_LOCK",
+  "VIBRATE",
+  "USE_BIOMETRIC",
+  "USE_FINGERPRINT"
 ]
 ```

@@ -1,4 +1,5 @@
 # Speedy Quark VPN - VPN Master
+<small>`pkg: com.speedy.vpn`</small>
 
 ---
 
@@ -45,17 +46,16 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| One-Tap Connection | |
-| Traffic Encryption | |
-| Server Selection and Switching | |
+| One-Tap Connection |`INTERNET`|
+| Traffic Encryption | `INTERNET`|
+| Server Selection and Switching | `INTERNET`|
 
 ---
 
@@ -64,19 +64,14 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "POST_NOTIFICATIONS",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "ACCESS_WIFI_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_SPECIAL_USE",
+  "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+  "RECEIVE_BOOT_COMPLETED",
+  "WAKE_LOCK"
 ]
 ```

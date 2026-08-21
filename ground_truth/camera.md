@@ -1,4 +1,5 @@
 # Camera for Android
+<small>`pkg: photo.camera.hdcameras `</small>
 
 ---
 
@@ -39,21 +40,24 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+  "CAMERA",
+  "RECORD_AUDIO",
+  "WRITE_EXTERNAL_STORAGE",
+  "ACCESS_FINE_LOCATION",
+  "ACCESS_COARSE_LOCATION"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Multi-Mode Capture | |
-| Dynamic user interface | |
-| Scene Modes | |
-| Manual Camera Controls | |
-| Geotagging | |
-| Configurable volume keys | |
-| Countdown Timer | |
+| Multi-Mode Capture | `CAMERA` `RECORD_AUDIO` `WRITE_EXTERNAL_STORAGE`|
+| Dynamic user interface | — |
+| Scene Modes | — |
+| Manual Camera Controls | — |
+| Geotagging | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION` |
+| Configurable volume keys | — |
+| Countdown Timer | — |
 
 ---
 
@@ -62,19 +66,18 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "ACCESS_COARSE_LOCATION",
+  "ACCESS_FINE_LOCATION",
+  "ACCESS_MEDIA_LOCATION",
+  "RECORD_AUDIO",
+  "READ_MEDIA_AUDIO",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "WAKE_LOCK"
+  "VIBRATE"
 ]
 ```

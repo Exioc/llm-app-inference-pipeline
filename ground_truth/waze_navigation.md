@@ -1,4 +1,5 @@
 # Waze Navigation & Live Traffic
+<small>`pkg: com.waze`</small>
 
 ---
 
@@ -47,21 +48,23 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+    "ACCESS_COARSE_LOCATION",
+    "ACCESS_FINE_LOCATION",
+    "POST_NOTIFICATIONS",
+    "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| GPS Navigation & Routing | |
-| Live Traffic & Incident Alerts | |
-| Speed & Trap Alerts | |
-| Community-Based Reporting | |
-| Tolls, Vignettes, and Road Passes | |
-| Fuel & Parking Search | |
-| Media & In-Car Integration | |
+| GPS Navigation & Routing | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+| Live Traffic & Incident Alerts | `POST_NOTIFICATIONS` `INTERNET`|
+| Speed & Trap Alerts | `POST_NOTIFICATIONS`|
+| Community-Based Reporting | `INTERNET`|
+| Tolls, Vignettes, and Road Passes | `INTERNET`|
+| Fuel & Parking Search | `INTERNET`|
+| Media & In-Car Integration | — |
 
 ---
 
@@ -70,19 +73,21 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+    "ACCESS_COARSE_LOCATION",
+    "ACCESS_FINE_LOCATION",
+    "RECORD_AUDIO",
+    "POST_NOTIFICATIONS",
+    "POST_PROMOTED_NOTIFICATIONS",
+    "READ_PHONE_STATE",
+    "READ_BASIC_PHONE_STATE",
+    "INTERNET",
+    "ACCESS_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_LOCATION",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "BROADCAST_STICKY",
+    "WAKE_LOCK",
+    "VIBRATE"
 ]
 ```

@@ -1,4 +1,5 @@
 # Duolingo: Language Lessons
+<small>`pkg: com.duolingo`</small>
 
 ---
 
@@ -68,21 +69,21 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+  "RECORD_AUDIO",
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Short & Gamified Lessons | |
-| Language Practice | |
-| Interactive Chess Course | |
-| Math Course | |
-| Music Course (Instrument-Free) | |
-| Progress & Habit Tracking | |
-| Competitive Leaderboards | |
+| Short & Gamified Lessons | — |
+| Language Practice | `RECORD_AUDIO`|
+| Interactive Chess Course | `INTERNET`|
+| Math Course | — |
+| Music Course (Instrument-Free) | — |
+| Progress & Habit Tracking | — |
+| Competitive Leaderboards | `INTERNET`|
 
 ---
 
@@ -91,19 +92,14 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "GET_ACCOUNTS",
+  "RECORD_AUDIO",
+  "POST_NOTIFICATIONS",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "WAKE_LOCK",
+  "MODIFY_AUDIO_SETTINGS",
+  "VIBRATE"
 ]
 ```

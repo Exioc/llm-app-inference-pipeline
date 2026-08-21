@@ -1,4 +1,5 @@
 # ChatGPT
+<small>`pkg: com.openai.chatgpt`</small>
 
 ---
 
@@ -37,7 +38,7 @@ https://openai.com/policies/privacy-policy
 | Educational & Learning Assistance | Explains complex concepts and adapts learning topics to specific audiences or knowledge levels. |
 | Professional Assistance | Assists with business planning, brainstorming, and marketing content creation. |
 | Ingredient-Based Recipe Suggestions | Generates recipe ideas based on available ingredients. |
-| Screen Sharing | Analyzes active screen content to answer questions without screenshot uploads. |
+| Screen Analysis via Accessibility Services| Analyzes active screen content to answer questions without screenshot uploads. |
 | History Sync | Synchronizes user chat history across devices. |
 
 ---
@@ -47,23 +48,32 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+    "CAMERA",
+    "GET_ACCOUNTS",
+    "RECORD_AUDIO",
+    "READ_MEDIA_AUDIO",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "INTERNET",
+    "READ_ASSIST_STRUCTURE_SCREEN_CONTENT",
+    "FOREGROUND_SERVICE"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Image Generation & Editing | |
-| Advanced Voice Mode | |
-| Image Analysis & Transcription | |
-| Personalized & Creative Assistance | |
-| Educational & Learning Assistance | |
-| Professional Assistance | |
-| Ingredient-Based Recipe Suggestions | |
-| Screen Sharing | |
-| History Sync | |
+| Image Generation & Editing | `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+| Advanced Voice Mode |`RECORD_AUDIO`|
+| Image Analysis & Transcription | `CAMERA` `READ_MEDIA_IMAGES` `xREAD_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
+| Personalized & Creative Assistance | — |
+| Educational & Learning Assistance | — |
+| Professional Assistance | `WRITE_EXTERNAL_STORAGE` |
+| Ingredient-Based Recipe Suggestions | — |
+| Screen Analysis via Accessibility Services | `READ_ASSIST_STRUCTURE_SCREEN_CONTENT` `FOREGROUND_SERVICE`|
+| History Sync | `GET_ACCOUNTS` `INTERNET`|
 
 ---
 
@@ -72,19 +82,23 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+    "CAMERA",
+    "GET_ACCOUNTS",
+    "RECORD_AUDIO",
+    "POST_NOTIFICATIONS",
+    "POST_PROMOTED_NOTIFICATIONS",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "INTERNET",
+    "ACCESS_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "WAKE_LOCK",
+    "MODIFY_AUDIO_SETTINGS",
+    "VIBRATE",
+    "READ_ASSIST_STRUCTURE_SCREEN_CONTENT"
 ]
 ```

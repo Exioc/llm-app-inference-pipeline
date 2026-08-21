@@ -1,4 +1,5 @@
 # Twitch: Live Streaming
+<small>`pkg: tv.twitch.android.app`</small>
 
 ---
 
@@ -36,20 +37,22 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "RECORD_AUDIO",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Live Content Viewing | |
-| Live Chat | |
-| Account and Channel Creation | |
-| Live Broadcasting | |
-| Channel Subscriptions | |
-| Dark Mode | |
+| Live Content Viewing | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Live Chat | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Account and Channel Creation | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Live Broadcasting | `INTERNET` `ACCESS_NETWORK_STATE` `CAMERA` `RECORD_AUDIO`|
+| Channel Subscriptions | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Dark Mode | — |
 
 ---
 
@@ -58,19 +61,22 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "GET_ACCOUNTS",
+  "RECORD_AUDIO",
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_CAMERA",
+  "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+  "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "FOREGROUND_SERVICE_MICROPHONE",
+  "WAKE_LOCK",
+  "MODIFY_AUDIO_SETTINGS"
 ]
 ```

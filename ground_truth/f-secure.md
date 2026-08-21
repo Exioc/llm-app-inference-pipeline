@@ -1,4 +1,5 @@
 # F-Secure: Total Security & VPN  
+<small>`pkg: com.fsecure.ms.safe`</small>
 
 ---
 
@@ -50,8 +51,8 @@ With the Accessibility service
 |---|---|
 | Antivirus protection | Scans apps and files for security threats. |
 | Multi-device protection | Cross-platform security for PC, Mac, Android, and iOS. |
-| Website safety checks | Chrome website protection with automatic phishing and fake online store detection. |
-| Scam Scanner | Upload screenshots of suspicious content to instantly identify potential scams. |
+| Website safety checks | Automatically detects phishing websites and fake online stores in Chrome using Accessibility Services.|
+| Scam scanner | Upload screenshots of suspicious content to instantly identify potential scams. |
 | SMS protection | AI-powered scam SMS filtering. |
 | VPN | Private browsing, IP address changing, and secure Wi-Fi connections. |
 | Identity theft protection | 24/7 dark web monitoring and data breach alerts. |
@@ -66,24 +67,30 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "QUERY_ALL_PACKAGES",
+  "RECEIVE_SMS",
+  "READ_EXTERNAL_STORAGE",
+  "INTERNET",
+  "FOREGROUND_SERVICE"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Antivirus protection | |
-| Multi-device protection | |
-| Website safety checks | |
-| Scam Scanner | |
-| SMS protection | |
-| VPN | |
-| Identity theft protection | |
-| Privacy and permissions management | |
-| Password vault | |
-| Children's online safety | |
+| Antivirus protection | `QUERY_ALL_PACKAGES` `READ_EXTERNAL_STORAGE`|
+| Multi-device protection | — |
+| Website safety checks | — |
+| Scam scanner | `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED`|
+| SMS protection | `RECEIVE_SMS`|
+| VPN | `INTERNET` `FOREGROUND_SERVICE`|
+| Identity theft protection | `POST_NOTIFICATIONS` `INTERNET` `FOREGROUND_SERVICE`|
+| Privacy and permissions management | `QUERY_ALL_PACKAGES`|
+| Password vault | `INTERNET`|
+| Children's online safety | — |
 
 ---
 
@@ -92,19 +99,22 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "RECEIVE_SMS",
+  "READ_EXTERNAL_STORAGE",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_SPECIAL_USE",
+  "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+  "QUERY_ALL_PACKAGES",
+  "REQUEST_DELETE_PACKAGES",
+  "RECEIVE_BOOT_COMPLETED",
+  "WAKE_LOCK",
+  "VIBRATE",
+  "USE_BIOMETRIC",
+  "USE_FINGERPRINT"
 ]
 ```

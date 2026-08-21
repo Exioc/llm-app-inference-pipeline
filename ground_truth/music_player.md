@@ -1,4 +1,5 @@
 # Music Player - True Bass
+<small>`pkg: com.musicplayer.player.mp3player.white`</small>
 
 ---
 
@@ -95,29 +96,36 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+"READ_MEDIA_AUDIO",
+"READ_MEDIA_IMAGES",
+"READ_MEDIA_VIDEO",
+"READ_MEDIA_VISUAL_USER_SELECTED",
+"READ_EXTERNAL_STORAGE",
+"WRITE_EXTERNAL_STORAGE"
+"INTERNET",
+"FOREGROUND_SERVICE",
+"FOREGROUND_SERVICE_MEDIA_PLAYBACK",
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Music playback | |
-| Video playback | |
-| Background playback | |
-| Playback controls | |
-| Equalizer | |
-| Audio effects | |
-| Visualizer | |
-| Library browsing | |
-| Automatic library scan | |
-| Playlist management | |
-| Media editing | |
-| UI customization | |
-| Chromecast | |
-| DLNA | |
-| Wear OS | |
+| Music playback | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+| Video playback | `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+| Background playback | `FOREGROUND_SERVICE` `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
+| Playback controls | `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
+| Equalizer | — |
+| Audio effects | —|
+| Visualizer | — |
+| Library browsing | `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+| Automatic library scan | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
+| Playlist management | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+| Media editing | `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `WRITE_EXTERNAL_STORAGE` |
+| UI customization | — |
+| Chromecast | `INTERNET`|
+| DLNA | `INTERNET`|
+| Wear OS | — |
 
 ---
 
@@ -126,19 +134,21 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+"POST_NOTIFICATIONS",
+"READ_MEDIA_AUDIO",
+"READ_MEDIA_IMAGES",
+"READ_MEDIA_VIDEO",
+"READ_MEDIA_VISUAL_USER_SELECTED",
+"READ_EXTERNAL_STORAGE",
+"WRITE_EXTERNAL_STORAGE"
+"INTERNET",
+"ACCESS_NETWORK_STATE",
+"ACCESS_WIFI_STATE",
+"FOREGROUND_SERVICE",
+"FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+"BROADCAST_STICKY",
+"WAKE_LOCK",
+"MODIFY_AUDIO_SETTINGS",
+"VIBRATE"
 ]
 ```

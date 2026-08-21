@@ -1,5 +1,5 @@
 # Alipay
-
+<small>`pkg: com.eg.android.AlipayGphone`</small>
 ---
 
 ## Description
@@ -24,33 +24,24 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+  "NFC",
+  "NFC_PREFERRED_PAYMENT_INFO",
+  "NFC_TRANSACTION_EVENT",
+  "POST_NOTIFICATIONS",
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Cross-Border Payments | |
-| Foreign Credit Card Integration | |
+| Cross-Border Payments | `INTERNET` `NFC`|
+| Foreign Credit Card Integration | `INTERNET` `NFC`|
 
 ---
 
 ## Permissions set 2
 Permission Set 2 combines the app description with domain knowledge to define the expected permissions as follows:
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
 
 ```json
 [

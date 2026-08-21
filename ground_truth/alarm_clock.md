@@ -1,4 +1,5 @@
-# Alarm clock
+# Alarm clock 
+<small>`pkg: com.timy.alarmclock`</small>
 
 ---
 
@@ -36,20 +37,20 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"android.permission.DUMMY",
-"android.permission.DUMMY"
+"READ_MEDIA_AUDIO", 
+"USE_EXACT_ALARM"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Multiple alarms | |
-| Characters to wake up | |
-| Wake up with your tones or songs | |
-| Repeat option | |
-| Snooze | |
-| Independent volume control | |
+| Multiple alarms | `USE_EXACT_ALARM` |
+| Characters to wake up | — |
+| Wake up with your tones or songs | `READ_MEDIA_AUDIO` |
+| Repeat option | — |
+| Snooze | — |
+| Independent volume control | — |
 
 ---
 
@@ -58,19 +59,15 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+"POST_NOTIFICATIONS",
+"USE_FULL_SCREEN_INTENT", 
+"READ_MEDIA_AUDIO",
+"READ_EXTERNAL_STORAGE",
+"FOREGROUND_SERVICE", 
+"FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+"RECEIVE_BOOT_COMPLETED",
+"WAKE_LOCK",
+"VIBRATE", 
+"USE_EXACT_ALARM"
 ]
 ```

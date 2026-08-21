@@ -1,4 +1,5 @@
 # Pinterest
+<small>`pkg: com.pinterest`</small>
 
 ---
 
@@ -18,7 +19,7 @@ It's Possible.
 | **Feature name** | **Description** |
 |---|---|
 | Content Discovery | Browses content across categories such as fashion tips, recipes, DIY projects, and home decor. |
-| In-App Shopping | ? |
+| In-App Shopping | ? Browse and shop styles and products|
 | Content Organization | Saves individual content items (Pins) and organizes them into custom boards. |
 | Collage Creation | Combines saved elements into visual collages. |
 
@@ -29,17 +30,18 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-
+  "INTERNET",
+  "ACCESS_NETWORK_STATE"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Content Discovery | |
-| In-App Shopping | |
-| Content Organization | |
-| Collage Creation | |
+| Content Discovery | `INTERNET` `ACCESS_NETWORK_STATE` |
+| In-App Shopping | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Content Organization | — |
+| Collage Creation | — |
 
 ---
 
@@ -48,19 +50,18 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "GET_ACCOUNTS",
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_DATA_SYNC",
+  "WAKE_LOCK",
+  "VIBRATE"
 ]
 ```

@@ -1,4 +1,5 @@
 # Signal Private Messenger
+<small>`pkg: org.thoughtcrime.securesms`</small>
 
 ---
 
@@ -41,19 +42,25 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "RECORD_AUDIO",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| End-to-End Encryption | |
-| Multimedia Messaging | |
-| Voice and Video Calling | |
-| Group Chats & Admin Controls | |
-| Short-Lived Stories | |
+| End-to-End Encryption | `INTERNET`|
+| Multimedia Messaging | `RECORD_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `INTERNET`|
+| Voice and Video Calling | `CAMERA` `RECORD_AUDIO` `INTERNET`|
+| Group Chats & Admin Controls | `INTERNET`|
+| Short-Lived Stories | `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `INTERNET`|
 
 ---
 
@@ -62,19 +69,39 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
-]
-```
-
----
-
-## Discussable (Temporarily)
-Not sure if they should be included in this set.
-
-```json
-[
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "READ_CONTACTS",
+  "WRITE_CONTACTS",
+  "ACCESS_COARSE_LOCATION",
+  "ACCESS_FINE_LOCATION",
+  "RECORD_AUDIO",
+  "POST_NOTIFICATIONS",
+  "USE_FULL_SCREEN_INTENT",
+  "READ_PHONE_STATE"
+  "READ_CALL_STATE"
+  "MANAGE_OWN_CALLS"
+  "READ_PHONE_NUMBERS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "READ_EXTERNAL_STORAGE",
+  "WRITE_EXTERNAL_STORAGE",
+  "INTERNET",
+  "ACCESS_WIFI_STATE",
+  "FOREGROUND_SERVICE",
+  "FOREGROUND_SERVICE_CAMERA",
+  "FOREGROUND_SERVICE_DATA_SYNC",
+  "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+  "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+  "FOREGROUND_SERVICE_MICROPHONE",
+  "FOREGROUND_SERVICE_PHONE_CALL",
+  "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+  "RECEIVE_BOOT_COMPLETED",
+  "BROADCAST_STICKY",
+  "WAKE_LOCK",
+  "MODIFY_AUDIO_SETTINGS",
+  "VIBRATE",
+  "USE_BIOMETRIC",
+  "USE_FINGERPRINT"
 ]
 ```
