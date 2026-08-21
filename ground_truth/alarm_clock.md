@@ -37,7 +37,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"READ_MEDIA_AUDIO", 
+"READ_MEDIA_AUDIO",
 "USE_EXACT_ALARM"
 ]
 ```
