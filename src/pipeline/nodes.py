@@ -117,13 +117,13 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     permissions = a.get_permissions()
 
     # Filter out permissions that do not start with "android.permission."
-    ground_truth_permissions = [perm.removeprefix('android.permission.') for perm in permissions if perm.startswith("android.permission.")]
-    ground_truth_permissions = [perm.replace(' ', '') for perm in ground_truth_permissions if perm]
-    number = len(ground_truth_permissions)
+    apk_permissions = [perm.removeprefix('android.permission.') for perm in permissions if perm.startswith("android.permission.")]
+    apk_permissions = [perm.replace(' ', '') for perm in apk_permissions if perm]
+    number = len(apk_permissions)
 
     if supported_apk_permissions:
-        ground_truth_permissions = [perm for perm in ground_truth_permissions if perm in permissions_set.permissions]
-        logger.info(f"Filtering ground truth: extracted known APK permissions from catalog ({number - len(ground_truth_permissions)} removed).")
+        apk_permissions = [perm for perm in apk_permissions if perm in permissions_set.permissions]
+        logger.info(f"Filtering ground truth: extracted known APK permissions from catalog ({number - len(apk_permissions)} removed).")
 
     updates = {
         "pkg": metadata.pkg,
@@ -131,7 +131,7 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
         "description_long": md_description,
         "storage_path": state["storage_path"],
         #"permissions_map": final_processed_permissions,
-        "ground_truth_permissions": ground_truth_permissions,
+        "apk_permissions": apk_permissions,
         "metadata": None
     }
 
@@ -360,6 +360,12 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
         # Make the LLM call to infer permission groups for the current feature
         result = llm.run(messages)
 
+    # Some llm models may return the permission name with the prefix "android.permission.", we need to remove it for consistency (qwen3.5:122B)
+    for item in result.inferences:
+        if item.permission_name:
+            print(f"Prefix im Berechtigungsnamen{item.permission_name}")
+            item.permission_name = item.permission_name.removeprefix("android.permission.")
+
     # Save the result as a new entry in the state
     new_feature_entry = {
         "title": feature.title,       
@@ -499,9 +505,9 @@ def transform_permission_node(state: PipelineState, config: RunnableConfig) -> d
 @auto_save("06_validation")
 def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
     permissions_list = state.get("permissions_list", [])
-    ground_truth_permissions = state.get("ground_truth_permissions", [])
+    apk_permissions = state.get("apk_permissions", [])
     
-    gt_set = set(ground_truth_permissions)
+    gt_set = set(apk_permissions)
     pred_set = set(permissions_list)
     
     # 3. Metriken berechnen (gibt das saubere flache Dict zurück)
