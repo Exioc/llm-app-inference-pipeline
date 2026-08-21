@@ -16,7 +16,7 @@ from src.pipeline.state import PipelineState
 from src.utils.save_state import save_state
 from src.utils.b64_decode import b64_decode
 from src.utils.calculate_metrics import calculate_metrics
-from src.prompts.func_prompt import FUNCTIONALITY_PROMPT
+from src.prompts.feature_prompt import FEATURE_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
 from src.prompts.permission_prompt import PERMISSION_PROMPT
 from src.schemas.group import (
@@ -146,7 +146,7 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
     llm_feature_list = config["configurable"].get("llm_feature_list", [])
     llm = llm_feature_list[0]
 
-    messages = FUNCTIONALITY_PROMPT.invoke({
+    messages = FEATURE_PROMPT.invoke({
         "label": state["label"],
         "description": state["description_long"]
     })

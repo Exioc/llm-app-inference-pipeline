@@ -2,16 +2,10 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import AIMessage
 import json
 
-from src.prompts.functionality_few_shot import (
-    GOOGLE_ONE_LABEL,
-    GOOGLE_ONE_DESCRIPTION,
-    GOOGLE_ONE_OUTPUT,
-    SAMSUNG_HEALTH_LABEL,
-    SAMSUNG_HEALTH_DESCRIPTION,
-    SAMSUNG_HEALTH_OUTPUT,
-    PETAL_MAPS_GPS_AND_NAVIGATION_LABEL,
-    PETAL_MAPS_GPS_AND_NAVIGATION_DESCRIPTION,
-    PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT
+from src.config.config import (
+    google_one_few_shot,
+    samsung_health_few_shot,
+    petal_maps_gps_and_navigation_few_shot
 )
 
 SYSTEM_PROMPT = (
@@ -53,27 +47,27 @@ HUMAN_PROMPT = (
     "Do not invent or hypothesize about underlying technical systems, APIs, or software architectures."
 )
 
-FUNCTIONALITY_PROMPT = ChatPromptTemplate.from_messages([
+FEATURE_PROMPT = ChatPromptTemplate.from_messages([
     ("system", SYSTEM_PROMPT),
     
     # -------------------------------------------------------------
-    # START FEW-SHOT BEISPIELE 
+    # START FEW-SHOT EXAMPLES 
     # -------------------------------------------------------------
 
-    # Beispiel 1 (Productivity)
-    ("human", "Now analyze the following app:\nTitle: " + GOOGLE_ONE_LABEL + "\nDescription: " + GOOGLE_ONE_DESCRIPTION),
-    AIMessage(content=json.dumps(GOOGLE_ONE_OUTPUT, ensure_ascii=False)),
+    # Example 1 (Productivity)
+    ("human", "Now analyze the following app:\nTitle: " + google_one_few_shot["label"] + "\nDescription: " + google_one_few_shot["description"]),
+        AIMessage(content=json.dumps(google_one_few_shot["output"], ensure_ascii=False)),
 
-    #Beispiel 2 (Health)
-    ("human", "Now analyze the following app:\nTitle: " + SAMSUNG_HEALTH_LABEL + "\nDescription: " + SAMSUNG_HEALTH_DESCRIPTION),
-    AIMessage(content=json.dumps(SAMSUNG_HEALTH_OUTPUT, ensure_ascii=False)),
+    #Example 2 (Health)
+    ("human", "Now analyze the following app:\nTitle: " + samsung_health_few_shot["label"] + "\nDescription: " + samsung_health_few_shot["description"]),
+    AIMessage(content=json.dumps(samsung_health_few_shot["output"], ensure_ascii=False)),
 
-    # Beispiel 3 (Maps & Navigation)
-    ("human", "Now analyze the following app:\nTitle: " + PETAL_MAPS_GPS_AND_NAVIGATION_LABEL + "\nDescription: " + PETAL_MAPS_GPS_AND_NAVIGATION_DESCRIPTION),
-    AIMessage(content=json.dumps(PETAL_MAPS_GPS_AND_NAVIGATION_OUTPUT, ensure_ascii=False)),
+    # Example 3 (Maps & Navigation)
+    ("human", "Now analyze the following app:\nTitle: " + petal_maps_gps_and_navigation_few_shot["label"] + "\nDescription: " + petal_maps_gps_and_navigation_few_shot["description"]),
+    AIMessage(content=json.dumps(petal_maps_gps_and_navigation_few_shot["output"], ensure_ascii=False)),
 
     # -------------------------------------------------------------
-    # ENDE FEW-SHOT BEISPIELE
+    # END FEW-SHOT EXAMPLES
     # -------------------------------------------------------------
 
     ("human", HUMAN_PROMPT)

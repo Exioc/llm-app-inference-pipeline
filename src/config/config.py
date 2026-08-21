@@ -15,9 +15,10 @@ load_dotenv()
 DIR = Path(__file__).resolve().parent.parent
 
 #Paths
-PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups_v3.json")
-PERMISSIONS_PATH = Path(DIR /"data/permissions_v3.json")
-PERMISSIONS_MAPPING_PATH = Path(DIR /"data/permissions_mapping.json")
+FEW_SHOTS_PATH = Path(DIR /"data/feature_few_shot.json")
+PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
+PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
+LABEL_PERMISSION_MAPPING_PATH = Path(DIR /"data/label_permission_mapping.json")
 DATA_TYPES_MAPPING_PATH = Path(DIR /"data/permission_data_types_mapping.json")
 LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
@@ -95,11 +96,11 @@ def load_llm_config(path: Path) -> list[dict]:
 
 # Mapped playstore labels to real android permission names 
 def load_permissions_mapping() -> AndroidPermissionsModel:
-    if not PERMISSIONS_MAPPING_PATH.exists():
-        raise FileNotFoundError(f"File not found: {PERMISSIONS_MAPPING_PATH}")
+    if not LABEL_PERMISSION_MAPPING_PATH.exists():
+        raise FileNotFoundError(f"File not found: {LABEL_PERMISSION_MAPPING_PATH}")
 
     else:
-        with open(PERMISSIONS_MAPPING_PATH, "r", encoding="utf-8") as file:
+        with open(LABEL_PERMISSION_MAPPING_PATH, "r", encoding="utf-8") as file:
             raw_data = json.load(file)
         return AndroidPermissionsModel(**raw_data)
 
@@ -113,6 +114,7 @@ def load_data_types_mapping() -> PermissionDataTypeMappingList:
             raw_data = json.load(file)
         return PermissionDataTypeMappingList(mappings=raw_data)
 
+# Load all permissions from the permissions.json file and return them as a PermissionCatalog object to filter apk permissions against.
 def load_permissions_set() -> PermissionCatalog:
     if not PERMISSIONS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSIONS_PATH}")
@@ -120,6 +122,20 @@ def load_permissions_set() -> PermissionCatalog:
         with open(PERMISSIONS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
             return PermissionCatalog.model_validate(raw_data)
+
+# Load few-shot examples from the few_shots.json file.
+def load_few_shots() -> list[dict]:
+    if not FEW_SHOTS_PATH.exists():
+        raise FileNotFoundError(f"File not found: {FEW_SHOTS_PATH}")
+    
+    with open(FEW_SHOTS_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+few_shots = load_few_shots()
+google_one_few_shot = few_shots[0]
+samsung_health_few_shot = few_shots[1]
+petal_maps_gps_and_navigation_few_shot = few_shots[2]
         
 llm_feature_config =  load_llm_config(LLM_FEATURE_CONFIG_PATH)
 llm_group_config =  load_llm_config(LLM_GROUP_CONFIG_PATH)

@@ -12,7 +12,7 @@
   },
   {
     "group_name": "CALENDAR",
-    "description": "Used for runtime permissions related to user's calendar.",
+    "description": "Used for permissions related to user's calendar.",
     "permissions": [
       {
         "id": "READ_CALENDAR",
@@ -28,7 +28,7 @@
   },
   {
     "group_name": "CALL_LOG",
-    "description": "Used for runtime permissions associated with accessing and modifying the device's call history.",
+    "description": "Used for permissions associated with accessing and modifying the device's call history.",
     "permissions": [
       {
         "id": "READ_CALL_LOG",
@@ -54,8 +54,8 @@
     ]
   },
   {
-    "group_name": "CONTACTS",
-    "description": "Used for runtime permissions related to contacts and profiles on this device.",
+    "group_name": "CONTACTS_AND_PROFILES",
+    "description": "Used for permissions related to accessing the user's contacts data and the list of accounts on the device.",
     "permissions": [
       {
         "id": "GET_ACCOUNTS",
@@ -65,12 +65,12 @@
       {
         "id": "READ_CONTACTS",
         "protection_level": "dangerous",
-        "description": "Allows an application to read the user's contacts data."
+        "description": "Allows an application to read the user's contacts data. Note: If your app uses the READ_CONTACTS permission and both your minSdkVersion and targetSdkVersion values are set to 15 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 16 or higher."
       },
       {
         "id": "WRITE_CONTACTS",
         "protection_level": "dangerous",
-        "description": "Allows an application to write the user's contacts data."
+        "description": "Allows an application to write the user's contacts data. Note: If your app uses the WRITE_CONTACTS permission and both your minSdkVersion and targetSdkVersion values are set to 15 or lower, the system implicitly grants your app this permission. If you don't need this permission, be sure your targetSdkVersion is 16 or higher."
       }
     ]
   },
@@ -123,7 +123,7 @@
   },
   {
     "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
-    "description": "Bundles all permissions required for discovering, connecting, and communicating with physical hardware in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, or NFC.",
+    "description": "Bundles all permissions required for discovering, connecting, communicating, or enforcing policies with physical hardware or devices in the immediate vicinity via Bluetooth, Wi-Fi Direct, UWB, NFC, or nearby streaming.",
     "permissions": [
       {
         "id": "BLUETOOTH",
@@ -179,6 +179,12 @@
         "id": "UWB_RANGING",
         "protection_level": "dangerous",
         "description": "Required to be able to range to devices using ultra-wideband."
+      },
+      {
+        "id": "READ_NEARBY_STREAMING_POLICY",
+        "protection_level": "normal",
+        "description": "Allows an application to read nearby streaming policy. The policy controls whether to allow the device to stream its notifications and apps to nearby devices. Applications that are not the device owner will need this permission to call DevicePolicyManager.getNearbyNotificationStreamingPolicy() or DevicePolicyManager.getNearbyAppStreamingPolicy().",
+        "source": "Androguard and Android Description"
       }
     ]
   },
@@ -205,7 +211,7 @@
   },
   {
     "group_name": "PHONE",
-    "description": "Used for runtime permissions associated with active telephony features, call management, and cellular state routing.",
+    "description": "Used for permissions associated with active telephony features, call management, emergency cell broadcasts, and cellular state routing.",
     "permissions": [
       {
         "id": "ACCEPT_HANDOVER",
@@ -251,6 +257,18 @@
         "id": "MANAGE_OWN_CALLS",
         "protection_level": "normal",
         "description": "Allows a calling application which manages its own calls through the self-managed ConnectionService APIs. See PhoneAccount.CAPABILITY_SELF_MANAGED for more information on the self-managed ConnectionService APIs."
+      },
+      {
+        "id": "READ_BASIC_PHONE_STATE",
+        "protection_level": "normal",
+        "description": "Allows read only access to phone state with a non dangerous permission, including the information like cellular network type, software version.",
+        "source": "Androguard and Android Description"
+      },
+      {
+        "id": "READ_CELL_BROADCASTS",
+        "protection_level": "dangerous",
+        "description": "Allows the app to read cell broadcast messages received by your device. Cell broadcast alerts are delivered in some locations to warn you of emergency situations. Malicious apps may interfere with the performance or operation of your device when an emergency cell broadcast is received.",
+        "source": "Androguard"
       }
     ]
   },
@@ -288,7 +306,7 @@
   },
   {
     "group_name": "SENSORS",
-    "description": "Used for permissions that are associated with accessing body or environmental sensors.",
+    "description": "Used for permissions that are associated with accessing body or environmental sensors, as well as spatial, head, face, eye, and hand tracking.",
     "permissions": [
       {
         "id": "BODY_SENSORS",
@@ -304,12 +322,54 @@
         "id": "HIGH_SAMPLING_RATE_SENSORS",
         "protection_level": "normal",
         "description": "Allows an app to access sensor data with a sampling rate greater than 200 Hz."
+      },
+      {
+        "id": "EYE_TRACKING_COARSE",
+        "protection_level": "dangerous",
+        "description": "Representing the user's eye pose, status, and orientation, such as for use with avatars. Use this permission when low-precision eye tracking data is needed.",
+        "source": "Androguard and Android Description XR"
+      },
+      {
+        "id": "EYE_TRACKING_FINE",
+        "protection_level": "dangerous",
+        "description": "Eye gaze for selection, input, and interactions.",
+        "source": "Androguard and Android Description XR"
+      },
+      {
+        "id": "FACE_TRACKING",
+        "protection_level": "dangerous",
+        "description": "Tracking and rendering facial expressions.",
+        "source": "Androguard and Android Description XR"
+      },
+      {
+        "id": "HAND_TRACKING",
+        "protection_level": "dangerous",
+        "description": "Tracking hand joint poses and angular and linear velocities; Using a mesh representation of the user's hands.",
+        "source": "Androguard and Android Description XR"
+      },
+      {
+        "id": "HEAD_TRACKING",
+        "protection_level": "dangerous",
+        "description": "Allows the app to access head tracking data.",
+        "source": "Androguard"
+      },
+      {
+        "id": "SCENE_UNDERSTANDING_COARSE",
+        "protection_level": "dangerous",
+        "description": "Light estimation; projecting passthrough onto mesh surfaces; performing raycasts against trackables in the environment; plane tracking; object tracking; persistent anchors.",
+        "source": "Androguard and Android Description XR"
+      },
+      {
+        "id": "SCENE_UNDERSTANDING_FINE",
+        "protection_level": "dangerous",
+        "description": "Allows the app to access tracking data about the environment directly around you with very high detail.",
+        "source": "Androguard"
       }
     ]
   },
   {
     "group_name": "SMS",
-    "description": "Used for runtime permissions related to user's SMS messages.",
+    "description": "Used for permissions related to user's SMS messages.",
     "permissions": [
       {
         "id": "READ_SMS",
@@ -340,7 +400,7 @@
   },
   {
     "group_name": "STORAGE",
-    "description": "Used for runtime permissions related to the shared external storage.",
+    "description": "Used for permissions related to the shared external storage.",
     "permissions": [
       {
         "id": "READ_EXTERNAL_STORAGE",
@@ -402,7 +462,7 @@
   },
   {
     "group_name": "FOREGROUND_SERVICES",
-    "description": "Used for permissions that allow regular applications to launch specialized foreground services (e.g., for data synchronization, media playback, or sensor tracking).",
+    "description": "Used for permissions that allow regular applications to launch specialized foreground services (e.g., for data synchronization, media playback, sensor tracking, or file management).",
     "permissions": [
       {
         "id": "FOREGROUND_SERVICE",
@@ -473,12 +533,18 @@
         "id": "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
         "protection_level": "normal|instant",
         "description": "Allows a regular application to use Service.startForeground with the type \"systemExempted\". Apps are allowed to use this type only in the use cases listed in ServiceInfo.FOREGROUND_SERVICE_TYPE_SYSTEM_EXEMPTED."
+      },
+      {
+        "id": "FOREGROUND_SERVICE_FILE_MANAGEMENT",
+        "protection_level": "normal|instant",
+        "description": "Allows the app to make use of foreground services with the type fileManagement.",
+        "source": "Androguard"
       }
     ]
   },
   {
     "group_name": "COMPANION_DEVICES",
-    "description": "Used for permissions related to setting up, managing, and interacting with companion hardware like smartwatches or smart glasses.",
+    "description": "Used for permissions related to setting up, managing, observing presence, and interacting with companion hardware like smartwatches or smart glasses.",
     "permissions": [
       {
         "id": "CALL_COMPANION_APP",
@@ -503,18 +569,30 @@
       {
         "id": "REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND",
         "protection_level": "normal",
-        "description": "Allows a companion app to start a foreground service from the background. See also:"
+        "description": "Allows a companion app to start a foreground service from the background."
       },
       {
         "id": "REQUEST_COMPANION_USE_DATA_IN_BACKGROUND",
         "protection_level": "normal",
         "description": "Allows a companion app to use data in the background."
+      },
+      {
+        "id": "DELIVER_COMPANION_MESSAGES",
+        "protection_level": "normal",
+        "description": "Allows an application to deliver companion messages to system.",
+        "source": "Androguard and Android Description"
+      },
+      {
+        "id": "REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE",
+        "protection_level": "normal",
+        "description": "Allows an application to subscribe to notifications about the presence status change of their associated companion device.",
+        "source": "Androguard and Android Description"
       }
     ]
   },
   {
     "group_name": "APP_AND_SYSTEM_MANAGEMENT",
-    "description": "Used for permissions associated with controlling the application lifecycle, managing package installation states, scheduling background tasks, and adjusting system resource optimization.",
+    "description": "Used for permissions associated with controlling the application lifecycle, managing package installation states, scheduling background tasks, retrieving task states, and adjusting system resource optimization.",
     "permissions": [
       {
         "id": "BROADCAST_STICKY",
@@ -575,12 +653,36 @@
         "id": "WAKE_LOCK",
         "protection_level": "normal",
         "description": "Allows using PowerManager WakeLocks to keep processor from sleeping or screen from dimming."
+      },
+      {
+        "id": "GET_TASKS",
+        "protection_level": "normal",
+        "description": "Allows the app to retrieve information about currently and recently running tasks. This may allow the app to discover information about which applications are used on the device.",
+        "source": "Androguard"
+      },
+      {
+        "id": "PERSISTENT_ACTIVITY",
+        "protection_level": "normal",
+        "description": "Allows the app to make parts of itself persistent in memory. This can limit memory available to other apps slowing down the phone.",
+        "source": "Androguard"
+      },
+      {
+        "id": "READ_INSTALL_SESSIONS",
+        "protection_level": "normal",
+        "description": "Allows an application to read install sessions. This allows it to see details about active package installations.",
+        "source": "Androguard"
+      },
+      {
+        "id": "RESTART_PACKAGES",
+        "protection_level": "normal",
+        "description": "Allows the app to end background processes of other apps. This may cause other apps to stop running.",
+        "source": "Androguard"
       }
     ]
   },
   {
     "group_name": "SYSTEM_UI_AND_PERIPHERALS",
-    "description": "Used for low-risk permissions that modify system-level interface elements (like wallpapers, status bars, and window layers) or control basic hardware peripherals and audio/vibration policies.",
+    "description": "Used for permissions that modify system-level interface elements (like wallpapers, status bars, window overlays, PiP, exact alarms) or control basic hardware peripherals (like IR transmitters) and audio/vibration policies.",
     "permissions": [
       {
         "id": "ACCESS_NOTIFICATION_POLICY",
@@ -641,12 +743,30 @@
         "id": "VIBRATE",
         "protection_level": "normal",
         "description": "Allows access to the vibrator."
+      },
+      {
+        "id": "HIDE_OVERLAY_WINDOWS",
+        "protection_level": "normal",
+        "description": "Allows an app to prevent non-system-overlay windows from being drawn on top of it.",
+        "source": "Androguard and Android Description"
+      },
+      {
+        "id": "TV_IMPLICIT_ENTER_PIP",
+        "protection_level": "normal",
+        "description": "Allows an app to enter Picture-in-Picture mode when the user is not explicitly requesting it. This includes using ERROR(/PictureInPictureParams.Builder#setAutoEnterEnabled) as well as lifecycle methods such as ERROR(/Activity#onUserLeaveHint) and ERROR(/Activity#onPause) to enter PiP when the user leaves the app. This permission should only be used for certain PiP usage types.",
+        "source": "Androguard and Android Description"
+      },
+      {
+        "id": "USE_EXACT_ALARM",
+        "protection_level": "normal",
+        "description": "Allows apps to use exact alarms just like with SCHEDULE_EXACT_ALARM but without needing to request this permission from the user. This is only intended for use by apps that rely on exact alarms for their core functionality. You should continue using SCHEDULE_EXACT_ALARM if your app needs exact alarms for a secondary feature that users may or may not use within your app. Keep in mind that this is a powerful permission and app stores may enforce policies to audit and review the use of this permission. Such audits may involve removal from the app store if the app is found to be misusing this permission. Apps need to target API Build.VERSION_CODES.TIRAMISU or above to be able to request this permission. Note that only one of USE_EXACT_ALARM orSCHEDULE_EXACT_ALARM should be requested on a device.",
+        "source": "Androguard and Android Description"
       }
     ]
   },
   {
     "group_name": "SECURITY_AND_PRIVACY_NORMAL",
-    "description": "Used for non-dangerous permissions interacting with system security integrations, credential management, biometric authentication, and application integrity protections against screen capturing.",
+    "description": "Used for non-dangerous permissions interacting with system security integrations, credential management, biometric authentication, device protection modes, and application integrity protections against screen capturing.",
     "permissions": [
       {
         "id": "ACCESS_HIDDEN_PROFILES",
@@ -692,12 +812,18 @@
         "id": "USE_FINGERPRINT",
         "protection_level": "normal",
         "description": "Allows an app to use fingerprint hardware."
+      },
+      {
+        "id": "QUERY_ADVANCED_PROTECTION_MODE",
+        "protection_level": "normal",
+        "description": "Allows an application to query the device's advanced protection mode status.",
+        "source": "Androguard and Android Description"
       }
     ]
   },
   {
-    "group_name": "ACCOUNT_SYNC",
-    "description": "Used for permissions that manage background data synchronization parameters and account sync statistics.",
+    "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+    "description": "Used for permissions that inspect background data synchronization statistics and configure account sync settings.",
     "permissions": [
       {
         "id": "READ_SYNC_SETTINGS",
@@ -705,20 +831,20 @@
         "description": "Allows applications to read the sync settings."
       },
       {
-        "id": "READ_SYNC_STATS",
-        "protection_level": "normal",
-        "description": "Allows applications to read the sync stats."
-      },
-      {
         "id": "WRITE_SYNC_SETTINGS",
         "protection_level": "normal",
         "description": "Allows applications to write the sync settings."
+      },
+      {
+        "id": "READ_SYNC_STATS",
+        "protection_level": "normal",
+        "description": "Allows applications to read the sync stats."
       }
     ]
   },
   {
     "group_name": "ACCESSIBILITY_AND_INPUT",
-    "description": "Used for highly sensitive UI capabilities that monitor screen content, read assist structures, or intercept low-level hardware inputs.",
+    "description": "Used for permissions that allow reading screen content through assistant structures or capturing keyboard input and system shortcuts.",
     "permissions": [
       {
         "id": "CAPTURE_KEYBOARD",
