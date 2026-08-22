@@ -31,15 +31,15 @@ https://openai.com/policies/privacy-policy
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Image Generation & Editing | Generates images from text descriptions or modifies existing images. |
-| Advanced Voice Mode | Enables real-time voice conversations by tapping the soundwave icon. |
-| Image Analysis & Transcription | Allows capturing or uploading photos to transcribe text or retrieve information about visual content. |
-| Personalized & Creative Assistance | Generates creative ideas, advice, travel itineraries, and written content tailored to specific situations. |
-| Educational & Learning Assistance | Explains complex concepts and adapts learning topics to specific audiences or knowledge levels. |
-| Professional Assistance | Assists with business planning, brainstorming, and marketing content creation. |
-| Ingredient-Based Recipe Suggestions | Generates recipe ideas based on available ingredients. |
-| Screen Analysis via Accessibility Services| Analyzes active screen content to answer questions without screenshot uploads. |
-| History Sync | Synchronizes user chat history across devices. |
+|Image Generation and Editing| Generates images from text descriptions or modifies existing images. |
+|Advanced Voice Mode| Enables real-time voice conversations by tapping the soundwave icon. |
+|Image Analysis and Transcription| Allows capturing or uploading photos to transcribe text or retrieve information about visual content. |
+|Personalized and Creative Assistance| Generates creative ideas, advice, travel itineraries, and written content tailored to specific situations. |
+|Educational and Learning Assistance| Explains complex concepts and adapts learning topics to specific audiences or knowledge levels. |
+|Professional Assistance| Assists with business planning, brainstorming, and marketing content creation. |
+|Ingredient-Based Recipe Suggestions| Generates recipe ideas based on available ingredients. |
+|Screen Analysis via Accessibility Services| Analyzes active screen content to answer questions without screenshot uploads. |
+|History Sync| Synchronizes user chat history across devices. |
 
 ---
 
@@ -59,19 +59,19 @@ Permission Set 1 includes the permissions derived from the app description, as f
     "FOREGROUND_SERVICE"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Image Generation & Editing | `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
-| Advanced Voice Mode |`RECORD_AUDIO`|
-| Image Analysis & Transcription | `CAMERA` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
-| Personalized & Creative Assistance | — |
-| Educational & Learning Assistance | — |
-| Professional Assistance | `WRITE_EXTERNAL_STORAGE` |
-| Ingredient-Based Recipe Suggestions | — |
-| Screen Analysis via Accessibility Services | `READ_ASSIST_STRUCTURE_SCREEN_CONTENT` `FOREGROUND_SERVICE`|
-| History Sync | `INTERNET`|
+|Image Generation and Editing| `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+|Advanced Voice Mode|`RECORD_AUDIO`|
+|Image Analysis and Transcription| `CAMERA` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
+|Personalized and Creative Assistance| — |
+|Educational and Learning Assistance| — |
+|Professional Assistance| `WRITE_EXTERNAL_STORAGE` |
+|Ingredient-Based Recipe Suggestions| — |
+|Screen Analysis via Accessibility Services| `READ_ASSIST_STRUCTURE_SCREEN_CONTENT` `FOREGROUND_SERVICE`|
+|History Sync| `INTERNET`|
 
 ---
 

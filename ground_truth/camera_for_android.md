@@ -25,13 +25,13 @@ Features:
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Multi-Mode Capture | Supports photo, video, smart panorama, and widescreen shooting modes. |
-| Dynamic user interface | — |
-| Scene Modes | Screen mode settings (Action, Night, Sunset, Play) |
-| Manual Camera Controls | Customizable white balance, exposure levels, and picture quality settings. |
+|Multi-Mode Capture| Supports photo, video, smart panorama, and widescreen shooting modes. |
+|Dynamic User Interface| — |
+|Scene Modes| Screen mode settings (Action, Night, Sunset, Play) |
+|Manual Camera Controls| Customizable white balance, exposure levels, and picture quality settings. |
 | Geotagging | Location targeting |
-| Configurable volume keys | — |
-| Countdown Timer | — |
+|Configurable Volume Keys| — |
+|Countdown Timer| — |
 
 ---
 
@@ -47,17 +47,17 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "ACCESS_COARSE_LOCATION"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Multi-Mode Capture | `CAMERA` `RECORD_AUDIO` `WRITE_EXTERNAL_STORAGE`|
-| Dynamic user interface | — |
-| Scene Modes | — |
-| Manual Camera Controls | — |
+|Multi-Mode Capture| `CAMERA` `RECORD_AUDIO` `WRITE_EXTERNAL_STORAGE`|
+|Dynamic User Interface| — |
+|Scene Modes| — |
+|Manual Camera Controls| — |
 | Geotagging | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION` |
-| Configurable volume keys | — |
-| Countdown Timer | — |
+|Configurable Volume Keys| — |
+|Countdown Timer| — |
 
 ---
 

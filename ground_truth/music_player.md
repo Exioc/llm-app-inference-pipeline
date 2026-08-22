@@ -73,18 +73,18 @@ X1 Player is the best music player for android. Send your feedback and suggestio
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Music playback | Offline playback supporting multiple audio formats (MP3, FLAC, WAV, AAC, MIDI, OGG, WMA, APE, AMR, M4A) with On-screen lyrics ,shake-to-skip and a sleep timer. |
-| Video playback | Offline HD video playback supporting major formats (MP4, MKV, AVI, MOV, FLV, WMV, RMVB, 3GP, TS) with subtitle support (.srt, .ass). |
-| Background playback | — |
-| Playback controls | Home screen widget and lock screen controls |
+|Music Playback| Offline playback supporting multiple audio formats (MP3, FLAC, WAV, AAC, MIDI, OGG, WMA, APE, AMR, M4A) with On-screen lyrics ,shake-to-skip and a sleep timer. |
+|Video Playback| Offline HD video playback supporting major formats (MP4, MKV, AVI, MOV, FLV, WMV, RMVB, 3GP, TS) with subtitle support (.srt, .ass). |
+|Background Playback| — |
+|Playback Controls| Home screen widget and lock screen controls |
 | Equalizer | 10-band graphical equalizer with presets, available for both music and video playback. |
-| Audio effects | Advanced sound enhancements including bass boost, 3D surround sound, and reverb effects. |
+|Audio Effects| Advanced sound enhancements including bass boost, 3D surround sound, and reverb effects. |
 | Visualizer | Built-in music visualizer with a party mode. |
-| Library browsing | Navigate and play media by albums, artists, genres, and folders. |
-| Automatic library scan | — |
-| Playlist management | Create and manage custom playlists, including easy queue reordering. |
-| Media editing | Built-in MP3, tag, and album art editor |
-| UI customization | Color themes, and UI customization |
+|Library Browsing| Navigate and play media by albums, artists, genres, and folders. |
+|Automatic Library Scan| — |
+|Playlist Management| Create and manage custom playlists, including easy queue reordering. |
+|Media Editing| Built-in MP3, tag, and album art editor |
+|UI Customization| Color themes, and UI customization |
 | Chromecast | Cast media directly to TVs using Google Cast. |
 | DLNA | Stream music and video to DLNA-compatible Smart TVs. |
 | Wear OS | Control playback from a smartwatch using Wear OS Tiles and Watch Face Complications. |
@@ -107,22 +107,22 @@ Permission Set 1 includes the permissions derived from the app description, as f
     "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Music playback | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
-| Video playback | `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
-| Background playback | `FOREGROUND_SERVICE` `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
-| Playback controls | `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
+|Music Playback| `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+|Video Playback| `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+|Background Playback| `FOREGROUND_SERVICE` `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
+|Playback Controls| `FOREGROUND_SERVICE_MEDIA_PLAYBACK` |
 | Equalizer | — |
-| Audio effects | —|
+|Audio Effects| —|
 | Visualizer | — |
-| Library browsing | `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
-| Automatic library scan | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
-| Playlist management | `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
-| Media editing | `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `WRITE_EXTERNAL_STORAGE` |
-| UI customization | — |
+|Library Browsing| `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+|Automatic Library Scan| `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
+|Playlist Management| `READ_MEDIA_AUDIO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` |
+|Media Editing| `READ_MEDIA_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `WRITE_EXTERNAL_STORAGE` |
+|UI Customization| — |
 | Chromecast | `INTERNET`|
 | DLNA | `INTERNET`|
 | Wear OS | — |

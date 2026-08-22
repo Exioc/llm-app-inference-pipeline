@@ -29,11 +29,11 @@ Follow us on Twitter @signalapp and Instagram @signal_app
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| End-to-End Encryption | Automatically encrypts all messages and calls to prevent third-party access. |
-| Multimedia Messaging | Transmission of text, voice messages, files, and media via internet connection. |
-| Voice & Video Calling | Supports individual and group audio and video calls for up to 50 participants. |
-| Group Chats & Admin Controls | Group chats for up to 1,000 members with admin settings for member management and posting permissions. |
-| Short-Lived Stories | Temporary text, image, and video stories that expire after 24 hours with customizable visibility settings. |
+|End-to-End Encryption| Automatically encrypts all messages and calls to prevent third-party access. |
+|Multimedia Messaging| Transmission of text, voice messages, files, and media via internet connection. |
+|Voice and Video Calling| Supports individual and group audio and video calls for up to 50 participants. |
+|Group Chats and Admin Controls| Group chats for up to 1,000 members with admin settings for member management and posting permissions. |
+|Short-Lived Stories| Temporary text, image, and video stories that expire after 24 hours with customizable visibility settings. |
 
 ---
 
@@ -52,15 +52,15 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| End-to-End Encryption | `INTERNET`|
-| Multimedia Messaging | `RECORD_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `INTERNET`|
-| Voice & Video Calling | `CAMERA` `RECORD_AUDIO` `INTERNET`|
-| Group Chats & Admin Controls | `INTERNET`|
-| Short-Lived Stories | `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `INTERNET`|
+|End-to-End Encryption| `INTERNET`|
+|Multimedia Messaging| `RECORD_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `INTERNET`|
+|Voice and Video Calling| `CAMERA` `RECORD_AUDIO` `INTERNET`|
+|Group Chats and Admin Controls| `INTERNET`|
+|Short-Lived Stories| `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `INTERNET`|
 
 ---
 

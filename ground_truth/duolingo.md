@@ -54,13 +54,13 @@ Privacy Policy: https://www.duolingo.com/privacy
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Short & Gamified Lessons | Provides short lessons using game-like elements and characters. |
-| Language Practice | Offers exercises in over 40 languages covering speaking, reading, listening, writing, vocabulary, grammar, and real-life conversations. |
-| Interactive Chess Course | Step-by-step guided lessons, puzzles, strategy exercises, and online matches for different skill levels. |
-| Math Course | Exercises covering mental math, multiplication, fractions, geometry, and toher core math topics using interactive exercises and games |
-| Music Course (Instrument-Free) | Teaches sheet music reading and lets users play song direclty on the device using an on-screen keyboard |
-| Progress & Habit Tracking | Tracks progress toward learning goals using rewards and achievements for daily practice. |
-| Competitive Leaderboards | Displays user rankings in language learning and online chess. |
+|Short and Gamified Lessons| Provides short lessons using game-like elements and characters. |
+|Language Practice| Offers exercises in over 40 languages covering speaking, reading, listening, writing, vocabulary, grammar, and real-life conversations. |
+|Interactive Chess Course| Step-by-step guided lessons, puzzles, strategy exercises, and online matches for different skill levels. |
+|Math Course| Exercises covering mental math, multiplication, fractions, geometry, and toher core math topics using interactive exercises and games |
+|Music Course (Instrument-Free)| Teaches sheet music reading and lets users play song direclty on the device using an on-screen keyboard |
+|Progress and Habit Tracking| Tracks progress toward learning goals using rewards and achievements for daily practice. |
+|Competitive Leaderboards| Displays user rankings in language learning and online chess. |
 
 ---
 
@@ -73,17 +73,17 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Short & Gamified Lessons | — |
-| Language Practice | `RECORD_AUDIO`|
-| Interactive Chess Course | `INTERNET`|
-| Math Course | — |
-| Music Course (Instrument-Free) | — |
-| Progress & Habit Tracking | — |
-| Competitive Leaderboards | `INTERNET`|
+|Short and Gamified Lessons| — |
+|Language Practice| `RECORD_AUDIO`|
+|Interactive Chess Course| `INTERNET`|
+|Math Course| — |
+|Music Course (Instrument-Free)| — |
+|Progress and Habit Tracking| — |
+|Competitive Leaderboards| `INTERNET`|
 
 ---
 

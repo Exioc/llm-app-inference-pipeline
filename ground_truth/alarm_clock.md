@@ -23,12 +23,12 @@ Important: Device must be on to work.
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Multiple alarms | — |
-| Characters to wake up | Deactivates alarms by completing a wake-up task with animal characters (cat, dog, bunny, fox, crocodile, shark, duck) across three difficulty levels. |
-| Wake up with your tones or songs | — |
-| Repeat option | — |
+|Multiple Alarms| — |
+|Characters to Wake up| Deactivates alarms by completing a wake-up task with animal characters (cat, dog, bunny, fox, crocodile, shark, duck) across three difficulty levels. |
+|Wake up with Your Tones or Songs| — |
+|Repeat Option| — |
 | Snooze | — |
-| Independent volume control | — |
+|Independent Volume Control| — |
 
 ---
 
@@ -42,16 +42,16 @@ Permission Set 1 includes the permissions derived from the app description, as f
 "USE_EXACT_ALARM"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Multiple alarms | `USE_EXACT_ALARM` |
-| Characters to wake up | — |
-| Wake up with your tones or songs | `READ_MEDIA_AUDIO` `READ_EXTERNAL_STORAGE` |
-| Repeat option | — |
+|Multiple Alarms| `USE_EXACT_ALARM` |
+|Characters to Wake up| — |
+|Wake up with Your Tones or Songs| `READ_MEDIA_AUDIO` `READ_EXTERNAL_STORAGE` |
+|Repeat Option| — |
 | Snooze | — |
-| Independent volume control | — |
+|Independent Volume Control| — |
 
 ---
 

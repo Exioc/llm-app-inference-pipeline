@@ -18,10 +18,10 @@ It's Possible.
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Content Discovery | Browses content across categories such as fashion tips, recipes, DIY projects, and home decor. |
-| In-App Shopping | ? Browse and shop styles and products|
-| Content Organization | Saves individual content items (Pins) and organizes them into custom boards. |
-| Collage Creation | Combines saved elements into visual collages. |
+|Content Discovery| Browses content across categories such as fashion tips, recipes, DIY projects, and home decor. |
+|In-App Shopping| ? Browse and shop styles and products|
+|Content Organization| Saves individual content items (Pins) and organizes them into custom boards. |
+|Collage Creation| Combines saved elements into visual collages. |
 
 ---
 
@@ -33,14 +33,14 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Content Discovery | `INTERNET`|
-| In-App Shopping | `INTERNET` |
-| Content Organization | — |
-| Collage Creation | — |
+|Content Discovery| `INTERNET`|
+|In-App Shopping| `INTERNET` |
+|Content Organization| — |
+|Collage Creation| — |
 
 ---
 

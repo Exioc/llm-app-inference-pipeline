@@ -28,10 +28,10 @@ By downloading the app, you agree to allow Lyft to collect your device's languag
 ## Features
 | **Feature name**  | **Description** |
 |---|---|
-| Upfront Booking & Pricing | Route preview and exact price calculation based on destination input prior to booking. |
-| Customized Ride Options | Selection of different service tiers based on pickup priority, price, and vehicle size. |
-| Micro-Mobility & Rentals | In-app access to bikes, scooters, and rental cars. |
-| Public Transit Integration | Search and navigation for local public transit routes. |
+|Upfront Booking and Pricing| Route preview and exact price calculation based on destination input prior to booking. |
+|Customized Ride Options| Selection of different service tiers based on pickup priority, price, and vehicle size. |
+|Micro-Mobility and Rentals| In-app access to bikes, scooters, and rental cars. |
+|Public Transit Integration| Search and navigation for local public transit routes. |
 
 ---
 
@@ -45,14 +45,14 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Upfront Booking & Pricing | `INTERNET` |
-| Customized Ride Options | `INTERNET` `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
-| Micro-Mobility & Rentals |`INTERNET` |
-| Public Transit Integration | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+|Upfront Booking and Pricing| `INTERNET` |
+|Customized Ride Options| `INTERNET` `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+|Micro-Mobility and Rentals|`INTERNET` |
+|Public Transit Integration| `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
 
 ---
 

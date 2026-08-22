@@ -14,8 +14,8 @@ Foreign visitors to China can connect their credit card to take advantage of Ali
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Cross-Border Payments | Enables users with a Chinese ID and bank account to make online and in-person payments abroad. |
-| Foreign Credit Card Integration | Allows visitors in China to link credit cards for local payments. |
+|Cross-Border Payments| Enables users with a Chinese ID and bank account to make online and in-person payments abroad. |
+|Foreign Credit Card Integration| Allows visitors in China to link credit cards for local payments. |
 
 ---
 
@@ -29,12 +29,12 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Cross-Border Payments | `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
-| Foreign Credit Card Integration | `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
+|Cross-Border Payments| `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
+|Foreign Credit Card Integration| `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
 
 ---
 

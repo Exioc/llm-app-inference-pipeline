@@ -35,9 +35,9 @@ https://www.instagram.com/quarkvpn/
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| One-Tap Connection | Connect to the VPN proxy with a single tap. |
-| Traffic Encryption | Encrypts internet traffic to block third-party activity tracking. |
-| Server Selection & Switching | Switch between proxy servers located in America, Europe, and Asia. |
+|One-Tap Connection| Connect to the VPN proxy with a single tap. |
+|Traffic Encryption| Encrypts internet traffic to block third-party activity tracking. |
+|Server Selection and Switching| Switch between proxy servers located in America, Europe, and Asia. |
 
 ---
 
@@ -49,13 +49,13 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| One-Tap Connection |`INTERNET`|
-| Traffic Encryption | `INTERNET`|
-| Server Selection & Switching | `INTERNET`|
+|One-Tap Connection|`INTERNET`|
+|Traffic Encryption| `INTERNET`|
+|Server Selection and Switching| `INTERNET`|
 
 ---
 

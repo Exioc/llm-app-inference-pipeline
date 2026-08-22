@@ -14,10 +14,10 @@ Paid to remove ads supported.
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Multi-Input Support | Supports touchscreens, external keyboards, mice, and remote controllers. |
-| Local Storage Management | Manages files stored on local drives. |
-| Network Storage Management | Manages files on file servers in the local network. |
-| Large-Screen Optimization | Adapts the user interface for displays on large screens. |
+|Multi-Input Support| Supports touchscreens, external keyboards, mice, and remote controllers. |
+|Local Storage Management| Manages files stored on local drives. |
+|Network Storage Management| Manages files on file servers in the local network. |
+|Large-Screen Optimization| Adapts the user interface for displays on large screens. |
 
 ---
 
@@ -32,14 +32,14 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "ACCESS_LOCAL_NETWORK"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Multi-Input Support | — |
-| Local Storage Management | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` |
-| Network Storage Management | `INTERNET` `ACCESS_LOCAL_NETWORK`|
-| Large-Screen Optimization | — |
+|Multi-Input Support| — |
+|Local Storage Management| `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` |
+|Network Storage Management| `INTERNET` `ACCESS_LOCAL_NETWORK`|
+|Large-Screen Optimization| — |
 
 ---
 

@@ -49,16 +49,16 @@ With the Accessibility service
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Antivirus protection | Scans apps and files for security threats. |
-| Multi-device protection | Cross-platform security for PC, Mac, Android, and iOS. |
-| Website safety checks | Automatically detects phishing websites and fake online stores in Chrome using Accessibility Services.|
-| Scam scanner | Upload screenshots of suspicious content to instantly identify potential scams. |
-| SMS protection | AI-powered scam SMS filtering. |
+|Antivirus Protection| Scans apps and files for security threats. |
+|Multi-Device Protection| Cross-platform security for PC, Mac, Android, and iOS. |
+|Website Safety Checks| Automatically detects phishing websites and fake online stores in Chrome using Accessibility Services.|
+|Scam Scanner| Upload screenshots of suspicious content to instantly identify potential scams. |
+|SMS Protection| AI-powered scam SMS filtering. |
 | VPN | Private browsing, IP address changing, and secure Wi-Fi connections. |
-| Identity theft protection | 24/7 dark web monitoring and data breach alerts. |
-| Privacy & permissions management | Control over personal data and app permissions. |
-| Password vault | Secure password manager with cross-device access. |
-| Children's online safety | Content filtering and screen-time limits. |s
+|Identity Theft Protection| 24/7 dark web monitoring and data breach alerts. |
+|Privacy and Permissions Management| Control over personal data and app permissions. |
+|Password Vault| Secure password manager with cross-device access. |
+|Children's Online Safety| Content filtering and screen-time limits. |s
 
 ---
 
@@ -77,20 +77,20 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "FOREGROUND_SERVICE"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Antivirus protection | `QUERY_ALL_PACKAGES` `READ_EXTERNAL_STORAGE`|
-| Multi-device protection | — |
-| Website safety checks | — |
-| Scam scanner | `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED`|
-| SMS protection | `RECEIVE_SMS`|
+|Antivirus Protection| `QUERY_ALL_PACKAGES` `READ_EXTERNAL_STORAGE`|
+|Multi-Device Protection| — |
+|Website Safety Checks| — |
+|Scam Scanner| `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED`|
+|SMS Protection| `RECEIVE_SMS`|
 | VPN | `INTERNET` `FOREGROUND_SERVICE`|
-| Identity theft protection | `POST_NOTIFICATIONS` `INTERNET` `FOREGROUND_SERVICE`|
-| Privacy & permissions management | `QUERY_ALL_PACKAGES`|
-| Password vault | `INTERNET`|
-| Children's online safety | — |
+|Identity Theft Protection| `POST_NOTIFICATIONS` `INTERNET` `FOREGROUND_SERVICE`|
+|Privacy and Permissions Management| `QUERY_ALL_PACKAGES`|
+|Password Vault| `INTERNET`|
+|Children's Online Safety| — |
 
 ---
 

@@ -33,13 +33,13 @@ You can manage your in-app Waze privacy settings at any time. Learn more about t
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| GPS Navigation & Routing | Turn-by-turn navigation with real-time directions, accurate ETAs, automatic traffic rerouting, multi-lane guidance, time-based trip planning, and multilingual voice instructions. |
-| Live Traffic & Incident Alerts | Real-time updates and hazard alerts for accidents, roadworks, road objects, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings. |
-| Speed & Trap Alerts | Notifications for speed limit changes, stationary speed cameras, red-light cameras, and user-reported police presence. |
-| Community-Based Reporting | In-app reporting tool for active road hazards, incidents, and hazards shared across the user network. |
-| Tolls, Vignettes, and Road Passes | Displays toll prices, offers alternative routes to avoid tolls, and manages road passes and vignettes for HOV lanes and restricted zones. |
-| Fuel & Parking Search | Price comparison and location search for fuel stations, EV charging stations, and parking spaces along the route or near the destination. |
-| Media & In-Car Integration | Direct in-app playback for audio apps (podcasts, music, news, audiobooks) and screen mirroring via Android Auto. |
+|GPS Navigation and Routing| Turn-by-turn navigation with real-time directions, accurate ETAs, automatic traffic rerouting, multi-lane guidance, time-based trip planning, and multilingual voice instructions. |
+|Live Traffic and Incident Alerts| Real-time updates and hazard alerts for accidents, roadworks, road objects, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings. |
+|Speed and Trap Alerts| Notifications for speed limit changes, stationary speed cameras, red-light cameras, and user-reported police presence. |
+|Community-Based Reporting| In-app reporting tool for active road hazards, incidents, and hazards shared across the user network. |
+|Tolls Vignettes and Road Passes| Displays toll prices, offers alternative routes to avoid tolls, and manages road passes and vignettes for HOV lanes and restricted zones. |
+|Fuel and Parking Search| Price comparison and location search for fuel stations, EV charging stations, and parking spaces along the route or near the destination. |
+|Media and in-Car Integration| Direct in-app playback for audio apps (podcasts, music, news, audiobooks) and screen mirroring via Android Auto. |
 
 ---
 
@@ -54,17 +54,17 @@ Permission Set 1 includes the permissions derived from the app description, as f
     "INTERNET"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| GPS Navigation & Routing | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
-| Live Traffic & Incident Alerts | `POST_NOTIFICATIONS` `INTERNET`|
-| Speed & Trap Alerts | `POST_NOTIFICATIONS`|
-| Community-Based Reporting | `INTERNET`|
-| Tolls, Vignettes, and Road Passes | `INTERNET`|
-| Fuel & Parking Search | `INTERNET`|
-| Media & In-Car Integration | — |
+|GPS Navigation and Routing| `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+|Live Traffic and Incident Alerts| `POST_NOTIFICATIONS` `INTERNET`|
+|Speed and Trap Alerts| `POST_NOTIFICATIONS`|
+|Community-Based Reporting| `INTERNET`|
+|Tolls Vignettes and Road Passes| `INTERNET`|
+|Fuel and Parking Search| `INTERNET`|
+|Media and in-Car Integration| — |
 
 ---
 

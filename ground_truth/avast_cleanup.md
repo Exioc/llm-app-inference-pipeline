@@ -64,14 +64,14 @@ Avast Cleanup uses accessibility permission to assist disabled and other users s
 ## Features
 | **Feature name** | **Description** |
 |---|---|
-| Junk & residual cleaner | Detects and removes unnecessary files, temporary data, browser history, app leftovers, and junk files via a one-tap cleanup. |
-| Storage Analyzer & manager | Analyzes storage space to identify hidden files and allows users to manage large files and organize download folders. |
-| App Analyzer | Identifies individual app impact by tracking storage footprint, battery drain, mobile data usage, and background activity. |
-| App Remover | Identifies unused applications and supports batch uninstallation of multiple apps. |
-| Stop Background Apps | Allows stopping background applications. |
-| Photo cleaner | Detects and removes duplicate, similar, old, poor-quality (dark or blurry), and private chat photos. |
-| Photo Compression | Reduces photo file sizes using Low, Moderate, High, and Aggressive compression levels. |
-| System resource monitoring | Tracks and displays CPU, RAM, and storage usage to identify performance issues. |
+|Junk and Residual Cleaner| Detects and removes unnecessary files, temporary data, browser history, app leftovers, and junk files via a one-tap cleanup. |
+|Storage Analyzer and Manager| Analyzes storage space to identify hidden files and allows users to manage large files and organize download folders. |
+|App Analyzer| Identifies individual app impact by tracking storage footprint, battery drain, mobile data usage, and background activity. |
+|App Remover| Identifies unused applications and supports batch uninstallation of multiple apps. |
+|Stop Background Apps| Allows stopping background applications. |
+|Photo Cleaner| Detects and removes duplicate, similar, old, poor-quality (dark or blurry), and private chat photos. |
+|Photo Compression| Reduces photo file sizes using Low, Moderate, High, and Aggressive compression levels. |
+|System Resource Monitoring| Tracks and displays CPU, RAM, and storage usage to identify performance issues. |
 ---
 
 ## Permissions set 1
@@ -89,18 +89,18 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "REQUEST_DELETE_PACKAGES"
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Junk & residual cleaner | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
-| Storage Analyzer & manager | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
-| App Analyzer |  `QUERY_ALL_PACKAGES` `GET_PACKAGE_SIZE`|
-| App Remover | `QUERY_ALL_PACKAGES` `REQUEST_DELETE_PACKAGES` |
-| Stop Background Apps | `KILL_BACKGROUND_PROCESSES`|
-| Photo cleaner | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` | 
-| Photo Compression | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` |
-| System resource monitoring | — |
+|Junk and Residual Cleaner| `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+|Storage Analyzer and Manager| `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
+|App Analyzer|  `QUERY_ALL_PACKAGES` `GET_PACKAGE_SIZE`|
+|App Remover| `QUERY_ALL_PACKAGES` `REQUEST_DELETE_PACKAGES` |
+|Stop Background Apps| `KILL_BACKGROUND_PROCESSES`|
+|Photo Cleaner| `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` | 
+|Photo Compression| `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` |
+|System Resource Monitoring| — |
 ---
 
 ## Permissions set 2

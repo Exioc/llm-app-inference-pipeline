@@ -23,12 +23,12 @@ Please note: This app features Nielsen’s proprietary measurement software whic
 
 | **Feature name** | **Description** |
 |---|---|
-| Live Content Viewing | Streaming of live content across categories such as gaming, esports, music, podcasts, and IRL. |
-| Live Chat | Real-time text messaging during live streams. |
-| Account & Channel Creation | Account creation to start a personal channel. |
-| Live Broadcasting | Direct in-app live streaming. |
-| Channel Subscriptions | Subscribe to streamers and access subscriber benefits |
-| Dark Mode | — |
+|Live Content Viewing| Streaming of live content across categories such as gaming, esports, music, podcasts, and IRL. |
+|Live Chat| Real-time text messaging during live streams. |
+|Account and Channel Creation| Account creation to start a personal channel. |
+|Live Broadcasting| Direct in-app live streaming. |
+|Channel Subscriptions| Subscribe to streamers and access subscriber benefits |
+|Dark Mode| — |
 
 ---
 
@@ -42,16 +42,16 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET",
 ]
 ```
-The following table maps the identified permissions to their corresponding features.
+The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Live Content Viewing | `INTERNET`|
-| Live Chat | `INTERNET`|
-| Account & Channel Creation | `INTERNET` |
-| Live Broadcasting | `INTERNET` `CAMERA` `RECORD_AUDIO`|
-| Channel Subscriptions | `INTERNET` |
-| Dark Mode | — |
+|Live Content Viewing| `INTERNET`|
+|Live Chat| `INTERNET`|
+|Account and Channel Creation| `INTERNET` |
+|Live Broadcasting| `INTERNET` `CAMERA` `RECORD_AUDIO`|
+|Channel Subscriptions| `INTERNET` |
+|Dark Mode| — |
 
 ---
 
