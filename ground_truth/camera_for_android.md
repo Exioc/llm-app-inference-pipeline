@@ -71,7 +71,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "ACCESS_FINE_LOCATION",
   "RECORD_AUDIO",
   "WRITE_EXTERNAL_STORAGE",
-  "WAKE_LOCK"
+  "WAKE_LOCK",
   "VIBRATE"
 ]
 ```

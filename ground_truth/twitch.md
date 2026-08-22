@@ -39,7 +39,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
 [
   "CAMERA",
   "RECORD_AUDIO",
-  "INTERNET",
+  "INTERNET"
 ]
 ```
 The following table maps the derived permissions to the corresponding features.
