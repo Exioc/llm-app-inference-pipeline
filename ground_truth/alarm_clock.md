@@ -37,9 +37,9 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"READ_MEDIA_AUDIO",
-"READ_EXTERNAL_STORAGE",
-"USE_EXACT_ALARM"
+    "READ_MEDIA_AUDIO",
+    "READ_EXTERNAL_STORAGE",
+    "USE_EXACT_ALARM"
 ]
 ```
 The following table maps the derived permissions to the corresponding features.
@@ -60,16 +60,16 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-"POST_NOTIFICATIONS",
-"USE_FULL_SCREEN_INTENT",
-"READ_MEDIA_AUDIO",
-"READ_EXTERNAL_STORAGE",
-"FOREGROUND_SERVICE",
-"FOREGROUND_SERVICE_MEDIA_PLAYBACK",
-"RECEIVE_BOOT_COMPLETED",
-"WAKE_LOCK",
-"MODIFY_AUDIO_SETTINGS",
-"VIBRATE",
-"USE_EXACT_ALARM"
+    "POST_NOTIFICATIONS",
+    "USE_FULL_SCREEN_INTENT",
+    "READ_MEDIA_AUDIO",
+    "READ_EXTERNAL_STORAGE",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "RECEIVE_BOOT_COMPLETED",
+    "WAKE_LOCK",
+    "MODIFY_AUDIO_SETTINGS",
+    "VIBRATE",
+    "USE_EXACT_ALARM"
 ]
 ```
