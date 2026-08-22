@@ -30,16 +30,15 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-  "INTERNET",
-  "ACCESS_NETWORK_STATE"
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Content Discovery | `INTERNET` `ACCESS_NETWORK_STATE` |
-| In-App Shopping | `INTERNET` `ACCESS_NETWORK_STATE` |
+| Content Discovery | `INTERNET`|
+| In-App Shopping | `INTERNET` |
 | Content Organization | — |
 | Collage Creation | — |
 
@@ -59,8 +58,6 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "READ_EXTERNAL_STORAGE",
   "INTERNET",
   "ACCESS_NETWORK_STATE",
-  "FOREGROUND_SERVICE",
-  "FOREGROUND_SERVICE_DATA_SYNC",
   "WAKE_LOCK",
   "VIBRATE"
 ]

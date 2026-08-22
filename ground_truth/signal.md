@@ -31,7 +31,7 @@ Follow us on Twitter @signalapp and Instagram @signal_app
 |---|---|
 | End-to-End Encryption | Automatically encrypts all messages and calls to prevent third-party access. |
 | Multimedia Messaging | Transmission of text, voice messages, files, and media via internet connection. |
-| Voice and Video Calling | Supports individual and group audio and video calls for up to 50 participants. |
+| Voice & Video Calling | Supports individual and group audio and video calls for up to 50 participants. |
 | Group Chats & Admin Controls | Group chats for up to 1,000 members with admin settings for member management and posting permissions. |
 | Short-Lived Stories | Temporary text, image, and video stories that expire after 24 hours with customizable visibility settings. |
 
@@ -58,7 +58,7 @@ The following table maps the identified permissions to their corresponding featu
 | --- | --- |
 | End-to-End Encryption | `INTERNET`|
 | Multimedia Messaging | `RECORD_AUDIO` `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` `INTERNET`|
-| Voice and Video Calling | `CAMERA` `RECORD_AUDIO` `INTERNET`|
+| Voice & Video Calling | `CAMERA` `RECORD_AUDIO` `INTERNET`|
 | Group Chats & Admin Controls | `INTERNET`|
 | Short-Lived Stories | `READ_MEDIA_IMAGES` `READ_MEDIA_VIDEO` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `INTERNET`|
 
@@ -87,7 +87,8 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "READ_EXTERNAL_STORAGE",
   "WRITE_EXTERNAL_STORAGE",
   "INTERNET",
-  "ACCESS_WIFI_STATE",
+  "ACCESS_NETWORK_STATE",
+  "NEARBY_WIFI_DEVICES",
   "FOREGROUND_SERVICE",
   "FOREGROUND_SERVICE_CAMERA",
   "FOREGROUND_SERVICE_DATA_SYNC",
@@ -102,6 +103,8 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "MODIFY_AUDIO_SETTINGS",
   "VIBRATE",
   "USE_BIOMETRIC",
-  "USE_FINGERPRINT"
+  "USE_FINGERPRINT",
+  "BLUETOOTH",
+  "BLUETOOTH_CONNECT"
 ]
 ```

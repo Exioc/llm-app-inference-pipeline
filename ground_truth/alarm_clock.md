@@ -38,6 +38,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
 ```json
 [
 "READ_MEDIA_AUDIO",
+"READ_EXTERNAL_STORAGE",
 "USE_EXACT_ALARM"
 ]
 ```
@@ -47,7 +48,7 @@ The following table maps the identified permissions to their corresponding featu
 | --- | --- |
 | Multiple alarms | `USE_EXACT_ALARM` |
 | Characters to wake up | — |
-| Wake up with your tones or songs | `READ_MEDIA_AUDIO` |
+| Wake up with your tones or songs | `READ_MEDIA_AUDIO` `READ_EXTERNAL_STORAGE` |
 | Repeat option | — |
 | Snooze | — |
 | Independent volume control | — |
@@ -67,6 +68,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
 "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
 "RECEIVE_BOOT_COMPLETED",
 "WAKE_LOCK",
+"MODIFY_AUDIO_SETTINGS",
 "VIBRATE", 
 "USE_EXACT_ALARM"
 ]

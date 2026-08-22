@@ -56,7 +56,7 @@ With the Accessibility service
 | SMS protection | AI-powered scam SMS filtering. |
 | VPN | Private browsing, IP address changing, and secure Wi-Fi connections. |
 | Identity theft protection | 24/7 dark web monitoring and data breach alerts. |
-| Privacy and permissions management | Control over personal data and app permissions. |
+| Privacy & permissions management | Control over personal data and app permissions. |
 | Password vault | Secure password manager with cross-device access. |
 | Children's online safety | Content filtering and screen-time limits. |s
 
@@ -88,7 +88,7 @@ The following table maps the identified permissions to their corresponding featu
 | SMS protection | `RECEIVE_SMS`|
 | VPN | `INTERNET` `FOREGROUND_SERVICE`|
 | Identity theft protection | `POST_NOTIFICATIONS` `INTERNET` `FOREGROUND_SERVICE`|
-| Privacy and permissions management | `QUERY_ALL_PACKAGES`|
+| Privacy & permissions management | `QUERY_ALL_PACKAGES`|
 | Password vault | `INTERNET`|
 | Children's online safety | — |
 
@@ -115,6 +115,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "WAKE_LOCK",
   "VIBRATE",
   "USE_BIOMETRIC",
-  "USE_FINGERPRINT"
+  "USE_FINGERPRINT",
+  "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
 ]
 ```

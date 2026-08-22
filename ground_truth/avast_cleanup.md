@@ -113,7 +113,6 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "READ_MEDIA_VISUAL_USER_SELECTED",
   "READ_EXTERNAL_STORAGE",
   "WRITE_EXTERNAL_STORAGE",
-  "FOREGROUND_SERVICE",
   "GET_PACKAGE_SIZE",
   "KILL_BACKGROUND_PROCESSES",
   "QUERY_ALL_PACKAGES",

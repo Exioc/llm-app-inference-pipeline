@@ -29,7 +29,6 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "READ_EXTERNAL_STORAGE",
   "WRITE_EXTERNAL_STORAGE",
   "INTERNET",
-  "ACCESS_NETWORK_STATE",
   "ACCESS_LOCAL_NETWORK"
 ]
 ```
@@ -39,7 +38,7 @@ The following table maps the identified permissions to their corresponding featu
 |---|---|
 | Multi-Input Support | — |
 | Local Storage Management | `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE` |
-| Network Storage Management | `INTERNET` `ACCESS_NETWORK_STATE` `ACCESS_LOCAL_NETWORK`|
+| Network Storage Management | `INTERNET` `ACCESS_LOCAL_NETWORK`|
 | Large-Screen Optimization | — |
 
 ---
@@ -55,6 +54,8 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "ACCESS_NETWORK_STATE",
   "ACCESS_LOCAL_NETWORK"
   "FOREGROUND_SERVICE",
-  "WAKE_LOCK"
+  "WAKE_LOCK",
+  "BLUETOOTH",
+  "BLUETOOTH_CONNECT"
 ]
 ```

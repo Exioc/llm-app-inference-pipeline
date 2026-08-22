@@ -42,17 +42,16 @@ Permission Set 1 includes the permissions derived from the app description, as f
 [
   "ACCESS_COARSE_LOCATION",
   "ACCESS_FINE_LOCATION",
-  "INTERNET",
-  "ACCESS_NETWORK_STATE"
+  "INTERNET"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-| Upfront Booking & Pricing | `INTERNET` `ACCESS_NETWORK_STATE`|
-| Customized Ride Options | `INTERNET` `ACCESS_NETWORK_STATE` `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
-| Micro-Mobility & Rentals |`INTERNET` `ACCESS_NETWORK_STATE` |
+| Upfront Booking & Pricing | `INTERNET` |
+| Customized Ride Options | `INTERNET` `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+| Micro-Mobility & Rentals |`INTERNET` |
 | Public Transit Integration | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
 
 ---
@@ -73,8 +72,11 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "FOREGROUND_SERVICE",
   "FOREGROUND_SERVICE_LOCATION",
   "WAKE_LOCK",
+  "MODIFY_AUDIO_SETTINGS",
   "VIBRATE",
-  "USE_BIOMETRIC",
-  "USE_FINGERPRINT"
+  "BLUETOOTH",
+  "BLUETOOTH_ADMIN",
+  "BLUETOOTH_SCAN",
+  "BLUETOOTH_CONNECT"
 ]
 ```

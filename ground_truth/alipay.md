@@ -25,9 +25,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
 ```json
 [
   "NFC",
-  "NFC_PREFERRED_PAYMENT_INFO",
   "NFC_TRANSACTION_EVENT",
-  "POST_NOTIFICATIONS",
   "INTERNET"
 ]
 ```
@@ -35,8 +33,8 @@ The following table maps the identified permissions to their corresponding featu
 
 | **Feature name** | **Permissions** |
 |---|---|
-| Cross-Border Payments | `INTERNET` `NFC`|
-| Foreign Credit Card Integration | `INTERNET` `NFC`|
+| Cross-Border Payments | `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
+| Foreign Credit Card Integration | `INTERNET` `NFC` `NFC_TRANSACTION_EVENT`|
 
 ---
 
@@ -45,7 +43,29 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
-  "android.permission.DUMMY",
-  "android.permission.DUMMY"
+  "CAMERA",
+  "ACCESS_COARSE_LOCATION",
+  "ACCESS_FINE_LOCATION",
+  "GET_ACCOUNTS",
+  "NFC",
+  "NFC_PREFERRED_PAYMENT_INFO",
+  "NFC_TRANSACTION_EVENT",
+  "POST_NOTIFICATIONS",
+  "READ_MEDIA_IMAGES",
+  "READ_MEDIA_VIDEO",
+  "READ_MEDIA_VISUAL_USER_SELECTED",
+  "WRITE_EXTERNAL_STORAGE",
+  "READ_EXTERNAL_STORAGE"
+  "INTERNET",
+  "ACCESS_NETWORK_STATE",
+  "FOREGROUND_SERVICE",
+  "BROADCAST_STICKY",
+  "WAKE_LOCK",
+  "HIDE_OVERLAY_WINDOWS",
+  "VIBRATE",
+  "DETECT_SCREEN_CAPTURE",
+  "DETECT_SCREEN_RECORDING",
+  "USE_BIOMETRIC",
+  "USE_FINGERPRINT"
 ]
 ```

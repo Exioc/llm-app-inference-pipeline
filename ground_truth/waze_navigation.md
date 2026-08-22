@@ -73,6 +73,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
 
 ```json
 [
+    "GET_ACCOUNTS",
     "ACCESS_COARSE_LOCATION",
     "ACCESS_FINE_LOCATION",
     "RECORD_AUDIO",
@@ -82,12 +83,18 @@ Permission Set 2 combines the app description with domain knowledge to define th
     "READ_BASIC_PHONE_STATE",
     "INTERNET",
     "ACCESS_NETWORK_STATE",
+    "ACCESS_WIFI_STATE",
     "FOREGROUND_SERVICE",
     "FOREGROUND_SERVICE_LOCATION",
     "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
     "FOREGROUND_SERVICE_MICROPHONE",
+    "MODIFY_AUDIO_SETTINGS",
     "BROADCAST_STICKY",
     "WAKE_LOCK",
-    "VIBRATE"
+    "VIBRATE",
+    "BLUETOOTH",
+    "BLUETOOTH_ADMIN",
+    "BLUETOOTH_SCAN",
+    "BLUETOOTH_CONNECT"
 ]
 ```

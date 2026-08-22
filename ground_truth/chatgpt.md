@@ -49,9 +49,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
 ```json
 [
     "CAMERA",
-    "GET_ACCOUNTS",
     "RECORD_AUDIO",
-    "READ_MEDIA_AUDIO",
     "READ_MEDIA_IMAGES",
     "READ_MEDIA_VISUAL_USER_SELECTED",
     "READ_EXTERNAL_STORAGE",
@@ -67,13 +65,13 @@ The following table maps the identified permissions to their corresponding featu
 | --- | --- |
 | Image Generation & Editing | `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE` `WRITE_EXTERNAL_STORAGE`|
 | Advanced Voice Mode |`RECORD_AUDIO`|
-| Image Analysis & Transcription | `CAMERA` `READ_MEDIA_IMAGES` `xREAD_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
+| Image Analysis & Transcription | `CAMERA` `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED` `READ_EXTERNAL_STORAGE`|
 | Personalized & Creative Assistance | — |
 | Educational & Learning Assistance | — |
 | Professional Assistance | `WRITE_EXTERNAL_STORAGE` |
 | Ingredient-Based Recipe Suggestions | — |
 | Screen Analysis via Accessibility Services | `READ_ASSIST_STRUCTURE_SCREEN_CONTENT` `FOREGROUND_SERVICE`|
-| History Sync | `GET_ACCOUNTS` `INTERNET`|
+| History Sync | `INTERNET`|
 
 ---
 

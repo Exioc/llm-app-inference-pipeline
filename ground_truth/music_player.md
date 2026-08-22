@@ -96,15 +96,15 @@ Permission Set 1 includes the permissions derived from the app description, as f
 
 ```json
 [
-"READ_MEDIA_AUDIO",
-"READ_MEDIA_IMAGES",
-"READ_MEDIA_VIDEO",
-"READ_MEDIA_VISUAL_USER_SELECTED",
-"READ_EXTERNAL_STORAGE",
-"WRITE_EXTERNAL_STORAGE"
-"INTERNET",
-"FOREGROUND_SERVICE",
-"FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_MEDIA_AUDIO",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_VIDEO",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "INTERNET",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
 ]
 ```
 The following table maps the identified permissions to their corresponding features.
@@ -140,7 +140,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
 "READ_MEDIA_VIDEO",
 "READ_MEDIA_VISUAL_USER_SELECTED",
 "READ_EXTERNAL_STORAGE",
-"WRITE_EXTERNAL_STORAGE"
+"WRITE_EXTERNAL_STORAGE",
 "INTERNET",
 "ACCESS_NETWORK_STATE",
 "ACCESS_WIFI_STATE",
