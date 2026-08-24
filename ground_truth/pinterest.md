@@ -19,7 +19,7 @@ It's Possible.
 | **Feature name** | **Description** |
 |---|---|
 |Content Discovery| Browses content across categories such as fashion tips, recipes, DIY projects, and home decor. |
-|In-App Shopping| ? Browse and shop styles and products|
+|In-App Shopping| Browse and shop styles and products|
 |Content Organization| Saves individual content items (Pins) and organizes them into custom boards. |
 |Collage Creation| Combines saved elements into visual collages. |
 

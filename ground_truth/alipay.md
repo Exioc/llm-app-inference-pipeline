@@ -1,5 +1,6 @@
 # Alipay
 <small>`pkg: com.eg.android.AlipayGphone`</small>
+
 ---
 
 ## Description
@@ -29,7 +30,7 @@ Permission Set 1 includes the permissions derived from the app description, as f
   "INTERNET"
 ]
 ```
-The following table maps the derived permissions to the corresponding features.
+The following table maps the derived permissions to the corresponding features.  
 
 | **Feature name** | **Permissions** |
 |---|---|
@@ -48,7 +49,6 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "ACCESS_FINE_LOCATION",
   "GET_ACCOUNTS",
   "NFC",
-  "NFC_PREFERRED_PAYMENT_INFO",
   "NFC_TRANSACTION_EVENT",
   "POST_NOTIFICATIONS",
   "READ_MEDIA_IMAGES",
@@ -61,7 +61,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "FOREGROUND_SERVICE",
   "BROADCAST_STICKY",
   "WAKE_LOCK",
-  "HIDE_OVERLAY_WINDOWS",
+  "HIDE_OVERLAY_WINDOWS", 
   "VIBRATE",
   "DETECT_SCREEN_CAPTURE",
   "DETECT_SCREEN_RECORDING",

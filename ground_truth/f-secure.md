@@ -86,7 +86,7 @@ The following table maps the derived permissions to the corresponding features.
 |Website Safety Checks| — |
 |Scam Scanner| `READ_MEDIA_IMAGES` `READ_MEDIA_VISUAL_USER_SELECTED`|
 |SMS Protection| `RECEIVE_SMS`|
-| VPN | `INTERNET` `FOREGROUND_SERVICE`|
+| VPN | `INTERNET`|
 |Identity Theft Protection| `POST_NOTIFICATIONS` `INTERNET` `FOREGROUND_SERVICE`|
 |Privacy and Permissions Management| `QUERY_ALL_PACKAGES`|
 |Password Vault| `INTERNET`|
