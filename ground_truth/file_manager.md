@@ -52,7 +52,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "WRITE_EXTERNAL_STORAGE",
   "INTERNET",
   "ACCESS_NETWORK_STATE",
-  "ACCESS_LOCAL_NETWORK"
+  "ACCESS_LOCAL_NETWORK",
   "FOREGROUND_SERVICE",
   "WAKE_LOCK",
   "BLUETOOTH",

@@ -55,7 +55,7 @@ Permission Set 2 combines the app description with domain knowledge to define th
   "READ_MEDIA_VIDEO",
   "READ_MEDIA_VISUAL_USER_SELECTED",
   "WRITE_EXTERNAL_STORAGE",
-  "READ_EXTERNAL_STORAGE"
+  "READ_EXTERNAL_STORAGE",
   "INTERNET",
   "ACCESS_NETWORK_STATE",
   "FOREGROUND_SERVICE",
