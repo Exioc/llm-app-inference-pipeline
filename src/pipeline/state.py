@@ -1,7 +1,7 @@
 from typing import TypedDict, Dict, List, Annotated
 
-from src.schemas.data_types_mapping import PermissionDataTypeMapping
-from src.schemas.permission_mapping import ProcessedPermissions
+from src.schemas.permission_data_types_mapping import PermissionDataTypeMapping
+from src.schemas.label_permission_mapping import ProcessedPermissions
 from src.schemas.app_data import AppMetadata
 from src.schemas.feature import FeatureResult
 from src.schemas.permission import FeaturePermissionAggregateResult, FeaturePermissionResult
@@ -44,11 +44,15 @@ class PipelineState(TypedDict, total=False):
     label: str
     description_long: str
 
-    # Map labels to permissions
-    permissions_map: ProcessedPermissions
+    # LABEL_TO_PERMISSIONS
+    # Map labels to permissions 
+    #permissions_map: ProcessedPermissions
+
+    # A list of ground truth sets for the app
+    ground_truth_sets: List[List[str]]
 
     # Permission list from manifest file 
-    ground_truth_permissions: List[str]
+    apk_permissions: List[str]
 
     # Results from functionality extraction 
     feature_result: FeatureResult

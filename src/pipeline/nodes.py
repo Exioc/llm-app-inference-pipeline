@@ -1,19 +1,18 @@
 import logging
 import threading
-import functools
 import json
 import html2text
 from typing import Dict, Any, List
 from androguard.core.apk import APK
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.data_types_mapping import PermissionDataTypeMapping, PermissionDataTypeMappingList
-from src.schemas.filter_config import GroupFilterConfig, PermissionFilterConfig
-from src.schemas.permission_mapping import AppPermission, ProcessedPermissions
+from src.schemas.permission_data_types_mapping import PermissionDataTypeMapping, PermissionDataTypeMappingList
+# LABEL_TO_PERMISSIONS
+from src.schemas.label_permission_mapping import AppPermission, ProcessedPermissions
 from src.schemas.app_data import PermissionItem
 from src.schemas.feature import FeatureResult
 from src.pipeline.state import PipelineState
-from src.utils.save_state import save_state
+from src.utils.auto_save import auto_save
 from src.utils.b64_decode import b64_decode
 from src.utils.calculate_metrics import calculate_metrics
 from src.prompts.feature_prompt import FEATURE_PROMPT
@@ -36,25 +35,6 @@ from src.schemas.permission import (
 logger = logging.getLogger(__name__)
 global_semaphore = None
 
-def auto_save(step_name: str):
-    def decorator(node_func):
-        @functools.wraps(node_func)
-        def wrapper(state, config, *args, **kwargs):
-            # Execute the real node 
-            result = node_func(state, config, *args, **kwargs)
-            
-            # Merge the result into the state
-            temp_state = {**state, **result}
-            
-            # Save the state after the node execution
-            save_state(temp_state, step_name)
-            
-            # Return the real result of the node
-            return result
-        return wrapper
-    return decorator
-
-
 def create_global_semaphore(number: int):
     global global_semaphore
     global_semaphore = threading.Semaphore(number)
@@ -62,9 +42,13 @@ def create_global_semaphore(number: int):
 
 @auto_save("01_preprocessing")
 def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
-    metadata = state["metadata"]
+
     supported_apk_permissions = config["configurable"].get("supported_apk_permissions", False)
+    supported_sets_permissions = config["configurable"].get("supported_sets_permissions", False)
     permissions_set = config["configurable"].get("permissions_set")
+
+    metadata = state["metadata"]
+    ground_truth_sets = state["ground_truth_sets"]
 
     # Base64 Decoding
     title = b64_decode(metadata.label)
@@ -75,6 +59,9 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     h.ignore_images = True
     h.body_width = 0  
     md_description = h.handle(description)
+
+    # LABEL_TO_PERMISSIONS
+    #===============================================================================================
 
     # permissions_mapping = config["configurable"].get("permissions_mapping", [])
 
@@ -112,6 +99,8 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     # # Wrap the final permissions map in a ProcessedPermissions instance
     # final_processed_permissions = ProcessedPermissions(permissions_map=temp_permissions_map)
 
+    # ==============================================================================================
+
     apk_path = state["apk_path"]
     a = APK(apk_path)
     permissions = a.get_permissions()
@@ -123,15 +112,24 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     if supported_apk_permissions:
         apk_permissions = [perm for perm in apk_permissions if perm in permissions_set.permissions]
-        logger.info(f"Filtering ground truth: extracted known APK permissions from catalog ({number - len(apk_permissions)} removed).")
+        logger.info(f"Filtering APK permissions: extracted known APK permissions from catalog ({number - len(apk_permissions)} removed).")
+
+    if supported_sets_permissions and ground_truth_sets:
+        ground_truth_sets = [
+            [perm for perm in sublist if perm in permissions_set.permissions]
+            for sublist in ground_truth_sets
+        ]
+        logger.info(f"Filtered permission sets against catalog of known permissions.")
 
     updates = {
+        # LABEL_TO_PERMISSIONS
+        #"permissions_map": final_processed_permissions.model_dump()["permissions_map"],
         "pkg": metadata.pkg,
         "label": title,
         "description_long": md_description,
         "storage_path": state["storage_path"],
-        #"permissions_map": final_processed_permissions,
         "apk_permissions": apk_permissions,
+        "ground_truth_sets": ground_truth_sets,
         "metadata": None
     }
 
@@ -139,8 +137,8 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     return updates
         
-@auto_save("02_functionality_extraction")
-def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
+@auto_save("02_feature_extraction")
+def feature_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     # Get LLM
     llm_feature_list = config["configurable"].get("llm_feature_list", [])
@@ -167,7 +165,7 @@ def functionality_node(state: PipelineState, config: RunnableConfig) -> dict:
         "feature_result": final_result
     }
 
-def group_idx_node(state: PipelineState, config: RunnableConfig) -> dict:
+def group_router(state: PipelineState, config: RunnableConfig) -> dict:
 
     group_send_idx = state["group_send_idx"]
     group_send_idx += 1
@@ -213,7 +211,7 @@ def group_node(state: dict[str, Any], config: RunnableConfig) -> dict:
 @auto_save("03_group_permission_arg")
 def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    group_filter = config["configurable"].get("group_filter", GroupFilterConfig())
+    group_threshold = config["configurable"].get("group_threshold", 0)
 
     llm_group_list = config["configurable"].get("llm_group_list", [])
     number_of_models = len(llm_group_list)
@@ -260,17 +258,17 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
                 group_entry["models_inferred"].append(feature.inferred_by_model)
 
 
-    if group_filter.enabled:
+    if group_threshold > 0:
 
         aggregated_data_majority = {}
 
         for title, feature_data in aggregated_data.items():
             filtered_groups = {}
             
-            for g_name, g_data in feature_data["groups_map"].items():
-                value = len(g_data["models_inferred"])
-                if value >= group_filter.threshold:
-                    filtered_groups[g_name] = g_data
+            for title, data in feature_data["groups_map"].items():
+                value = len(data["models_inferred"]) / number_of_models
+                if value >= group_threshold:
+                    filtered_groups[title] = data
 
             if filtered_groups:
                 aggregated_data_majority[title] = {
@@ -308,10 +306,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
             )
         )
 
-    logger.info(
-        f"Aggregation of all results from the group analysis "
-        f"Group filter enabled: {group_filter.enabled}, threshold: {group_filter.threshold}"
-    )
+    logger.info(f"Aggregation of all results from the group analysis with threshold {group_threshold}")
 
     return {
         "feature_groups_aggregate_result": FeatureGroupsAggregateResult(
@@ -320,7 +315,7 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
         )
     }
 
-def permission_idx_node(state: PipelineState, config: RunnableConfig) -> dict:
+def permission_router(state: PipelineState, config: RunnableConfig) -> dict:
 
     permission_send_idx = state["permission_send_idx"]
     permission_send_idx += 1
@@ -363,7 +358,6 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
     # Some llm models may return the permission name with the prefix "android.permission.", we need to remove it for consistency (qwen3.5:122B)
     for item in result.inferences:
         if item.permission_name:
-            print(f"Prefix im Berechtigungsnamen{item.permission_name}")
             item.permission_name = item.permission_name.removeprefix("android.permission.")
 
     # Save the result as a new entry in the state
@@ -382,7 +376,7 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
 @auto_save("04_permission_arg")
 def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    perm_filter = config["configurable"].get("permission_filter", PermissionFilterConfig())
+    permission_threshold = config["configurable"].get("permission_threshold", 0)
 
     llm_permission_list = config["configurable"].get("llm_permission_list", [])
     number_of_models = len(llm_permission_list)
@@ -432,16 +426,16 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
             if feature.inferred_by_model and feature.inferred_by_model not in permission_entry["models_inferred"]:
                 permission_entry["models_inferred"].append(feature.inferred_by_model)
 
-    if perm_filter.enabled:
+    if permission_threshold > 0:
         aggregated_data_majority = {}
 
         for title, feature_data in aggregated_data.items():
             filtered_permissions = {}
             
-            for p_name, p_data in feature_data["permissions_map"].items():
-                value = len(p_data["models_inferred"]) / number_of_models
-                if value >= perm_filter.threshold:
-                    filtered_permissions[p_name] = p_data
+            for title, data in feature_data["permissions_map"].items():
+                value = len(data["models_inferred"]) / number_of_models
+                if value >= permission_threshold:
+                    filtered_permissions[title] = data
 
             if filtered_permissions:
                 aggregated_data_majority[title] = {
@@ -475,10 +469,7 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
             )
         )
 
-    logger.info(
-        f"Aggregation of all results from the permission analysis "
-        f"Permission filter enabled: {perm_filter.enabled}, threshold: {perm_filter.threshold}"
-    )
+    logger.info(f"Aggregation of all results from the permission analysis with threshold {permission_threshold}")
 
     return {
         "feature_permission_aggregate_result": FeaturePermissionAggregateResult(
@@ -506,6 +497,9 @@ def transform_permission_node(state: PipelineState, config: RunnableConfig) -> d
 def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
     permissions_list = state.get("permissions_list", [])
     apk_permissions = state.get("apk_permissions", [])
+
+    group_threshold = config["configurable"].get("group_threshold", 0)
+    permission_threshold = config["configurable"].get("permission_threshold", 0)
     
     gt_set = set(apk_permissions)
     pred_set = set(permissions_list)
@@ -524,13 +518,11 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
             "inference":  perm in pred_set
         })
 
-    group_filter = config["configurable"].get("group_filter", GroupFilterConfig())
-    perm_filter = config["configurable"].get("permission_filter", PermissionFilterConfig())
-
+    
     validation_results = {
             "metrics": metrics_dict,
-            "threshold_group": group_filter.threshold,
-            "threshold_permission": perm_filter.threshold,
+            "threshold_group": group_threshold,
+            "threshold_permission": permission_threshold,
             "comparison": table_rows
         }
     

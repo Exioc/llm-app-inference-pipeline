@@ -1,6 +1,8 @@
+# LABEL_TO_PERMISSIONS
 from typing import Dict, List
 from pydantic import BaseModel, Field, model_validator
 
+# This code defines the data model for the state 
 class AppPermission(BaseModel):
     name: str = Field(...,description="The technical Android permission name, e.g. 'android.permission.ACCESS_WIFI_STATE'")
     label: str = Field(...,description="The human-readable permission label, e.g. 'view Wi-Fi connections'")
@@ -9,6 +11,8 @@ class ProcessedPermissions(BaseModel):
     # Key = category (e.g., "Identity"), Value = list of AppPermission objects
     permissions_map: Dict[str, List[AppPermission]] = Field(default_factory=dict)
 
+
+# This code defines the data models for mapping labels to Android permissions.
 class PermissionElement(BaseModel):
     description: str
     description_ptr: str
@@ -35,9 +39,6 @@ class AndroidPermissionsModel(BaseModel):
             # Get the label from the permission body. If it's empty, fallback to the original permission name.
             new_key = perm_body.get("label") or perm_body.get("name") or old_key
             
-            # if "name" not in perm_body:
-            #     perm_body["name"] = old_key
-                
             # Save the permission body under the new key (label)
             transformed_permissions[new_key] = perm_body
 

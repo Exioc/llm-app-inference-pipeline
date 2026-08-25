@@ -10,13 +10,14 @@ from src.utils.initialize_run_folder import initialize_run_folder
 from src.utils.get_jsonl_line import get_jsonl_line
 from src.utils.create_llm_pool import create_llm_pool
 from src.schemas.app_data import AppMetadata
-from src.schemas.filter_config import GroupFilterConfig, PermissionFilterConfig
 from src.config.config import (
+    # LABEL_TO_PERMISSIONS
+    #load_permissions_mapping,
     LANGSMITH_TRACING,
+    extract_permission_sets_from_md,
     load_data_types_mapping,
     load_permission_groups,
     load_permissions,
-    load_permissions_mapping,
     load_permissions_set,
     setup_logging,
     llm_feature_config,
@@ -37,9 +38,23 @@ def main() -> None:
     parser.add_argument("metadata_path", type=str, help="Path to the JSONL file containing app metadata.")
     parser.add_argument("index", type=int, help="Index of the line to read, start with 1.")
     parser.add_argument("apk_path", type=str, help="Path to the APK file.")
+    parser.add_argument("ground_truth_path", type=str, help="Path to the ground truth file.", nargs="?")
 
     # Parse command-line arguments
     args = parser.parse_args()
+
+    # Load ground truth permission sets if provided
+    # ground_truth_sets is a list of lists, where each inner list contains a set of permissions.
+    if args.ground_truth_path is not None:
+        ground_truth_sets = extract_permission_sets_from_md(args.ground_truth_path)
+    else:
+        ground_truth_sets = []
+
+    # permissions_set_1 = ground_truth_sets[0] if len(ground_truth_sets) > 0 else []
+    # permissions_set_2 = ground_truth_sets[1] if len(ground_truth_sets) > 1 else []
+
+    # print("Permissions Set 1:", permissions_set_1)
+    # print("Permissions Set 2:", permissions_set_2)
 
     # Extract the specified line from the JSONL file
     app_data = get_jsonl_line(args.metadata_path, args.index)
@@ -66,15 +81,13 @@ def main() -> None:
     permission_groups_model = load_permission_groups()
     permissions_model = load_permissions()
 
-    permissions_mapping = load_permissions_mapping()
+    # LABEL_TO_PERMISSIONS
+    # permissions_mapping = load_permissions_mapping()
 
     data_types_mapping = load_data_types_mapping()
 
+    # Set to filter APK or other sets with permissions against the known permissions catalog
     permissions_set = load_permissions_set()
-
-    # Create filter (default is enabled=False and threshold=0.5)
-    group_filter = GroupFilterConfig(enabled=True,threshold=0.0)
-    permission_filter = PermissionFilterConfig(enabled=True,threshold=0.0)
 
     create_global_semaphore(1)
 
@@ -84,6 +97,7 @@ def main() -> None:
     # Input for the pipeline
     initial_input = {
         "metadata": app_data,
+        "ground_truth_sets": ground_truth_sets,
         "storage_path": storage_path,
         "apk_path": apk_path,
         "group_send_idx": -1,
@@ -100,17 +114,19 @@ def main() -> None:
         initial_input,
         {
             "configurable": {
+                # LABEL_TO_PERMISSIONS
+                #"permissions_mapping": permissions_mapping,
                 "llm_feature_list": llm_feature_list,
                 "llm_group_list": llm_group_list,
                 "llm_permission_list": llm_permission_list,
                 "permission_groups": permission_groups_model,
                 "permissions": permissions_model,
                 "permissions_set": permissions_set,
-                "permissions_mapping": permissions_mapping,
                 "data_types_mapping": data_types_mapping,
-                "group_filter": group_filter,
-                "permission_filter": permission_filter,
-                "supported_apk_permissions": True
+                "group_threshold": 0.0,
+                "permission_threshold": 0.4,
+                "supported_apk_permissions": True,
+                "supported_sets_permissions": True
             }
         },
     )

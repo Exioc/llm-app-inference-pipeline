@@ -8,11 +8,11 @@ from src.pipeline.state import PipelineState
 from src.pipeline.nodes import (
     data_types_node, 
     preprocess_node, 
-    functionality_node,
-    group_idx_node, 
+    feature_node,
+    group_router, 
     group_node, 
     group_aggregate_node,
-    permission_idx_node, 
+    permission_router, 
     permission_node, 
     permission_aggregate_node, 
     transform_permission_node,
@@ -80,11 +80,11 @@ def build_app():
 
     # Nodes
     workflow.add_node("preprocess", preprocess_node)
-    workflow.add_node("function", functionality_node)
-    workflow.add_node("group_idx", group_idx_node)
+    workflow.add_node("feature", feature_node)
+    workflow.add_node("group_router", group_router)
     workflow.add_node("group", group_node)
     workflow.add_node("group_arg", group_aggregate_node)
-    workflow.add_node("permission_idx", permission_idx_node)
+    workflow.add_node("permission_router", permission_router)
     workflow.add_node("permission", permission_node)
     workflow.add_node("permission_arg", permission_aggregate_node)
     workflow.add_node("transform_permission", transform_permission_node)
@@ -93,11 +93,12 @@ def build_app():
 
     # Edges
     workflow.add_edge(START, "preprocess")
-    workflow.add_edge("preprocess", "function")
-    workflow.add_edge("function", "group_idx")
-    workflow.add_edge("group", "group_idx")
-    workflow.add_edge("group_arg", "permission_idx")
-    workflow.add_edge("permission", "permission_idx")
+    # workflow.add_edge("preprocess", END)
+    workflow.add_edge("preprocess", "feature")
+    workflow.add_edge("feature", "group_router")
+    workflow.add_edge("group", "group_router")
+    workflow.add_edge("group_arg", "permission_router")
+    workflow.add_edge("permission", "permission_router")
     workflow.add_edge("permission_arg", "transform_permission")
     workflow.add_edge("transform_permission", "validation")
     workflow.add_edge("validation", "data_types")
@@ -105,7 +106,7 @@ def build_app():
     
     # Conditional edges
     workflow.add_conditional_edges(
-        "group_idx",
+        "group_router",
         route_group_node,
         {
             "group": "group",
@@ -114,7 +115,7 @@ def build_app():
     )
 
     workflow.add_conditional_edges(
-        "permission_idx",
+        "permission_router",
         route_permission_node,
         {   
             "permission": "permission",
@@ -122,4 +123,9 @@ def build_app():
         }
     )
 
-    return workflow.compile()
+    app = workflow.compile()
+
+    with open("pipeline_graph.png", "wb") as f:
+        f.write(app.get_graph().draw_mermaid_png())
+
+    return app 
