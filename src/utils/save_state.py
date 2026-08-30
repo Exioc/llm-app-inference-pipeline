@@ -1,26 +1,41 @@
 import json
 from pathlib import Path
+from typing import Any
 from pydantic import BaseModel
-from src.pipeline.state import PipelineState
-from src.schemas.app_data import AppMetadata
 
-
-def save_state(state: PipelineState | AppMetadata, name: str, path=None) -> None:
-    
-    # Convert pydantic models to dicts for JSON serialization
-    if not isinstance(state, BaseModel):
-        storage_path = Path(state.get("storage_path", "results/unknown_run"))
-        path = storage_path / f"{name}.json"
-        serializable_state = {}
-        for key, value in state.items():
-            if hasattr(value, "model_dump"):
-                serializable_state[key] = value.model_dump()
-            else:
-                serializable_state[key] = value
+def save_state(state: Any, name: str, path: str | Path | None = None) -> None:
+    # Determine the target folder (either from a parameter or from the state)
+    if path:
+        storage_dir = Path(path)
+    elif isinstance(state, dict) and "storage_path" in state:
+        storage_dir = Path(state["storage_path"])
+    elif hasattr(state, "storage_path") and state.storage_path:
+        storage_dir = Path(state.storage_path)
     else:
-        storage_path = Path(path or "results/unknown_run")
-        path = storage_path / f"{name}.json"
-        serializable_state = state.model_dump()
+        raise ValueError(
+            f"Could not determine storage path to save '{name}.json'. "
+            "Please provide a 'path' argument or define 'storage_path' in the state."
+        )
 
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(serializable_state, f, indent=2, ensure_ascii=False)
+    file_path = storage_dir / f"{name}.json"
+
+    # Create folder if it does not already exist
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # Prepare serializable output data
+    data_to_save = state.model_dump() if isinstance(state, BaseModel) else state
+
+    # Writing JSON with a fallback encoder for nested Pydantic models
+    def pydantic_encoder(obj: Any) -> Any:
+        if hasattr(obj, "model_dump"):
+            return obj.model_dump()
+        raise TypeError(f"Object of type {type(obj).__name__} is not JSON serializable")
+
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(
+            data_to_save,
+            f,
+            indent=2,
+            ensure_ascii=False,
+            default=pydantic_encoder
+        )
