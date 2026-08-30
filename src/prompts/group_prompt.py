@@ -9,8 +9,7 @@ GROUP_PROMPT = ChatPromptTemplate.from_messages([
         "CRITICAL INSTRUCTIONS:\n"
         "1. You MUST ONLY choose group names present inside the `<allowed_groups>` section.\n"
         "2. Read the description of each group carefully to evaluate whether the feature might require permissions belonging to that group.\n"
-        "3. If NO permission groups are required at all, return exactly ONE entry "
-        "   where 'group_name' is set to 'NONE' and 'reasoning' to 'No permission required.'.\n\n"
+        "3. If NO permission groups are required at all, return exactly ONE entry where 'group_name' is set to 'NONE' and 'reasoning' to 'No permission required.'.\n\n"
         
         "EXPECTED OUTPUT FORMAT (JSON ONLY):\n"
         "{{\n"

@@ -9,15 +9,14 @@ PERMISSION_PROMPT = ChatPromptTemplate.from_messages([
         "CRITICAL INSTRUCTIONS:\n"
         "1. You MUST ONLY choose permission names from the **\"id\"** fields present inside the `<allowed_permissions>` section.\n"
         "2. Read the description of each individual permission carefully to see if the app feature justifies its usage.\n"
-        "3. If NO permissions from the **{group_name}** group are required at all, return exactly ONE entry "
-        "   where 'permission_name' is set to 'NONE' and 'reasoning' to 'No permission required.'.\n\n"
+        "3. If NO permissions from the **{group_name}** group are required at all, return exactly ONE entry where 'permission_name' is set to 'NONE' and 'reasoning' to 'No permission required.'.\n\n"
         
         "EXPECTED OUTPUT FORMAT (JSON ONLY):\n"
         "{{\n"
         '  "inferences": [\n'
         '    {{\n'
-        '      "permission_name": "android.permission.CAMERA",\n'
-        '      "reasoning": "Required to record video frames for live processing."\n'
+        '      "permission_name": "CAMERA",\n'
+        '      "reasoning": "Required to take photos."\n'
         "    }}\n"
         "  ]\n"
         "}}\n\n"

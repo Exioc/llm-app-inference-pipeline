@@ -25,9 +25,9 @@ class LLMWorker:
         if self.config.role == "feature": 
             return llm.with_structured_output(FeatureResponse)
         elif self.config.role == "group": 
-            return llm.with_structured_output(GroupResponse,method="json_schema")
+            return llm.with_structured_output(GroupResponse)
         elif self.config.role == "permission": 
-            return llm.with_structured_output(PermissionResponse,method="json_schema")
+            return llm.with_structured_output(PermissionResponse)
         else:
             return llm
 
