@@ -93,7 +93,6 @@ def build_app():
 
     # Edges
     workflow.add_edge(START, "preprocess")
-    # workflow.add_edge("preprocess", END)
     workflow.add_edge("preprocess", "feature")
     workflow.add_edge("feature", "group_router")
     workflow.add_edge("group", "group_router")
@@ -125,6 +124,7 @@ def build_app():
 
     app = workflow.compile()
 
+    # Create and save a graph 
     with open("pipeline_graph.png", "wb") as f:
         f.write(app.get_graph().draw_mermaid_png())
 
