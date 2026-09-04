@@ -28,8 +28,8 @@ class PermissionDataTypeMapping(BaseModel):
         description="List of associated data types for this permission."
     )
 
-# Data model representing a list of permission-to-datatype mappings.
-class PermissionDataTypeMappingList(BaseModel):
+# Data model representing a registry of permission-to-data type mappings, allowing for easy access and retrieval of mappings.
+class PermissionDataTypeMappingRegistry(BaseModel):
     model_config = ConfigDict(populate_by_name=True)
 
     mappings: List[PermissionDataTypeMapping] = Field(
