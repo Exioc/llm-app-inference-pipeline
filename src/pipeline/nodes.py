@@ -6,7 +6,7 @@ from typing import Dict, Any, List
 from androguard.core.apk import APK
 from langchain_core.runnables import RunnableConfig
 
-from src.schemas.permission_data_types_mapping import PermissionDataTypeMapping, PermissionDataTypeMappingList
+from src.schemas.permission_data_types_mapping import PermissionDataTypeMapping, PermissionDataTypeMappingRegistry
 # LABEL_TO_PERMISSIONS
 from src.schemas.label_permission_mapping import AppPermission, ProcessedPermissions
 from src.schemas.app_data import PermissionItem
@@ -15,6 +15,8 @@ from src.pipeline.state import PipelineState
 from src.utils.auto_save import auto_save
 from src.utils.b64_decode import b64_decode
 from src.utils.calculate_metrics import calculate_metrics
+from src.utils.plot_metrics_summary import plot_metrics_summary
+from src.utils.plot_permission_matrix import plot_permission_matrix
 from src.prompts.feature_prompt import FEATURE_PROMPT
 from src.prompts.group_prompt import GROUP_PROMPT
 from src.prompts.permission_prompt import PERMISSION_PROMPT
@@ -43,9 +45,10 @@ def create_global_semaphore(number: int):
 @auto_save("01_preprocessing")
 def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
 
+    # Filteering option for apk permissions and ground truth 
     supported_apk_permissions = config["configurable"].get("supported_apk_permissions", False)
-    supported_sets_permissions = config["configurable"].get("supported_sets_permissions", False)
-    permissions_set = config["configurable"].get("permissions_set")
+    supported_ground_truth_sets = config["configurable"].get("supported_ground_truth_sets", False)
+    permissions_registry = config["configurable"].get("permissions_registry")
 
     metadata = state["metadata"]
     ground_truth_sets = state["ground_truth_sets"]
@@ -111,15 +114,15 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
     number = len(apk_permissions)
 
     if supported_apk_permissions:
-        apk_permissions = [perm for perm in apk_permissions if perm in permissions_set.permissions]
-        logger.info(f"Filtering APK permissions: extracted known APK permissions from catalog ({number - len(apk_permissions)} removed).")
+        apk_permissions = [perm for perm in apk_permissions if perm in permissions_registry.permissions]
+        logger.info(f"Filtered APK permissions against the registry ({number - len(apk_permissions)} removed).")
 
-    if supported_sets_permissions and ground_truth_sets:
+    if supported_ground_truth_sets and ground_truth_sets:
         ground_truth_sets = [
-            [perm for perm in sublist if perm in permissions_set.permissions]
+            [perm for perm in sublist if perm in permissions_registry.permissions]
             for sublist in ground_truth_sets
         ]
-        logger.info(f"Filtered permission sets against catalog of known permissions.")
+        logger.info("Filtered permission sets against the registry of known permissions.")
 
     updates = {
         # LABEL_TO_PERMISSIONS
@@ -127,7 +130,6 @@ def preprocess_node(state: PipelineState, config: RunnableConfig) -> dict:
         "pkg": metadata.pkg,
         "label": title,
         "description_long": md_description,
-        "storage_path": state["storage_path"],
         "apk_permissions": apk_permissions,
         "ground_truth_sets": ground_truth_sets,
         "metadata": None
@@ -149,7 +151,15 @@ def feature_node(state: PipelineState, config: RunnableConfig) -> dict:
         "description": state["description_long"]
     })
 
-    llm_output = llm.run(messages)
+    try:
+        llm_output = llm.run(messages)
+    except Exception as e:
+        logger.warning(f"First LLM call failed: {e}. Retrying once")
+        try:
+            llm_output = llm.run(messages)
+        except Exception as e:
+            logger.error(f"Second LLM call failed: {e}. Aborting.")
+            raise
 
     number_of_features = len(llm_output.features) if llm_output.features else 0
 
@@ -194,7 +204,15 @@ def group_node(state: dict[str, Any], config: RunnableConfig) -> dict:
     with global_semaphore:
         logger.info(f"Analyze feature '{feature.title}' using {llm.config.model}")
         # Make the LLM call to infer permission groups for the current feature
-        result = llm.run(messages)
+        try:
+            result = llm.run(messages)
+        except Exception as e:
+            logger.warning(f"First LLM call failed: {e}. Retrying once")
+            try:
+                result = llm.run(messages)
+            except Exception as e:
+                logger.error(f"Second LLM call failed: {e}. Aborting.")
+                raise
 
     # Save the result as a new entry in the state
     new_feature_entry = {
@@ -211,7 +229,7 @@ def group_node(state: dict[str, Any], config: RunnableConfig) -> dict:
 @auto_save("03_group_permission_arg")
 def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    group_threshold = config["configurable"].get("group_threshold", 0)
+    group_threshold = config["configurable"].get("group_threshold", 0.0)
 
     llm_group_list = config["configurable"].get("llm_group_list", [])
     number_of_models = len(llm_group_list)
@@ -353,7 +371,15 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
     with global_semaphore:
         logger.info(f"Analyze feature '{feature.title}' using group '{group_name}' and LLM model '{llm.config.model}")
         # Make the LLM call to infer permission groups for the current feature
-        result = llm.run(messages)
+        try:
+            result = llm.run(messages)
+        except Exception as e:
+            logger.warning(f"First LLM call failed: {e}. Retrying once")
+            try:
+                result = llm.run(messages)
+            except Exception as e:
+                logger.error(f"Second LLM call failed: {e}. Aborting.")
+                raise
 
     # Some llm models may return the permission name with the prefix "android.permission.", we need to remove it for consistency (qwen3.5:122B)
     for item in result.inferences:
@@ -376,7 +402,7 @@ def permission_node(state: dict[str, Any], config: RunnableConfig) -> dict:
 @auto_save("04_permission_arg")
 def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
-    permission_threshold = config["configurable"].get("permission_threshold", 0)
+    permission_threshold = config["configurable"].get("permission_threshold", 0.0)
 
     llm_permission_list = config["configurable"].get("llm_permission_list", [])
     number_of_models = len(llm_permission_list)
@@ -477,8 +503,9 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
         )
     }
 
-@auto_save("05_transform_permission")
-def transform_permission_node(state: PipelineState, config: RunnableConfig) -> dict:
+# Extract the aggregated permission results into a clean list of predicted permissions
+@auto_save("05_extract_permission")
+def extract_permission_node(state: PipelineState, config: RunnableConfig) -> dict:
     feature_permission_aggregate_result = state.get("feature_permission_aggregate_result")
     features = feature_permission_aggregate_result.features if feature_permission_aggregate_result else []
     
@@ -489,71 +516,161 @@ def transform_permission_node(state: PipelineState, config: RunnableConfig) -> d
                 unique_permissions.add(inference.permission_name.strip().upper())
             
     return {
-        "permissions_list": list(unique_permissions)
+        "inferred_permissions": list(unique_permissions)
     }
 
 
 @auto_save("06_validation")
 def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
-    permissions_list = state.get("permissions_list", [])
+    storage_path = state.get("storage_path")
+
+    ground_truth_sets = state.get("ground_truth_sets", [])
     apk_permissions = state.get("apk_permissions", [])
+    inferred_permissions = state.get("inferred_permissions", [])
 
-    group_threshold = config["configurable"].get("group_threshold", 0)
-    permission_threshold = config["configurable"].get("permission_threshold", 0)
-    
-    gt_set = set(apk_permissions)
-    pred_set = set(permissions_list)
-    
-    # 3. Metriken berechnen (gibt das saubere flache Dict zurück)
-    metrics_dict = calculate_metrics(gt_set, pred_set)
-    
-    # 4. Detaillierte Tabelle erstellen
-    all_permissions = sorted(list(gt_set | pred_set))
-    table_rows = []
-    
-    for perm in all_permissions:
-        table_rows.append({
-            "permission": perm,
-            "truth":      perm in gt_set,
-            "inference":  perm in pred_set
-        })
+    # -1 indicates that something went wrong while reading the variable.
+    group_threshold = config["configurable"].get("group_threshold", -1)
+    permission_threshold = config["configurable"].get("permission_threshold", -1)
 
-    
-    validation_results = {
-            "metrics": metrics_dict,
-            "threshold_group": group_threshold,
-            "threshold_permission": permission_threshold,
-            "comparison": table_rows
-        }
+    permissions_set_1 = ground_truth_sets[0] if len(ground_truth_sets) > 0 else []
+    permissions_set_2 = ground_truth_sets[1] if len(ground_truth_sets) > 1 else []
+
+    permissions_set_1 = set(permissions_set_1)
+    permissions_set_2 = set(permissions_set_2)
+    apk_permissions = set(apk_permissions)
+    inferred_permissions = set(inferred_permissions)
+
+    apk_pipeline = calculate_metrics(apk_permissions, inferred_permissions, "APK", "Pipeline")
+    plot_permission_matrix(
+        ground_truth=apk_permissions,
+        prediction= inferred_permissions,
+        ground_truth_name='APK',
+        prediction_name='Pipeline',
+        output_dir=storage_path
+    )
+
+    metrics_collection = {"apk_pipeline": apk_pipeline}
+    sample_data = [apk_pipeline]
+
+    if permissions_set_1:
+        set1_pipeline = calculate_metrics(permissions_set_1, inferred_permissions,"Set 1", "Pipeline")
+        plot_permission_matrix(
+            ground_truth=permissions_set_1,
+            prediction= inferred_permissions,
+            ground_truth_name='Set 1',
+            prediction_name='Pipeline',
+            output_dir=storage_path
+        )
+
+        # Apk as Ground Truth
+        apk_set1 = calculate_metrics(apk_permissions, permissions_set_1, "APK", "Set 1")
+        plot_permission_matrix(
+            ground_truth=apk_permissions,
+            prediction= permissions_set_1,
+            ground_truth_name='APK',
+            prediction_name='Set 1',
+            output_dir=storage_path
+        )
+
+        metrics_collection["set1_pipeline"] = set1_pipeline
+        metrics_collection["apk_set1"] = apk_set1
+        sample_data.append(set1_pipeline)
+        sample_data.append(apk_set1)
+
+    if permissions_set_2:
+        set2_pipeline = calculate_metrics(permissions_set_2, inferred_permissions, "Set 2", "Pipeline")
+        plot_permission_matrix(
+            ground_truth=permissions_set_2,
+            prediction= inferred_permissions,
+            ground_truth_name='Set 2',
+            prediction_name='Pipeline',
+            output_dir=storage_path
+        )
+
+        # Apk as Ground Truth
+        apk_set2 = calculate_metrics(apk_permissions, permissions_set_2, "APK", "Set 2")
+        plot_permission_matrix(
+            ground_truth=apk_permissions,
+            prediction= permissions_set_2,
+            ground_truth_name='APK',
+            prediction_name='Set 2',
+            output_dir=storage_path
+        )
+
+        metrics_collection["set2_pipeline"] = set2_pipeline
+        metrics_collection["apk_set2"] = apk_set2
+        sample_data.append(set2_pipeline)
+        sample_data.append(apk_set2)
+
+
+    #sample_data = [apk_pipeline, set1_pipeline, set2_pipeline, apk_set1, apk_set2]
+
+    plot_metrics_summary(metrics_list=sample_data,output_dir=storage_path)
+
+    # metrics_collection = {
+    #     "apk_pipeline": apk_pipeline,
+    #     "set1_pipeline": set1_pipeline, 
+    #     "set2_pipeline": set2_pipeline,
+    #     "apk_set1": apk_set1,
+    #     "apk_set2": apk_set2
+    # }
+
+    threshold = {
+        "group_threshold": group_threshold,
+        "permission_threshold": permission_threshold
+    }
+
+    # # Convert to list because json.dumps cannot serialize sets
+    set_collection = {
+        "permissions_set_1": list(permissions_set_1),
+        "permissions_set_2": list(permissions_set_2),
+        "apk_permissions": list(apk_permissions),
+        "inferred_permissions": list(inferred_permissions)
+    }
+
+    logger.info("Validation finished.")
     
     return {
-        "validation_results": validation_results
+        "metrics_collection" : metrics_collection,
+        "threshold": threshold,
+        "set_collection": set_collection
     }
 
 @auto_save("07_data_types")
 def data_types_node(state: PipelineState, config: RunnableConfig) -> dict:
     data_types_mapping = config["configurable"].get(
-        "data_types_mapping", 
-        PermissionDataTypeMappingList()
+        "data_types_mapping", PermissionDataTypeMappingRegistry()
     )
+    set_collection = state.get("set_collection", {})
 
-    permissions_list = state.get("permissions_list", [])
+    target = {
+        "inferred_permissions": set_collection.get("inferred_permissions", set()),
+        "apk_permissions": set_collection.get("apk_permissions", set()),
+    }
+
     lookup = data_types_mapping.as_dict
 
-    result = []
+    result: dict[str, list[PermissionDataTypeMapping]] = {}
+    for key, perms in target.items():
+        mappings: list[PermissionDataTypeMapping] = []
+        for perm in perms:
+            perm_name = getattr(perm, "permission_name", perm) if not isinstance(perm, str) else perm
+            data_types = lookup.get(perm_name, [])
 
-    for perm in permissions_list:
-        
-        data_types = lookup.get(perm)
+            if not data_types:
+                continue
 
-        if data_types: 
-            mapping_obj = PermissionDataTypeMapping(
-                permission=perm,
-                data_types=data_types
+            mappings.append(
+                PermissionDataTypeMapping(
+                    permission=perm_name,
+                    data_types=data_types,
+                )
             )
-            
-            result.append(mapping_obj.model_dump(by_alias=True))
+
+        result[key] = mappings
+
+    logger.info("Data Type Mapping finished.")
 
     return {
-        "data_types": result
+        "data_types_collection": result
     }
