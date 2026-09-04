@@ -1,7 +1,7 @@
 from typing import Set, Any
 from pydantic import BaseModel, Field, model_validator
 
-class PermissionCatalog(BaseModel):
+class PermissionRegistry(BaseModel):
     permissions: Set[str] = Field(default_factory=set)
 
     @model_validator(mode="before")
