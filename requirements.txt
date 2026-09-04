@@ -6,3 +6,5 @@ pydantic>=2.0.0
 python-dotenv>=1.0.0
 notify-py>=0.3.0
 html2text==2025.4.15
+NumPy>= 2.0.0
+Matplotlib>= 3.9.0
