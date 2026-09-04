@@ -18,8 +18,9 @@ from src.config.config import (
     load_data_types_mapping,
     load_permission_groups,
     load_permissions,
-    load_permissions_set,
+    load_permissions_registry,
     setup_logging,
+    load_weights_config,
     llm_feature_config,
     llm_group_config,
     llm_permission_config
@@ -50,12 +51,6 @@ def main() -> None:
     else:
         ground_truth_sets = []
 
-    # permissions_set_1 = ground_truth_sets[0] if len(ground_truth_sets) > 0 else []
-    # permissions_set_2 = ground_truth_sets[1] if len(ground_truth_sets) > 1 else []
-
-    # print("Permissions Set 1:", permissions_set_1)
-    # print("Permissions Set 2:", permissions_set_2)
-
     # Extract the specified line from the JSONL file
     app_data = get_jsonl_line(args.metadata_path, args.index)
 
@@ -77,17 +72,19 @@ def main() -> None:
     llm_group_list = create_llm_pool(llm_group_config)
     llm_permission_list = create_llm_pool(llm_permission_config)
 
+    thresholds = load_weights_config()
+
     # Load permission groups and permissions
-    permission_groups_model = load_permission_groups()
-    permissions_model = load_permissions()
+    permission_groups = load_permission_groups()
+    permissions = load_permissions()
 
     # LABEL_TO_PERMISSIONS
     # permissions_mapping = load_permissions_mapping()
 
     data_types_mapping = load_data_types_mapping()
 
-    # Set to filter APK or other sets with permissions against the known permissions catalog
-    permissions_set = load_permissions_set()
+    # Set to filter APK or other sets with permissions against the known permissions registry
+    permissions_registry = load_permissions_registry()
 
     create_global_semaphore(1)
 
@@ -119,14 +116,14 @@ def main() -> None:
                 "llm_feature_list": llm_feature_list,
                 "llm_group_list": llm_group_list,
                 "llm_permission_list": llm_permission_list,
-                "permission_groups": permission_groups_model,
-                "permissions": permissions_model,
-                "permissions_set": permissions_set,
+                "permission_groups": permission_groups,
+                "permissions": permissions,
+                "permissions_registry": permissions_registry,
                 "data_types_mapping": data_types_mapping,
-                "group_threshold": 0.0,
-                "permission_threshold": 0.4,
+                "group_threshold": thresholds.get("group", 0.0),
+                "permission_threshold": thresholds.get("permission", 0.0),
                 "supported_apk_permissions": True,
-                "supported_sets_permissions": True
+                "supported_ground_truth_sets": True
             }
         },
     )
