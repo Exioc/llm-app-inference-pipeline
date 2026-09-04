@@ -6,8 +6,8 @@ import logging
 from pathlib import Path
 from dotenv import load_dotenv
 
-from src.schemas.permission_set import PermissionCatalog
-from src.schemas.permission_data_types_mapping import PermissionDataTypeMappingList
+from src.schemas.permission_registry import PermissionRegistry
+from src.schemas.permission_data_types_mapping import PermissionDataTypeMappingRegistry
 from src.schemas.label_permission_mapping import AndroidPermissionsModel
 from src.schemas.android_data import PermissionGroupSummaries, PermissionGroupCollection
 
@@ -22,16 +22,15 @@ DIR = Path(__file__).resolve().parent.parent
 FEW_SHOTS_PATH = Path(DIR /"data/feature_few_shot.json")
 PERMISSION_GROUPS_PATH = Path(DIR /"data/permission_groups.json")
 PERMISSIONS_PATH = Path(DIR /"data/permissions.json")
+THRESHOLDS_PATH = Path(DIR /"config/presets/thresholds.json")
 DATA_TYPES_MAPPING_PATH = Path(DIR /"data/permission_data_types_mapping.json")
 LLM_FEATURE_CONFIG_PATH = Path(DIR /"config/presets/llm_feature_config.json")
 LLM_GROUP_CONFIG_PATH = Path(DIR /"config/presets/llm_group_config.json")
 LLM_PERMISSION_CONFIG_PATH = Path(DIR /"config/presets/llm_permission_config.json")
 RESULTS_BASE_DIR = Path("results")
-UNKNOWN_RUN_DIR = RESULTS_BASE_DIR / "unknown_run"
 
-# Make sure the results and unknown_run directories exist
+# Make sure the results directories exist
 RESULTS_BASE_DIR.mkdir(parents=True, exist_ok=True)
-UNKNOWN_RUN_DIR.mkdir(parents=True, exist_ok=True)
 
 # Load environment variables
 OLLAMA_API_KEY = os.getenv("OLLAMA_API_KEY")
@@ -74,28 +73,44 @@ def setup_logging():
     
     logging.info("Logging infrastructure successfully initialized.")
 
+# Load permission groups
 def load_permission_groups() -> PermissionGroupSummaries:
     if not PERMISSION_GROUPS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSION_GROUPS_PATH}")
     else:         
         with open(PERMISSION_GROUPS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-            return PermissionGroupSummaries(groups=raw_data)
 
+        return PermissionGroupSummaries(groups=raw_data)
+
+# Load all permissions including their groupings
 def load_permissions() -> PermissionGroupCollection:
     if not PERMISSIONS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSIONS_PATH}")
     else:         
         with open(PERMISSIONS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-            return PermissionGroupCollection(groups=raw_data)
 
+        return PermissionGroupCollection(groups=raw_data)
+
+# Load LLM configuration from a JSON file. The configuration contains a list of models and their settings.
 def load_llm_config(path: Path) -> list[dict]:
     if not os.path.exists(path):
         return []
     with open(path, "r", encoding="utf-8") as f:
         data = json.load(f)
+
     return data.get("models", [])
+
+# Load thresholds
+def load_weights_config() -> dict[str, float]:
+    if not THRESHOLDS_PATH.exists():
+        raise FileNotFoundError(f"Configuration file not found at: {THRESHOLDS_PATH}")
+
+    with open(THRESHOLDS_PATH, "r", encoding="utf-8") as f:
+        data: dict[str, float] = json.load(f)
+
+    return data
 
 # LABEL_TO_PERMISSIONS
 # Mapped playstore labels to real android permission names 
@@ -106,26 +121,29 @@ def load_llm_config(path: Path) -> list[dict]:
 #     else:
 #         with open(LABEL_PERMISSION_MAPPING_PATH, "r", encoding="utf-8") as file:
 #             raw_data = json.load(file)
+#
 #         return AndroidPermissionsModel(**raw_data)
 
 # Mapped android permissions to data types
-def load_data_types_mapping() -> PermissionDataTypeMappingList:
+def load_data_types_mapping() -> PermissionDataTypeMappingRegistry:
     if not DATA_TYPES_MAPPING_PATH.exists():
         raise FileNotFoundError(f"File not found: {DATA_TYPES_MAPPING_PATH}")
 
     else:
         with open(DATA_TYPES_MAPPING_PATH, "r", encoding="utf-8") as file:
             raw_data = json.load(file)
-        return PermissionDataTypeMappingList(mappings=raw_data)
 
-# Load all permissions from the permissions.json file and return them as a PermissionCatalog object to filter apk permissions against.
-def load_permissions_set() -> PermissionCatalog:
+        return PermissionDataTypeMappingRegistry(mappings=raw_data)
+
+# Load all permissions from the permissions.json file and return them as a PermissionRegistry object to filter apk permissions against.
+def load_permissions_registry() -> PermissionRegistry:
     if not PERMISSIONS_PATH.exists():
         raise FileNotFoundError(f"File not found: {PERMISSIONS_PATH}")
     else:         
         with open(PERMISSIONS_PATH, "r", encoding="utf-8") as f:
             raw_data = json.load(f)
-            return PermissionCatalog.model_validate(raw_data)
+
+        return PermissionRegistry.model_validate(raw_data)
 
 
 # Load ground truth permissions sets from input md file.
@@ -155,7 +173,9 @@ def load_few_shots() -> list[dict]:
         raise FileNotFoundError(f"File not found: {FEW_SHOTS_PATH}")
     
     with open(FEW_SHOTS_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+        
+    return data
 
 few_shots = load_few_shots()
 google_one_few_shot = few_shots[0]
