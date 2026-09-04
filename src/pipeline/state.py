@@ -1,12 +1,12 @@
 from typing import TypedDict, Dict, List, Annotated
 
 from src.schemas.permission_data_types_mapping import PermissionDataTypeMapping
+from src.schemas.metrics import metrics
 from src.schemas.label_permission_mapping import ProcessedPermissions
 from src.schemas.app_data import AppMetadata
 from src.schemas.feature import FeatureResult
 from src.schemas.permission import FeaturePermissionAggregateResult, FeaturePermissionResult
 from src.schemas.group import FeatureGroupsAggregateResult, FeatureGroupsResult
-from src.schemas.validation import ValidationResults
 
 def merge_group_results(left: FeatureGroupsResult, right: FeatureGroupsResult) -> FeatureGroupsResult:
     if not left: return right
@@ -70,10 +70,12 @@ class PipelineState(TypedDict, total=False):
     feature_permission_aggregate_result: FeaturePermissionAggregateResult
 
     # List of Permission (cleaned)
-    permissions_list: List[str]
+    inferred_permissions: List[str]
 
     # Validation
-    validation_results: ValidationResults
+    metrics_collection: dict[str,metrics]
+    threshold: dict
+    set_collection: dict
 
     # DataTypes
-    data_types: list[PermissionDataTypeMapping]
+    data_types_collection: dict[str,list[PermissionDataTypeMapping]]
