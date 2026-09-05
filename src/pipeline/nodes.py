@@ -271,6 +271,10 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
                 "models_inferred": []
             })
 
+            # if the privious reasoning is empty and the current inference has reasoning, update it
+            if inf.reasoning and not group_entry["reasoning"]:
+                group_entry["reasoning"] = inf.reasoning
+
             # Add the model name to the list
             if feature.inferred_by_model and feature.inferred_by_model not in group_entry["models_inferred"]:
                 group_entry["models_inferred"].append(feature.inferred_by_model)
@@ -283,10 +287,10 @@ def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
         for title, feature_data in aggregated_data.items():
             filtered_groups = {}
             
-            for title, data in feature_data["groups_map"].items():
+            for group_name, data in feature_data["groups_map"].items():
                 value = len(data["models_inferred"]) / number_of_models
                 if value >= group_threshold:
-                    filtered_groups[title] = data
+                    filtered_groups[group_name] = data
 
             if filtered_groups:
                 aggregated_data_majority[title] = {
@@ -437,8 +441,12 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
              # Normalize group name by removing spaces and converting to uppercase because an LLM model copy the name with with spaces
             normalized_p_name = inf.permission_name.replace(" ", "").upper()
 
+            normalized_g_name = feature.group_name.replace(" ", "").upper()
+
+            unique_key = f"{normalized_g_name}::{normalized_p_name}"
+
             # Add permission entry if it doesn't exist
-            permission_entry = feature_entry["permissions_map"].setdefault(normalized_p_name, {
+            permission_entry = feature_entry["permissions_map"].setdefault(unique_key, {
                 "permission_name": normalized_p_name,
                 "reasoning": inf.reasoning,
                 "models_inferred": []
@@ -458,10 +466,10 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
         for title, feature_data in aggregated_data.items():
             filtered_permissions = {}
             
-            for title, data in feature_data["permissions_map"].items():
+            for perm_name, data in feature_data["permissions_map"].items():
                 value = len(data["models_inferred"]) / number_of_models
                 if value >= permission_threshold:
-                    filtered_permissions[title] = data
+                    filtered_permissions[data["permission_name"]] = data
 
             if filtered_permissions:
                 aggregated_data_majority[title] = {
