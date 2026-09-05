@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional
 
+# Structured output model for a single inferred permission
 class PermissionInference(BaseModel):
     permission_name: str = Field(
         description="The exact name of the Android permission (e.g. CAMERA, RECORD_AUDIO) or 'NONE'."
@@ -10,11 +11,13 @@ class PermissionInference(BaseModel):
         description="Logical explanation for the permission. If permission_name is 'NONE', write 'No permission required.'"
     )
 
+# Structured output model for the LLM response
 class PermissionResponse(BaseModel):
     inferences: List[PermissionInference] = Field(
         description="List of inferred permissions with reasoning."
     )
 
+# Structured output model that combines the feature and its inferred permissions as well as the group name that the permission belongs to
 class FeaturePermission(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
@@ -36,18 +39,20 @@ class FeaturePermission(BaseModel):
         )
     )
 
+# Structured output model for the final result of permission extraction
 class FeaturePermissionResult(BaseModel):
     features: List[FeaturePermission] = Field(
         description="The list of extracted app features containing their finalized Android permission inferences."
     )
 
-# Aggregation (Groupname and Reasoning from GroupInference)
+# Structured output model that combines the permission name and reasoning from PermissionInference with the LLM models that inferred it
 class PermissionInferenceAggregate(PermissionInference):
     models_inferred: List[str] = Field(
         default_factory=list,
         description="List of all LLM model names that inferred this permission."
     )
 
+# Structured output model that combines the feature, the permission name and reasoning and the LLM models that inferred it
 class FeaturePermissionAggregate(BaseModel):
     title: str = Field(
         description="The distinct English name of the extracted app feature."
@@ -64,5 +69,6 @@ class FeaturePermissionAggregate(BaseModel):
         )
     )
 
+# Structured output model for the final result of feature permission extraction with aggregated permission inferences
 class FeaturePermissionAggregateResult(BaseModel):
     features: List[FeaturePermissionAggregate]

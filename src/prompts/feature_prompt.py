@@ -49,15 +49,15 @@ FEATURE_PROMPT = ChatPromptTemplate.from_messages([
     # START FEW-SHOT EXAMPLES 
     # -------------------------------------------------------------
 
-    # Example 1 (Productivity)
+    # Example 1
     ("human", "Now analyze the following app:\nTitle: " + google_one_few_shot["label"] + "\nDescription: " + google_one_few_shot["description"]),
         AIMessage(content=json.dumps(google_one_few_shot["output"], ensure_ascii=False)),
 
-    #Example 2 (Health)
+    #Example 2
     ("human", "Now analyze the following app:\nTitle: " + samsung_health_few_shot["label"] + "\nDescription: " + samsung_health_few_shot["description"]),
     AIMessage(content=json.dumps(samsung_health_few_shot["output"], ensure_ascii=False)),
 
-    # Example 3 (Maps & Navigation)
+    # Example 3
     ("human", "Now analyze the following app:\nTitle: " + petal_maps_gps_and_navigation_few_shot["label"] + "\nDescription: " + petal_maps_gps_and_navigation_few_shot["description"]),
     AIMessage(content=json.dumps(petal_maps_gps_and_navigation_few_shot["output"], ensure_ascii=False)),
 

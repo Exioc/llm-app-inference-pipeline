@@ -2,17 +2,17 @@
 from typing import Dict, List
 from pydantic import BaseModel, Field, model_validator
 
-# This code defines the data model for the state 
 class AppPermission(BaseModel):
     name: str = Field(...,description="The technical Android permission name, e.g. 'android.permission.ACCESS_WIFI_STATE'")
     label: str = Field(...,description="The human-readable permission label, e.g. 'view Wi-Fi connections'")
 
+# Defines a model to represent the processed permissions mapping in the pipeline state.
 class ProcessedPermissions(BaseModel):
     # Key = category (e.g., "Identity"), Value = list of AppPermission objects
     permissions_map: Dict[str, List[AppPermission]] = Field(default_factory=dict)
 
 
-# This code defines the data models for mapping labels to Android permissions.
+# Defines a model matching the structure of AndroGuard's "label_permission_mapping" file.
 class PermissionElement(BaseModel):
     description: str
     description_ptr: str
@@ -22,6 +22,7 @@ class PermissionElement(BaseModel):
     permission_group: str = Field(..., alias="permissionGroup")
     protection_level: str = Field(..., alias="protectionLevel")
 
+# Model that automatically transforms permissions dictionary keys from permission names to labels for easier mapping.
 class AndroidPermissionsModel(BaseModel):
     permissions: Dict[str, PermissionElement]
 

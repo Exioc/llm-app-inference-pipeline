@@ -1,6 +1,7 @@
 from typing import Set, Any
 from pydantic import BaseModel, Field, model_validator
 
+# Registry model that extracts and flattens a unique set of permission names from a nested list structure.
 class PermissionRegistry(BaseModel):
     permissions: Set[str] = Field(default_factory=set)
 

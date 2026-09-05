@@ -15,7 +15,7 @@ from src.pipeline.nodes import (
     permission_router, 
     permission_node, 
     permission_aggregate_node, 
-    extract_permission_node,
+    extract_permissions_node,
     validation_node
 )
 
@@ -87,7 +87,7 @@ def build_app():
     workflow.add_node("permission_router", permission_router)
     workflow.add_node("permission", permission_node)
     workflow.add_node("permission_arg", permission_aggregate_node)
-    workflow.add_node("extract_permission", extract_permission_node)
+    workflow.add_node("extract_permissions", extract_permissions_node)
     workflow.add_node("validation", validation_node)
     workflow.add_node("data_types", data_types_node)
 
@@ -98,8 +98,8 @@ def build_app():
     workflow.add_edge("group", "group_router")
     workflow.add_edge("group_arg", "permission_router")
     workflow.add_edge("permission", "permission_router")
-    workflow.add_edge("permission_arg", "extract_permission")
-    workflow.add_edge("extract_permission", "validation")
+    workflow.add_edge("permission_arg", "extract_permissions")
+    workflow.add_edge("extract_permissions", "validation")
     workflow.add_edge("validation", "data_types")
     workflow.add_edge("data_types", END)
     

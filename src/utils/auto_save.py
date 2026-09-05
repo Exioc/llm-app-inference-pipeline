@@ -1,6 +1,7 @@
 import functools
 from src.utils.save_state import save_state
 
+# Automatically merges node outputs with the current state and saves a checkpoint.
 def auto_save(step_name: str):
     def decorator(node_func):
         @functools.wraps(node_func)

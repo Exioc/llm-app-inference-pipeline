@@ -1,6 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import List
 
+# Structured output model for a single extracted feature
 class Feature(BaseModel):
     title: str = Field(
         description="A clear, meaningful, and distinct name for the extracted feature in English."
@@ -29,6 +30,7 @@ class Feature(BaseModel):
         )
     )
 
+# Structured output model for the LLM response
 class FeatureResponse(BaseModel):
     features: List[Feature] = Field(
         description=(
@@ -39,6 +41,7 @@ class FeatureResponse(BaseModel):
         )
     )
 
+# Structured output model for the final result of feature extraction
 class FeatureResult(BaseModel):
     inferred_by_model: str = Field(
         description="Which model was used to perform the inference "

@@ -226,7 +226,7 @@ def group_node(state: dict[str, Any], config: RunnableConfig) -> dict:
         "feature_groups_result": FeatureGroupsResult(features=[new_feature_entry])
     }
 
-@auto_save("03_group_permission_arg")
+@auto_save("03_group_arg")
 def group_aggregate_node(state: PipelineState, config: RunnableConfig) -> dict:
 
     group_threshold = config["configurable"].get("group_threshold", 0.0)
@@ -504,8 +504,8 @@ def permission_aggregate_node(state: PipelineState, config: RunnableConfig) -> d
     }
 
 # Extract the aggregated permission results into a clean list of predicted permissions
-@auto_save("05_extract_permission")
-def extract_permission_node(state: PipelineState, config: RunnableConfig) -> dict:
+@auto_save("05_extract_permissions")
+def extract_permissions_node(state: PipelineState, config: RunnableConfig) -> dict:
     feature_permission_aggregate_result = state.get("feature_permission_aggregate_result")
     features = feature_permission_aggregate_result.features if feature_permission_aggregate_result else []
     
@@ -532,14 +532,17 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
     group_threshold = config["configurable"].get("group_threshold", -1)
     permission_threshold = config["configurable"].get("permission_threshold", -1)
 
+    # get both permission sets if they exist, otherwise set them to empty lists
     permissions_set_1 = ground_truth_sets[0] if len(ground_truth_sets) > 0 else []
     permissions_set_2 = ground_truth_sets[1] if len(ground_truth_sets) > 1 else []
 
+    # Convert all permission lists to sets for easier comparison and to remove duplicates
     permissions_set_1 = set(permissions_set_1)
     permissions_set_2 = set(permissions_set_2)
     apk_permissions = set(apk_permissions)
     inferred_permissions = set(inferred_permissions)
 
+    # Calculate metrics and plot permission matrices for APK vs Pipeline
     apk_pipeline = calculate_metrics(apk_permissions, inferred_permissions, "APK", "Pipeline")
     plot_permission_matrix(
         ground_truth=apk_permissions,
@@ -549,9 +552,11 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
         output_dir=storage_path
     )
 
+    # Collect metrics and sample data for plotting summary
     metrics_collection = {"apk_pipeline": apk_pipeline}
     sample_data = [apk_pipeline]
 
+    # Calculate metrics and plot permission matrices for Set 1 vs Pipeline and APK vs Set 1 if Set 1 exists
     if permissions_set_1:
         set1_pipeline = calculate_metrics(permissions_set_1, inferred_permissions,"Set 1", "Pipeline")
         plot_permission_matrix(
@@ -572,11 +577,13 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
             output_dir=storage_path
         )
 
+        # Collect metrics and sample data for plotting summary
         metrics_collection["set1_pipeline"] = set1_pipeline
         metrics_collection["apk_set1"] = apk_set1
         sample_data.append(set1_pipeline)
         sample_data.append(apk_set1)
 
+    # Calculate metrics and plot permission matrices for Set 2 vs Pipeline and APK vs Set 2 if Set 2 exists
     if permissions_set_2:
         set2_pipeline = calculate_metrics(permissions_set_2, inferred_permissions, "Set 2", "Pipeline")
         plot_permission_matrix(
@@ -597,24 +604,17 @@ def validation_node(state: PipelineState, config: RunnableConfig) -> dict:
             output_dir=storage_path
         )
 
+        # Collect metrics and sample data for plotting summary
         metrics_collection["set2_pipeline"] = set2_pipeline
         metrics_collection["apk_set2"] = apk_set2
         sample_data.append(set2_pipeline)
         sample_data.append(apk_set2)
 
 
-    #sample_data = [apk_pipeline, set1_pipeline, set2_pipeline, apk_set1, apk_set2]
-
+    # Plot the summary of all metrics
     plot_metrics_summary(metrics_list=sample_data,output_dir=storage_path)
 
-    # metrics_collection = {
-    #     "apk_pipeline": apk_pipeline,
-    #     "set1_pipeline": set1_pipeline, 
-    #     "set2_pipeline": set2_pipeline,
-    #     "apk_set1": apk_set1,
-    #     "apk_set2": apk_set2
-    # }
-
+    # Store the thresholds in State for metadata and reporting purposes
     threshold = {
         "group_threshold": group_threshold,
         "permission_threshold": permission_threshold
@@ -641,15 +641,20 @@ def data_types_node(state: PipelineState, config: RunnableConfig) -> dict:
     data_types_mapping = config["configurable"].get(
         "data_types_mapping", PermissionDataTypeMappingRegistry()
     )
+
+    # Get all the permission sets from the state
     set_collection = state.get("set_collection", {})
 
+    # Create a target dictionary to hold the permissions for which we want to find data types (APK and inferred permissions)
     target = {
         "inferred_permissions": set_collection.get("inferred_permissions", set()),
         "apk_permissions": set_collection.get("apk_permissions", set()),
     }
 
+    # Create a lookup dictionary from the data types mapping for quick access
     lookup = data_types_mapping.as_dict
 
+    # Iterate over the target permissions and map them to their corresponding data types
     result: dict[str, list[PermissionDataTypeMapping]] = {}
     for key, perms in target.items():
         mappings: list[PermissionDataTypeMapping] = []
