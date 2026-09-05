@@ -1,3 +1,4 @@
+from langchain_core.messages import AIMessage
 from langchain_core.prompts import ChatPromptTemplate
 import json
 
@@ -50,15 +51,15 @@ FEATURE_PROMPT = ChatPromptTemplate.from_messages([
 
     # Example 1
     ("human", "Now analyze the following app:\nTitle: " + google_one_few_shot["label"] + "\nDescription: " + google_one_few_shot["description"]),
-    ("ai", json.dumps(google_one_few_shot["output"], ensure_ascii=False)),
+    AIMessage(content=json.dumps(google_one_few_shot["output"], ensure_ascii=False)),
 
     #Example 2
     ("human", "Now analyze the following app:\nTitle: " + samsung_health_few_shot["label"] + "\nDescription: " + samsung_health_few_shot["description"]),
-    ("ai", json.dumps(samsung_health_few_shot["output"], ensure_ascii=False)),
+    AIMessage(content=json.dumps(samsung_health_few_shot["output"], ensure_ascii=False)),
 
     # Example 3
     ("human", "Now analyze the following app:\nTitle: " + petal_maps_gps_and_navigation_few_shot["label"] + "\nDescription: " + petal_maps_gps_and_navigation_few_shot["description"]),
-    ("ai", json.dumps(petal_maps_gps_and_navigation_few_shot["output"], ensure_ascii=False)),
+    AIMessage(content=json.dumps(petal_maps_gps_and_navigation_few_shot["output"], ensure_ascii=False)),
 
     # -------------------------------------------------------------
     # END FEW-SHOT EXAMPLES
