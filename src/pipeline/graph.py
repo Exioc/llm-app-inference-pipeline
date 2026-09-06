@@ -1,5 +1,5 @@
 import logging
-from langgraph.constants import Send
+from langgraph.types import Send
 from langgraph.graph import StateGraph, START, END
 from langchain_core.runnables import RunnableConfig
 
