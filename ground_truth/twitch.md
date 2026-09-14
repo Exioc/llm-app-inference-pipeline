@@ -20,12 +20,12 @@ For feedback and assistance, please visit our Support Center: https://help.twitc
 Please note: This app features Nielsen’s proprietary measurement software which contributes to market research, like Nielsen’s TV Ratings. Please see http://priv-policy.imrworldwide.com/priv/mobile/us/en/optout.html for more information
 
 ---
-
+## Features
 | **Feature name** | **Description** |
 |---|---|
 |Live Content Viewing| Streaming of live content across categories such as gaming, esports, music, podcasts, and IRL. |
-|Live Chat| Real-time text messaging during live streams. |
-|Account and Channel Creation| Account creation to start a personal channel. |
+|Chat| — |
+|Account Creation | Account creation to start a personal channel. |
 |Live Broadcasting| Direct in-app live streaming. |
 |Channel Subscriptions| Subscribe to streamers and access subscriber benefits |
 |Dark Mode| — |
@@ -47,8 +47,8 @@ The following table maps the derived permissions to the corresponding features.
 | **Feature name** | **Permissions** |
 | --- | --- |
 |Live Content Viewing| `INTERNET`|
-|Live Chat| `INTERNET`|
-|Account and Channel Creation| `INTERNET` |
+|Chat| `INTERNET`|
+|Account Creation| `INTERNET` |
 |Live Broadcasting| `INTERNET` `CAMERA` `RECORD_AUDIO`|
 |Channel Subscriptions| `INTERNET` |
 |Dark Mode| — |

@@ -30,6 +30,7 @@ Features:
 |Scene Modes| Screen mode settings (Action, Night, Sunset, Play) |
 |Manual Camera Controls| Customizable white balance, exposure levels, and picture quality settings. |
 | Geotagging | Location targeting |
+|Zoom | Pinch to zoom |
 |Configurable Volume Keys| — |
 |Countdown Timer| — |
 
@@ -56,6 +57,7 @@ The following table maps the derived permissions to the corresponding features.
 |Scene Modes| — |
 |Manual Camera Controls| — |
 | Geotagging | `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION` |
+|Zoom | — |
 |Configurable Volume Keys| — |
 |Countdown Timer| — |
 

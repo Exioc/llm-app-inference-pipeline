@@ -69,7 +69,7 @@ Avast Cleanup uses accessibility permission to assist disabled and other users s
 |App Analyzer| Identifies individual app impact by tracking storage footprint, battery drain, mobile data usage, and background activity. |
 |App Remover| Identifies unused applications and supports batch uninstallation of multiple apps. |
 |Stop Background Apps| Allows stopping background applications. |
-|Photo Cleaner| Detects and removes duplicate, similar, old, poor-quality (dark or blurry), and private chat photos. |
+|Photo Cleaner| Organize your media and gallery by detecting and removing duplicate, similar, old, poor-quality (dark or blurry), and private chat photos. |
 |Photo Compression| Reduces photo file sizes using Low, Moderate, High, and Aggressive compression levels. |
 |System Resource Monitoring| Tracks and displays CPU, RAM, and storage usage to identify performance issues. |
 ---

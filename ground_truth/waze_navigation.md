@@ -58,9 +58,9 @@ The following table maps the derived permissions to the corresponding features.
 
 | **Feature name** | **Permissions** |
 | --- | --- |
-|GPS Navigation and Routing| `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION`|
+|GPS Navigation and Routing| `ACCESS_FINE_LOCATION` `ACCESS_COARSE_LOCATION` `INTERNET`|
 |Live Traffic and Incident Alerts| `POST_NOTIFICATIONS` `INTERNET`|
-|Speed and Trap Alerts| `POST_NOTIFICATIONS`|
+|Speed and Trap Alerts| `POST_NOTIFICATIONS` `INTERNET`| 
 |Community-Based Reporting| `INTERNET`|
 |Tolls Vignettes and Road Passes| `INTERNET`|
 |Fuel and Parking Search| `INTERNET`|

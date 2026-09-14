@@ -57,7 +57,7 @@ Privacy Policy: https://www.duolingo.com/privacy
 |Short and Gamified Lessons| Provides short lessons using game-like elements and characters. |
 |Language Practice| Offers exercises in over 40 languages covering speaking, reading, listening, writing, vocabulary, grammar, and real-life conversations. |
 |Interactive Chess Course| Step-by-step guided lessons, puzzles, strategy exercises, and online matches for different skill levels. |
-|Math Course| Exercises covering mental math, multiplication, fractions, geometry, and toher core math topics using interactive exercises and games |
+|Math Course| Exercises covering mental math, multiplication, fractions, geometry, and other core math topics using interactive exercises and games |
 |Music Course (Instrument-Free)| Teaches sheet music reading and lets users play song direclty on the device using an on-screen keyboard |
 |Progress and Habit Tracking| Tracks progress toward learning goals using rewards and achievements for daily practice. |
 |Competitive Leaderboards| Displays user rankings in language learning and online chess. |
