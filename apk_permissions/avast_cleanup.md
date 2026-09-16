@@ -1,9 +1,9 @@
-# Avast Cleanup
+# Avast Cleanup – Phone Cleaner
 <small>`pkg: com.avast.android.cleaner`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

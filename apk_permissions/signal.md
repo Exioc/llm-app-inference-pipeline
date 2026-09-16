@@ -1,9 +1,9 @@
-# Signal
+# Signal Private Messenger
 <small>`pkg: org.thoughtcrime.securesms`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

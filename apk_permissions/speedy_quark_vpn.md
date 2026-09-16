@@ -1,9 +1,9 @@
-# QuarkVPN
+# Speedy Quark VPN - VPN Master
 <small>`pkg: com.speedy.vpn`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

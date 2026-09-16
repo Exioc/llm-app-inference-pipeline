@@ -1,9 +1,9 @@
-# Twitch
+# Twitch: Live Streaming
 <small>`pkg: tv.twitch.android.app`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

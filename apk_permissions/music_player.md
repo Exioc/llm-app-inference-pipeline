@@ -1,9 +1,9 @@
-# Music Player
+# Music Player - True Bass
 <small>`pkg: com.musicplayer.player.mp3player.white`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

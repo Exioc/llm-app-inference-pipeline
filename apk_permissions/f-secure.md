@@ -1,9 +1,9 @@
-# F-Secure
+# F-Secure: Total Security & VPN  
 <small>`pkg: com.fsecure.ms.safe`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

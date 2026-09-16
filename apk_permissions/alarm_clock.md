@@ -3,7 +3,7 @@
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

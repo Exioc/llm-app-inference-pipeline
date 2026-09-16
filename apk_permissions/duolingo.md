@@ -1,9 +1,9 @@
-# Duolingo
+# Duolingo: Language Lessons
 <small>`pkg: com.duolingo`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

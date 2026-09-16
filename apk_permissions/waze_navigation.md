@@ -1,9 +1,9 @@
-# Waze
+# Waze Navigation & Live Traffic
 <small>`pkg: com.waze`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [

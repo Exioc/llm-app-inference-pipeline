@@ -1,9 +1,9 @@
-# Camera
+# Camera for Android
 <small>`pkg: photo.camera.hdcameras`</small>
 
 ---
 
-## Berechtigungen
+## Permissions
 
 ```json
 [
