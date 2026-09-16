@@ -223,6 +223,7 @@ logs/
 test_apks/
 test_data/
 test_results/
+apks/
 
 # OS-Specific
 .directory
