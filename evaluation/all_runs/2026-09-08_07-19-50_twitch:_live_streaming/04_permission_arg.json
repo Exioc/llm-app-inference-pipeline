@@ -1,0 +1,2186 @@
+{
+  "storage_path": "results/2026-09-08_07-19-50_twitch:_live_streaming",
+  "apk_path": "test_apks/twitch.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "tv.twitch.android.app",
+  "label": "Twitch: Live Streaming",
+  "description_long": "Welcome to the Purple App, where thousands of communities come together for our favorite streamers, for the games we love, for the lulz, for each other, for whatever. Download Twitch and join millions enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams, and whatever else crosses our community’s wonderfully absurd minds. We’ll see you in chat.  \n  \nHere’s a convenient list of other awesome things about Twitch:  \n  \nEveryone is “about” community. We actually are one: Whatever you nerd out about, you can find your people on Twitch.   \nGive support, get support: Find new streamers and subscribe to your favorites. Plus, unlock exclusive perks for your support.   \nStart your own channel: The Twitch app is one of the easiest ways to start streaming. Just create an account, go live directly from the app, and bring people together around whatever you’re passionate about.   \nYou never know what you’ll find: Popular games are always live, but so are music festivals, rocket launches, street tours of Tokyo, and goat yoga. Yes, really.   \nDark mode: Y’all love this one. Black and purple have never looked this good together.  \n  \nTwitch's Terms of Service are available at https://www.twitch.tv/p/legal/terms-of-service/  \nFor feedback and assistance, please visit our Support Center: https://help.twitch.tv  \n  \nPlease note: This app features Nielsen’s proprietary measurement software which contributes to market research, like Nielsen’s TV Ratings. Please see http://priv-policy.imrworldwide.com/priv/mobile/us/en/optout.html for more information\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_CAMERA",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "RECORD_AUDIO",
+    "WAKE_LOCK",
+    "INTERNET",
+    "GET_ACCOUNTS",
+    "READ_EXTERNAL_STORAGE",
+    "MODIFY_AUDIO_SETTINGS",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "CHANGE_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "CAMERA",
+    "POST_NOTIFICATIONS",
+    "WRITE_EXTERNAL_STORAGE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 6,
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "reasoning": "The text explicitly lists the types of content available for viewing: 'enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams', directly confirming the breadth of the streaming library.",
+        "source_quotes": [
+          "Download Twitch and join millions enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams, and whatever else crosses our community’s wonderfully absurd minds."
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "reasoning": "The text explicitly commands the user to 'Find new streamers and subscribe to your favorites' and mentions the ability to 'unlock exclusive perks for your support', directly proving a monetization and subscription feature.",
+        "source_quotes": [
+          "Find new streamers and subscribe to your favorites. Plus, unlock exclusive perks for your support."
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "reasoning": "The text explicitly states 'Just create an account, go live directly from the app', which serves as direct evidence that the app supports user-generated live streaming.",
+        "source_quotes": [
+          "The Twitch app is one of the easiest ways to start streaming. Just create an account, go live directly from the app, and bring people together around whatever you’re passionate about."
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "reasoning": "The text explicitly references the existence of 'chat' with the statement 'We’ll see you in chat', confirming the presence of a communication feature.",
+        "source_quotes": [
+          "We’ll see you in chat."
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "reasoning": "The text explicitly names 'Dark mode' as a feature ('Dark mode: Y’all love this one'), directly confirming the availability of a dark UI theme.",
+        "source_quotes": [
+          "Dark mode: Y’all love this one. Black and purple have never looked this good together."
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "reasoning": "The text explicitly states 'This app features Nielsen’s proprietary measurement software which contributes to market research', confirming the inclusion of third-party analytics software.",
+        "source_quotes": [
+          "Please note: This app features Nielsen’s proprietary measurement software which contributes to market research, like Nielsen’s TV Ratings."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Streaming live content (games, sports, music, etc.) fundamentally requires IP-based data transport over the internet to fetch the media streams from servers."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Live content consumption often involves media playback (audio for podcasts, video for streams) that needs to continue when the app is in the background or screen is off, which typically requires a foreground service to maintain the connection and prevent the OS from killing the process."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Apps providing 'live' content heavily rely on notifications to alert users when a stream starts, is about to end, or for other real-time updates related to content consumption."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for connecting to remote servers to discover streamer profiles, process subscription payments, and synchronize support data and exclusive perk status."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Potentially required to alert users about subscription confirmations, new streamer discoveries, and the unlocking of exclusive perks."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Live streaming broadcasts require capturing video content from the device's camera hardware."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Live streaming broadcasts require capturing audio content from the device's microphone for real-time transmission."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Initiating a live broadcast requires IP-based data transport to stream audio and video data to the broadcasting server."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Maintaining a continuous live streaming session requires launching a specialized foreground service to keep the app active and prevent the system from killing the process."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Chat interfaces require the ability to send notifications to alert users about new messages from streamers or other viewers, especially when the app is in the background."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Chat functionality fundamentally requires internet connectivity to send and receive messages in real-time with streamers and other viewers."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Streaming chat apps often include voice message or voice chat features, which would require microphone access to capture audio."
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Measurement software needs to transmit collected data to Nielsen's servers for market research analysis."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Market research measurement often collects location data for demographic analysis and geographic targeting."
+          },
+          {
+            "group_name": "ACTIVITY_RECOGNITION",
+            "reasoning": " Nielsen measurement SDK may track app usage patterns and user activity data for audience measurement purposes."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for streaming live content over the internet."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to display video content (e.g., games, sports, esports, cooking shows, IRL streams)."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to play audio content (e.g., music, podcasts, commentary in live streams)."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Live streaming typically requires capturing video from the device camera."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Live streaming often includes audio, which requires access to the microphone."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Live broadcasting requires internet access to stream data to a server."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to save temporary files or cached data related to the live stream."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Creating an account may involve syncing user data or managing account-related settings."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to enable real-time chat communication."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to cache chat messages or media files shared in the chat."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "May be required to notify users of new messages or mentions in the chat."
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Nielsen’s measurement software likely requires network access to send market research data to their servers."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The software may need to read/write data locally for caching or storing research data before transmission."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "If the measurement involves device usage patterns, it might access sensors (e.g., gyroscope, accelerometer) to collect user interaction data."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "If the measurement includes tracking app usage or screen content, it might require permissions to read screen content or input events."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The software may need to observe app lifecycle or package states to measure app usage statistics."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for live content consumption."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for live content consumption, such as music or podcasts."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for handling IP-based data transport for live streaming."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to launch specialized foreground services for media playback during live content consumption."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to handle IP-based data transport for discovering new streamers, subscribing to channels, and unlocking exclusive perks online."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Possibly needed for managing account sync settings related to subscription status and exclusive perks across devices."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required for storing information about subscribed channels, exclusive perks, and possibly caching streamer data locally on the device."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Could be necessary for managing credentials securely, especially when handling subscription payments or accessing exclusive content, ensuring the protection of user data."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access the camera for video capture during live streaming."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Needed to access the microphone for audio capture during live streaming."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for uploading the live stream to the internet."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Potentially needed if the app allows users to select and broadcast pre-recorded videos from their gallery."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "May be required for managing user accounts and synchronizing data related to live broadcasts."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Likely necessary to keep the live streaming service running in the foreground while the user is broadcasting."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to establish and maintain internet connections for real-time chat communication."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "May be necessary to post notifications for new messages or mentions in the chat."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Possible requirement for audio files transmission or reception in chat, such as voice messages."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Possible requirement for image or video files transmission or reception in chat."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "May be required to access user profiles or contact information for chat interactions."
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The Dark Mode UI feature only involves changing the visual theme of the application interface, which does not require any specific Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to send collected data to Nielsen's servers over the internet."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Possibly required to monitor audio content for measurement purposes."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Possibly required to monitor video content for measurement purposes."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Possibly required to run the measurement service in the foreground to collect data."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Possibly required to manage the application lifecycle and schedule background tasks for data collection."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access the device camera for capturing video footage during live broadcasts."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to capture audio input from the device microphone for the live stream."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to establish internet connectivity and transmit video/audio data packets to broadcasting servers in real-time."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to buffer, cache, or temporarily save recorded media files locally before uploading during the broadcast process."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to establish internet connectivity for sending and receiving messages, relying on IP-based data transport and network routing."
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "PHONE",
+            "reasoning": "Third-party measurement SDKs historically require permissions like READ_PHONE_STATE to access device identifiers (e.g., IMEI/MEID) or cellular state. These are used as fallback persistent identifiers for cross-session tracking and accurate audience counting when modern advertising IDs are reset or unavailable."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The integration requires network connectivity permissions to reliably transmit aggregated usage statistics, session logs, and market research data back to Nielsen's backend servers. It may also leverage Wi-Fi interface state permissions to ensure stable uploads or infer geographic proximity for location-based measurement campaigns."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Streaming live content (video and audio) requires IP-based data transport and internet access to fetch content from remote servers."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To ensure that the live stream (especially audio-centric content like podcasts or music) continues playing uninterrupted when the app is not in the immediate foreground, a foreground service for media playback is required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with a remote server to discover streamers, handle subscriptions, and process support payments."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Likely required to notify users about exclusive perks, subscription confirmations, or updates from the streamers they support."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture video for the live streaming broadcast."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to capture audio for the live streaming broadcast."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for account creation and to transmit the live stream data over the internet."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the live streaming broadcast as a foreground service to prevent the system from killing the process."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for sending and receiving chat messages over the internet via IP-based data transport."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to notify users of new incoming messages from streamers or other viewers."
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to transmit the collected market research data to the third-party (Nielsen) servers over the internet."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to monitor the application lifecycle, retrieve task states, and schedule background tasks for data collection and reporting."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 18,
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Streaming live content (games, sports, music, etc.) fundamentally requires IP-based data transport over the internet to fetch the media streams from servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Live content consumption often involves media playback (audio for podcasts, video for streams) that needs to continue when the app is in the background or screen is off, which typically requires a foreground service to maintain the connection and prevent the OS from killing the process.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to display video content (e.g., games, sports, esports, cooking shows, IRL streams).",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to play audio content (e.g., music, podcasts, commentary in live streams).",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for connecting to remote servers to discover streamer profiles, process subscription payments, and synchronize support data and exclusive perk status.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Potentially required to alert users about subscription confirmations, new streamer discoveries, and the unlocking of exclusive perks.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Live streaming broadcasts require capturing video content from the device's camera hardware.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Live streaming broadcasts require capturing audio content from the device's microphone for real-time transmission.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Initiating a live broadcast requires IP-based data transport to stream audio and video data to the broadcasting server.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Maintaining a continuous live streaming session requires launching a specialized foreground service to keep the app active and prevent the system from killing the process.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to save temporary files or cached data related to the live stream.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Creating an account may involve syncing user data or managing account-related settings.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Chat interfaces require the ability to send notifications to alert users about new messages from streamers or other viewers, especially when the app is in the background.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Chat functionality fundamentally requires internet connectivity to send and receive messages in real-time with streamers and other viewers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Measurement software needs to transmit collected data to Nielsen's servers for market research analysis.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The software may need to observe app lifecycle or package states to measure app usage statistics.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to connect to remote servers and retrieve live video and audio streams."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to monitor network connectivity status, allowing the app to adapt streaming quality or handle disconnections during live content consumption."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "The app feature enables users to watch live content including games, music, sports, esports, podcasts, cooking shows, and IRL streams. This is primarily a media consumption application that streams video and audio content. To maintain playback while in the background or when the screen is locked, the app needs to run a foreground service with the mediaPlayback type, which is precisely what FOREGROUND_SERVICE_MEDIA_PLAYBACK permission allows."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with external servers to fetch streamer information, process subscriptions, and verify support payments. This feature needs to open network sockets to send and receive data from backend services."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Useful to check network connectivity status before attempting to fetch streamer data or process subscription transactions, providing better error handling when the user is offline."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Subscribing to streamers and unlocking perks typically requires alerting users about streamer activity (e.g., going live) or transaction confirmations, necessitating the ability to post notifications."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Live broadcasting functionality requires capturing real-time video, which necessitates access to the camera device hardware."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Live broadcasting functionality typically requires capturing real-time audio from the user's environment or voice to transmit during the stream, which necessitates access to the microphone."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Live streaming and account creation require the application to send and receive data over the internet, which necessitates opening network sockets."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "To ensure a stable broadcast and manage connectivity issues, the application needs to access information about the current network status and availability before initiating the stream."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_CAMERA",
+            "reasoning": "Live broadcasting requires capturing video in real-time, which necessitates running a foreground service with camera type to maintain the video streaming session continuously."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MICROPHONE",
+            "reasoning": "Live broadcasting requires capturing audio in real-time, which necessitates running a foreground service with microphone type to maintain the audio streaming session continuously during the broadcast."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Chat features require notifying users of new messages, mentions, streamer activity, and other viewer interactions in real-time. POST_NOTIFICATIONS permission is necessary to display these notification alerts so users stay updated on chat activity even when the app is not in foreground."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for transmitting and receiving chat messages with streamers and other viewers over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to manage chat connection status (e.g., online/offline indicators) and ensure messages are sent only when a network is available."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required for Nielsen measurement SDK to send collected market research data to external servers over the network."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the app to check network connectivity status before attempting to transmit measurement data, ensuring data is sent only when connection is available."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "WAKE_LOCK",
+            "reasoning": "Required to keep the processor awake during background data collection and transmission tasks to ensure measurement data is not interrupted by sleep modes."
+          },
+          {
+            "permission_name": "QUERY_ALL_PACKAGES",
+            "reasoning": "Market research data collection typically requires querying the list of installed applications on the device to analyze market penetration and app demographics."
+          },
+          {
+            "permission_name": "GET_TASKS",
+            "reasoning": "Measurement software often needs to retrieve information about currently running tasks to track which applications are in use for market research metrics."
+          },
+          {
+            "permission_name": "RECEIVE_BOOT_COMPLETED",
+            "reasoning": "Measurement software requires the ability to start services automatically after the system boots to ensure continuous data collection without user intervention."
+          },
+          {
+            "permission_name": "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+            "reasoning": "To maintain accurate data collection, the measurement service often needs to request exemption from battery optimizations to prevent the system from stopping background processes."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for streaming live content over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "Required for streaming live media content (e.g., games, music, sports, etc.) in a foreground service."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to allow the app to connect to the internet for discovering streamers, managing subscriptions, and unlocking perks."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to capture video from the camera device for live streaming."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Required to capture audio during live streaming broadcasts."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for live streaming data transmission over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check network availability and status before initiating or maintaining a live broadcast."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_CAMERA",
+            "reasoning": "Required for live streaming broadcasts as it allows the app to use Service.startForeground with the type 'camera' to capture video."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MICROPHONE",
+            "reasoning": "Required for live streaming broadcasts as it allows the app to use Service.startForeground with the type 'microphone' to capture audio."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for real-time chat communication with servers and other users."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required for Nielsen's proprietary measurement software to send market research data over the network."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for streaming live content over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to access information about networks, which is necessary to adjust the streaming quality based on the user's current network connection."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "Required to allow the app to continue playing live content in the foreground while the user is interacting with other apps, ensuring uninterrupted playback of media such as video and audio streams."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_VIDEO",
+            "reasoning": "Required to read video files from external storage, which may be necessary for the live content consumption feature to access and play back video content."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_AUDIO",
+            "reasoning": "Required to read audio files from external storage for live content categories such as music, podcasts, and other audio-related streams."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to connect to the streaming service's servers to discover new streamers, subscribe to channels, and unlock exclusive perks."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to check the network state and ensure a stable connection for streaming and subscription services."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The feature involves user subscriptions and support for streamers, which likely includes notifications for new streams, updates, or special offers. Therefore, the ability to post notifications is necessary to keep users informed about the streamers they support."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for live video streaming."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Required to record audio from the microphone for live streaming broadcasts."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for live streaming broadcasts over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, ensuring a stable connection for live streaming."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+            "reasoning": "Required for live streaming broadcasts, as it allows the application to use Service.startForeground with the type \"mediaProjection\", which is necessary for screen sharing and projection during live broadcasts."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_CAMERA",
+            "reasoning": "Required to access the camera for live video streaming, as it allows the application to use Service.startForeground with the type \"camera\", which is necessary for video capture during live broadcasts."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MICROPHONE",
+            "reasoning": "Required to access the microphone for live audio streaming, as it allows the application to use Service.startForeground with the type \"microphone\", which is necessary for audio capture during live broadcasts."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to write temporary video files to external storage while live streaming."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to post notifications for new messages or updates in the chat interface, allowing users to stay informed about interactions."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to send and receive chat messages over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to check the user's network connectivity and handle changes in network state, such as switching between Wi-Fi and mobile data, to maintain a stable chat connection."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app likely needs to send collected market research data to Nielsen's servers over the internet, which requires opening network sockets to transmit the data."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for downloading, buffering, and streaming live video and audio content from remote servers."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to monitor available network connectivity (e.g., Wi-Fi vs. mobile data) to ensure stable playback, handle connection drops gracefully, and adapt stream quality accordingly."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "The feature enables users to watch live video and audio streams across various categories like music, sports, and podcasts. This functionality relies on continuous media playback, which requires a foreground service of type 'mediaPlayback' to ensure uninterrupted streaming and properly handle minimized or background states."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires communicating with remote backend servers to fetch streamer discovery data, process channel subscription requests, and unlock exclusive perks. These operations fundamentally rely on opening network sockets to send/receive HTTP or API requests over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature 'Mobile Live Broadcasting' allows users to initiate live streaming. To capture video for a live stream from a mobile application, the app must have access to the device's camera hardware."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Live streaming broadcasts generally involve capturing real-time audio from the user's environment or their voice, which requires access to the microphone."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for sending live video/audio streams in real-time and communicating with backend servers for account creation and authentication."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to monitor active network connectivity status (e.g., Wi-Fi vs. mobile data) to dynamically adjust streaming quality and prevent excessive cellular data usage during broadcasts."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to initialize and maintain a foreground service, which is necessary for continuous live broadcasting without the app being backgrounded or terminated by the system."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The chat interface requires establishing communication with remote servers (streamers and viewers), which necessitates opening network sockets to send and receive data."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and transmit collected audience measurement data to Nielsen's proprietary servers over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to query the device's current connectivity status (e.g., online/offline, Wi-Fi vs. cellular) before attempting data transmission, which is standard practice for third-party measurement SDKs to optimize data usage and handle network reliability."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to stream live video and audio content from remote servers."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to monitor the device's network connectivity status, allowing the app to handle connection losses or adjust streaming quality based on the network type."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to allow the application to use Service.startForeground, which is necessary to keep the live content streaming active when the app is not in the foreground."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "Required because the feature involves watching and listening to live content (games, music, sports, podcasts, etc.), which falls under the 'mediaPlayback' foreground service type."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with a backend server to discover new streamers, process subscriptions, and unlock exclusive perks."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check if the device has an active network connection before attempting to perform online operations like searching for streamers or subscribing."
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Live streaming broadcasts typically require capturing real-time video from the device's camera to be broadcast to viewers."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Live broadcasting typically requires the ability to capture and stream audio from the device's microphone in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to create an account via a remote server and to transmit live video and audio data during broadcasting."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status before initiating a live stream or creating an account to ensure a stable connection is available."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to allow the application to run a foreground service, ensuring the live stream continues even if the user leaves the app."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_CAMERA",
+            "reasoning": "Required to capture video for live broadcasting while the app is running as a foreground service."
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MICROPHONE",
+            "reasoning": "Required to capture audio for live broadcasting while the app is running as a foreground service."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to notify users of incoming chat messages from streamers or other viewers when the app is not in the foreground."
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections to send and receive chat messages between users and streamers via a server."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status to ensure the user is online before attempting to send or receive chat messages."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required for the measurement software to send collected market research data to Nielsen's remote servers."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to determine the device's network connectivity status before attempting to transmit data to the research servers."
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+        "inferences": [
+          {
+            "permission_name": "QUERY_ALL_PACKAGES",
+            "reasoning": "Market research software typically needs to identify the other applications installed on a device to analyze app ecosystem trends and user demographics."
+          },
+          {
+            "permission_name": "RECEIVE_BOOT_COMPLETED",
+            "reasoning": "To ensure continuous and consistent data collection for research purposes, the measurement software must be able to start automatically after the system boots."
+          },
+          {
+            "permission_name": "WAKE_LOCK",
+            "reasoning": "Required to ensure the processor remains active during the collection and transmission of research data to remote servers, preventing the device from sleeping mid-process."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to connect to remote servers and retrieve live video and audio streams.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to monitor network connectivity status, allowing the app to adapt streaming quality or handle disconnections during live content consumption.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+            "reasoning": "The app feature enables users to watch live content including games, music, sports, esports, podcasts, cooking shows, and IRL streams. This is primarily a media consumption application that streams video and audio content. To maintain playback while in the background or when the screen is locked, the app needs to run a foreground service with the mediaPlayback type, which is precisely what FOREGROUND_SERVICE_MEDIA_PLAYBACK permission allows.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with external servers to fetch streamer information, process subscriptions, and verify support payments. This feature needs to open network sockets to send and receive data from backend services.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Useful to check network connectivity status before attempting to fetch streamer data or process subscription transactions, providing better error handling when the user is offline.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Live broadcasting functionality requires capturing real-time video, which necessitates access to the camera device hardware.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Live broadcasting functionality typically requires capturing real-time audio from the user's environment or voice to transmit during the stream, which necessitates access to the microphone.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Live streaming and account creation require the application to send and receive data over the internet, which necessitates opening network sockets.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "To ensure a stable broadcast and manage connectivity issues, the application needs to access information about the current network status and availability before initiating the stream.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_CAMERA",
+            "reasoning": "Live broadcasting requires capturing video in real-time, which necessitates running a foreground service with camera type to maintain the video streaming session continuously.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE_MICROPHONE",
+            "reasoning": "Live broadcasting requires capturing audio in real-time, which necessitates running a foreground service with microphone type to maintain the audio streaming session continuously during the broadcast.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Chat features require notifying users of new messages, mentions, streamer activity, and other viewer interactions in real-time. POST_NOTIFICATIONS permission is necessary to display these notification alerts so users stay updated on chat activity even when the app is not in foreground.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for transmitting and receiving chat messages with streamers and other viewers over the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to manage chat connection status (e.g., online/offline indicators) and ensure messages are sent only when a network is available.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required for Nielsen measurement SDK to send collected market research data to external servers over the network.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the app to check network connectivity status before attempting to transmit measurement data, ensuring data is sent only when connection is available.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

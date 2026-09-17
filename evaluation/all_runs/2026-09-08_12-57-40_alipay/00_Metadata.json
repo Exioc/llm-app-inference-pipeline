@@ -1,0 +1,174 @@
+{
+  "pkg": "com.eg.android.AlipayGphone",
+  "label": "QWxpcGF5",
+  "description": {
+    "long": "QWxpcGF5IGlzIGEgbGVhZGluZyBvcGVuIHBsYXRmb3JtIGZvciBwYXltZW50cyBhbmQgZGlnaXRhbCBzZXJ2aWNlcyBpbiBDaGluYS48YnI+PGJyPlVzZXJzIHdpdGggYSBDaGluZXNlIElEIGFuZCBiYW5rIGFjY291bnQgY2FuIHVzZSBBbGlwYXkgdG8gbWFrZSBwYXltZW50cyBvbmxpbmUgYW5kIGluIHBlcnNvbiBhdCB2YXJpb3VzIG1lcmNoYW50cyBvdXRzaWRlIG9mIENoaW5hIGFzIHRoZXkgdHJhdmVsIGZvciBsZWlzdXJlLCBidXNpbmVzcywgb3Igc3R1ZHkuIDxicj48YnI+Rm9yZWlnbiB2aXNpdG9ycyB0byBDaGluYSBjYW4gY29ubmVjdCB0aGVpciBjcmVkaXQgY2FyZCB0byB0YWtlIGFkdmFudGFnZSBvZiBBbGlwYXnigJlzIHdpZGVzcHJlYWQgYWNjZXB0YW5jZSBieSB0ZW5zIG9mIG1pbGxpb25zIG9mIG1lcmNoYW50cyBhY3Jvc3MgdGhlIGNvdW50cnkuIEFsaXBheSBpcyBub3QgZGVzaWduZWQgb3IgaW50ZW5kZWQgZm9yIHVzZSBieSBmb3JlaWduIHVzZXJzIGluIHRoZWlyIGhvbWUgY291bnRyeSBvciBhbnl3aGVyZSBvdXRzaWRlIG9mIENoaW5hLg==",
+    "short": "QWxpcGF5IGlzIGEgbGVhZGluZyBvcGVuIHBsYXRmb3JtIGZvciBwYXltZW50cyBhbmQgZGlnaXRhbCBzZXJ2aWNlcyBpbiBDaGluYS4="
+  },
+  "version": null,
+  "downloads": 25276650,
+  "rating": 2.5952153,
+  "review_count": 82957,
+  "in_app_purchases": "False",
+  "age_rating": "Teen",
+  "contains_ads": false,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": null,
+    "timestamp": null
+  },
+  "updated": {
+    "date": "Jul 8, 2026",
+    "timestamp": 1783494176
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Finance",
+    "name": "FINANCE"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "http://mobile.alipay.com",
+    "email": "suchang.sc@antfin.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "QWxpcGF5IChIYW5nemhvdSkgVGVjaG5vbG9neSBDby4gTHRk",
+    "name": "/store/apps/dev?id=Alipay+(Hangzhou)+Technology+Co.+Ltd",
+    "legal_name": "Alipay+(Hangzhou)+Technology+Co.+Ltd",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://ds.alipay.com/fd-ig3hu7fu/index.html",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Device & app history",
+      "permissions": [
+        "retrieve running apps",
+        "retrieve system internal state"
+      ]
+    },
+    {
+      "category": "Identity",
+      "permissions": [
+        "add or remove accounts",
+        "find accounts on the device",
+        "read your own contact card"
+      ]
+    },
+    {
+      "category": "Calendar",
+      "permissions": [
+        "add or modify calendar events and send email to guests without owners' knowledge",
+        "read calendar events plus confidential information"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "permissions": [
+        "find accounts on the device",
+        "read your contacts"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Phone",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Camera",
+      "permissions": [
+        "take pictures and videos"
+      ]
+    },
+    {
+      "category": "Microphone",
+      "permissions": [
+        "record audio"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Device ID & call information",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "access Bluetooth settings",
+        "allow Wi-Fi Multicast reception",
+        "change network connectivity",
+        "change your audio settings",
+        "connect and disconnect from Wi-Fi",
+        "control Near Field Communication",
+        "control flashlight",
+        "control vibration",
+        "create accounts and set passwords",
+        "draw over other apps",
+        "expand/collapse status bar",
+        "full network access",
+        "install shortcuts",
+        "modify system settings",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "read battery statistics",
+        "read sync settings",
+        "reorder running apps",
+        "run at startup",
+        "send sticky broadcast",
+        "toggle sync on and off",
+        "uninstall shortcuts",
+        "use accounts on the device",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "SmartcardServicePermission label",
+        "read Home settings and shortcuts",
+        "read Home settings and shortcuts",
+        "write Home settings and shortcuts",
+        "write Home settings and shortcuts"
+      ]
+    }
+  ]
+}

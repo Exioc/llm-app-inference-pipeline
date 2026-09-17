@@ -1,0 +1,1900 @@
+{
+  "storage_path": "results/2026-09-06_12-16-52_duolingo:_language_lessons",
+  "apk_path": "test_apks/duolingo.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "com.duolingo",
+  "label": "Duolingo: Language Lessons",
+  "description_long": "Learn a new language, chess & more with the world’s most downloaded education app! Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons. Practice speaking, reading, listening & writing to build your vocabulary & grammar skills.  \n  \nDesigned by learning experts & loved by hundreds of millions worldwide, Duolingo helps you prepare for real conversations in Spanish, French, Chinese, Italian, German, English & more. Whether you want to learn Spanish, learn French, learn German or improve your English, our language lessons make learning effective & fun  \n  \nAnd now, you can learn Math, Music & Chess the Duolingo way, including interactive chess online & fun chess lessons for all levels!  \n  \n♟️**Chess** : Master moves, level up your game & play chess online in our brand new Chess course. Learn chess basics, practice fun chess challenges & improve your strategy with guided chess lessons. Whether you're new to chess or already play online chess, our step-by-step chess lessons help you build real skills. Play online chess matches, solve chess puzzles & experience fun chess training designed to make learning chess engaging & rewarding. Checkmate!  \n  \n🧮 **Math** : Build real-world math skills: from calculating tips to identifying patterns, sharpen your mental math in our Math course. Learn foundational topics like multiplication, fractions, geometry & more & keep your brain sharp with more challenging exercises, games etc.  \n  \n🎵 **Music** : Learn how to read music & play popular songs on your device in our Music course, no instrument needed! Using an on-screen keyboard, you’ll learn bit-by-bit.  \n  \nWhether you’re learning a language for travel, school, career or your brain health, you’ll love learning with Duolingo. You can learn languages like Spanish, French, German & English while also strengthening your logic & focus through chess online & strategic chess practice.  \n  \n**Why Duolingo?**  \n• Duolingo is fun & effective. Game like language lessons & fun characters help you build solid speaking, reading, listening, & writing skills, plus enjoy fun chess & competitive online chess in one app.  \n  \n• Duolingo works. Designed by learning experts, Duolingo has a science-based teaching methodology proven to foster long-term knowledge retention across language lessons & chess lessons alike.  \n  \n• Track your progress. Work toward your learning goals with playful rewards & achievements when you make practicing language lessons or chess online part of your daily habit.  \n  \n• Join millions of learners. Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community.  \n  \n• Every language course is free. Learn Spanish, French, German, Italian, Russian, Portuguese, Turkish, Dutch, Irish, Danish, Swedish, Ukrainian, Esperanto, Polish, Greek, Hungarian, Norwegian, Hebrew, Welsh, Arabic, Latin, Hawaiian, Scottish Gaelic, Vietnamese, Korean, Japanese, English, & even High Valyrian! And now, learn Math, Music & improve your chess online skills with structured chess lessons & fun chess challenges.  \n  \n**What the world is saying about Duolingo ⭐️⭐️⭐️⭐️⭐️:**  \n  \nEditor's Choice & \"\"Best of the Best”- Google Play  \n  \n“Far & away the best language-learning app.”- The Wall Street Journal  \n  \n“This free app & website is among the most effective language-learning methods I’ve tried… lessons come in the form of brief challenges, speaking, translating, answering multiple-choice questions, that keep me coming back for more.”- The New York Times  \n  \n“Duolingo may hold the secret to the future of education.”- TIME Magazine  \n  \n“..Duolingo is cheerful, lighthearted & fun..”- Forbes  \n  \nIf you like Duolingo, try Super Duolingo for 14 days free! Learn a language fast with no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair.  \n  \nSend any feedback to android@duolingo.com  \n  \nUse Duolingo on the Web at https://www.duolingo.com  \n  \nPrivacy Policy: https://www.duolingo.com/privacy\n",
+  "ground_truth_sets": [
+    [
+      "RECORD_AUDIO",
+      "INTERNET"
+    ],
+    [
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_CALENDAR",
+    "WRITE_EXTERNAL_STORAGE",
+    "DETECT_SCREEN_CAPTURE",
+    "VIBRATE",
+    "RECORD_AUDIO",
+    "USE_BIOMETRIC",
+    "RECEIVE_BOOT_COMPLETED",
+    "USE_FINGERPRINT",
+    "MODIFY_AUDIO_SETTINGS",
+    "POST_NOTIFICATIONS",
+    "WRITE_CALENDAR",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "WAKE_LOCK",
+    "GET_ACCOUNTS",
+    "READ_CONTACTS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 8,
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "reasoning": "The text explicitly states 'learning 40+ languages through quick, bite-sized lessons' and 'Practice speaking, reading, listening & writing to build your vocabulary & grammar skills', directly confirming a comprehensive language learning capability with specific skill targets.",
+        "source_quotes": [
+          "Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons.",
+          "Practice speaking, reading, listening & writing to build your vocabulary & grammar skills.",
+          "Learn Spanish, French, German & English while also strengthening your logic & focus through chess online & strategic chess practice."
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "reasoning": "The text explicitly mentions 'play chess online in our brand new Chess course' and 'Play online chess matches, solve chess puzzles & experience fun chess training', proving both educational and multiplayer gameplay capabilities for chess.",
+        "source_quotes": [
+          "Master moves, level up your game & play chess online in our brand new Chess course.",
+          "Play online chess matches, solve chess puzzles & experience fun chess training designed to make learning chess engaging & rewarding."
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "reasoning": "The text explicitly defines the scope of the Math course with 'Build real-world math skills: from calculating tips to identifying patterns' and lists specific topics like 'multiplication, fractions, geometry', confirming a dedicated math learning feature.",
+        "source_quotes": [
+          "Build real-world math skills: from calculating tips to identifying patterns, sharpen your mental math in our Math course.",
+          "Learn foundational topics like multiplication, fractions, geometry & more & keep your brain sharp with more challenging exercises, games etc."
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "reasoning": "The text explicitly states 'Learn how to read music & play popular songs on your device in our Music course, no instrument needed! Using an on-screen keyboard', which directly confirms a music learning feature with specific hardware requirements (on-screen keyboard).",
+        "source_quotes": [
+          "Learn how to read music & play popular songs on your device in our Music course, no instrument needed!",
+          "Using an on-screen keyboard, you’ll learn bit-by-bit."
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "reasoning": "The text explicitly instructs users to 'Track your progress' and notes they can 'Work toward your learning goals with playful rewards & achievements', directly proving the existence of a progress monitoring and gamification system.",
+        "source_quotes": [
+          "Track your progress.",
+          "Work toward your learning goals with playful rewards & achievements when you make practicing language lessons or chess online part of your daily habit."
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "reasoning": "The text explicitly mentions 'Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community', confirming a social competition feature.",
+        "source_quotes": [
+          "Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community."
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "reasoning": "The text explicitly details the 'Super Duolingo' offer with 'no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair', confirming a monetization feature with specific defined benefits.",
+        "source_quotes": [
+          "If you like Duolingo, try Super Duolingo for 14 days free!",
+          "Learn a language fast with no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair."
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "reasoning": "The text explicitly states 'Use Duolingo on the Web at https://www.duolingo.com', confirming cross-platform availability beyond the mobile app.",
+        "source_quotes": [
+          "Use Duolingo on the Web at https://www.duolingo.com"
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "The app includes speaking practice for language learning, which requires microphone access to record and analyze user pronunciation."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The app includes listening practice with audio lessons, which requires reading audio files from storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Language learning apps require internet connectivity to download lessons, sync user progress, and communicate with servers for content delivery."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app needs to save downloaded lessons, cache content, and store user progress on external storage."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Language learning apps typically use notifications to remind users of practice sessions and lesson updates."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature explicitly includes 'playing online matches' and 'engaging in guided lessons', which requires internet connectivity to communicate with game servers, synchronize moves, and download course content."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Online gaming and learning apps typically require permissions to post notifications for match updates (e.g., 'Your turn'), game invites, lesson reminders, and challenge alerts to keep users engaged."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may require access to shared external storage to download and cache lesson materials, save game replays (PGN files), or export user progress and high scores."
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The described feature is a music literacy app using an on-screen keyboard interface. The core functionality of learning to read music and playing songs via an on-screen keyboard does not inherently require any sensitive Android permissions. No camera, microphone, location, contacts, storage access, or other hardware/data access is needed for the basic described functionality."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send achievement notifications, daily practice reminders, and progress updates to users to maintain engagement with the learning goal tracking system."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to the internet for fetching global leaderboard data and syncing user progress to the server."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Likely required to send push notifications to users regarding rank updates, new achievements, or community activity to maintain motivation."
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. Web platform access via browser/webview uses standard Internet connectivity which is granted through normal permissions that don't require user runtime approval. The feature does not involve accessing sensitive device data like contacts, location, camera, microphone, or other protected resources."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required for speech recognition and speaking practice features."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to save downloaded lessons or user progress data."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for downloading lessons, updates, or accessing online features."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for online matches and potential data synchronization (e.g., connecting to chess servers, multiplayer functionality)."
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "May require access to audio files for playing music samples or backing tracks."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Potentially needed if the app listens to user playback (e.g., for pitch/note detection via microphone)."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared storage for downloading or saving sheet music, audio files, or user progress data."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Could be used if the app relies on device sensors (e.g., touch latency/pressure) for the on-screen keyboard interaction."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Global leaderboards require internet access to fetch and sync data with servers hosting the leaderboard information."
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Accessing a web platform via a browser requires network connectivity, which is covered under this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves listening to audio lessons, which requires reading audio files from shared storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature includes reading and writing lessons, which may require reading image and video files from shared storage for visual aids or instructional content."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "The speaking component of the language lessons may require accessing the device's microphone to record and assess the user's pronunciation."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may need to store downloaded lessons, user progress, and other data, which requires access to the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for online play, as it needs to establish and maintain connections with other players or servers over the internet."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to store user progress, downloaded lessons, or cached data for offline access."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Could be necessary to send notifications about match invites, reminders, or updates on lessons and challenges."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "May be needed to manage user accounts, synchronize progress across devices, or handle subscription services."
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The app plays popular songs, which likely requires reading audio files from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may need to access and store audio files, music sheets, or user progress, which requires permissions related to the shared external storage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The app plays music and provides an on-screen keyboard, which may require launching specialized foreground services for media playback."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The on-screen keyboard may modify system-level interface elements, such as window overlays, which requires permissions to control basic hardware peripherals and audio/vibration policies."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature needs to store user progress and learning goals, which would require accessing the device's shared external storage to save and retrieve data."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "To provide timely rewards and achievements, the app might need to post notifications, which would require permissions associated with posting notifications."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch and update leaderboard data from a remote server, which involves handling IP-based data transport and global internet routing."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "可能 required to store local copies of leaderboard data or user progress, which involves accessing the shared external storage."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "可能 required to synchronize user data, such as scores or progress, across devices or with the server, which involves inspecting background data synchronization statistics and configuring account sync settings."
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature described is related to a paid subscription offering various benefits such as ad-free experience, unlimited hearts, and monthly streak repair, which does not require any specific Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to access the Duolingo platform via a web browser, as it involves handling IP-based data transport and internet routing."
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No other permission groups are explicitly required for web platform access, as it primarily involves internet connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "The feature explicitly includes speaking practice, which requires capturing and processing the user's voice through the device's microphone."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves playing online matches, syncing progress, and accessing remote servers for guided lessons and challenges, which strictly requires network connectivity permissions (e.g., INTERNET, ACCESS_NETWORK_STATE) handled by this group."
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Accessing a web platform requires establishing an internet connection to load content, fetch data, and synchronize with external servers, which falls under permissions handling IP-based data transport and global internet routing."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required for 'speaking' exercises to record user audio for pronunciation practice and evaluation."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Commonly used in learning apps to send daily reminders, lesson alerts, and streak notifications to keep users engaged."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Necessary for downloading course content, synchronizing user progress, and fetching multilingual lesson data from a server."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for playing online matches and accessing guided lessons/challenges from a server."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Necessary to notify users about their turn in online matches, game results, or challenge invitations."
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves playing popular songs and music lessons, which would require reading audio files from the device's storage."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to notify the user when they have achieved a learning goal or earned a playful reward for their daily practice habits."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "A global leaderboard requires communicating with a backend server to synchronize user data and retrieve the rankings of other users across the community."
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Accessing a web platform via a browser requires internet connectivity for data transport and routing."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 18,
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "The app includes speaking practice for language learning, which requires microphone access to record and analyze user pronunciation.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The app includes listening practice with audio lessons, which requires reading audio files from storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Language learning apps require internet connectivity to download lessons, sync user progress, and communicate with servers for content delivery.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app needs to save downloaded lessons, cache content, and store user progress on external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Language learning apps typically use notifications to remind users of practice sessions and lesson updates.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature explicitly includes 'playing online matches' and 'engaging in guided lessons', which requires internet connectivity to communicate with game servers, synchronize moves, and download course content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Online gaming and learning apps typically require permissions to post notifications for match updates (e.g., 'Your turn'), game invites, lesson reminders, and challenge alerts to keep users engaged.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may require access to shared external storage to download and cache lesson materials, save game replays (PGN files), or export user progress and high scores.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The described feature is a music literacy app using an on-screen keyboard interface. The core functionality of learning to read music and playing songs via an on-screen keyboard does not inherently require any sensitive Android permissions. No camera, microphone, location, contacts, storage access, or other hardware/data access is needed for the basic described functionality.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "May require access to audio files for playing music samples or backing tracks.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared storage for downloading or saving sheet music, audio files, or user progress data.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send achievement notifications, daily practice reminders, and progress updates to users to maintain engagement with the learning goal tracking system.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to the internet for fetching global leaderboard data and syncing user progress to the server.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. Web platform access via browser/webview uses standard Internet connectivity which is granted through normal permissions that don't require user runtime approval. The feature does not involve accessing sensitive device data like contacts, location, camera, microphone, or other protected resources.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Accessing a web platform via a browser requires network connectivity, which is covered under this permission group.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The application feature explicitly states it covers 'speaking', which requires accessing the device microphone to capture the user's voice for pronunciation assessment and interactive language practice."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to download language lessons, audio content for listening exercises, and sync user progress to servers. The app needs network connectivity to fetch lesson content and updates for multiple languages."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the app to check network connectivity status before attempting to download lessons or sync progress, ensuring content is only fetched when internet is available."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Language learning applications typically utilize notifications to send daily reminders and progress updates, which supports the 'bite-sized lessons' feature for maintaining user engagement."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for connecting to remote servers to play online matches and download course content."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to verify internet availability before initiating online matches and handle connection status changes."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to alert users about turn updates in online matches and reminders for challenges or lessons."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. This chess learning and online play app does not require external storage access. Game data, user progress, puzzles, and settings can be stored in the app's internal storage or app-specific directories without needing READ_EXTERNAL_STORAGE or WRITE_EXTERNAL_STORAGE. No features mentioned require accessing photos, videos, music, or other media files from external storage."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. The feature describes a music learning app with an on-screen keyboard that doesn't indicate any need to read from or write to external storage. All functionality appears to be self-contained within the app, and modern Android storage access patterns (scoped storage, app-specific directories) don't require broad external storage permissions for this type of feature."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The feature requires maintaining daily practice habits and delivering achievement rewards, which necessitates sending alerts and reminders to the user via the system notification channel."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections with remote servers to fetch global leaderboard data and upload user scores."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Accessing a web platform requires establishing network connections to remote servers, which is enabled by the INTERNET permission that allows applications to open network sockets."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The feature includes 'speaking' and 'listening' components, which likely require audio recording for pronunciation exercises or speech recognition."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to enable online matches, as the app needs to open network sockets to communicate with remote servers for playing against other users."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to post notifications for achievement rewards and daily practice reminders."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to connect to global servers to fetch and update leaderboard data."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for web browser access to the Duolingo platform."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The language learning app focuses on building speaking skills, which implies that users will need to practice speaking and possibly record themselves to improve their pronunciation. Therefore, the RECORD_AUDIO permission is required to enable audio recording."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_AUDIO",
+            "reasoning": "The app focuses on language learning, which includes listening to audio materials such as pronunciation guides or conversations. Therefore, it requires access to read audio files, making READ_MEDIA_AUDIO a necessary permission."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app likely needs to download language lessons, synchronize user progress, and potentially stream audio or video content for lessons, which requires internet access."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "To provide a seamless user experience, the app may need to check the network state to determine when to download or update content, or to adjust its behavior based on the available network connection."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The app likely needs to send reminders or notifications to the user about new lessons, practice exercises, or progress updates, which requires the POST_NOTIFICATIONS permission."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to play online matches, as it involves connecting to a server or other players over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to check the network connection state, ensuring a stable online play experience and adapting to changes in network connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The app likely needs to notify users of various events such as their turn in an online match, new puzzle availability, or completion of guided lessons and challenges, thus requiring the POST_NOTIFICATIONS permission to post notifications."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_AUDIO",
+            "reasoning": "The Music Literacy & Performance Course may require reading audio files, such as musical notes or songs, from external storage to provide a comprehensive learning experience, thus justifying the need for the READ_MEDIA_AUDIO permission."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to send notifications to users about their progress, rewards, and achievements."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to fetch and update global leaderboard data from a remote server, allowing users to view and interact with the global community."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to check the network state before attempting to fetch or update leaderboard data, ensuring a smooth user experience by handling network errors and changes in connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to access the Duolingo platform via a web browser, as it involves opening network sockets to communicate with the web platform."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The app feature explicitly covers 'speaking' exercises, which in language learning applications typically requires recording the user's voice to compare pronunciation with native speakers and provide interactive feedback."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to fetch and update lesson content, stream audio for pronunciation practice, sync learning progress across devices, and access online vocabulary or grammar resources."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to check device connectivity status before loading multimedia lessons, syncing data, or switching between offline and online modes to conserve bandwidth."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to enable online matchmaking and real-time communication with chess servers during online matches."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The app features online matches, puzzles, and guided challenges that rely on timely alerts to inform users about their turn, puzzle completion, or lesson reminders. To display these system-level alerts effectively, the POST_NOTIFICATIONS permission is required."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The app features an on-screen keyboard for learning and playing music, which typically relies on internal audio assets or real-time synthesis. It does not indicate any need to access or read the user's personal audio files from external storage, so READ_MEDIA_AUDIO is not required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to notify users about their progress, daily practice streaks, and awarded achievements."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communicating with remote servers to fetch and update data from the global community leaderboards."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about active networks to check connectivity status before synchronizing leaderboard data and handling offline states efficiently."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature describes providing access to a web platform (Duolingo) directly within the app, which requires establishing outgoing network connections to fetch and display web content. The INTERNET permission is explicitly required to open network sockets for standard internet communication."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The feature description explicitly states that the app covers 'speaking', which requires recording audio to practice and evaluate the user's pronunciation."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to download lesson content, sync user progress, and access language resources from a remote server."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's connectivity status to ensure the app can reach the server before attempting to download content or synchronize data."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to play online matches, fetch chess puzzles, and access guided lessons and challenges from a remote server."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's connectivity status to ensure the user is online before attempting to start online matches or download content."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to notify users about their turn in online matches, receive new game challenges, or receive updates on their guided lessons."
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_AURAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The feature involves awarding achievements and rewards for maintaining habits, which typically requires sending notifications to the user to alert them of their progress and success."
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to connect to a remote server to synchronize and retrieve global leaderboard data from a community of users."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity state before attempting to fetch or upload leaderboard data."
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to communicate with the Duolingo web platform."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the network connectivity status to ensure the device is online before attempting to access the web platform."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The application feature explicitly states it covers 'speaking', which requires accessing the device microphone to capture the user's voice for pronunciation assessment and interactive language practice.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to download language lessons, audio content for listening exercises, and sync user progress to servers. The app needs network connectivity to fetch lesson content and updates for multiple languages.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the app to check network connectivity status before attempting to download lessons or sync progress, ensuring content is only fetched when internet is available.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for connecting to remote servers to play online matches and download course content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to verify internet availability before initiating online matches and handle connection status changes.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "Required to alert users about turn updates in online matches and reminders for challenges or lessons.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. This chess learning and online play app does not require external storage access. Game data, user progress, puzzles, and settings can be stored in the app's internal storage or app-specific directories without needing READ_EXTERNAL_STORAGE or WRITE_EXTERNAL_STORAGE. No features mentioned require accessing photos, videos, music, or other media files from external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. The feature describes a music learning app with an on-screen keyboard that doesn't indicate any need to read from or write to external storage. All functionality appears to be self-contained within the app, and modern Android storage access patterns (scoped storage, app-specific directories) don't require broad external storage permissions for this type of feature.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The feature requires maintaining daily practice habits and delivering achievement rewards, which necessitates sending alerts and reminders to the user via the system notification channel.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections with remote servers to fetch global leaderboard data and upload user scores.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to check the network state before attempting to fetch or update leaderboard data, ensuring a smooth user experience by handling network errors and changes in connectivity.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Accessing a web platform requires establishing network connections to remote servers, which is enabled by the INTERNET permission that allows applications to open network sockets.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

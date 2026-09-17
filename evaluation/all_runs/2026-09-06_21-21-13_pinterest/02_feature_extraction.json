@@ -1,0 +1,105 @@
+{
+  "storage_path": "results/2026-09-06_21-21-13_pinterest",
+  "apk_path": "test_apks/pinterest.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.pinterest",
+  "label": "Pinterest",
+  "description_long": "Pinterest is a place of endless possibilities. You can:  \n\\- Discover everyday inspiration  \n\\- Shop styles you love  \n\\- Try and learn something new  \n  \nCreate boards, save Pins and make collages of all your inspiration. Unlock billions of ideas, from fashion tips 👠 and easy recipes 🍜 to DIY projects 🛠️ and fresh ways to redo your space. Creating the life you love?  \n  \nIt's Possible.\n",
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "NFC",
+    "DETECT_SCREEN_CAPTURE",
+    "POST_NOTIFICATIONS",
+    "ACCESS_FINE_LOCATION",
+    "RECEIVE_BOOT_COMPLETED",
+    "INTERNET",
+    "CAMERA",
+    "ACCESS_WIFI_STATE",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_MEDIA_VIDEO",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_COARSE_LOCATION",
+    "GET_ACCOUNTS",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 6,
+    "features": [
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "reasoning": "The text explicitly states the user can 'Discover everyday inspiration' and 'Unlock billions of ideas, from fashion tips... to DIY projects...', directly confirming a content discovery and browsing capability.",
+        "source_quotes": [
+          "Discover everyday inspiration",
+          "Unlock billions of ideas, from fashion tips 👠 and easy recipes 🍜 to DIY projects 🛠️ and fresh ways to redo your space."
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "reasoning": "The text explicitly lists 'Shop styles you love' as one of the things users can do, proving the existence of a shopping feature.",
+        "source_quotes": [
+          "Shop styles you love"
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "reasoning": "The text explicitly includes 'Try and learn something new' in the list of user capabilities ('You can: ...'), confirming a learning-oriented feature.",
+        "source_quotes": [
+          "Try and learn something new"
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "reasoning": "The text explicitly states users can 'Create boards', which is a direct reference to the board creation functionality.",
+        "source_quotes": [
+          "Create boards"
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "reasoning": "The text explicitly states users can 'save Pins', confirming the capability to bookmark or save content.",
+        "source_quotes": [
+          "save Pins"
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "reasoning": "The text explicitly states users can 'make collages of all your inspiration', directly confirming a content composition or collage tool.",
+        "source_quotes": [
+          "make collages of all your inspiration"
+        ]
+      }
+    ]
+  }
+}

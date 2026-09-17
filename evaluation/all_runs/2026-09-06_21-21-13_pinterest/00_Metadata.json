@@ -1,0 +1,127 @@
+{
+  "pkg": "com.pinterest",
+  "label": "UGludGVyZXN0",
+  "description": {
+    "long": "UGludGVyZXN0IGlzIGEgcGxhY2Ugb2YgZW5kbGVzcyBwb3NzaWJpbGl0aWVzLiBZb3UgY2FuOjxicj4tIERpc2NvdmVyIGV2ZXJ5ZGF5IGluc3BpcmF0aW9uPGJyPi0gU2hvcCBzdHlsZXMgeW91IGxvdmU8YnI+LSBUcnkgYW5kIGxlYXJuIHNvbWV0aGluZyBuZXc8YnI+PGJyPkNyZWF0ZSBib2FyZHMsIHNhdmUgUGlucyBhbmQgbWFrZSBjb2xsYWdlcyBvZiBhbGwgeW91ciBpbnNwaXJhdGlvbi4gVW5sb2NrIGJpbGxpb25zIG9mIGlkZWFzLCBmcm9tIGZhc2hpb24gdGlwcyAg8J+RoCBhbmQgZWFzeSByZWNpcGVzIPCfjZwgdG8gRElZIHByb2plY3RzIPCfm6DvuI8gYW5kIGZyZXNoIHdheXMgdG8gcmVkbyB5b3VyIHNwYWNlLiBDcmVhdGluZyB0aGUgbGlmZSB5b3UgbG92ZT88YnI+PGJyPkl0JiMzOTtzIFBvc3NpYmxlLg==",
+    "short": "T25lIGRlc3RpbmF0aW9uIGZvciBhIHdvcmxkIG9mIGluc3BpcmF0aW9uLg=="
+  },
+  "version": null,
+  "downloads": 1574724500,
+  "rating": 4.2843876,
+  "review_count": 11575574,
+  "in_app_purchases": "$5.88 - $329.41 per item",
+  "age_rating": "Teen",
+  "contains_ads": true,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "Aug 14, 2012",
+    "timestamp": 1344902400
+  },
+  "updated": {
+    "date": "Aug 3, 2026",
+    "timestamp": 1785799339
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Lifestyle",
+    "name": "LIFESTYLE"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "https://help.pinterest.com",
+    "email": "help@pinterest.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "UGludGVyZXN0",
+    "name": "/store/apps/dev?id=Pinterest",
+    "legal_name": "Pinterest",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://policy.pinterest.com/privacy-policy",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Identity",
+      "permissions": [
+        "find accounts on the device",
+        "read your own contact card"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "permissions": [
+        "find accounts on the device",
+        "read your contacts"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Camera",
+      "permissions": [
+        "take pictures and videos"
+      ]
+    },
+    {
+      "category": "Microphone",
+      "permissions": [
+        "record audio"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "control Near Field Communication",
+        "control vibration",
+        "full network access",
+        "prevent device from sleeping",
+        "read Google service configuration",
+        "run at startup",
+        "set wallpaper",
+        "use accounts on the device",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "receive data from Internet"
+      ]
+    }
+  ]
+}

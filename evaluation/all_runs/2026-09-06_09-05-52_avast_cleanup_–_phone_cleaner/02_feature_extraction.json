@@ -1,0 +1,168 @@
+{
+  "storage_path": "results/2026-09-06_09-05-52_avast_cleanup_–_phone_cleaner",
+  "apk_path": "test_apks/avast_cleaner.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.avast.android.cleaner",
+  "label": "Avast Cleanup – Phone Cleaner",
+  "description_long": "**Avast Cleanup – Smart Phone Cleaner & Storage Manager**   \n  \nAvast Cleanup is a powerful phone cleaner and storage manager designed to help you remove junk files and perform deep cleaning on your Android device for an organized experience. With advanced cleaning tools and smart cleaning technology, Avast Cleanup turns your device into a cleaner phone. Whether you need to clean your phone, manage storage space, remove junk, or identify what drains your battery, Avast Cleanup delivers a complete cleaning experience.  \n  \nGo beyond simple storage management by identifying hidden, unnecessary files that slow down your device. Our advanced cleaning technology detects leftover data and temporary files from uninstalled apps that occupy valuable storage. By removing these digital leftovers, you get more than a better organized phone — you reclaim space for new photos, videos, and important applications.   \n  \nGet more from your device with our intelligent cleaning features. Avast Cleanup doesn't just delete files; App Analyzer helps you identify apps that are active in the background, so you can manage them more easily.   \n  \nOrganize your media and gallery with our smart photo cleaning feature. We help you identify blurry, poor-quality, or duplicate photos. From managing large files to organizing your downloads, Avast Cleanup is the all-in-one app to keep your phone clean.   \n  \n**Avast Cleanup Features**   \n  \n**Clean and Remove**   \n• Remove unnecessary files and safely clean junk.  \n• Clean junk files, browser history, download folders, leftover data, and more.  \n  \n**Reclaim Storage Space**   \n• Analyze storage space.   \n• Quickly and easily uninstall multiple unwanted apps in one go.  \n• Clear junk, including old and residual files.   \n  \n**Analyze App Impact**   \n• Determine the impact of individual apps on your device.   \n• Check which apps consume your data.   \n• Find apps draining your battery.   \n• Discover unused apps with Apps Overview.   \n  \n**Clean your photo library**   \n• Find and remove similar, old, and poor-quality (dark or blurry) images.   \n• Use the photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression   \n• Delete photos from private chats   \n  \n**Monitor system resources**   \n• Learn how your CPU (processor), RAM, and storage are used so you can quickly spot issues and keep your device running smoothly.   \n  \n**Easy to Use**   \n• Clean your Android with our Quick Clean   \n• Simple, intuitive user interface which is easy to navigate.   \n  \n**Summary**   \n► App Analyzer: Identify apps draining resources and easily clean up with Avast Cleanup.   \n► App Remover: Quickly clear out unused apps to increase storage space.   \n► Junk Cleaner: Master the cleanup of junk files and residual app and browser data.   \n► Analyze apps based on storage, battery use, and data consumption to decide what to clear or clean up.   \n► Detect and remove duplicate photos for effective cleaning.   \n► Easily clean up your photo library and clear unnecessary files.   \n► With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds.   \n► Organize photos easily.   \n  \nBy installing this app, you agree that your use of it is governed by these terms: https://www.avast.com/en-ph/cybersec-event-terms.   \n  \nAvast Cleanup uses accessibility permission to assist disabled and other users stop background apps with just one tap.   \n  \n**_Download Avast Cleanup – the smart, powerful phone cleaner and cleaner app to keep your Android device tidy by removing junk, managing storage, and completing thorough cleanup today._**\n",
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "GET_PACKAGE_SIZE",
+      "KILL_BACKGROUND_PROCESSES",
+      "QUERY_ALL_PACKAGES",
+      "REQUEST_DELETE_PACKAGES"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "GET_PACKAGE_SIZE",
+      "KILL_BACKGROUND_PROCESSES",
+      "QUERY_ALL_PACKAGES",
+      "REQUEST_DELETE_PACKAGES",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "BLUETOOTH",
+    "ACCESS_WIFI_STATE",
+    "READ_PHONE_STATE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "READ_SYNC_SETTINGS",
+    "WRITE_SYNC_SETTINGS",
+    "KILL_BACKGROUND_PROCESSES",
+    "ACCESS_NOTIFICATION_POLICY",
+    "BLUETOOTH_ADMIN",
+    "REQUEST_DELETE_PACKAGES",
+    "VIBRATE",
+    "ACCESS_FINE_LOCATION",
+    "CHANGE_NETWORK_STATE",
+    "GET_PACKAGE_SIZE",
+    "ACCESS_NETWORK_STATE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "POST_NOTIFICATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 11,
+    "features": [
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "reasoning": "The text explicitly states the capability to 'Clean junk files, browser history, download folders, leftover data, and more' and 'detects leftover data and temporary files from uninstalled apps', which directly confirms a comprehensive cleaning engine for digital leftovers.",
+        "source_quotes": [
+          "Remove unnecessary files and safely clean junk.",
+          "Clean junk files, browser history, download folders, leftover data, and more.",
+          "Our advanced cleaning technology detects leftover data and temporary files from uninstalled apps that occupy valuable storage."
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "reasoning": "The text explicitly mentions 'Analyze storage space' and 'reclaim space for new photos, videos, and important applications', directly proving storage management and reclamation capabilities.",
+        "source_quotes": [
+          "manage storage space",
+          "Analyze storage space.",
+          "reclaim space for new photos, videos, and important applications."
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "reasoning": "The text explicitly lists 'Determine the impact of individual apps on your device', 'Check which apps consume your data', and 'Find apps draining your battery', which directly proves an app-level resource analysis feature.",
+        "source_quotes": [
+          "identify what drains your battery",
+          "Check which apps consume your data.",
+          "Determine the impact of individual apps on your device."
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "reasoning": "The text explicitly states the app helps you 'identify apps that are active in the background' and 'uses accessibility permission to assist disabled and other users stop background apps with just one tap', directly confirming background control functionality.",
+        "source_quotes": [
+          "App Analyzer helps you identify apps that are active in the background, so you can manage them more easily.",
+          "Avast Cleanup uses accessibility permission to assist disabled and other users stop background apps with just one tap."
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "reasoning": "The text explicitly offers the ability to 'Quickly and easily uninstall multiple unwanted apps in one go', which directly confirms a batch uninstall feature.",
+        "source_quotes": [
+          "Quickly and easily uninstall multiple unwanted apps in one go."
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "reasoning": "The text explicitly mentions the ability to 'identify blurry, poor-quality, or duplicate photos' and 'Find and remove similar, old, and poor-quality (dark or blurry) images', directly proving intelligent photo detection logic.",
+        "source_quotes": [
+          "identify blurry, poor-quality, or duplicate photos.",
+          "Find and remove similar, old, and poor-quality (dark or blurry) images.",
+          "Detect and remove duplicate photos for effective cleaning."
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "reasoning": "The text explicitly describes a 'photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression', directly confirming a file compression capability for photos.",
+        "source_quotes": [
+          "Use the photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression"
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "reasoning": "The text explicitly states 'Delete photos from private chats', which serves as direct evidence of a targeted deletion feature for chat media.",
+        "source_quotes": [
+          "Delete photos from private chats"
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "reasoning": "The text explicitly mentions users can 'Learn how your CPU (processor), RAM, and storage are used', directly confirming a system hardware monitoring feature.",
+        "source_quotes": [
+          "Learn how your CPU (processor), RAM, and storage are used so you can quickly spot issues and keep your device running smoothly."
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "reasoning": "The text explicitly states 'Clean your Android with our Quick Clean' and 'With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds', directly proving a one-step cleaning workflow.",
+        "source_quotes": [
+          "Clean your Android with our Quick Clean",
+          "With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds."
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "reasoning": "The text explicitly mentions 'Organize your media and gallery' and 'managing large files to organizing your downloads', directly confirming file organization capabilities.",
+        "source_quotes": [
+          "Organize your media and gallery with our smart photo cleaning feature.",
+          "From managing large files to organizing your downloads",
+          "Organize photos easily."
+        ]
+      }
+    ]
+  }
+}

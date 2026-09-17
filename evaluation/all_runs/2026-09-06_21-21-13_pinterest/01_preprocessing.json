@@ -1,0 +1,50 @@
+{
+  "storage_path": "results/2026-09-06_21-21-13_pinterest",
+  "apk_path": "test_apks/pinterest.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "pkg": "com.pinterest",
+  "label": "Pinterest",
+  "description_long": "Pinterest is a place of endless possibilities. You can:  \n\\- Discover everyday inspiration  \n\\- Shop styles you love  \n\\- Try and learn something new  \n  \nCreate boards, save Pins and make collages of all your inspiration. Unlock billions of ideas, from fashion tips 👠 and easy recipes 🍜 to DIY projects 🛠️ and fresh ways to redo your space. Creating the life you love?  \n  \nIt's Possible.\n",
+  "apk_permissions": [
+    "FOREGROUND_SERVICE",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "NFC",
+    "DETECT_SCREEN_CAPTURE",
+    "POST_NOTIFICATIONS",
+    "ACCESS_FINE_LOCATION",
+    "RECEIVE_BOOT_COMPLETED",
+    "INTERNET",
+    "CAMERA",
+    "ACCESS_WIFI_STATE",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_MEDIA_VIDEO",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_COARSE_LOCATION",
+    "GET_ACCOUNTS",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE"
+  ]
+}

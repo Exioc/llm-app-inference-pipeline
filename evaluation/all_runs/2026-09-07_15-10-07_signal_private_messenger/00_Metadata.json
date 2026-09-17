@@ -1,0 +1,147 @@
+{
+  "pkg": "org.thoughtcrime.securesms",
+  "label": "U2lnbmFsIFByaXZhdGUgTWVzc2VuZ2Vy",
+  "description": {
+    "long": "U2lnbmFsIGlzIGEgbWVzc2FnaW5nIGFwcCB3aXRoIHByaXZhY3kgYXQgaXRzIGNvcmUuIEl0IGlzIGZyZWUgYW5kIGVhc3kgdG8gdXNlLCB3aXRoIHN0cm9uZyBlbmQtdG8tZW5kIGVuY3J5cHRpb24gdGhhdCBrZWVwcyB5b3VyIGNvbW11bmljYXRpb24gY29tcGxldGVseSBwcml2YXRlLjxicj48YnI+PGJyPuKAoiBTZW5kIHRleHRzLCB2b2ljZSBtZXNzYWdlcywgcGhvdG9zLCB2aWRlb3MsIEdJRnMsIGFuZCBmaWxlcyBmb3IgZnJlZS4gU2lnbmFsIHVzZXMgeW91ciBwaG9uZeKAmXMgZGF0YSBjb25uZWN0aW9uLCBzbyB5b3UgYXZvaWQgU01TIGFuZCBNTVMgZmVlcy48YnI+PGJyPjxicj7igKIgQ2FsbCB5b3VyIGZyaWVuZHMgd2l0aCBjcnlzdGFsLWNsZWFyIGVuY3J5cHRlZCB2b2ljZSBhbmQgdmlkZW8gY2FsbHMuIEdyb3VwIGNhbGxzIHN1cHBvcnRlZCBmb3IgdXAgdG8gNTAgcGVvcGxlLjxicj48YnI+PGJyPuKAoiBTdGF5IGNvbm5lY3RlZCB3aXRoIGdyb3VwIGNoYXRzIHVwIHRvIDEsMDAwIHBlb3BsZS4gQ29udHJvbCB3aG8gY2FuIHBvc3QgYW5kIG1hbmFnZSBncm91cCBtZW1iZXJzIHdpdGggYWRtaW4gcGVybWlzc2lvbiBzZXR0aW5ncy48YnI+PGJyPjxicj7igKIgU2hhcmUgaW1hZ2UsIHRleHQsIGFuZCB2aWRlbyBTdG9yaWVzIHRoYXQgZGlzYXBwZWFyIGFmdGVyIDI0IGhvdXJzLiBQcml2YWN5IHNldHRpbmdzIGtlZXAgeW91IGluIGNoYXJnZSBvZiBleGFjdGx5IHdobyBjYW4gc2VlIGVhY2ggU3RvcnkuPGJyPjxicj48YnI+4oCiIFNpZ25hbCBpcyBidWlsdCBmb3IgeW91ciBwcml2YWN5LiBXZSBrbm93IG5vdGhpbmcgYWJvdXQgeW91IG9yIHdobyB5b3XigJlyZSB0YWxraW5nIHRvLiBPdXIgb3BlbiBzb3VyY2UgU2lnbmFsIFByb3RvY29sIG1lYW5zIHRoYXQgd2UgY2Fu4oCZdCByZWFkIHlvdXIgbWVzc2FnZXMgb3IgbGlzdGVuIHRvIHlvdXIgY2FsbHMuIE5laXRoZXIgY2FuIGFueW9uZSBlbHNlLiBObyBiYWNrIGRvb3JzLCBubyBkYXRhIGNvbGxlY3Rpb24sIG5vIGNvbXByb21pc2VzLjxicj48YnI+PGJyPuKAoiBTaWduYWwgaXMgaW5kZXBlbmRlbnQgYW5kIG5vdCBmb3IgcHJvZml0OyBhIGRpZmZlcmVudCBraW5kIG9mIHRlY2ggZnJvbSBhIGRpZmZlcmVudCBraW5kIG9mIG9yZ2FuaXphdGlvbi4gQXMgYSA1MDFjMyBub25wcm9maXQgd2UgYXJlIHN1cHBvcnRlZCBieSB5b3VyIGRvbmF0aW9ucywgbm90IGJ5IGFkdmVydGlzZXJzIG9yIGludmVzdG9ycy48YnI+PGJyPjxicj7igKIgRm9yIHN1cHBvcnQsIHF1ZXN0aW9ucywgb3IgbW9yZSBpbmZvcm1hdGlvbiBwbGVhc2UgdmlzaXQgaHR0cHM6Ly9zdXBwb3J0LnNpZ25hbC5vcmcvPGJyPjxicj48YnI+VG8gY2hlY2sgb3V0IG91ciBzb3VyY2UgY29kZSwgdmlzaXQgaHR0cHM6Ly9naXRodWIuY29tL3NpZ25hbGFwcDxicj48YnI+PGJyPkZvbGxvdyB1cyBvbiBUd2l0dGVyIEBzaWduYWxhcHAgYW5kIEluc3RhZ3JhbSBAc2lnbmFsX2FwcA==",
+    "short": "U2F5IOKAnGhlbGxv4oCdIHRvIHByaXZhY3ku"
+  },
+  "version": null,
+  "downloads": 199441280,
+  "rating": 4.520656,
+  "review_count": 2897650,
+  "in_app_purchases": "$1.99 per item",
+  "age_rating": "Everyone",
+  "contains_ads": false,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "May 25, 2010",
+    "timestamp": 1274745600
+  },
+  "updated": {
+    "date": "Aug 3, 2026",
+    "timestamp": 1785779767
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Communication",
+    "name": "COMMUNICATION"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "https://signal.org",
+    "email": "support@signal.org",
+    "address": null
+  },
+  "developer_info": {
+    "id": "U2lnbmFsIEZvdW5kYXRpb24=",
+    "name": "/store/apps/dev?id=Signal+Foundation",
+    "legal_name": "Signal+Foundation",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://signal.org/privacy",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Identity",
+      "permissions": [
+        "find accounts on the device",
+        "read your own contact card"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "permissions": [
+        "find accounts on the device",
+        "modify your contacts",
+        "read your contacts"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Phone",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Camera",
+      "permissions": [
+        "take pictures and videos"
+      ]
+    },
+    {
+      "category": "Microphone",
+      "permissions": [
+        "record audio"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Device ID & call information",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "change network connectivity",
+        "change your audio settings",
+        "connect and disconnect from Wi-Fi",
+        "control vibration",
+        "create accounts and set passwords",
+        "disable your screen lock",
+        "full network access",
+        "install shortcuts",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "read sync settings",
+        "run at startup",
+        "send sticky broadcast",
+        "toggle sync on and off",
+        "use accounts on the device",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "receive data from Internet"
+      ]
+    }
+  ]
+}

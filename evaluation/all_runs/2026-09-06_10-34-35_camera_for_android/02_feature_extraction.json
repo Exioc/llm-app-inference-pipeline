@@ -1,0 +1,154 @@
+{
+  "storage_path": "results/2026-09-06_10-34-35_camera_for_android",
+  "apk_path": "test_apks/camera_for_andriod.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "photo.camera.hdcameras",
+  "label": "Camera for Android",
+  "description_long": "Camera for Android will allow you to make excellent pictures，that is a very fast and simple way to capture moments.  \nYou can easily to shoot excellent photos, utilizing all advantage of your phone or tablet.  \nFeatures:  \n\\- Camera, video recorder & panorama features  \n\\- White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)  \n\\- Screen mode settings(Action, Night, Sunset, Play)  \n\\- Dynamic user interface (phone/tablet)  \n\\- Pinch to zoom  \n\\- Smart panorama shooting   \n\\- Wide screen pictures  \n\\- Picture quality setting  \n\\- Exposure  \n\\- Location targeting  \n\\- Configurable volume keys  \n\\- Countdown Timer\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION"
+    ],
+    [
+      "CAMERA",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "GET_ACCOUNTS",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "ACCESS_COARSE_LOCATION",
+    "INTERNET",
+    "CAMERA",
+    "READ_EXTERNAL_STORAGE",
+    "ACCESS_WIFI_STATE",
+    "RECORD_AUDIO",
+    "READ_MEDIA_VIDEO",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_SYNC_SETTINGS",
+    "NFC",
+    "WRITE_SYNC_SETTINGS",
+    "ACCESS_NETWORK_STATE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_FINE_LOCATION",
+    "FOREGROUND_SERVICE",
+    "CHANGE_WIFI_STATE",
+    "SET_WALLPAPER",
+    "RECEIVE_BOOT_COMPLETED",
+    "VIBRATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 12,
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "reasoning": "The text explicitly lists 'Camera, video recorder & panorama features' in the features list, directly proving the existence of these three distinct media capture capabilities bundled together.",
+        "source_quotes": [
+          "- Camera, video recorder & panorama features"
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "reasoning": "The text explicitly states 'White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)', providing direct evidence of a configurable white balance feature with specific options.",
+        "source_quotes": [
+          "- White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)"
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "reasoning": "The text explicitly lists 'Screen mode settings(Action, Night, Sunset, Play)', directly confirming the availability of these specific scene modes.",
+        "source_quotes": [
+          "- Screen mode settings(Action, Night, Sunset, Play)"
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "reasoning": "The text explicitly mentions 'Dynamic user interface (phone/tablet)', directly proving the interface adapts to or supports both device form factors.",
+        "source_quotes": [
+          "- Dynamic user interface (phone/tablet)"
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "reasoning": "The text explicitly states 'Pinch to zoom', which directly confirms a gesture-based zoom control feature.",
+        "source_quotes": [
+          "- Pinch to zoom"
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "reasoning": "The text explicitly lists 'Smart panorama shooting' as a distinct feature line item, separate from the general panorama mention in the first bullet, proving a specialized panoramic mode exists.",
+        "source_quotes": [
+          "- Smart panorama shooting"
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "reasoning": "The text explicitly states 'Wide screen pictures', directly confirming the capability to produce wide format images.",
+        "source_quotes": [
+          "- Wide screen pictures"
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "reasoning": "The text explicitly mentions 'Picture quality setting', serving as direct evidence that image quality is adjustable.",
+        "source_quotes": [
+          "- Picture quality setting"
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "reasoning": "The text explicitly lists 'Exposure' under the features section, directly confirming exposure control functionality.",
+        "source_quotes": [
+          "- Exposure"
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "reasoning": "The text explicitly lists 'Location targeting' as a feature, directly confirming location-based capabilities.",
+        "source_quotes": [
+          "- Location targeting"
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "reasoning": "The text explicitly states 'Configurable volume keys', directly proving that physical button behavior can be customized within the app.",
+        "source_quotes": [
+          "- Configurable volume keys"
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "reasoning": "The text explicitly lists 'Countdown Timer' as a feature, directly confirming the existence of a timer for shooting photos.",
+        "source_quotes": [
+          "- Countdown Timer"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1817 @@
+{
+  "storage_path": "results/2026-09-07_08-11-12_music_player_-_true_bass",
+  "apk_path": "test_apks/music_player.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.musicplayer.player.mp3player.white",
+  "label": "Music Player - True Bass",
+  "description_long": "X1 Player is the best offline music player and video player for Android. Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality. If you need a powerful MP3 player with equalizer, bass boost, and 3D sound — X1 Player is your perfect free media player.   \n  \nWhy Choose X1 Player?   \n  \nX1 Player is one of the few free Android app that combines a full-featured offline music player and HD video player in one. Whether you need an MP3 player with equalizer or a smooth MKV video player with subtitles - X1 Player does it all.   \n  \n🎵 All-in-one music player & video player   \n🎵 Offline music player - no internet needed   \n🎵 Supports all audio formats & video formats   \n🎵 Powerful equalizer with bass boost & 3D sound   \n🎵 HD video player with subtitle support   \n🎵 Fast, lightweight & battery efficient   \n  \nMusic Player Features  \n  \n🎵 MP3 player supporting MP3, FLAC, WAV, AAC, MIDI, OGG, WMA, APE, AMR, M4A and more   \n🎵 10 - band graphical equalizer with presets   \n🎵 Bass boost, reverb & immersive 3D sound effects   \n🎵 Music visualizer with party mode   \n🎵 Lyrics display for songs   \n🎵 Browse by albums, artists, genres and folders   \n🎵 Playlist management with queue reorder   \n🎵 Shake to skip songs   \n🎵 Built-in MP3 editor & tag editor   \n🎵 Change album art   \n🎵 Sleep timer   \n  \nVideo Player Features   \n  \n🎬 Supports MP4, MKV, AVI, MOV, FLV, WMV, RMVB, 3GP, TS and all popular video formats   \n🎬 Smooth HD video playback   \n🎬 Subtitle support (.srt, .ass)   \n🎬 Equalizer for video player   \n🎬 Cast to TV via Google Cast (Chromecast)   \n  \nSound & Customisation  \n  \n🔊 10-band equalizer with audio presets   \n🔊 Bass boost & 3D surround sound   \n🔊 Reverb effects for premium listening   \n🎨 Color themes & UI customisation   \n🎨 Home screen widget & lock screen controls   \n  \nSmart Media Management  \n  \n📂 Fast automatic library scan   \n📂 Browse and play music by folder   \n📂 Easy playlist creation & management   \n📂 Clean, simple interface   \n  \nExtra Features  \n  \n⚡ Background playback   \n⚡ Chrome Cast support   \n⚡ DLNA Casting – Stream music and video to compatible Smart TVs   \n⚡ Lightweight & battery efficient   \n⚡ Works fully offline - no wifi required   \n  \nX1 Player is a complete offline media player - combining the best MP3 player, music player, audio player, and video player in one free Android app. Download X1 Player now and enjoy the best music and video experience on your phone.  \n  \nControl your music faster with Wear OS Tiles and Watch Face Complications, providing quick access from your smartwatch and watch face.  \n  \nX1 Player is the best music player for android. Send your feedback and suggestion about X1 Player to mytechnosound@gmail.com.\n",
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_AUDIO",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "WAKE_LOCK",
+    "VIBRATE",
+    "BROADCAST_STICKY",
+    "FOREGROUND_SERVICE",
+    "READ_MEDIA_VIDEO",
+    "MODIFY_AUDIO_SETTINGS",
+    "WRITE_EXTERNAL_STORAGE",
+    "POST_NOTIFICATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 15,
+    "features": [
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "reasoning": "The text explicitly states 'Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality', directly confirming support for diverse media containers and codecs.",
+        "source_quotes": [
+          "Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality."
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "reasoning": "The text explicitly lists 'Powerful equalizer with bass boost & 3D sound' and '10 - band graphical equalizer with presets', confirming a suite of audio processing capabilities.",
+        "source_quotes": [
+          "Powerful equalizer with bass boost & 3D sound",
+          "10 - band graphical equalizer with presets",
+          "Bass boost, reverb & immersive 3D sound effects"
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "reasoning": "The text explicitly mentions 'Smooth HD video playback' and 'Subtitle support (.srt, .ass)', directly proving video playback and captioning features.",
+        "source_quotes": [
+          "Smooth HD video playback",
+          "Subtitle support (.srt, .ass)"
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "reasoning": "The text explicitly states 'Offline music player - no internet needed' and 'Works fully offline - no wifi required', confirming offline functionality.",
+        "source_quotes": [
+          "Offline music player - no internet needed",
+          "Works fully offline - no wifi required"
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "reasoning": "The text explicitly mentions 'Fast automatic library scan', 'Browse by albums, artists, genres and folders', and 'Playlist management with queue reorder', confirming organization capabilities.",
+        "source_quotes": [
+          "Fast automatic library scan",
+          "Browse by albums, artists, genres and folders",
+          "Playlist management with queue reorder"
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "reasoning": "The text explicitly mentions 'Built-in MP3 editor & tag editor' and 'Change album art', confirming file and metadata modification features.",
+        "source_quotes": [
+          "Built-in MP3 editor & tag editor",
+          "Change album art"
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "reasoning": "The text explicitly states 'Lyrics display for songs', directly confirming a lyrics feature.",
+        "source_quotes": [
+          "Lyrics display for songs"
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "reasoning": "The text explicitly mentions 'Music visualizer with party mode', confirming a visual output feature synchronized to music.",
+        "source_quotes": [
+          "Music visualizer with party mode"
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "reasoning": "The text explicitly states 'Shake to skip songs', confirming a physical gesture control for playback.",
+        "source_quotes": [
+          "Shake to skip songs"
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "reasoning": "The text explicitly lists 'Sleep timer' under music player features, confirming the automated stop capability.",
+        "source_quotes": [
+          "Sleep timer"
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "reasoning": "The text explicitly mentions 'Cast to TV via Google Cast (Chromecast)' and 'DLNA Casting – Stream music and video to compatible Smart TVs', confirming dual casting support.",
+        "source_quotes": [
+          "Cast to TV via Google Cast (Chromecast)",
+          "DLNA Casting – Stream music and video to compatible Smart TVs"
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "reasoning": "The text explicitly states 'Background playback' and 'Home screen widget & lock screen controls', confirming system-level integration features.",
+        "source_quotes": [
+          "Background playback",
+          "Home screen widget & lock screen controls"
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "reasoning": "The text explicitly mentions 'Color themes & UI customisation', confirming visual personalization capabilities.",
+        "source_quotes": [
+          "Color themes & UI customisation"
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "reasoning": "The text explicitly states 'Control your music faster with Wear OS Tiles and Watch Face Complications', confirming smartwatch integration.",
+        "source_quotes": [
+          "Control your music faster with Wear OS Tiles and Watch Face Complications, providing quick access from your smartwatch and watch face."
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "reasoning": "The text explicitly claims the app is 'Fast, lightweight & battery efficient' and 'Lightweight & battery efficient', confirming performance optimization features.",
+        "source_quotes": [
+          "Fast, lightweight & battery efficient",
+          "Lightweight & battery efficient"
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature supports playback of audio file formats (MP3, FLAC, WAV, AAC), which requires reading audio files from shared storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature supports playback of video file formats (MKV, MP4), which requires reading video files from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature modifies audio policies and signal processing (equalizer, bass boost, reverb) which requires control over system audio settings and hardware peripherals as described in the group context."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio signal processing and enhancement typically requires a persistent background service to apply effects while the app is not in the foreground or the screen is off."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The app likely needs to read audio files from shared storage to apply the customization tools (equalizer, 3D sound) to the user's music library or audio content."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Saving and loading custom presets and configuration files often requires access to shared external storage for persistence and user management of settings."
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for playback, as defined by the group description for accessing image and video files."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and load external subtitle files (such as .srt and .ass) which are text files and may not fall under specific media types, requiring general shared external storage permissions."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Often required to maintain smooth playback performance and keep the app active in the background or lock screen during media consumption."
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and play audio files from shared storage for offline media playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and play video/image files from shared storage for offline media playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where the media files are stored for offline playback."
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to scan, read, and organize audio files (music) stored on the device, including accessing metadata like albums, artists, and genres."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access shared external storage for browsing folder structures and potentially saving playlist files to the device."
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access, read, and modify MP3 audio files and their associated audio metadata tags."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and select image files from storage to embed or change the album art."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the modified audio files and updated metadata back to the device's shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "To display lyrics during playback, the app typically needs to read audio file metadata (embedded lyrics) or local lyric files from shared storage, which requires access to media files."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Lyrics are often fetched dynamically from online databases or APIs during playback, requiring internet connectivity permissions."
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio visualizer features require reading and analyzing audio files to create visual representations of music."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app likely needs access to shared external storage to locate and read music files from the device for visualization."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Party mode may involve real-time audio input from microphone for live audio visualization during events."
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Required to detect device shaking/movement through accelerometer and motion sensors for gesture recognition."
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the timer service in the background to track the set duration and trigger playback stop even when the app is not in foreground."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Commonly used to display timer countdown status to users and provide quick access to cancel or adjust the sleep timer."
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required to discover compatible external devices (Smart TVs) in the immediate vicinity via Wi-Fi or local network protocols and establish the initial connection for casting sessions."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Essential for handling IP-based data transport, local network socket communication, and maintaining the internet/Wi-Fi connection required to stream content to external devices."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Potentially required if the feature allows users to select and stream local image or video files from the device storage to the external device."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Potentially required if the feature allows users to select and stream local audio files from the device storage to the external device."
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Background audio playback requires a foreground service to maintain playback when the app is not in the foreground, which is a standard Android requirement for continuous media playback."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Lock screen and home screen widget controls use media notification channels to display playback controls, requiring notification permissions."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio playback functionality may require reading audio files from shared storage to enable media playback features."
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "UI customization within an app (color themes, visual appearance changes) is handled through internal app storage and resources without requiring any system-level permissions. The app can modify its own interface elements using SharedPreferences or app-specific storage, which doesn't require dangerous permission groups from the allowed list."
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The feature explicitly involves integrating with Wear OS smartwatches via Tiles and Complications, which requires permissions to interact with and manage companion hardware devices."
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "This feature describes a general app design goal (being lightweight and battery efficient) rather than a specific functionality requiring access to device resources, hardware, or user data. Being 'battery efficient' and 'lightweight' is a development philosophy that doesn't inherently require any Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files (MP3, FLAC, WAV, AAC) from shared storage for playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files (MKV, MP4, etc.) from shared storage for playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where the media files are stored."
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves audio processing (equalizer, bass boost, reverb, 3D sound), which requires access to audio files or audio data, aligning with the MEDIA_AURAL group's description."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Audio effects and immersive sound may require control over audio policies (e.g., volume, output routing), which falls under SYSTEM_UI_AND_PERIPHERALS."
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access subtitle files (.srt, .ass) from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access media files stored on the device for offline playback."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required if the app plays audio files from shared storage in offline mode."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required if the app plays video files from shared storage in offline mode."
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for library scanning and music browsing."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage for scanning and organizing media files."
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and modify MP3 files and metadata stored in shared external storage."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files (MP3) from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Audio visualization may require access to microphone input to capture live audio for real-time visualization."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Reading audio files from shared storage may be required to play music for visualization."
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Shaking the device likely requires access to accelerometer or other motion sensors to detect the gesture."
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport and local network socket communication to discover and connect to Chromecast/DLNA devices."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Bundles permissions for discovering, connecting, and communicating with physical hardware (like Chromecast/DLNA devices) in the immediate vicinity via Wi-Fi or other protocols."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for streaming music."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage for streaming video."
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required for running a foreground service to handle background audio playback."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for playback."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to provide interface controls on the home screen widget and lock screen, which involve modifying system-level UI elements."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Potentially required if audio is streamed over the internet, involving network data transport."
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "Required for setting up, managing, and interacting with companion hardware like smartwatches (Wear OS devices)."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Wear OS Tiles and Complications often display notifications or allow quick actions that may require notification permissions."
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access the shared external storage where the media files are located."
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for processing and enhancement."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "May be required to capture audio input for real-time processing and enhancement."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": " Likely required to launch specialized foreground services for continuous audio processing and playback."
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for high-definition video playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access video and subtitle files stored in the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for offline playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage for offline playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access media files stored on the device for offline operation."
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves browsing music, which requires reading audio files from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature needs to access the shared external storage to scan and organize the media library."
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage, which is necessary for editing MP3 files."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access and modify audio files and their metadata on the shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and modify image files, such as album art, from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access audio files or playback information from shared storage to determine the current song and display its lyrics."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to read lyrics files or other relevant data from shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for music visualization."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to handle visual aspects of the music visualizer, potentially reading image or video files for visualization effects."
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Required to access the device's accelerometer or gyroscope sensors to detect the shaking gesture."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to control and skip audio playback."
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The sleep timer feature likely controls audio playback, which requires access to audio files or playback controls, potentially involving permissions related to reading audio files from shared storage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To automatically stop playback after a set duration, the app might need to run a foreground service that can control media playback even when the app is not in the foreground."
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for handling IP-based data transport and local network socket communication to stream content to external devices."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to access and stream video files from shared storage to external devices."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Needed to access and stream audio files from shared storage to external devices."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for discovering and connecting to nearby devices such as Chromecast and DLNA-enabled devices via protocols like Wi-Fi Direct or Bluetooth."
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for playback."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Needed to launch specialized foreground services for background audio playback."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Used to modify system-level interface elements such as the home screen widget and lock screen for providing interface controls."
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature allows users to change the visual appearance of the app, which may involve modifying system-level interface elements such as wallpapers or window overlays, thus requiring permissions from this group."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "To save or load customized UI themes, the app may need to access the device's shared external storage, which is associated with the STORAGE permission group."
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The Wear OS Integration feature requires interaction with companion hardware like smartwatches, which is directly related to the COMPANION_DEVICES group."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To provide quick access and control via Wear OS Tiles and Watch Face Complications, the feature might need to launch specialized foreground services for data synchronization or other tasks, which aligns with the FOREGROUND_SERVICES group."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "For seamless integration with Wear OS, the feature might require inspecting background data synchronization statistics and configuring account sync settings, making the ACCOUNT_AND_SYNC_MANAGEMENT group relevant."
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and access audio files from shared storage for playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and access video files from shared storage for playback."
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature involves playing high-definition video files, which requires reading video content from shared storage, covered by the MEDIA_VISUAL permission group."
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature explicitly describes operating without an internet connection and playing locally cached or downloaded media files. This functionality typically utilizes app-private storage, which does not require runtime permissions. Thus, no permissions from the allowed groups are necessary."
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves automatic scanning and browsing of music libraries, which requires reading audio files from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature requires reading MP3 audio files to apply edits, decode formats, and extract or update embedded metadata tags."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Modifying existing metadata tags and swapping album art involves writing to or altering files on shared external storage, which requires standard storage access permissions."
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature is a music visualizer, which implies the need to access and read audio files from the device storage for visualization."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "A 'party mode' in an audio visualizer typically involves capturing ambient sound or external music via the microphone to generate real-time visuals synchronized with the input audio."
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Detecting a shake gesture to skip songs requires accessing the device's motion sensors, such as the accelerometer and gyroscope, to interpret physical movements."
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The sleep timer feature requires scheduling background tasks to control media playback timing and ensure reliable execution when the app is minimized or running in the background. This aligns with the FOREGROUND_SERVICES group, which covers permissions for launching specialized services used in media playback management."
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to manage Wi-Fi interface states and establish local network socket communication for discovering compatible external devices (like Smart TVs) and streaming data via IP-based protocols such as DLNA (UPnP/SSDP) and Google Cast."
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The feature requires audio playback to continue when the app is not in the foreground, which on modern Android versions necessitates a foreground service to maintain process priority and system awareness. This directly aligns with the FOREGROUND_SERVICES permission group, which explicitly covers permissions for managing media playback and other specialized background services."
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The feature involves integrating with Wear OS to provide control via Tiles and Watch Face Complications on a smartwatch. This functionality specifically relates to observing presence and interacting with companion hardware, as defined by the COMPANION_DEVICES permission group."
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and read audio file formats like MP3, FLAC, WAV, and AAC from shared storage for playback."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and read video file formats like MKV and MP4 from shared storage for playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Necessary for accessing media files stored on the device's shared external storage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to allow the app to continue playing media in the background via a foreground service."
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio signal processing and enhancement tools typically require a foreground service to ensure that audio effects (like equalization and reverb) are applied continuously to the audio stream while other applications are playing media."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "This group includes permissions for controlling audio policies, which is necessary for implementing advanced audio customization tools and managing how audio is processed and output by the system."
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and read high-definition video files from the device's shared storage for playback."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and read subtitle files (e.g., .srt, .ass) stored in the shared external storage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain smooth media playback by allowing the app to run a specialized foreground service, preventing the system from interrupting the video."
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and play audio files stored locally on the device for offline use."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and play video files stored locally on the device for offline use."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where offline media files are stored."
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to scan and read audio files (music) from shared storage for browsing by artist, album, and genre."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access album artwork and image files associated with the music library."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for automatic library scanning of folders and for creating and managing playlist files on shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and access the MP3 audio files that need to be edited."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access image files from shared storage to change the album art."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for modifying and saving changes to audio files and their metadata on shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required if the lyrics are fetched from an online database or API via the internet."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required if the lyrics are stored as separate files (e.g., .lrc files) on the device's shared external storage."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required if the lyrics are embedded within the audio files stored in shared storage and need to be read during playback."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Since the lyrics are displayed 'during playback', the app likely employs a foreground service to maintain audio playback and the associated lyrics synchronization in the background."
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to capture ambient audio for real-time visualization, especially for a 'party mode' that reacts to external music."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for visualization purposes."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to keep the visualizer active as a foreground service during media playback or in party mode."
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Required to detect the shaking motion of the device using the accelerometer or gyroscope."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the gesture detection service in the background so that users can skip songs even when the app is not in the immediate foreground."
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to ensure the timer continues to run and can stop media playback while the application is in the background or the device is asleep."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to schedule exact alarms to ensure the sleep timer triggers the stop action at the precise set duration."
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for discovering and connecting to nearby casting devices like Chromecast and Smart TVs via nearby streaming protocols."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport and local network socket communication necessary to stream content to external devices over Wi-Fi."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage in order to stream music to external devices."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage in order to stream video content to external devices."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the streaming session as a foreground service, ensuring playback continues even if the app is not in the immediate foreground."
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to allow audio playback to continue in the background, as foreground services are specifically used for media playback."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to provide interface controls on the lock screen, as media controls are typically implemented via notifications."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required for providing interface controls on the home screen widget and lock screen, which involve modifying system-level interface elements."
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The feature involves integration with Wear OS devices (smartwatches), which are specifically mentioned in the description of this group as companion hardware that requires setup, management, and interaction."
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 36,
+    "features": [
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature supports playback of audio file formats (MP3, FLAC, WAV, AAC), which requires reading audio files from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature supports playback of video file formats (MKV, MP4), which requires reading video files from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where the media files are stored.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature modifies audio policies and signal processing (equalizer, bass boost, reverb) which requires control over system audio settings and hardware peripherals as described in the group context.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio signal processing and enhancement typically requires a persistent background service to apply effects while the app is not in the foreground or the screen is off.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The app likely needs to read audio files from shared storage to apply the customization tools (equalizer, 3D sound) to the user's music library or audio content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read video files from shared storage for playback, as defined by the group description for accessing image and video files.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and load external subtitle files (such as .srt and .ass) which are text files and may not fall under specific media types, requiring general shared external storage permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Often required to maintain smooth playback performance and keep the app active in the background or lock screen during media consumption.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and play audio files from shared storage for offline media playback.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and play video/image files from shared storage for offline media playback.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where the media files are stored for offline playback.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to scan, read, and organize audio files (music) stored on the device, including accessing metadata like albums, artists, and genres.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access shared external storage for browsing folder structures and potentially saving playlist files to the device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access, read, and modify MP3 audio files and their associated audio metadata tags.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and select image files from storage to embed or change the album art.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the modified audio files and updated metadata back to the device's shared external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "To display lyrics during playback, the app typically needs to read audio file metadata (embedded lyrics) or local lyric files from shared storage, which requires access to media files.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Lyrics are often fetched dynamically from online databases or APIs during playback, requiring internet connectivity permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to read lyrics files or other relevant data from shared external storage.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio visualizer features require reading and analyzing audio files to create visual representations of music.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Party mode may involve real-time audio input from microphone for live audio visualization during events.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Required to detect device shaking/movement through accelerometer and motion sensors for gesture recognition.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the timer service in the background to track the set duration and trigger playback stop even when the app is not in foreground.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required to discover compatible external devices (Smart TVs) in the immediate vicinity via Wi-Fi or local network protocols and establish the initial connection for casting sessions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Essential for handling IP-based data transport, local network socket communication, and maintaining the internet/Wi-Fi connection required to stream content to external devices.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Potentially required if the feature allows users to select and stream local image or video files from the device storage to the external device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Potentially required if the feature allows users to select and stream local audio files from the device storage to the external device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Background audio playback requires a foreground service to maintain playback when the app is not in the foreground, which is a standard Android requirement for continuous media playback.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Lock screen and home screen widget controls use media notification channels to display playback controls, requiring notification permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio playback functionality may require reading audio files from shared storage to enable media playback features.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to provide interface controls on the home screen widget and lock screen, which involve modifying system-level UI elements.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "UI customization within an app (color themes, visual appearance changes) is handled through internal app storage and resources without requiring any system-level permissions. The app can modify its own interface elements using SharedPreferences or app-specific storage, which doesn't require dangerous permission groups from the allowed list.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "inferences": [
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The feature explicitly involves integrating with Wear OS smartwatches via Tiles and Complications, which requires permissions to interact with and manage companion hardware devices.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "This feature describes a general app design goal (being lightweight and battery efficient) rather than a specific functionality requiring access to device resources, hardware, or user data. Being 'battery efficient' and 'lightweight' is a development philosophy that doesn't inherently require any Android permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

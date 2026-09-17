@@ -1,0 +1,149 @@
+{
+  "pkg": "me.lyft.android",
+  "label": "THlmdA==",
+  "description": {
+    "long": "R2V0IHdoZXJlIHlvdeKAmXJlIGdvaW5nIHdpdGggTHlmdC48YnI+PGJyPldoZXRoZXIgeW914oCZcmUgY2F0Y2hpbmcgYSBmbGlnaHQsIGdvaW5nIG91dCBmb3IgdGhlIG5pZ2h0LCBjb21tdXRpbmcgdG8gdGhlIG9mZmljZSwgb3IgcnVubmluZyBlcnJhbmRzIGluIGEgcnVzaCwgdGhlIEx5ZnQgYXBwIG9mZmVycyB5b3UgbXVsdGlwbGUgd2F5cyB0byBnZXQgdGhlcmUuPGJyPjxicj5FQVNZIFRPIFVTRTxicj5FbnRlciB5b3VyIGRlc3RpbmF0aW9uLiBTZWUgeW91ciByb3V0ZSBhbmQgcmlkZSBjb3N0IHVwIGZyb250LiBDaG9vc2UgUHJpb3JpdHkgUGlja3VwIHRvIGdldCBnb2luZyBxdWljay4gQm9vbS4gRG9uZS4gU2ltcGxlPGJyPjxicj5DSE9PU0UgWU9VUiBXSEVFTFM8YnI+Q2hvb3NlIGZyb20gV2FpdCAmYW1wOyBTYXZlLCBQcmlvcml0eSBQaWNrdXAsIEJpa2VzICZhbXA7IFNjb290ZXJzLCBMeWZ0IFhMLCBMeWZ0IEx1eCwgVHJhbnNpdCwgb3IgZXZlbiBSZW50YWxzLjxicj48YnI+QUZGT1JEQUJMRSBSSURFUzxicj5PdXIgV2FpdCAmYW1wOyBTYXZlIG9wdGlvbiBoZWxwcyB5b3UgZ2V0IGFyb3VuZCBmb3IgbGVzcy4gQW5kIHlvdSBjYW4gZmluZCB0aGUgZmFzdGVzdCBwdWJsaWMgdHJhbnNpdCByb3V0ZXMsIHRvby48YnI+PGJyPiogTHlmdCByaWRlIHR5cGVzIG1heSB2YXJ5IGJ5IHJlZ2lvbi4gQ2hlY2sgdGhlIGFwcCB0byBzZWUgd2hhdCBpcyBhdmFpbGFibGUgaW4geW91ciBjaXR5Ljxicj7igJQ8YnI+UHJpY2VzIHZhcnkgYmFzZWQgb24gbWFya2V0IGNvbmRpdGlvbi48YnI+PGJyPkJ5IGRvd25sb2FkaW5nIHRoZSBhcHAsIHlvdSBhZ3JlZSB0byBhbGxvdyBMeWZ0IHRvIGNvbGxlY3QgeW91ciBkZXZpY2UmIzM5O3MgbGFuZ3VhZ2Ugc2V0dGluZ3Mu",
+    "short": "R2V0IG1hdGNoZWQgd2l0aCBhIG5lYXJieSBkcml2ZXIg4oCUIHlvdeKAmWxsIGJlIG9uIHlvdXIgd2F5IGluIG1pbnV0ZXMu"
+  },
+  "version": null,
+  "downloads": 81785937,
+  "rating": 4.9000993,
+  "review_count": 660102,
+  "in_app_purchases": "False",
+  "age_rating": "Everyone",
+  "contains_ads": true,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "Aug 28, 2012",
+    "timestamp": 1346112000
+  },
+  "updated": {
+    "date": "Jul 31, 2026",
+    "timestamp": 1785524537
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Maps & Navigation",
+    "name": "MAPS_AND_NAVIGATION"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "http://www.lyft.com",
+    "email": "support@lyft.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "THlmdCwgSW5jLg==",
+    "name": "/store/apps/dev?id=6629245766506578153",
+    "legal_name": "6629245766506578153",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://www.lyft.com/privacy",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Identity",
+      "permissions": [
+        "find accounts on the device"
+      ]
+    },
+    {
+      "category": "Calendar",
+      "permissions": [
+        "read calendar events plus confidential information"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "permissions": [
+        "find accounts on the device",
+        "read your contacts"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Phone",
+      "permissions": [
+        "directly call phone numbers",
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Camera",
+      "permissions": [
+        "take pictures and videos"
+      ]
+    },
+    {
+      "category": "Microphone",
+      "permissions": [
+        "record audio"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Device ID & call information",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "Google Play license check",
+        "access Bluetooth settings",
+        "allow Wi-Fi Multicast reception",
+        "connect and disconnect from Wi-Fi",
+        "control Near Field Communication",
+        "control vibration",
+        "draw over other apps",
+        "full network access",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "read Google service configuration",
+        "run at startup",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "receive data from Internet"
+      ]
+    }
+  ]
+}

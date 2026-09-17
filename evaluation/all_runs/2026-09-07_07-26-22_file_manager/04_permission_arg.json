@@ -1,0 +1,949 @@
+{
+  "storage_path": "results/2026-09-07_07-26-22_file_manager",
+  "apk_path": "test_apks/file_manager.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "com.chaozhuo.filemanager",
+  "label": "File Manager",
+  "description_long": "File Manager is a file management tool running on Android system, which supports touch screen, external mouse/keyboard and telecontroller, it provides a easy way to manage files on both your local disks and the file servers in your local network.  \nAt present, the UI is specially tuned for large screen device only.  \n  \nPaid to remove ads supported.\n",
+  "ground_truth_sets": [
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_LOCAL_NETWORK"
+    ],
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_LOCAL_NETWORK",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "BLUETOOTH",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "READ_EXTERNAL_STORAGE",
+    "SET_WALLPAPER",
+    "FOREGROUND_SERVICE",
+    "ACCESS_WIFI_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "BLUETOOTH",
+    "CHANGE_NETWORK_STATE",
+    "INTERNET",
+    "READ_PHONE_STATE",
+    "CHANGE_WIFI_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "reasoning": "The text explicitly states the tool 'provides a easy way to manage files on both your local disks and the file servers in your local network', directly confirming management capabilities for both storage types.",
+        "source_quotes": [
+          "it provides a easy way to manage files on both your local disks and the file servers in your local network."
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "reasoning": "The text explicitly lists the supported hardware inputs: 'supports touch screen, external mouse/keyboard and telecontroller', which confirms compatibility with these specific control methods.",
+        "source_quotes": [
+          "which supports touch screen, external mouse/keyboard and telecontroller"
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "reasoning": "The text explicitly defines the tool as 'running on Android system', establishing the platform dependency.",
+        "source_quotes": [
+          "File Manager is a file management tool running on Android system"
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "reasoning": "The text explicitly states 'the UI is specially tuned for large screen device only', confirming a specific display optimization and its limitation.",
+        "source_quotes": [
+          "At present, the UI is specially tuned for large screen device only."
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "reasoning": "The text explicitly mentions 'Paid to remove ads supported', confirming the existence of a monetization feature for ad removal.",
+        "source_quotes": [
+          "Paid to remove ads supported."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage files on the device's local disks, which involves reading and writing to shared external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect and communicate with file servers within the local network, involving local network socket communication and network interface access."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Support for multiple input methods (touch screen, external mouse, keyboard, telecontroller) is handled through the standard Android input framework and does not require special runtime permissions. These input sources connect to the device's input system at the framework level without needing access to protected resources or sensitive data."
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The description only states Android OS compatibility for a file management tool without specifying any actual functionality that would require accessing device resources, hardware, or user data. Compatibility statements alone do not require Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Large screen device UI optimization is a standard Android development practice that uses resource qualifiers (like sw600dp, sw720dp) and layout configuration files to adapt the interface to different screen sizes. This is handled by the Android system automatically and does not require any runtime permissions or access to user data, hardware, or system resources."
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This feature is a business/monetization function that allows users to remove ads through payment. It uses Google Play's billing system internally which doesn't require any of the listed Android permission groups. The ad removal logic is handled within the app's code without accessing any sensitive user data, hardware, or system resources."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for managing files on the device's local disks (external/shared storage)."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for accessing file servers within the local network, as it involves network communication and local socket operations."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required for capturing keyboard input and system shortcuts, which is relevant for external keyboard support."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for communicating with physical hardware like telecontrollers via Bluetooth or other wireless protocols."
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage files located on the device's local disks."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to access and manage files on file servers within the local network."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "This group is required because the feature involves interacting with system-level interface elements and controlling basic hardware peripherals such as external mouse and keyboard."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "This group is required because the feature involves capturing keyboard input and system shortcuts, and possibly reading screen content through assistant structures to support multiple input methods."
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature description only mentions compatibility with the Android operating system, which does not inherently require any specific permissions."
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature involves optimizing the user interface for large screen devices, which may require modifying system-level interface elements."
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature only involves a payment option to remove advertisements, which does not necessarily require any specific Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to read, write, and manage files located on the device's local disks and shared external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to establish IP-based connections and handle local network socket communication for accessing and managing remote file servers."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature describes a monetization/ad-removal option typically handled via in-app billing libraries or local app settings. It does not interact with device hardware, sensitive user data, or system-level interfaces that would require any of the listed dangerous Android permission groups."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage and access files located on the device's local disks."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for network communication and socket connectivity to interact with file servers on the local network."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to perform long-running file management tasks, such as transferring files to or from network servers, as a foreground service."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for discovering and connecting to wireless peripherals such as Bluetooth-enabled mice, keyboards, or telecontrollers."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required for controlling or interacting with basic hardware peripherals, such as IR transmitters used by some telecontrollers."
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app is described as a file management tool, which inherently requires access to the device's shared external storage to perform file operations."
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 9,
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage files on the device's local disks, which involves reading and writing to shared external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect and communicate with file servers within the local network, involving local network socket communication and network interface access.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Support for multiple input methods (touch screen, external mouse, keyboard, telecontroller) is handled through the standard Android input framework and does not require special runtime permissions. These input sources connect to the device's input system at the framework level without needing access to protected resources or sensitive data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required for capturing keyboard input and system shortcuts, which is relevant for external keyboard support.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for communicating with physical hardware like telecontrollers via Bluetooth or other wireless protocols.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "This group is required because the feature involves interacting with system-level interface elements and controlling basic hardware peripherals such as external mouse and keyboard.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The description only states Android OS compatibility for a file management tool without specifying any actual functionality that would require accessing device resources, hardware, or user data. Compatibility statements alone do not require Android permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Large screen device UI optimization is a standard Android development practice that uses resource qualifiers (like sw600dp, sw720dp) and layout configuration files to adapt the interface to different screen sizes. This is handled by the Android system automatically and does not require any runtime permissions or access to user data, hardware, or system resources.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This feature is a business/monetization function that allows users to remove ads through payment. It uses Google Play's billing system internally which doesn't require any of the listed Android permission groups. The ad removal logic is handled within the app's code without accessing any sensitive user data, hardware, or system resources.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read files located on the device's local disks to display them for management."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to create, modify, or delete files on the device's local disks as part of the file management functionality."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "Required to connect to file servers within the local network. This permission specifically enables advertising and connecting to local network devices over IP networks using broadcast-capable interfaces like Wi-Fi or Ethernet, which matches the feature's requirement to manage files on local network servers."
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communication with remote file servers. The feature involves accessing files on file servers within the network, which necessitates network socket connectivity for sending and receiving data."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "ACCESSIBILITY_AND_INPUT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature describes support for multiple input methods (touch screen, external mouse, keyboard, telecontroller). These input devices typically connect via USB or are already paired through the Android system's Bluetooth stack. The application itself does not need to actively discover, pair, or connect to nearby devices - it simply processes input from already-connected peripherals. No NEARBY_DEVICES_AND_PROXIMITY permissions are required for this functionality."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "Support for touch screen, external mouse, keyboard, and telecontroller input methods are standard Android system capabilities that do not require special permission grants. These input methods are handled at the framework level automatically, and no permissions from the SYSTEM_UI_AND_PERIPHERALS group are needed for basic input support."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to read files from the device's external storage as part of local file management."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to write, modify, or delete files on the device's external storage as part of local file management."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to access file servers on the local network, which involves opening network sockets."
+          },
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "Required to advertise and connect to local network devices (file servers) for file management."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "ACCESSIBILITY_AND_INPUT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to read files from external storage on the device."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to write files to external storage on the device, such as saving files from the network to local disks."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about networks, which is necessary for managing files on file servers within the local network."
+          },
+          {
+            "permission_name": "ACCESS_WIFI_STATE",
+            "reasoning": "Required to access information about Wi-Fi networks, which is necessary for managing files on file servers within the local Wi-Fi network."
+          },
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "Required to advertise and connect to local network devices, which is necessary for managing files on file servers within the local network."
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Not explicitly required for local network operations, but may be necessary if the file servers are accessed using standard network protocols that rely on internet sockets."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "ACCESSIBILITY_AND_INPUT",
+        "inferences": [
+          {
+            "permission_name": "CAPTURE_KEYBOARD",
+            "reasoning": "The application requires this permission to handle custom shortcut behavior for external keyboards, allowing it to consume keys that are normally consumed by the system for shortcuts."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "BLUETOOTH",
+            "reasoning": "Required to connect to external Bluetooth devices such as keyboards and mice."
+          },
+          {
+            "permission_name": "BLUETOOTH_CONNECT",
+            "reasoning": "Required to connect to paired Bluetooth devices like external keyboards and mice."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "VIBRATE",
+            "reasoning": "Required to provide haptic feedback for touch screen and other peripheral inputs."
+          },
+          {
+            "permission_name": "DISABLE_KEYGUARD",
+            "reasoning": "May be required to temporarily disable keyguard for seamless input when using external peripherals like keyboards or telecontrollers."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read files stored on the device's local external storage as part of the file management functionality."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to create, modify, or delete files on the device's local external storage to fully support the comprehensive file management features described."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "The feature explicitly manages files on file servers within the local network, which requires the ability to advertise and connect to devices on a broadcast-capable local IP network (such as Wi-Fi or Ethernet) as defined by this permission."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "ACCESSIBILITY_AND_INPUT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to read and browse files located on the device's local disks."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to manage, modify, or delete files located on the device's local disks."
+          }
+        ]
+      },
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to communicate with file servers."
+          },
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "Explicitly required to connect to file servers and devices located within the local network."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "ACCESSIBILITY_AND_INPUT",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. Standard support for input peripherals like keyboards, mice, and controllers is handled by the Android system through standard event listeners and does not require the specialized permissions listed in the ACCESSIBILITY_AND_INPUT group."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. Supporting input methods like an external mouse, keyboard, or telecontroller refers to the application's ability to handle input events provided by the Android system. The OS manages the pairing and connection of these HID (Human Interface Device) peripherals; the application does not need to perform Bluetooth scanning, pairing, or connection management itself to receive these inputs."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read files located on the device's local disks to display them for management.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to create, modify, or delete files on the device's local disks as part of the file management functionality.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_LOCAL_NETWORK",
+            "reasoning": "Required to connect to file servers within the local network. This permission specifically enables advertising and connecting to local network devices over IP networks using broadcast-capable interfaces like Wi-Fi or Ethernet, which matches the feature's requirement to manage files on local network servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communication with remote file servers. The feature involves accessing files on file servers within the network, which necessitates network socket connectivity for sending and receiving data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "Support for touch screen, external mouse, keyboard, and telecontroller input methods are standard Android system capabilities that do not require special permission grants. These input methods are handled at the framework level automatically, and no permissions from the SYSTEM_UI_AND_PERIPHERALS group are needed for basic input support.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

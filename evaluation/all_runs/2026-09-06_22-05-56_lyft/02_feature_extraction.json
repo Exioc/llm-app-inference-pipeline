@@ -1,0 +1,115 @@
+{
+  "storage_path": "results/2026-09-06_22-05-56_lyft",
+  "apk_path": "test_apks/lyft.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "me.lyft.android",
+  "label": "Lyft",
+  "description_long": "Get where you’re going with Lyft.  \n  \nWhether you’re catching a flight, going out for the night, commuting to the office, or running errands in a rush, the Lyft app offers you multiple ways to get there.  \n  \nEASY TO USE  \nEnter your destination. See your route and ride cost up front. Choose Priority Pickup to get going quick. Boom. Done. Simple  \n  \nCHOOSE YOUR WHEELS  \nChoose from Wait & Save, Priority Pickup, Bikes & Scooters, Lyft XL, Lyft Lux, Transit, or even Rentals.  \n  \nAFFORDABLE RIDES  \nOur Wait & Save option helps you get around for less. And you can find the fastest public transit routes, too.  \n  \n* Lyft ride types may vary by region. Check the app to see what is available in your city.  \n—  \nPrices vary based on market condition.  \n  \nBy downloading the app, you agree to allow Lyft to collect your device's language settings.\n",
+  "ground_truth_sets": [
+    [
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "POST_NOTIFICATIONS",
+      "CALL_PHONE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_LOCATION",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "BLUETOOTH",
+      "BLUETOOTH_ADMIN",
+      "BLUETOOTH_SCAN",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "POST_NOTIFICATIONS",
+    "CHANGE_WIFI_STATE",
+    "GET_ACCOUNTS",
+    "CHANGE_WIFI_MULTICAST_STATE",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "VIBRATE",
+    "READ_EXTERNAL_STORAGE",
+    "BLUETOOTH_ADMIN",
+    "CAMERA",
+    "FOREGROUND_SERVICE_LOCATION",
+    "RECORD_AUDIO",
+    "RECEIVE_BOOT_COMPLETED",
+    "BLUETOOTH",
+    "CALL_PHONE",
+    "ACCESS_FINE_LOCATION",
+    "USE_BIOMETRIC",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE",
+    "INTERNET",
+    "ACCESS_WIFI_STATE",
+    "READ_MEDIA_AUDIO",
+    "READ_CALENDAR",
+    "READ_PHONE_STATE",
+    "ACCESS_COARSE_LOCATION",
+    "USE_FINGERPRINT",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "BLUETOOTH_SCAN",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_CONTACTS",
+    "NFC",
+    "ACCESS_NETWORK_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "reasoning": "The text explicitly states 'Enter your destination. See your route and ride cost up front', which directly confirms the capability to preview route details and pricing prior to booking.",
+        "source_quotes": [
+          "Enter your destination. See your route and ride cost up front."
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "reasoning": "The text explicitly mentions the ability to 'Choose Priority Pickup to get going quick', directly proving the existence of a speed-optimized pickup feature.",
+        "source_quotes": [
+          "Choose Priority Pickup to get going quick."
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "reasoning": "The text explicitly states 'Our Wait & Save option helps you get around for less', directly confirming a feature dedicated to cost reduction.",
+        "source_quotes": [
+          "Our Wait & Save option helps you get around for less."
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "reasoning": "The text explicitly claims 'you can find the fastest public transit routes, too', which is direct evidence of a public transit navigation feature.",
+        "source_quotes": [
+          "And you can find the fastest public transit routes, too."
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "reasoning": "The text explicitly lists 'Bikes & Scooters, Lyft XL, Lyft Lux... or even Rentals' as selectable choices under the 'Choose from' section, confirming these distinct modes are available.",
+        "source_quotes": [
+          "Choose from Wait & Save, Priority Pickup, Bikes & Scooters, Lyft XL, Lyft Lux, Transit, or even Rentals."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "storage_path": "results/2026-09-06_11-42-11_chatgpt",
+  "apk_path": "test_apks/chatGPT.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.openai.chatgpt",
+  "label": "ChatGPT",
+  "description_long": "Introducing ChatGPT for Android: OpenAI’s latest advancements at your fingertips.  \n  \nThis official app is free, syncs your history across devices, and brings you the latest from OpenAI, including the new image generator.  \n  \nWith ChatGPT in your pocket, you’ll find:  \n  \n· Image generation–Generate original images from a description, or transform existing ones with a few simple words.   \n· Advanced Voice Mode–Tap the soundwave icon to have a real-time convo on the go. Settle a dinner table debate, or practice a new language.   \n· Photo upload—Snap or upload a picture to transcribe a handwritten recipe or get info about a landmark.   \n· Creative inspiration—Find custom birthday gift ideas or create a personalized greeting card.  \n· Tailored advice—Talk through a tough situation, ask for a detailed travel itinerary, or get help crafting the perfect response.   \n· Personalized learning—Explain electricity to a dinosaur-loving kid or easily brush up yourself on a historic event.  \n· Professional input—Brainstorm marketing copy or map out a business plan.  \n· Instant answers—Get recipe suggestions when you only have a few ingredients.  \n· Screen share with Accessibility Services — In limited availability, users can choose to let ChatGPT help answer questions about screen details without requiring screenshot uploads.  \n  \nJoin hundreds of millions of users and try the app captivating the world. Download ChatGPT today.  \n  \nTerms of service & privacy policy:  \nhttps://openai.com/policies/terms-of-use  \nhttps://openai.com/policies/privacy-policy\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "READ_ASSIST_STRUCTURE_SCREEN_CONTENT",
+      "FOREGROUND_SERVICE"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "POST_PROMOTED_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "READ_ASSIST_STRUCTURE_SCREEN_CONTENT"
+    ]
+  ],
+  "apk_permissions": [
+    "RECORD_AUDIO",
+    "POST_NOTIFICATIONS",
+    "BLUETOOTH",
+    "ACCESS_FINE_LOCATION",
+    "POST_PROMOTED_NOTIFICATIONS",
+    "USE_FINGERPRINT",
+    "INTERNET",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_BASIC_PHONE_STATE",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "ACCESS_COARSE_LOCATION",
+    "FOREGROUND_SERVICE",
+    "USE_BIOMETRIC",
+    "ACCESS_WIFI_STATE",
+    "DETECT_SCREEN_CAPTURE",
+    "CAMERA",
+    "RECEIVE_BOOT_COMPLETED",
+    "ACCESS_NETWORK_STATE",
+    "READ_CONTACTS",
+    "VIBRATE",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "CHANGE_NETWORK_STATE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_MICROPHONE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 6,
+    "features": [
+      {
+        "title": "Cross-Device History Synchronization",
+        "description": "The app automatically synchronizes the user's chat history across all connected devices.",
+        "reasoning": "The text explicitly states that the app 'syncs your history across devices', providing direct evidence of a cross-platform synchronization capability.",
+        "source_quotes": [
+          "syncs your history across devices"
+        ]
+      },
+      {
+        "title": "Image Generation & Transformation",
+        "description": "Allows users to generate original images from text descriptions or transform existing images using simple text prompts.",
+        "reasoning": "The text explicitly describes 'Image generation' with the capability to 'Generate original images from a description, or transform existing ones with a few simple words'.",
+        "source_quotes": [
+          "including the new image generator.",
+          "Image generation–Generate original images from a description, or transform existing ones with a few simple words."
+        ]
+      },
+      {
+        "title": "Advanced Voice Mode",
+        "description": "Enables real-time voice conversations via a soundwave icon interface, suitable for debates or language practice.",
+        "reasoning": "The text explicitly defines 'Advanced Voice Mode' and instructs users to 'Tap the soundwave icon to have a real-time convo on the go'.",
+        "source_quotes": [
+          "Advanced Voice Mode–Tap the soundwave icon to have a real-time convo on the go."
+        ]
+      },
+      {
+        "title": "Photo Upload & Visual Analysis",
+        "description": "Allows users to snap or upload pictures to perform tasks such as transcribing handwritten recipes or retrieving information about landmarks.",
+        "reasoning": "The text explicitly mentions 'Photo upload' as a feature where users can 'Snap or upload a picture to transcribe a handwritten recipe or get info about a landmark'.",
+        "source_quotes": [
+          "Photo upload—Snap or upload a picture to transcribe a handwritten recipe or get info about a landmark."
+        ]
+      },
+      {
+        "title": "Conversational Text Assistance & Content Generation",
+        "description": "Provides text-based generative capabilities for creative inspiration (gift ideas, greeting cards), tailored advice (itineraries, responses), personalized learning (explaining concepts), professional input (marketing copy, business plans), and instant answers (recipes).",
+        "reasoning": "The text explicitly lists these specific text-based capabilities under the section 'With ChatGPT in your pocket, you’ll find:', confirming them as core chat functions.",
+        "source_quotes": [
+          "Creative inspiration—Find custom birthday gift ideas or create a personalized greeting card.",
+          "Tailored advice—Talk through a tough situation, ask for a detailed travel itinerary, or get help crafting the perfect response.",
+          "Personalized learning—Explain electricity to a dinosaur-loving kid or easily brush up yourself on a historic event.",
+          "Professional input—Brainstorm marketing copy or map out a business plan.",
+          "Instant answers—Get recipe suggestions when you only have a few ingredients."
+        ]
+      },
+      {
+        "title": "Screen Share with Accessibility Services",
+        "description": "Allows users to grant ChatGPT access to view screen details via Accessibility Services to answer questions about the current screen without needing screenshot uploads. This feature is noted to be in limited availability.",
+        "reasoning": "The text explicitly mentions 'Screen share with Accessibility Services' and specifies that users can 'let ChatGPT help answer questions about screen details without requiring screenshot uploads' with the caveat 'In limited availability'.",
+        "source_quotes": [
+          "Screen share with Accessibility Services — In limited availability, users can choose to let ChatGPT help answer questions about screen details without requiring screenshot uploads."
+        ]
+      }
+    ]
+  }
+}

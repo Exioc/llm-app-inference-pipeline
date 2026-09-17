@@ -1,0 +1,47 @@
+{
+  "storage_path": "results/2026-09-06_12-16-52_duolingo:_language_lessons",
+  "apk_path": "test_apks/duolingo.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "RECORD_AUDIO",
+      "INTERNET"
+    ],
+    [
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "pkg": "com.duolingo",
+  "label": "Duolingo: Language Lessons",
+  "description_long": "Learn a new language, chess & more with the world’s most downloaded education app! Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons. Practice speaking, reading, listening & writing to build your vocabulary & grammar skills.  \n  \nDesigned by learning experts & loved by hundreds of millions worldwide, Duolingo helps you prepare for real conversations in Spanish, French, Chinese, Italian, German, English & more. Whether you want to learn Spanish, learn French, learn German or improve your English, our language lessons make learning effective & fun  \n  \nAnd now, you can learn Math, Music & Chess the Duolingo way, including interactive chess online & fun chess lessons for all levels!  \n  \n♟️**Chess** : Master moves, level up your game & play chess online in our brand new Chess course. Learn chess basics, practice fun chess challenges & improve your strategy with guided chess lessons. Whether you're new to chess or already play online chess, our step-by-step chess lessons help you build real skills. Play online chess matches, solve chess puzzles & experience fun chess training designed to make learning chess engaging & rewarding. Checkmate!  \n  \n🧮 **Math** : Build real-world math skills: from calculating tips to identifying patterns, sharpen your mental math in our Math course. Learn foundational topics like multiplication, fractions, geometry & more & keep your brain sharp with more challenging exercises, games etc.  \n  \n🎵 **Music** : Learn how to read music & play popular songs on your device in our Music course, no instrument needed! Using an on-screen keyboard, you’ll learn bit-by-bit.  \n  \nWhether you’re learning a language for travel, school, career or your brain health, you’ll love learning with Duolingo. You can learn languages like Spanish, French, German & English while also strengthening your logic & focus through chess online & strategic chess practice.  \n  \n**Why Duolingo?**  \n• Duolingo is fun & effective. Game like language lessons & fun characters help you build solid speaking, reading, listening, & writing skills, plus enjoy fun chess & competitive online chess in one app.  \n  \n• Duolingo works. Designed by learning experts, Duolingo has a science-based teaching methodology proven to foster long-term knowledge retention across language lessons & chess lessons alike.  \n  \n• Track your progress. Work toward your learning goals with playful rewards & achievements when you make practicing language lessons or chess online part of your daily habit.  \n  \n• Join millions of learners. Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community.  \n  \n• Every language course is free. Learn Spanish, French, German, Italian, Russian, Portuguese, Turkish, Dutch, Irish, Danish, Swedish, Ukrainian, Esperanto, Polish, Greek, Hungarian, Norwegian, Hebrew, Welsh, Arabic, Latin, Hawaiian, Scottish Gaelic, Vietnamese, Korean, Japanese, English, & even High Valyrian! And now, learn Math, Music & improve your chess online skills with structured chess lessons & fun chess challenges.  \n  \n**What the world is saying about Duolingo ⭐️⭐️⭐️⭐️⭐️:**  \n  \nEditor's Choice & \"\"Best of the Best”- Google Play  \n  \n“Far & away the best language-learning app.”- The Wall Street Journal  \n  \n“This free app & website is among the most effective language-learning methods I’ve tried… lessons come in the form of brief challenges, speaking, translating, answering multiple-choice questions, that keep me coming back for more.”- The New York Times  \n  \n“Duolingo may hold the secret to the future of education.”- TIME Magazine  \n  \n“..Duolingo is cheerful, lighthearted & fun..”- Forbes  \n  \nIf you like Duolingo, try Super Duolingo for 14 days free! Learn a language fast with no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair.  \n  \nSend any feedback to android@duolingo.com  \n  \nUse Duolingo on the Web at https://www.duolingo.com  \n  \nPrivacy Policy: https://www.duolingo.com/privacy\n",
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_CALENDAR",
+    "WRITE_EXTERNAL_STORAGE",
+    "DETECT_SCREEN_CAPTURE",
+    "VIBRATE",
+    "RECORD_AUDIO",
+    "USE_BIOMETRIC",
+    "RECEIVE_BOOT_COMPLETED",
+    "USE_FINGERPRINT",
+    "MODIFY_AUDIO_SETTINGS",
+    "POST_NOTIFICATIONS",
+    "WRITE_CALENDAR",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "WAKE_LOCK",
+    "GET_ACCOUNTS",
+    "READ_CONTACTS"
+  ]
+}

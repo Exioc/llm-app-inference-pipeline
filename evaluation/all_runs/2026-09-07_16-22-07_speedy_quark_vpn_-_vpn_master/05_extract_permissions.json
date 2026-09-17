@@ -1,0 +1,1544 @@
+{
+  "storage_path": "results/2026-09-07_16-22-07_speedy_quark_vpn_-_vpn_master",
+  "apk_path": "test_apks/speedy_quark_vpn.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "com.speedy.vpn",
+  "label": "Speedy Quark VPN - VPN Master",
+  "description_long": "Speedy Quark VPN is the world’s fastest and most secure free VPN proxy app. Protect yourself from cyber threats with a simple tap of the screen.   \n  \nWhen it comes to Internet's safety and security, Speedy Quark VPN is an essential tool. It encrypts your connection so that third parties can’t track your online activity, making it more secure than a typical proxy.  \n  \nWe have built a global VPN proxy network included America, Europe and Asia, and expand to more country soon. You can click the flag and change proxy server as any times as you want.   \n  \n\\- Daily free traffic, fast and free  \n\\- 7-day free trial: free of charge; unlimited traffics; fastest servers.  \n\\- Length of subscription: one year; one month.  \n\\- Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo.   \n\\- No cancellation of the current subscription is allowed during the active subscription period.  \n  \nEmail:   \nquarkteam@outlook.com  \nsupport@quarkvpn.com  \n  \nGroup:  \nTelegram: https://t.me/joinchat/XmYO2LrduPUxMDdl  \nWhatsApp: https://chat.whatsapp.com/JjHvOSUJPuN8wGfMyIwq8N  \n  \nYou can also find us on：  \nhttps://www.quarkvpn.com/  \nhttps://www.facebook.com/QuarkVPN/  \nhttps://twitter.com/QuarkVpn  \nhttps://www.instagram.com/quarkvpn/\n",
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_SPECIAL_USE",
+      "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+    ]
+  ],
+  "apk_permissions": [
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "ACCESS_WIFI_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 8,
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "reasoning": "The text explicitly states 'It encrypts your connection so that third parties can’t track your online activity', directly proving the existence of data encryption and privacy protection capabilities.",
+        "source_quotes": [
+          "It encrypts your connection so that third parties can’t track your online activity, making it more secure than a typical proxy."
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "reasoning": "The text explicitly describes the activation method as 'Protect yourself from cyber threats with a simple tap of the screen', confirming a simplified UI connection workflow.",
+        "source_quotes": [
+          "Protect yourself from cyber threats with a simple tap of the screen."
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "reasoning": "The text explicitly lists the network scope: 'We have built a global VPN proxy network included America, Europe and Asia', confirming the geographical availability of server nodes.",
+        "source_quotes": [
+          "We have built a global VPN proxy network included America, Europe and Asia"
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "reasoning": "The text explicitly states 'You can click the flag and change proxy server as any times as you want', proving the existence of a server selection and switching feature.",
+        "source_quotes": [
+          "You can click the flag and change proxy server as any times as you want."
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "reasoning": "The text explicitly lists 'Daily free traffic, fast and free' as a bullet point, confirming a recurring free usage tier.",
+        "source_quotes": [
+          "Daily free traffic, fast and free"
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "reasoning": "The text explicitly details '7-day free trial: free of charge; unlimited traffics; fastest servers', confirming a time-limited premium access feature.",
+        "source_quotes": [
+          "7-day free trial: free of charge; unlimited traffics; fastest servers."
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "reasoning": "The text explicitly lists the subscription options: 'Length of subscription: one year; one month' and 'Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo', confirming the existence of paid service tiers.",
+        "source_quotes": [
+          "Length of subscription: one year; one month.",
+          "Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo."
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "reasoning": "The text explicitly lists contact methods including 'Email: quarkteam@outlook.com', 'Telegram', 'WhatsApp', and social media links, proving the availability of external support channels.",
+        "source_quotes": [
+          "Email: quarkteam@outlook.com support@quarkvpn.com",
+          "Telegram: https://t.me/joinpat/XmYO2LrduPUxMDdl",
+          "WhatsApp: https://chat.whatsapp.com/JjHvOSUJPuN8wGfMyIwq8N",
+          "You can also find us on： https://www.quarkvpn.com/ https://www.facebook.com/QuarkVPN/ https://twitter.com/QuarkVpn https://www.instagram.com/quarkvpn/"
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Core functionality requires managing internet connection routing, VPN-like proxy connections, and monitoring network traffic to encrypt and protect online activity from third-party tracking."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "VPN and connection protection apps typically need foreground service permissions to maintain the encrypted connection active in the background and prevent the system from terminating the service."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature describes a user interface element ('One-Tap Activation Interface') and a user interaction ('simple screen tap'). It does not explicitly describe data access, hardware usage, or system modifications that would mandate specific Android permissions. While the underlying 'protection' functionality might require permissions (e.g., network, storage, or foreground services), the feature description provided focuses solely on the activation mechanism rather than the technical requirements of the protection itself."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Core functionality requires permissions to handle IP-based data transport, manage internet routing, and establish connections to the global proxy servers across different regions."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The service must run continuously in the background to maintain the active proxy network connection, which requires launching a specialized foreground service."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "A persistent notification is required by the Android system to display the VPN/proxy connection status while the foreground service is active."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Proxy server switching involves network routing configuration and IP-based data transport. Changing proxy servers affects how the device connects to the internet and routes network traffic, which requires network-related permissions for proper functionality."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature provides free data traffic which requires managing IP-based data transport, internet routing, and network interface states to control and allocate data usage for users."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves accessing servers and using data traffic ('unlimited traffic', 'access to the fastest servers'), which requires permissions handling IP-based data transport and global internet routing."
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app encrypts the user's internet connection, which involves handling IP-based data transport and global internet routing."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "A global VPN proxy network requires handling IP-based data transport and global internet routing, which falls under this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Changing proxy server locations involves handling IP-based data transport and global internet routing, which falls under this group."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves providing data traffic, which inherently requires permissions related to network and internet access to monitor or manage data usage."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves encrypting the user's internet connection, which requires handling IP-based data transport and potentially interacting with network interface states, fitting the description of the NETWORK_AND_INTERNET_INFRASTRUCTURE group."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature is related to activating protection from cyber threats, which implies interaction with system security integrations, and thus, permissions from this group might be required to implement the security features."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to handle IP-based data transport and global internet routing for the VPN proxy network."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves manually switching proxy server locations, which requires handling IP-based data transport and possibly interacting with network settings, making this group a potential fit."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature provides a daily allowance of free data traffic, which implies that the app needs to monitor and manage network usage, requiring permissions related to handling IP-based data transport and internet routing."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature is related to a free trial period and does not require any specific device permissions."
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required to access user's contacts data for sharing contact information via email, Telegram, WhatsApp, or other social media platforms."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to handle IP-based data transport for communicating with servers of email, Telegram, WhatsApp, and social media platforms."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "May be necessary for handling SMS-based verifications or notifications from services like WhatsApp."
+          },
+          {
+            "group_name": "PHONE",
+            "reasoning": "Could be required for call management or emergency cell broadcasts if the app integrates voice calls for support."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "May be needed to launch foreground services for handling data synchronization or notifications from the various support channels."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature requires managing IP-based data transport, routing, and network traffic interception to encrypt the connection and block tracking, which directly aligns with permissions handling internet routing and socket communication in this group."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature provides a VPN proxy network that routes user traffic across different geographic regions, which directly requires permissions for managing IP-based data transport and global internet routing to establish and maintain the network tunnel."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves configuring proxy settings to route network traffic through different server locations, which directly pertains to managing IP-based data transport and global internet routing."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves monitoring and managing a daily data traffic allowance, which typically requires accessing network connectivity states, tracking bandwidth/data usage statistics, and potentially controlling IP-based transport to enforce the quota. Permissions in this group are necessary for such network state and traffic management functionalities."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves managing internet traffic and connecting to high-speed servers, which typically requires permissions for handling IP-based data transport, global routing, and network interface states."
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app encrypts the internet connection and acts as a security-enhanced proxy, which requires managing IP-based data transport and network routing."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To maintain a continuous encrypted connection without being interrupted by the system, the app would need to run a specialized foreground service."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Activating cyber threat protection typically requires running a persistent background process to monitor the system in real-time, which necessitates a foreground service."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "This group explicitly includes permissions for interacting with system security integrations and device protection modes, which are directly required for cyber threat protection."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Cyber threat protection often involves monitoring the application lifecycle and package installation states to detect and prevent malicious software."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature is a VPN proxy network, which fundamentally requires handling IP-based data transport and manipulating network routing to connect to global servers."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "VPN services must run continuously in the background to maintain the secure tunnel; this requires a foreground service to prevent the Android system from terminating the process."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Changing proxy server locations involves modifying network routing and managing IP-based data transport and socket communications."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Providing daily free data traffic involves managing internet connectivity, IP-based data transport, and network interface states."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature mentions providing 'unlimited traffic' and access to 'the fastest servers,' which requires the app to handle IP-based data transport and establish network connections to remote servers."
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with payment gateways, the Google Play Store, or backend servers to process, verify, and manage subscription transactions."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app requires internet access to connect to and facilitate communication through external support channels such as email, Telegram, WhatsApp, and various social media platforms."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 13,
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Core functionality requires managing internet connection routing, VPN-like proxy connections, and monitoring network traffic to encrypt and protect online activity from third-party tracking.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "VPN and connection protection apps typically need foreground service permissions to maintain the encrypted connection active in the background and prevent the system from terminating the service.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature describes a user interface element ('One-Tap Activation Interface') and a user interaction ('simple screen tap'). It does not explicitly describe data access, hardware usage, or system modifications that would mandate specific Android permissions. While the underlying 'protection' functionality might require permissions (e.g., network, storage, or foreground services), the feature description provided focuses solely on the activation mechanism rather than the technical requirements of the protection itself.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature is related to activating protection from cyber threats, which implies interaction with system security integrations, and thus, permissions from this group might be required to implement the security features.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Core functionality requires permissions to handle IP-based data transport, manage internet routing, and establish connections to the global proxy servers across different regions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The service must run continuously in the background to maintain the active proxy network connection, which requires launching a specialized foreground service.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Proxy server switching involves network routing configuration and IP-based data transport. Changing proxy servers affects how the device connects to the internet and routes network traffic, which requires network-related permissions for proper functionality.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature provides free data traffic which requires managing IP-based data transport, internet routing, and network interface states to control and allocate data usage for users.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves accessing servers and using data traffic ('unlimited traffic', 'access to the fastest servers'), which requires permissions handling IP-based data transport and global internet routing.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to handle IP-based data transport for communicating with servers of email, Telegram, WhatsApp, and social media platforms.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for handling and encrypting the user's internet traffic as the core function of connection encryption."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about current network connectivity states to optimize the encrypted connection routing and adapt to network changes."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to run the connection encryption service as a foreground service, ensuring the encrypted VPN/proxy connection remains active and visible to the user for security and tracking prevention."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature describes a service that connects to a global proxy/VPN network across various regions. To establish connections with remote proxy servers and transmit data over the internet, the application must be able to open network sockets, which is explicitly granted by the INTERNET permission."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The app feature describes a persistent proxy/VPN service that needs to run continuously in the background to maintain network connectivity. On Android, such services must run as a foreground service (displaying a notification) to prevent the system from killing them, which requires the base FOREGROUND_SERVICE permission."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves selecting and connecting to different proxy servers, which requires the application to open network sockets for data transmission over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communicating with servers to verify the daily traffic allowance, download content, or route the provided free data traffic."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Necessary to access information about the current network connectivity state (e.g., available, connected) and network type (e.g., mobile vs Wi-Fi) to manage and apply the daily data traffic allowance correctly."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves accessing remote servers and handling unlimited data traffic, which requires the application to open network sockets to communicate over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and communicate with external support channels including email servers, Telegram API, WhatsApp, and social media platforms. These services all require internet connectivity to send and receive user feedback and support requests."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Useful to check network connectivity status before attempting to connect to support channels, allowing the app to handle offline scenarios gracefully and inform users if network is unavailable."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for encrypting and routing the user's internet connection."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for connecting to the global VPN proxy network."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The app requires a foreground service to maintain the VPN proxy network connection, as VPNs typically need persistent foreground services to ensure continuous operation and user awareness."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for connecting to proxy servers."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to allow the app to open network sockets for data traffic."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to allow the app to connect to the fastest servers for providing the trial service, which involves opening network sockets."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for connecting to email, Telegram, WhatsApp, and social media platforms over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and establish an encrypted internet connection."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, ensuring the app can adapt its encryption and anti-tracking features according to the current network state."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The app needs to run a foreground service to maintain the encrypted internet connection and prevent tracking, which requires continuous operation in the background."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "REQUEST_PASSWORD_COMPLEXITY",
+            "reasoning": "The app's one-tap activation interface for protection from cyber threats might involve setting up or prompting users for a certain level of screen lock complexity to enhance security, thus requiring this permission."
+          },
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "To enhance security, the one-tap activation might also involve setting up biometric authentication, which would necessitate the use of this permission to access device-supported biometric modalities."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to access and connect to the global VPN proxy network over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, such as the current network state, to establish and manage VPN connections."
+          },
+          {
+            "permission_name": "CHANGE_NETWORK_STATE",
+            "reasoning": "Necessary to change network connectivity state, which is essential for establishing, maintaining, and switching between different VPN connections."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to keep the VPN proxy service running in the foreground, ensuring a stable and continuous connection to the global proxy network."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and establish connections to the manually selected proxy server locations."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about the current network state, which is necessary to determine the availability and characteristics of the network connection when switching proxy servers."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to allow the app to open network sockets and utilize the daily free data traffic allowance."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, which is essential for managing and monitoring the daily free data traffic."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature includes 'unlimited traffic' and 'access to the fastest servers', which implies that the app needs to open network sockets to provide internet access to the user during the trial period."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "To determine the quality of the network connection and provide 'access to the fastest servers', the app likely needs to access information about the current network state."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app needs to access the internet to send and receive data through various channels like email, Telegram, WhatsApp, and social media platforms."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves encrypting internet traffic and operating as a proxy, which requires the application to open network sockets to establish and maintain secure communication channels with external servers."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves connecting to remote proxy servers across multiple global regions, which requires the application to open network sockets to establish and maintain internet communication with these external endpoints."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The feature requires maintaining a persistent VPN proxy connection, which is typically implemented as a foreground service to prevent Android's background execution limits from terminating it. This necessitates the baseline FOREGROUND_SERVICE permission to call Service.startForeground()."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and route application traffic through the user-selected proxy servers over the internet."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to monitor current network connectivity status before switching proxies or attempting server connections, ensuring reliable routing and handling offline states gracefully."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app needs to communicate with remote backend servers to validate, sync, and update the daily free traffic allowance for users, which requires standard internet connectivity via open network sockets."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves accessing external servers and providing unlimited traffic, which necessitates the application's ability to open network sockets for internet connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and establish outbound connections to remote servers for facilitating communication through email, Telegram, WhatsApp, and social media platforms."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app needs to open network sockets to establish an encrypted connection to a remote server and route the user's internet traffic."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "The app needs to monitor the device's network status to ensure the encrypted connection can be maintained or re-established across different network types."
+          }
+        ]
+      },
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The app needs to encrypt the internet connection and prevent tracking continuously in the background. To ensure the service is not killed by the system while the user is browsing, it must run as a foreground service."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to connect to the global VPN proxy servers across different regions."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status to determine if a connection to the proxy network can be established."
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "FOREGROUND_SERVICES",
+        "inferences": [
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "A VPN proxy network must maintain a persistent network connection in the background to ensure uninterrupted traffic routing, which requires the use of a foreground service to prevent the system from killing the process."
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires the application to connect to and communicate with various proxy servers based on the user's selection, which necessitates opening network sockets."
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with a remote server to track, verify, and provide the daily free data traffic allowance."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status to ensure the app can reach the server to manage the traffic allowance."
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to access the remote servers and transmit network traffic as described in the feature."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app needs to connect to external servers and APIs to facilitate customer support via email, Telegram, WhatsApp, and social media platforms."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to verify that the device has an active network connection before attempting to contact support services."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for handling and encrypting the user's internet traffic as the core function of connection encryption.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about current network connectivity states to optimize the encrypted connection routing and adapt to network changes.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "Required to run the connection encryption service as a foreground service, ensuring the encrypted VPN/proxy connection remains active and visible to the user for security and tracking prevention.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature describes a service that connects to a global proxy/VPN network across various regions. To establish connections with remote proxy servers and transmit data over the internet, the application must be able to open network sockets, which is explicitly granted by the INTERNET permission.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "FOREGROUND_SERVICE",
+            "reasoning": "The app feature describes a persistent proxy/VPN service that needs to run continuously in the background to maintain network connectivity. On Android, such services must run as a foreground service (displaying a notification) to prevent the system from killing them, which requires the base FOREGROUND_SERVICE permission.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves selecting and connecting to different proxy servers, which requires the application to open network sockets for data transmission over the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communicating with servers to verify the daily traffic allowance, download content, or route the provided free data traffic.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Necessary to access information about the current network connectivity state (e.g., available, connected) and network type (e.g., mobile vs Wi-Fi) to manage and apply the daily data traffic allowance correctly.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves accessing remote servers and handling unlimited data traffic, which requires the application to open network sockets to communicate over the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and communicate with external support channels including email servers, Telegram API, WhatsApp, and social media platforms. These services all require internet connectivity to send and receive user feedback and support requests.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inferred_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "INTERNET",
+    "FOREGROUND_SERVICE"
+  ]
+}

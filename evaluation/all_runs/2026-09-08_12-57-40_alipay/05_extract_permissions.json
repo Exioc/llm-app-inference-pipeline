@@ -1,0 +1,1963 @@
+{
+  "storage_path": "results/2026-09-08_12-57-40_alipay",
+  "apk_path": "test_apks/alipay.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "com.eg.android.AlipayGphone",
+  "label": "Alipay",
+  "description_long": "Alipay is a leading open platform for payments and digital services in China.  \n  \nUsers with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China as they travel for leisure, business, or study.   \n  \nForeign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country. Alipay is not designed or intended for use by foreign users in their home country or anywhere outside of China.\n",
+  "ground_truth_sets": [
+    [
+      "NFC",
+      "NFC_TRANSACTION_EVENT",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "GET_ACCOUNTS",
+      "NFC",
+      "NFC_TRANSACTION_EVENT",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "WRITE_EXTERNAL_STORAGE",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "HIDE_OVERLAY_WINDOWS",
+      "VIBRATE",
+      "DETECT_SCREEN_CAPTURE",
+      "DETECT_SCREEN_RECORDING",
+      "USE_BIOMETRIC",
+      "USE_FINGERPRINT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "WRITE_SYNC_SETTINGS",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "RECEIVE_BOOT_COMPLETED",
+    "HIDE_OVERLAY_WINDOWS",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "GET_TASKS",
+    "ACCESS_MEDIA_LOCATION",
+    "BLUETOOTH",
+    "BLUETOOTH_ADVERTISE",
+    "WAKE_LOCK",
+    "READ_MEDIA_VIDEO",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "READ_PHONE_STATE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_CONTACTS",
+    "ACCESS_FINE_LOCATION",
+    "READ_EXTERNAL_STORAGE",
+    "BROADCAST_STICKY",
+    "BLUETOOTH_ADMIN",
+    "ACCESS_NOTIFICATION_POLICY",
+    "READ_SYNC_SETTINGS",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_CALENDAR",
+    "ACTIVITY_RECOGNITION",
+    "VIBRATE",
+    "CHANGE_NETWORK_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "NEARBY_WIFI_DEVICES",
+    "CHANGE_WIFI_MULTICAST_STATE",
+    "REORDER_TASKS",
+    "POST_NOTIFICATIONS",
+    "READ_MEDIA_AUDIO",
+    "RECORD_AUDIO",
+    "WRITE_CALENDAR",
+    "BLUETOOTH_CONNECT",
+    "INTERNET",
+    "USE_BIOMETRIC",
+    "CAMERA",
+    "USE_FINGERPRINT",
+    "FOREGROUND_SERVICE_LOCATION",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE",
+    "HIGH_SAMPLING_RATE_SENSORS",
+    "READ_MEDIA_IMAGES",
+    "FOREGROUND_SERVICE_CAMERA",
+    "READ_BASIC_PHONE_STATE",
+    "NFC",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "BLUETOOTH_SCAN",
+    "EXPAND_STATUS_BAR",
+    "CHANGE_WIFI_STATE",
+    "QUERY_ALL_PACKAGES"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 3,
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "reasoning": "The text explicitly states that 'Users with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China', directly proving a cross-border payment capability for this specific user group.",
+        "source_quotes": [
+          "Users with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China as they travel for leisure, business, or study."
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "reasoning": "The text explicitly grants the capability that 'Foreign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country', confirming a third-party card integration feature for this user segment.",
+        "source_quotes": [
+          "Foreign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country."
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "reasoning": "The text defines the application as 'a leading open platform for payments and digital services in China', explicitly establishing the general scope of services provided.",
+        "source_quotes": [
+          "Alipay is a leading open platform for payments and digital services in China."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Executing payments online and communicating with banking or merchant servers requires IP-based data transport and global internet routing."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "In-person payments at merchants typically involve connecting to point-of-sale terminals via NFC or Bluetooth protocols defined in this group."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Verifying the user's 'Chinese ID' usually requires capturing images of the document, and in-person payments often involve scanning QR codes."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Banking and payment features involving 'bank account' transactions commonly require reading SMS messages to receive One-Time Passwords (OTPs) for authorization."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Connecting external credit cards often involves scanning the physical card via the camera to automatically populate card details using OCR."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Linking financial accounts typically requires phone number verification via One-Time Passwords (OTP) sent via SMS by the bank or payment processor."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature is explicitly designed for 'traveling to China' and using merchants 'within the country', implying a need to verify the user's location to enable or validate the service."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Connecting a card to the platform and facilitating transactions with merchants requires IP-based data transport and internet routing to communicate with banking and payment servers."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Handling sensitive financial data and payment credentials typically requires biometric authentication or device integrity checks to ensure secure linking."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Payment processing and digital services require internet connectivity for transaction processing, API communication, and service access."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Payment confirmations, transaction alerts, and service updates typically require notification permissions to inform users of important activities."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Payment applications commonly require biometric authentication and security measures to protect financial transactions and user data."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Chinese payment platforms commonly use SMS verification codes for authentication and transaction security during account setup and sensitive operations."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Payment apps often allow sending money to friends or contacts, requiring access to contact lists for peer-to-peer transfers."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Saving receipts, transaction records, and digital service documents typically requires access to external storage."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for handling IP-based data transport and global internet routing to facilitate international payments."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to store user data (e.g., Chinese ID details, bank account information) locally for payment processing."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "May be needed for credential management and application integrity protections (e.g., biometric authentication for secure payments)."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to communicate with payment gateways and verify credit card details."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to cache or store credit card information locally (if applicable)."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Potentially required for credential management and protecting sensitive payment data."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport and global internet routing to access digital services and process payments."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required for caching payment data or other digital service-related information on shared external storage."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Potentially required for location-based services or regional payment processing within China."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "May be needed for credential management and application integrity protections, especially for payment-related features."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Could be used for managing background tasks or scheduling payment-related operations."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may need to store user's Chinese ID and bank account information securely on the device."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To execute online payments, the app likely requires internet connectivity and access to network infrastructure to communicate with payment servers."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "The app might need to synchronize user account information, such as bank account details and payment history, across devices or with the payment server."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The app may utilize system security integrations, such as biometric authentication or device protection modes, to secure user transactions and protect sensitive information."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to store credit card information securely on the device."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for online transactions and communication with the merchant network."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Used for secure authentication and protection of sensitive credit card information."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for online payment processing and accessing digital services over the internet."
+          },
+          {
+            "group_name": "PHONE",
+            "reasoning": "Possibly required for telephony features such as SMS verification or call management related to payment services."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "May be required for SMS verification or receiving payment confirmation messages."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed for storing payment information, digital service data, and potentially other app-related data."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to process online payments, establish secure connections with banking/payment gateways, and transmit transaction data globally."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Potentially required to facilitate in-person contactless transactions via NFC or communicate directly with payment terminals at merchants outside of China."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Connecting external credit cards requires establishing an internet connection to communicate with payment gateways or backend servers for authentication and data transmission."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app likely needs to locally store encrypted tokens, card metadata, or user preferences related to the linked accounts to facilitate future transactions without re-entering details."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "A digital services platform requires internet connectivity to process payments, synchronize user data, and communicate with remote servers for various digital services."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Payment and digital service platforms in China heavily rely on QR code scanning for transactions, authentication, and accessing specific services, which requires camera access."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required for scanning QR codes at merchants for in-person payments and potentially for scanning the Chinese ID for identity verification."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for contactless payments via NFC or other proximity technologies when paying in-person at merchants."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to execute online payments and transmit transaction data to banking servers over the internet."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to verify that payments are being made at merchants located outside of China for security, fraud prevention, and regulatory compliance."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for communicating with the platform's servers to link the credit card and for transmitting payment data to the merchant network during transactions."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Likely required for two-factor authentication (2FA) or receiving verification codes (OTPs) to verify ownership of the credit card during the linking process."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Potentially required to allow users to scan their physical credit cards to auto-fill details during linking, or to scan QR codes to facilitate payments at merchant locations in China."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for the application to communicate with servers to process payments and access digital services."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Crucial for scanning QR codes, which is the primary method for payments and service access in China."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Necessary for fraud prevention in payments, verifying transaction locations, and providing location-based digital services."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Typically required for account registration and identity verification via One-Time Passwords (OTP) during payment setup."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Used to send real-time alerts for payment confirmations, transaction history, and service updates."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Needed for secure authentication and biometric verification (e.g., fingerprint or face unlock) to authorize payments."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Likely required for peer-to-peer payments, allowing users to send money to people in their contact list."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for saving digital receipts, downloading transaction statements, or managing user profile documents."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 18,
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Executing payments online and communicating with banking or merchant servers requires IP-based data transport and global internet routing.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "In-person payments at merchants typically involve connecting to point-of-sale terminals via NFC or Bluetooth protocols defined in this group.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Verifying the user's 'Chinese ID' usually requires capturing images of the document, and in-person payments often involve scanning QR codes.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to store user data (e.g., Chinese ID details, bank account information) locally for payment processing.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "May be needed for credential management and application integrity protections (e.g., biometric authentication for secure payments).",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Connecting external credit cards often involves scanning the physical card via the camera to automatically populate card details using OCR.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Linking financial accounts typically requires phone number verification via One-Time Passwords (OTP) sent via SMS by the bank or payment processor.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Connecting a card to the platform and facilitating transactions with merchants requires IP-based data transport and internet routing to communicate with banking and payment servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Handling sensitive financial data and payment credentials typically requires biometric authentication or device integrity checks to ensure secure linking.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to cache or store credit card information locally (if applicable).",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Payment processing and digital services require internet connectivity for transaction processing, API communication, and service access.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Payment confirmations, transaction alerts, and service updates typically require notification permissions to inform users of important activities.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Payment applications commonly require biometric authentication and security measures to protect financial transactions and user data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "Chinese payment platforms commonly use SMS verification codes for authentication and transaction security during account setup and sensitive operations.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Payment apps often allow sending money to friends or contacts, requiring access to contact lists for peer-to-peer transfers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Saving receipts, transaction records, and digital service documents typically requires access to external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Potentially required for location-based services or regional payment processing within China.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Payment and digital service platforms in China heavily rely on QR code scanning for transactions, authentication, and accessing specific services, which requires camera access.",
+            "models_inferred": [
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections for executing online payments and communicating with bank/payment servers to process transactions."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about the current network status to ensure connectivity is available before attempting to process payment transactions."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NFC",
+            "reasoning": "Required to perform in-person payments at merchants via contactless/NFC payment terminals. This permission allows applications to perform I/O operations over NFC, which is necessary for the in-person payment functionality described in the feature."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The International Payments feature does not inherently require broad external storage access. Payment processing, ID verification, and transaction records can be handled using app-specific storage directories (which don't require explicit permissions) or camera APIs for document capture. Modern Android versions (API 33+) use scoped storage with READ_MEDIA_* permissions for media files rather than READ_EXTERNAL_STORAGE, and app-specific directories are accessible without WRITE_EXTERNAL_STORAGE. No storage access from the allowed STORAGE group is strictly required for core payment functionality."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "The feature involves executing payments using sensitive identity (Chinese ID) and bank account information. Secure user authentication is a standard requirement for authorizing such high-risk financial transactions to ensure the user is the rightful account holder. The USE_BIOMETRIC permission allows the app to implement strong authentication modalities (fingerprint, face, iris) which are essential for securing payment operations."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires the application to open network sockets to communicate with remote servers for linking credit cards and processing financial transactions."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "The feature requires verifying network connectivity status to ensure transaction requests can be successfully routed and to prevent errors during payment processing."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communicating with payment gateways and accessing remote digital service APIs."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to ensure reliable transaction processing and manage service availability."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The application functions as a payment and digital services platform, which typically requires notifying users about transaction statuses, payment confirmations, and service updates via system notifications."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The application description specifies a platform for payments and digital services but does not explicitly mention functionality that requires SMS interaction, such as SMS-based authentication, carrier billing, or messaging. Therefore, no permissions from the SMS group are strictly justified based on the provided context."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CONTACTS_AND_PROFILES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The application description specifies functionality related to payments and digital services. These core functions typically rely on network APIs and secure internal storage for transaction data. There is no explicit mention of features requiring access to external storage, such as uploading user documents, saving receipts to the public gallery, or managing files outside the application's specific directory. Therefore, no specific STORAGE group permissions are logically required based on the provided text."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for executing online payments."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections for processing credit card transactions and communicating with the platform's servers."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The app provides access to digital services and payments, which requires network connectivity to communicate with servers and process transactions."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CONTACTS_AND_PROFILES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for online payments and to communicate with servers outside of China."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, ensuring a stable connection for payment transactions, whether online or in-person at merchants."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "The app may require biometric authentication, such as facial recognition or fingerprint scanning, to secure transactions and verify the user's identity, especially when dealing with financial information and international payments."
+          },
+          {
+            "permission_name": "REQUEST_PASSWORD_COMPLEXITY",
+            "reasoning": "To enhance security, the app may need to request and enforce a certain level of screen lock complexity to protect users' financial information and prevent unauthorized access."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and facilitate online transactions with the merchant network."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to access information about networks, ensuring a stable connection for transactions."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS",
+            "reasoning": "Required to manage and query external credit card credentials for linking to the platform."
+          },
+          {
+            "permission_name": "CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
+            "reasoning": "Needed to specify allowed credit card providers for the linking process, ensuring only authorized providers are used."
+          },
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "May be required for secure authentication of users when linking credit cards, using biometric modalities supported by the device."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The application provides access to digital services and payments, which likely requires connecting to remote servers or services over the internet to process transactions and fetch service information."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "To ensure seamless and reliable service delivery, the application may need to monitor the network state to handle changes in connectivity, such as switching between Wi-Fi and cellular networks."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "As a digital services platform, it likely needs to notify users of transactions, updates, or other service-related events, which requires posting notifications."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "As a digital services platform, it likely involves secure transactions and authentication, which can be facilitated through biometric modalities such as facial recognition or fingerprint scanning, thus requiring the USE_BIOMETRIC permission."
+          },
+          {
+            "permission_name": "USE_FINGERPRINT",
+            "reasoning": "Similar to the USE_BIOMETRIC permission, the USE_FINGERPRINT permission might be necessary for platforms that require fingerprint authentication for secure transactions or access to sensitive information within the digital services provided."
+          },
+          {
+            "permission_name": "REQUEST_PASSWORD_COMPLEXITY",
+            "reasoning": "To ensure the security of user accounts and transactions on the platform, the application may need to request or enforce a certain level of screen lock complexity, such as a PIN, pattern, or password, which aligns with the REQUEST_PASSWORD_COMPLEXITY permission."
+          },
+          {
+            "permission_name": "CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS",
+            "reasoning": "Given that the platform offers digital services, including payments, it may utilize credential management features to streamline user authentication and payment processes, thus requiring the ability to query candidate credentials as provided by the CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS permission."
+          },
+          {
+            "permission_name": "CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS",
+            "reasoning": "To manage and secure the credential providers for digital services and payments, the platform may need to specify which providers are allowed or preferred, which is enabled by the CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS permission."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CONTACTS_AND_PROFILES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. The provided description of the Digital Services Platform does not explicitly mention the use of location services, and therefore, no location-related permissions are justified."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature allows users to execute payments online, which necessitates the ability to open network sockets to transmit transaction data securely to external servers."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NFC",
+            "reasoning": "The feature enables in-person payments at merchants, which typically relies on contactless tap-to-pay technology. The NFC permission is required to perform I/O operations over NFC to handle proximity-based payment transactions."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature describes executing financial transactions (payments) using Chinese ID and bank account details for online and in-person use. There is no explicit mention of scanning QR codes, capturing images, or using the camera device for identity verification within the provided description."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature describes connecting external credit cards for transactions. This is a financial functionality that does not inherently require access to the device's camera hardware based on the provided description."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves connecting external credit cards and facilitating transactions with a merchant network, which inherently requires the application to open network sockets to communicate securely with remote payment gateways and platform servers over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "Required to securely authenticate users and verify their identity during the credit card linking and transaction processes using device-supported biometric modalities such as fingerprint or face recognition, which is standard for financial payment flows."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The application provides access to payments and digital services, which inherently requires establishing external network connections to communicate with remote servers, verify identities, and process transactions. The INTERNET permission is necessary to open network sockets for this core functionality."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CONTACTS_AND_PROFILES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to execute online payments and communicate with banking servers and payment gateways to process transactions."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to verify the device's connectivity status before attempting to process a payment to ensure the transaction can be completed."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+        "inferences": [
+          {
+            "permission_name": "NFC",
+            "reasoning": "Required to execute in-person payments at merchants using contactless NFC technology."
+          },
+          {
+            "permission_name": "NFC_PREFERRED_PAYMENT_INFO",
+            "reasoning": "Required for the app to manage and receive information regarding the user's preferred payment method during an NFC transaction."
+          },
+          {
+            "permission_name": "NFC_TRANSACTION_EVENT",
+            "reasoning": "Required to receive and process events triggered by NFC payment transactions at merchant terminals."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "Required to provide a secure way for users to authenticate themselves before authorizing and executing international payment transactions."
+          },
+          {
+            "permission_name": "USE_FINGERPRINT",
+            "reasoning": "Required to allow the app to utilize fingerprint hardware for secure user authentication during the payment process."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with external payment gateways and servers to link credit cards and process transactions."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status to ensure a stable connection before attempting to link the credit card."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "Linking a credit card is a high-security operation; biometric authentication is typically required to verify the user's identity before adding sensitive payment information to the platform."
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to connect to backend servers for processing payments and accessing digital services."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the network connection status to ensure the platform can communicate with servers for payments and services."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+        "inferences": [
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "Required to provide secure user authentication for payment transactions using device-supported biometric modalities."
+          },
+          {
+            "permission_name": "USE_FINGERPRINT",
+            "reasoning": "Required to allow the application to use fingerprint hardware for authenticating payment services."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SMS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CONTACTS_AND_PROFILES",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections for executing online payments and communicating with bank/payment servers to process transactions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about the current network status to ensure connectivity is available before attempting to process payment transactions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NFC",
+            "reasoning": "Required to perform in-person payments at merchants via contactless/NFC payment terminals. This permission allows applications to perform I/O operations over NFC, which is necessary for the in-person payment functionality described in the feature.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "The International Payments feature does not inherently require broad external storage access. Payment processing, ID verification, and transaction records can be handled using app-specific storage directories (which don't require explicit permissions) or camera APIs for document capture. Modern Android versions (API 33+) use scoped storage with READ_MEDIA_* permissions for media files rather than READ_EXTERNAL_STORAGE, and app-specific directories are accessible without WRITE_EXTERNAL_STORAGE. No storage access from the allowed STORAGE group is strictly required for core payment functionality.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "The feature involves executing payments using sensitive identity (Chinese ID) and bank account information. Secure user authentication is a standard requirement for authorizing such high-risk financial transactions to ensure the user is the rightful account holder. The USE_BIOMETRIC permission allows the app to implement strong authentication modalities (fingerprint, face, iris) which are essential for securing payment operations.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires the application to open network sockets to communicate with remote servers for linking credit cards and processing financial transactions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "The feature requires verifying network connectivity status to ensure transaction requests can be successfully routed and to prevent errors during payment processing.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "USE_BIOMETRIC",
+            "reasoning": "May be required for secure authentication of users when linking credit cards, using biometric modalities supported by the device.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for communicating with payment gateways and accessing remote digital service APIs.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to access information about network connectivity to ensure reliable transaction processing and manage service availability.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inferred_permissions": [
+    "INTERNET",
+    "USE_BIOMETRIC",
+    "ACCESS_NETWORK_STATE",
+    "NFC"
+  ]
+}

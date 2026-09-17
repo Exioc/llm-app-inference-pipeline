@@ -1,0 +1,107 @@
+{
+  "storage_path": "results/2026-09-08_07-19-50_twitch:_live_streaming",
+  "apk_path": "test_apks/twitch.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "tv.twitch.android.app",
+  "label": "Twitch: Live Streaming",
+  "description_long": "Welcome to the Purple App, where thousands of communities come together for our favorite streamers, for the games we love, for the lulz, for each other, for whatever. Download Twitch and join millions enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams, and whatever else crosses our community’s wonderfully absurd minds. We’ll see you in chat.  \n  \nHere’s a convenient list of other awesome things about Twitch:  \n  \nEveryone is “about” community. We actually are one: Whatever you nerd out about, you can find your people on Twitch.   \nGive support, get support: Find new streamers and subscribe to your favorites. Plus, unlock exclusive perks for your support.   \nStart your own channel: The Twitch app is one of the easiest ways to start streaming. Just create an account, go live directly from the app, and bring people together around whatever you’re passionate about.   \nYou never know what you’ll find: Popular games are always live, but so are music festivals, rocket launches, street tours of Tokyo, and goat yoga. Yes, really.   \nDark mode: Y’all love this one. Black and purple have never looked this good together.  \n  \nTwitch's Terms of Service are available at https://www.twitch.tv/p/legal/terms-of-service/  \nFor feedback and assistance, please visit our Support Center: https://help.twitch.tv  \n  \nPlease note: This app features Nielsen’s proprietary measurement software which contributes to market research, like Nielsen’s TV Ratings. Please see http://priv-policy.imrworldwide.com/priv/mobile/us/en/optout.html for more information\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_CAMERA",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "RECORD_AUDIO",
+    "WAKE_LOCK",
+    "INTERNET",
+    "GET_ACCOUNTS",
+    "READ_EXTERNAL_STORAGE",
+    "MODIFY_AUDIO_SETTINGS",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "CHANGE_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "CAMERA",
+    "POST_NOTIFICATIONS",
+    "WRITE_EXTERNAL_STORAGE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 6,
+    "features": [
+      {
+        "title": "Live Content Consumption",
+        "description": "Allows users to watch a variety of live content categories including games, music, sports, esports, podcasts, cooking shows, and IRL streams.",
+        "reasoning": "The text explicitly lists the types of content available for viewing: 'enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams', directly confirming the breadth of the streaming library.",
+        "source_quotes": [
+          "Download Twitch and join millions enjoying live games, music, sports, esports, podcasts, cooking shows, IRL streams, and whatever else crosses our community’s wonderfully absurd minds."
+        ]
+      },
+      {
+        "title": "Streamer Subscription & Support",
+        "description": "Enables users to discover new streamers, subscribe to their favorite channels, and unlock exclusive perks in exchange for support.",
+        "reasoning": "The text explicitly commands the user to 'Find new streamers and subscribe to your favorites' and mentions the ability to 'unlock exclusive perks for your support', directly proving a monetization and subscription feature.",
+        "source_quotes": [
+          "Find new streamers and subscribe to your favorites. Plus, unlock exclusive perks for your support."
+        ]
+      },
+      {
+        "title": "Mobile Live Broadcasting",
+        "description": "Allows users to create an account and initiate live streaming broadcasts directly from the mobile application.",
+        "reasoning": "The text explicitly states 'Just create an account, go live directly from the app', which serves as direct evidence that the app supports user-generated live streaming.",
+        "source_quotes": [
+          "The Twitch app is one of the easiest ways to start streaming. Just create an account, go live directly from the app, and bring people together around whatever you’re passionate about."
+        ]
+      },
+      {
+        "title": "Chat Interaction",
+        "description": "Provides a chat interface for users to communicate with streamers and other viewers.",
+        "reasoning": "The text explicitly references the existence of 'chat' with the statement 'We’ll see you in chat', confirming the presence of a communication feature.",
+        "source_quotes": [
+          "We’ll see you in chat."
+        ]
+      },
+      {
+        "title": "Dark Mode UI",
+        "description": "Offers a dark visual theme for the application interface.",
+        "reasoning": "The text explicitly names 'Dark mode' as a feature ('Dark mode: Y’all love this one'), directly confirming the availability of a dark UI theme.",
+        "source_quotes": [
+          "Dark mode: Y’all love this one. Black and purple have never looked this good together."
+        ]
+      },
+      {
+        "title": "Third-Party Measurement Integration",
+        "description": "Includes Nielsen’s proprietary measurement software to contribute to market research data collection.",
+        "reasoning": "The text explicitly states 'This app features Nielsen’s proprietary measurement software which contributes to market research', confirming the inclusion of third-party analytics software.",
+        "source_quotes": [
+          "Please note: This app features Nielsen’s proprietary measurement software which contributes to market research, like Nielsen’s TV Ratings."
+        ]
+      }
+    ]
+  }
+}

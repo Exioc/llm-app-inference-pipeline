@@ -1,0 +1,39 @@
+{
+  "storage_path": "results/2026-09-07_16-22-07_speedy_quark_vpn_-_vpn_master",
+  "apk_path": "test_apks/speedy_quark_vpn.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_SPECIAL_USE",
+      "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+    ]
+  ],
+  "pkg": "com.speedy.vpn",
+  "label": "Speedy Quark VPN - VPN Master",
+  "description_long": "Speedy Quark VPN is the world’s fastest and most secure free VPN proxy app. Protect yourself from cyber threats with a simple tap of the screen.   \n  \nWhen it comes to Internet's safety and security, Speedy Quark VPN is an essential tool. It encrypts your connection so that third parties can’t track your online activity, making it more secure than a typical proxy.  \n  \nWe have built a global VPN proxy network included America, Europe and Asia, and expand to more country soon. You can click the flag and change proxy server as any times as you want.   \n  \n\\- Daily free traffic, fast and free  \n\\- 7-day free trial: free of charge; unlimited traffics; fastest servers.  \n\\- Length of subscription: one year; one month.  \n\\- Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo.   \n\\- No cancellation of the current subscription is allowed during the active subscription period.  \n  \nEmail:   \nquarkteam@outlook.com  \nsupport@quarkvpn.com  \n  \nGroup:  \nTelegram: https://t.me/joinchat/XmYO2LrduPUxMDdl  \nWhatsApp: https://chat.whatsapp.com/JjHvOSUJPuN8wGfMyIwq8N  \n  \nYou can also find us on：  \nhttps://www.quarkvpn.com/  \nhttps://www.facebook.com/QuarkVPN/  \nhttps://twitter.com/QuarkVpn  \nhttps://www.instagram.com/quarkvpn/\n",
+  "apk_permissions": [
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "ACCESS_WIFI_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+  ]
+}

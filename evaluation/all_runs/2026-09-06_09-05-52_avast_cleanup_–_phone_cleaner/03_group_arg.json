@@ -1,0 +1,1285 @@
+{
+  "storage_path": "results/2026-09-06_09-05-52_avast_cleanup_–_phone_cleaner",
+  "apk_path": "test_apks/avast_cleaner.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.avast.android.cleaner",
+  "label": "Avast Cleanup – Phone Cleaner",
+  "description_long": "**Avast Cleanup – Smart Phone Cleaner & Storage Manager**   \n  \nAvast Cleanup is a powerful phone cleaner and storage manager designed to help you remove junk files and perform deep cleaning on your Android device for an organized experience. With advanced cleaning tools and smart cleaning technology, Avast Cleanup turns your device into a cleaner phone. Whether you need to clean your phone, manage storage space, remove junk, or identify what drains your battery, Avast Cleanup delivers a complete cleaning experience.  \n  \nGo beyond simple storage management by identifying hidden, unnecessary files that slow down your device. Our advanced cleaning technology detects leftover data and temporary files from uninstalled apps that occupy valuable storage. By removing these digital leftovers, you get more than a better organized phone — you reclaim space for new photos, videos, and important applications.   \n  \nGet more from your device with our intelligent cleaning features. Avast Cleanup doesn't just delete files; App Analyzer helps you identify apps that are active in the background, so you can manage them more easily.   \n  \nOrganize your media and gallery with our smart photo cleaning feature. We help you identify blurry, poor-quality, or duplicate photos. From managing large files to organizing your downloads, Avast Cleanup is the all-in-one app to keep your phone clean.   \n  \n**Avast Cleanup Features**   \n  \n**Clean and Remove**   \n• Remove unnecessary files and safely clean junk.  \n• Clean junk files, browser history, download folders, leftover data, and more.  \n  \n**Reclaim Storage Space**   \n• Analyze storage space.   \n• Quickly and easily uninstall multiple unwanted apps in one go.  \n• Clear junk, including old and residual files.   \n  \n**Analyze App Impact**   \n• Determine the impact of individual apps on your device.   \n• Check which apps consume your data.   \n• Find apps draining your battery.   \n• Discover unused apps with Apps Overview.   \n  \n**Clean your photo library**   \n• Find and remove similar, old, and poor-quality (dark or blurry) images.   \n• Use the photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression   \n• Delete photos from private chats   \n  \n**Monitor system resources**   \n• Learn how your CPU (processor), RAM, and storage are used so you can quickly spot issues and keep your device running smoothly.   \n  \n**Easy to Use**   \n• Clean your Android with our Quick Clean   \n• Simple, intuitive user interface which is easy to navigate.   \n  \n**Summary**   \n► App Analyzer: Identify apps draining resources and easily clean up with Avast Cleanup.   \n► App Remover: Quickly clear out unused apps to increase storage space.   \n► Junk Cleaner: Master the cleanup of junk files and residual app and browser data.   \n► Analyze apps based on storage, battery use, and data consumption to decide what to clear or clean up.   \n► Detect and remove duplicate photos for effective cleaning.   \n► Easily clean up your photo library and clear unnecessary files.   \n► With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds.   \n► Organize photos easily.   \n  \nBy installing this app, you agree that your use of it is governed by these terms: https://www.avast.com/en-ph/cybersec-event-terms.   \n  \nAvast Cleanup uses accessibility permission to assist disabled and other users stop background apps with just one tap.   \n  \n**_Download Avast Cleanup – the smart, powerful phone cleaner and cleaner app to keep your Android device tidy by removing junk, managing storage, and completing thorough cleanup today._**\n",
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "GET_PACKAGE_SIZE",
+      "KILL_BACKGROUND_PROCESSES",
+      "QUERY_ALL_PACKAGES",
+      "REQUEST_DELETE_PACKAGES"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "GET_PACKAGE_SIZE",
+      "KILL_BACKGROUND_PROCESSES",
+      "QUERY_ALL_PACKAGES",
+      "REQUEST_DELETE_PACKAGES",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "BLUETOOTH",
+    "ACCESS_WIFI_STATE",
+    "READ_PHONE_STATE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "READ_SYNC_SETTINGS",
+    "WRITE_SYNC_SETTINGS",
+    "KILL_BACKGROUND_PROCESSES",
+    "ACCESS_NOTIFICATION_POLICY",
+    "BLUETOOTH_ADMIN",
+    "REQUEST_DELETE_PACKAGES",
+    "VIBRATE",
+    "ACCESS_FINE_LOCATION",
+    "CHANGE_NETWORK_STATE",
+    "GET_PACKAGE_SIZE",
+    "ACCESS_NETWORK_STATE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "POST_NOTIFICATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 11,
+    "features": [
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "reasoning": "The text explicitly states the capability to 'Clean junk files, browser history, download folders, leftover data, and more' and 'detects leftover data and temporary files from uninstalled apps', which directly confirms a comprehensive cleaning engine for digital leftovers.",
+        "source_quotes": [
+          "Remove unnecessary files and safely clean junk.",
+          "Clean junk files, browser history, download folders, leftover data, and more.",
+          "Our advanced cleaning technology detects leftover data and temporary files from uninstalled apps that occupy valuable storage."
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "reasoning": "The text explicitly mentions 'Analyze storage space' and 'reclaim space for new photos, videos, and important applications', directly proving storage management and reclamation capabilities.",
+        "source_quotes": [
+          "manage storage space",
+          "Analyze storage space.",
+          "reclaim space for new photos, videos, and important applications."
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "reasoning": "The text explicitly lists 'Determine the impact of individual apps on your device', 'Check which apps consume your data', and 'Find apps draining your battery', which directly proves an app-level resource analysis feature.",
+        "source_quotes": [
+          "identify what drains your battery",
+          "Check which apps consume your data.",
+          "Determine the impact of individual apps on your device."
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "reasoning": "The text explicitly states the app helps you 'identify apps that are active in the background' and 'uses accessibility permission to assist disabled and other users stop background apps with just one tap', directly confirming background control functionality.",
+        "source_quotes": [
+          "App Analyzer helps you identify apps that are active in the background, so you can manage them more easily.",
+          "Avast Cleanup uses accessibility permission to assist disabled and other users stop background apps with just one tap."
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "reasoning": "The text explicitly offers the ability to 'Quickly and easily uninstall multiple unwanted apps in one go', which directly confirms a batch uninstall feature.",
+        "source_quotes": [
+          "Quickly and easily uninstall multiple unwanted apps in one go."
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "reasoning": "The text explicitly mentions the ability to 'identify blurry, poor-quality, or duplicate photos' and 'Find and remove similar, old, and poor-quality (dark or blurry) images', directly proving intelligent photo detection logic.",
+        "source_quotes": [
+          "identify blurry, poor-quality, or duplicate photos.",
+          "Find and remove similar, old, and poor-quality (dark or blurry) images.",
+          "Detect and remove duplicate photos for effective cleaning."
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "reasoning": "The text explicitly describes a 'photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression', directly confirming a file compression capability for photos.",
+        "source_quotes": [
+          "Use the photo adjuster feature to reduce photo sizes with Low, Moderate, High, and Aggressive file compression"
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "reasoning": "The text explicitly states 'Delete photos from private chats', which serves as direct evidence of a targeted deletion feature for chat media.",
+        "source_quotes": [
+          "Delete photos from private chats"
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "reasoning": "The text explicitly mentions users can 'Learn how your CPU (processor), RAM, and storage are used', directly confirming a system hardware monitoring feature.",
+        "source_quotes": [
+          "Learn how your CPU (processor), RAM, and storage are used so you can quickly spot issues and keep your device running smoothly."
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "reasoning": "The text explicitly states 'Clean your Android with our Quick Clean' and 'With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds', directly proving a one-step cleaning workflow.",
+        "source_quotes": [
+          "Clean your Android with our Quick Clean",
+          "With one tap, clean your phone, perform a full cleanup, and clear junk files in seconds."
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "reasoning": "The text explicitly mentions 'Organize your media and gallery' and 'managing large files to organizing your downloads', directly confirming file organization capabilities.",
+        "source_quotes": [
+          "Organize your media and gallery with our smart photo cleaning feature.",
+          "From managing large files to organizing your downloads",
+          "Organize photos easily."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires scanning, accessing, and deleting files from the device's file system (including download folders, residual data, and temporary files) to reclaim storage space. This functionality directly relies on read and write permissions for shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature's core function is to analyze device storage space and reclaim it, which requires permissions to read and write to the shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The description explicitly mentions handling 'photos' and 'videos', implying the app needs to scan and access these specific image and video files to determine their size and recommend reclamation."
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to monitor app resource usage, battery drain, and system resource optimization statistics across individual applications."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to check data consumption and network usage statistics of individual apps."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and monitor storage usage information for individual apps on the device."
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Feature explicitly requires accessibility permissions for one-tap control to interact with screen content and UI elements to identify and stop background apps."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Feature needs to monitor and control application lifecycle, retrieve task states, and manage background process states to identify and stop apps running in the background."
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Uninstalling apps requires permissions to manage package installation states and control application lifecycle, which are core functions of this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature needs to access and scan image files from the user's library/shared storage to analyze photo quality (dark, blurry), detect duplicates, and identify similar images. This requires permission to read image files from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from shared storage to access the photos that need to be compressed."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to write/save the compressed photos back to the shared external storage after processing."
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to perform deletion operations on files stored in external/shared storage where chat photos are typically saved."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Specifically needed to identify and access image files (photos) from shared storage before deletion, as the feature targets visual media files."
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to read storage usage statistics and display information about shared external storage capacity and usage."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to access system resource statistics including CPU and RAM usage, retrieve task states, and monitor device performance metrics for system resource management."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Cleaning junk files requires accessing and modifying the device's shared external storage to identify, read, and delete temporary/cache files."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Full cleanup operations may require managing application lifecycle, clearing cache data, and adjusting system resource optimization for background processes."
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and organize image and video files in the photo gallery and media collections from shared storage."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and organize audio files as part of the media organization features from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage downloads, handle large files, and access shared external storage for file organization operations."
+          }
+        ]
+      },
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and delete files (including browser history, download folders, and leftover data) from shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to analyze and manage the device's shared external storage, including reclaiming space for new files."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage during analysis."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage during analysis."
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to analyze app resource usage, including battery drain, data consumption, and storage usage, as this involves inspecting application lifecycle and system resource optimization."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to check storage usage of individual apps, as this involves accessing shared external storage metrics."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to determine data consumption of apps, as this involves accessing network-related statistics."
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to manage application lifecycle and control background tasks."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required for using accessibility permissions to interact with the app interface for one-tap control."
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required for permissions associated with managing package installation states, including uninstalling apps."
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage to analyze photo quality and detect duplicates."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access the shared external storage where the user's photo library is stored."
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access photos from shared storage for compression."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from shared storage for compression."
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Deleting photos may require access to shared external storage where the photos are stored."
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required for accessing system-level resource statistics like CPU and RAM usage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for accessing storage usage statistics."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Clearing junk files typically requires access to shared external storage to identify and delete unnecessary files."
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and organize image and video files from the photo gallery."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and organize audio files as part of media management."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and manage downloads and large files in shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and manage shared external storage, allowing the app to remove unnecessary files, browser history, download folders, and leftover data or temporary files."
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to analyze and manage the device's storage space, including reading and writing files."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to access and manage photos and videos stored on the device."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "May be required to access and manage audio files stored on the device, although not explicitly mentioned, it's a common aspect of storage space analysis."
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Required to inspect background data synchronization statistics for analyzing data consumption."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Needed to manage package installation states and retrieve task states for analyzing app resource usage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Necessary to access shared external storage for analyzing storage usage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to handle IP-based data transport for analyzing data consumption."
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature uses accessibility permissions for one-tap control, which aligns with the description of the ACCESSIBILITY_AND_INPUT group, allowing reading screen content and capturing keyboard input."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature involves controlling application lifecycle by stopping background apps, which matches the APP_AND_SYSTEM_MANAGEMENT group's description of managing package installation states and controlling the application lifecycle."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Although the feature focuses on background apps, the ability to launch a service to manage or stop these apps might require permissions related to foreground services, as described in the FOREGROUND_SERVICES group."
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature involves uninstalling apps, which requires managing package installation states and controlling the application lifecycle, both of which are associated with the APP_AND_SYSTEM_MANAGEMENT group."
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from shared storage to analyze and compare photo quality and detect duplicates."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access the user's library and remove detected images, which involves modifying the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The Photo Compression Tool requires access to image files to reduce photo sizes, which aligns with the MEDIA_VISUAL group's description of reading image files from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The tool needs to read and write image files, which involves accessing shared external storage, making the STORAGE group's permissions necessary."
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and delete photos from shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and manage image files from shared storage, which includes photos from private chats."
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to access and manage system resource information such as CPU and RAM usage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access storage usage statistics."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires accessing and modifying the device's storage to clear junk files, which aligns with the STORAGE group's description of handling permissions related to the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to be able to read and organize image and video files from shared storage, such as the photo gallery."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access and manage downloads and large files stored in the shared external storage."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "May be necessary to organize audio files from shared storage, which could be part of the media management functionality."
+          }
+        ]
+      },
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature description explicitly mentions removing unnecessary files, download folders, and temporary data to reclaim storage space. These operations require permissions to access and modify the device's shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires reading, analyzing, and deleting files on the device's shared external storage to calculate usage statistics and reclaim space for media and applications."
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature explicitly mentions using 'accessibility permissions for one-tap control', which directly aligns with this group's purpose of handling assistant-like interactions and system shortcut/control capabilities."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Identifying apps active in the background, retrieving task states, and controlling the application lifecycle to stop them directly corresponds to permissions for managing app lifecycle, retrieving task states, and adjusting system resource optimization."
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature enables uninstalling multiple applications, which requires permissions to manage package installation states and control the application lifecycle, as explicitly covered by this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature requires reading and analyzing existing image files from the device to evaluate their quality (brightness, blur) and compare them for duplicates."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Accessing the user's photo library and retrieving files stored on the device typically falls under permissions related to shared external or internal storage."
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires accessing image files from shared storage to read existing photos, apply the selected compression level, and save the adjusted results, necessitating permissions for shared external storage access."
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Deleting photos requires the ability to access, modify, or remove files within the device's storage, which typically falls under the STORAGE permission group."
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires scanning and deleting junk/cache files from the device, which necessitates read/write access to the file system. This aligns with the STORAGE permission group used for managing shared external storage and device files."
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Managing downloads and organizing large files requires accessing the device's shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Organizing media collections and photo galleries inherently involves reading and displaying image and video files from storage."
+          }
+        ]
+      },
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature involves scanning and deleting unnecessary files, browser history, and temporary files from download folders and shared storage to reclaim space."
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to analyze and manage shared external storage to identify and reclaim space."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to analyze and identify space occupied by image and video files for reclamation."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to analyze and identify space occupied by audio files for reclamation."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to analyze storage used by applications and potentially manage application-related data to reclaim space."
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to monitor and analyze data consumption patterns of individual apps."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to determine the storage usage and disk space occupied by individual apps."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to analyze battery drain and the overall impact of apps on system resources and optimization."
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to identify apps active in the background and monitor/control their lifecycle and task states."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature explicitly mentions using accessibility permissions to provide one-tap control to stop apps."
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature involves uninstalling multiple apps, which requires managing package installation states."
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and analyze image files from shared storage to identify duplicates and assess photo quality (e.g., blurriness or darkness)."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access the user's image library and perform deletion of identified duplicate or poor-quality images from shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read the image files from shared storage that need to be compressed."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the compressed photo files back to the device's shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Deleting photos from the device typically requires permissions to modify files within the shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to identify and access image files in shared storage in order to target them for deletion."
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access information and calculate usage statistics for the device's shared external storage."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to retrieve task states and system resource information to monitor and display CPU and RAM usage statistics."
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and delete junk files and temporary files stored on the device's shared external storage."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required for tasks related to adjusting system resource optimization, which is a core part of a cleanup feature."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Likely required to ensure the cleanup process (which can be time-consuming) continues to run via a specialized foreground service for file management."
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to organize the photo gallery and visual media files."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to organize audio media files."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and manage downloads and large files stored in shared external storage."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 23,
+    "features": [
+      {
+        "title": "Junk and Residual File Removal",
+        "description": "The app removes unnecessary files, browser history, download folders, and leftover data or temporary files specifically from uninstalled apps to reclaim storage space.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature requires scanning, accessing, and deleting files from the device's file system (including download folders, residual data, and temporary files) to reclaim storage space. This functionality directly relies on read and write permissions for shared external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Storage Space Analysis and Reclamation",
+        "description": "Provides tools to analyze the device's storage space and reclaim it for new photos, videos, and applications.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature's core function is to analyze device storage space and reclaim it, which requires permissions to read and write to the shared external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The description explicitly mentions handling 'photos' and 'videos', implying the app needs to scan and access these specific image and video files to determine their size and recommend reclamation.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage during analysis.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "App Resource Impact Analysis",
+        "description": "Allows users to determine the impact of individual apps on device resources, specifically checking data consumption, battery drain, and storage usage.",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to monitor app resource usage, battery drain, and system resource optimization statistics across individual applications.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to check data consumption and network usage statistics of individual apps.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and monitor storage usage information for individual apps on the device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Background App Identification and Control",
+        "description": "Identifies apps active in the background and allows users to stop them using accessibility permissions for one-tap control.",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Feature explicitly requires accessibility permissions for one-tap control to interact with screen content and UI elements to identify and stop background apps.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Feature needs to monitor and control application lifecycle, retrieve task states, and manage background process states to identify and stop apps running in the background.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Batch App Uninstallation",
+        "description": "Enables the quick and easy uninstallation of multiple unwanted apps simultaneously.",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Uninstalling apps requires permissions to manage package installation states and control application lifecycle, which are core functions of this permission group.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Photo Quality and Duplicate Detection",
+        "description": "Identifies and removes similar, old, poor-quality (dark or blurry), and duplicate images within the user's library.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature needs to access and scan image files from the user's library/shared storage to analyze photo quality (dark, blurry), detect duplicates, and identify similar images. This requires permission to read image files from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access the shared external storage where the user's photo library is stored.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Photo Compression Tool",
+        "description": "Uses a photo adjuster feature to reduce photo sizes with selectable compression levels including Low, Moderate, High, and Aggressive.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from shared storage to access the photos that need to be compressed.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to write/save the compressed photos back to the shared external storage after processing.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Private Chat Photo Deletion",
+        "description": "Provides the specific capability to delete photos originating from private chats.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to perform deletion operations on files stored in external/shared storage where chat photos are typically saved.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Specifically needed to identify and access image files (photos) from shared storage before deletion, as the feature targets visual media files.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "System Resource Monitoring",
+        "description": "Displays usage statistics for the device's CPU, RAM, and storage to help users spot performance issues.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to read storage usage statistics and display information about shared external storage capacity and usage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to access system resource statistics including CPU and RAM usage, retrieve task states, and monitor device performance metrics for system resource management.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "One-Tap Quick Clean",
+        "description": "Allows users to perform a full cleanup and clear junk files with a single tap.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Cleaning junk files requires accessing and modifying the device's shared external storage to identify, read, and delete temporary/cache files.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Full cleanup operations may require managing application lifecycle, clearing cache data, and adjusting system resource optimization for background processes.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Media and Download Organization",
+        "description": "Provides tools to organize media, the photo gallery, and downloads, as well as manage large files.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and organize image and video files in the photo gallery and media collections from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and organize audio files as part of the media organization features from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to manage downloads, handle large files, and access shared external storage for file organization operations.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
