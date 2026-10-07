@@ -1,0 +1,135 @@
+{
+  "pkg": "com.avast.android.cleaner",
+  "label": "QXZhc3QgQ2xlYW51cCDigJMgUGhvbmUgQ2xlYW5lcg==",
+  "description": {
+    "long": "PGI+QXZhc3QgQ2xlYW51cCDigJMgU21hcnQgUGhvbmUgQ2xlYW5lciAmYW1wOyBTdG9yYWdlIE1hbmFnZXI8L2I+ICA8YnI+PGJyPkF2YXN0IENsZWFudXAgaXMgYSBwb3dlcmZ1bCBwaG9uZSBjbGVhbmVyIGFuZCBzdG9yYWdlIG1hbmFnZXIgZGVzaWduZWQgdG8gaGVscCB5b3UgcmVtb3ZlIGp1bmsgZmlsZXMgYW5kIHBlcmZvcm0gZGVlcCBjbGVhbmluZyBvbiB5b3VyIEFuZHJvaWQgZGV2aWNlIGZvciBhbiBvcmdhbml6ZWQgZXhwZXJpZW5jZS4gV2l0aCBhZHZhbmNlZCBjbGVhbmluZyB0b29scyBhbmQgc21hcnQgY2xlYW5pbmcgdGVjaG5vbG9neSwgQXZhc3QgQ2xlYW51cCB0dXJucyB5b3VyIGRldmljZSBpbnRvIGEgY2xlYW5lciBwaG9uZS4gV2hldGhlciB5b3UgbmVlZCB0byBjbGVhbiB5b3VyIHBob25lLCBtYW5hZ2Ugc3RvcmFnZSBzcGFjZSwgcmVtb3ZlIGp1bmssIG9yIGlkZW50aWZ5IHdoYXQgZHJhaW5zIHlvdXIgYmF0dGVyeSwgQXZhc3QgQ2xlYW51cCBkZWxpdmVycyBhIGNvbXBsZXRlIGNsZWFuaW5nIGV4cGVyaWVuY2UuPGJyPjxicj5HbyBiZXlvbmQgc2ltcGxlIHN0b3JhZ2UgbWFuYWdlbWVudCBieSBpZGVudGlmeWluZyBoaWRkZW4sIHVubmVjZXNzYXJ5IGZpbGVzIHRoYXQgc2xvdyBkb3duIHlvdXIgZGV2aWNlLiBPdXIgYWR2YW5jZWQgY2xlYW5pbmcgdGVjaG5vbG9neSBkZXRlY3RzIGxlZnRvdmVyIGRhdGEgYW5kIHRlbXBvcmFyeSBmaWxlcyBmcm9tIHVuaW5zdGFsbGVkIGFwcHMgdGhhdCBvY2N1cHkgdmFsdWFibGUgc3RvcmFnZS4gQnkgcmVtb3ZpbmcgdGhlc2UgZGlnaXRhbCBsZWZ0b3ZlcnMsIHlvdSBnZXQgbW9yZSB0aGFuIGEgYmV0dGVyIG9yZ2FuaXplZCBwaG9uZSDigJQgeW91IHJlY2xhaW0gc3BhY2UgZm9yIG5ldyBwaG90b3MsIHZpZGVvcywgYW5kIGltcG9ydGFudCBhcHBsaWNhdGlvbnMuIDxicj48YnI+R2V0IG1vcmUgZnJvbSB5b3VyIGRldmljZSB3aXRoIG91ciBpbnRlbGxpZ2VudCBjbGVhbmluZyBmZWF0dXJlcy4gQXZhc3QgQ2xlYW51cCBkb2VzbiYjMzk7dCBqdXN0IGRlbGV0ZSBmaWxlczsgQXBwIEFuYWx5emVyIGhlbHBzIHlvdSBpZGVudGlmeSBhcHBzIHRoYXQgYXJlIGFjdGl2ZSBpbiB0aGUgYmFja2dyb3VuZCwgc28geW91IGNhbiBtYW5hZ2UgdGhlbSBtb3JlIGVhc2lseS4gPGJyPjxicj5Pcmdhbml6ZSB5b3VyIG1lZGlhIGFuZCBnYWxsZXJ5IHdpdGggb3VyIHNtYXJ0IHBob3RvIGNsZWFuaW5nIGZlYXR1cmUuIFdlIGhlbHAgeW91IGlkZW50aWZ5IGJsdXJyeSwgcG9vci1xdWFsaXR5LCBvciBkdXBsaWNhdGUgcGhvdG9zLiBGcm9tIG1hbmFnaW5nIGxhcmdlIGZpbGVzIHRvIG9yZ2FuaXppbmcgeW91ciBkb3dubG9hZHMsIEF2YXN0IENsZWFudXAgaXMgdGhlIGFsbC1pbi1vbmUgYXBwIHRvIGtlZXAgeW91ciBwaG9uZSBjbGVhbi4gIDxicj48YnI+PGI+QXZhc3QgQ2xlYW51cCBGZWF0dXJlczwvYj4gIDxicj48YnI+PGI+Q2xlYW4gYW5kIFJlbW92ZTwvYj4gICA8YnI+4oCiIFJlbW92ZSB1bm5lY2Vzc2FyeSBmaWxlcyBhbmQgc2FmZWx5IGNsZWFuIGp1bmsuPGJyPuKAoiBDbGVhbiBqdW5rIGZpbGVzLCBicm93c2VyIGhpc3RvcnksIGRvd25sb2FkIGZvbGRlcnMsIGxlZnRvdmVyIGRhdGEsIGFuZCBtb3JlLjxicj48YnI+PGI+UmVjbGFpbSBTdG9yYWdlIFNwYWNlPC9iPiAgIDxicj7igKIgQW5hbHl6ZSBzdG9yYWdlIHNwYWNlLiA8YnI+4oCiIFF1aWNrbHkgYW5kIGVhc2lseSB1bmluc3RhbGwgbXVsdGlwbGUgdW53YW50ZWQgYXBwcyBpbiBvbmUgZ28uPGJyPuKAoiBDbGVhciBqdW5rLCBpbmNsdWRpbmcgb2xkIGFuZCByZXNpZHVhbCBmaWxlcy4gPGJyPjxicj48Yj5BbmFseXplIEFwcCBJbXBhY3Q8L2I+ICAgPGJyPuKAoiBEZXRlcm1pbmUgdGhlIGltcGFjdCBvZiBpbmRpdmlkdWFsIGFwcHMgb24geW91ciBkZXZpY2UuIDxicj7igKIgQ2hlY2sgd2hpY2ggYXBwcyBjb25zdW1lIHlvdXIgZGF0YS4gPGJyPuKAoiBGaW5kIGFwcHMgZHJhaW5pbmcgeW91ciBiYXR0ZXJ5LiA8YnI+4oCiIERpc2NvdmVyIHVudXNlZCBhcHBzIHdpdGggQXBwcyBPdmVydmlldy4gPGJyPjxicj48Yj5DbGVhbiB5b3VyIHBob3RvIGxpYnJhcnk8L2I+ICAgPGJyPuKAoiBGaW5kIGFuZCByZW1vdmUgc2ltaWxhciwgb2xkLCBhbmQgcG9vci1xdWFsaXR5IChkYXJrIG9yIGJsdXJyeSkgaW1hZ2VzLiAgPGJyPuKAoiBVc2UgdGhlIHBob3RvIGFkanVzdGVyIGZlYXR1cmUgdG8gcmVkdWNlIHBob3RvIHNpemVzIHdpdGggTG93LCBNb2RlcmF0ZSwgSGlnaCwgYW5kIEFnZ3Jlc3NpdmUgZmlsZSBjb21wcmVzc2lvbiAgPGJyPuKAoiBEZWxldGUgcGhvdG9zIGZyb20gcHJpdmF0ZSBjaGF0cyAgPGJyPjxicj48Yj5Nb25pdG9yIHN5c3RlbSByZXNvdXJjZXM8L2I+ICAgPGJyPuKAoiBMZWFybiBob3cgeW91ciBDUFUgKHByb2Nlc3NvciksIFJBTSwgYW5kIHN0b3JhZ2UgYXJlIHVzZWQgc28geW91IGNhbiBxdWlja2x5IHNwb3QgaXNzdWVzIGFuZCBrZWVwIHlvdXIgZGV2aWNlIHJ1bm5pbmcgc21vb3RobHkuIDxicj48YnI+PGI+RWFzeSB0byBVc2U8L2I+ICAgPGJyPuKAoiBDbGVhbiB5b3VyIEFuZHJvaWQgd2l0aCBvdXIgUXVpY2sgQ2xlYW4gPGJyPuKAoiBTaW1wbGUsIGludHVpdGl2ZSB1c2VyIGludGVyZmFjZSB3aGljaCBpcyBlYXN5IHRvIG5hdmlnYXRlLiA8YnI+PGJyPjxiPlN1bW1hcnk8L2I+ICA8YnI+4pa6IEFwcCBBbmFseXplcjogSWRlbnRpZnkgYXBwcyBkcmFpbmluZyByZXNvdXJjZXMgYW5kIGVhc2lseSBjbGVhbiB1cCB3aXRoIEF2YXN0IENsZWFudXAuICA8YnI+4pa6IEFwcCBSZW1vdmVyOiBRdWlja2x5IGNsZWFyIG91dCB1bnVzZWQgYXBwcyB0byBpbmNyZWFzZSBzdG9yYWdlIHNwYWNlLiA8YnI+4pa6IEp1bmsgQ2xlYW5lcjogTWFzdGVyIHRoZSBjbGVhbnVwIG9mIGp1bmsgZmlsZXMgYW5kIHJlc2lkdWFsIGFwcCBhbmQgYnJvd3NlciBkYXRhLiAgPGJyPuKWuiBBbmFseXplIGFwcHMgYmFzZWQgb24gc3RvcmFnZSwgYmF0dGVyeSB1c2UsIGFuZCBkYXRhIGNvbnN1bXB0aW9uIHRvIGRlY2lkZSB3aGF0IHRvIGNsZWFyIG9yIGNsZWFuIHVwLiA8YnI+4pa6IERldGVjdCBhbmQgcmVtb3ZlIGR1cGxpY2F0ZSBwaG90b3MgZm9yIGVmZmVjdGl2ZSBjbGVhbmluZy4gIDxicj7ilrogRWFzaWx5IGNsZWFuIHVwIHlvdXIgcGhvdG8gbGlicmFyeSBhbmQgY2xlYXIgdW5uZWNlc3NhcnkgZmlsZXMuICA8YnI+4pa6IFdpdGggb25lIHRhcCwgY2xlYW4geW91ciBwaG9uZSwgcGVyZm9ybSBhIGZ1bGwgY2xlYW51cCwgYW5kIGNsZWFyIGp1bmsgZmlsZXMgaW4gc2Vjb25kcy4gIDxicj7ilrogT3JnYW5pemUgcGhvdG9zIGVhc2lseS4gPGJyPjxicj5CeSBpbnN0YWxsaW5nIHRoaXMgYXBwLCB5b3UgYWdyZWUgdGhhdCB5b3VyIHVzZSBvZiBpdCBpcyBnb3Zlcm5lZCBieSB0aGVzZSB0ZXJtczogaHR0cHM6Ly93d3cuYXZhc3QuY29tL2VuLXBoL2N5YmVyc2VjLWV2ZW50LXRlcm1zLiA8YnI+PGJyPkF2YXN0IENsZWFudXAgdXNlcyBhY2Nlc3NpYmlsaXR5IHBlcm1pc3Npb24gdG8gYXNzaXN0IGRpc2FibGVkIGFuZCBvdGhlciB1c2VycyBzdG9wIGJhY2tncm91bmQgYXBwcyB3aXRoIGp1c3Qgb25lIHRhcC4gPGJyPjxicj48Yj48dT5Eb3dubG9hZCBBdmFzdCBDbGVhbnVwIOKAkyB0aGUgc21hcnQsIHBvd2VyZnVsIHBob25lIGNsZWFuZXIgYW5kIGNsZWFuZXIgYXBwIHRvIGtlZXAgeW91ciBBbmRyb2lkIGRldmljZSB0aWR5IGJ5IHJlbW92aW5nIGp1bmssIG1hbmFnaW5nIHN0b3JhZ2UsIGFuZCBjb21wbGV0aW5nIHRob3JvdWdoIGNsZWFudXAgdG9kYXkuPC91PjwvYj4=",
+    "short": "U3RvcmFnZSBDbGVhbmVyOiBDbGVhciBqdW5rIHRvIG1ha2Ugc3BhY2Ugb24geW91ciBkZXZpY2U="
+  },
+  "version": null,
+  "downloads": 94525904,
+  "rating": 4.6039352,
+  "review_count": 1514610,
+  "in_app_purchases": "$0.99 - $59.99 per item",
+  "age_rating": "Everyone",
+  "contains_ads": true,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "Feb 27, 2015",
+    "timestamp": 1424995200
+  },
+  "updated": {
+    "date": "Jul 8, 2026",
+    "timestamp": 1783515931
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Tools",
+    "name": "TOOLS"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "http://www.avast.com/",
+    "email": "android@avast.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "QXZhc3QgU29mdHdhcmU=",
+    "name": "/store/apps/dev?id=5078220335056375043",
+    "legal_name": "5078220335056375043",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://www.avast.com/privacy-policy",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Identity",
+      "permissions": [
+        "add or remove accounts",
+        "find accounts on the device"
+      ]
+    },
+    {
+      "category": "Contacts",
+      "permissions": [
+        "find accounts on the device"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Phone",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Device ID & call information",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "Google Play license check",
+        "access Bluetooth settings",
+        "change network connectivity",
+        "close other apps",
+        "control vibration",
+        "create accounts and set passwords",
+        "full network access",
+        "install shortcuts",
+        "measure app storage space",
+        "modify system settings",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "read sync settings",
+        "run at startup",
+        "toggle sync on and off",
+        "use accounts on the device",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "receive data from Internet",
+        "update component usage statistics"
+      ]
+    }
+  ]
+}

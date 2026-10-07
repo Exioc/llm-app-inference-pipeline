@@ -1,0 +1,59 @@
+{
+  "storage_path": "results/2026-09-07_08-11-12_music_player_-_true_bass",
+  "apk_path": "test_apks/music_player.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "pkg": "com.musicplayer.player.mp3player.white",
+  "label": "Music Player - True Bass",
+  "description_long": "X1 Player is the best offline music player and video player for Android. Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality. If you need a powerful MP3 player with equalizer, bass boost, and 3D sound — X1 Player is your perfect free media player.   \n  \nWhy Choose X1 Player?   \n  \nX1 Player is one of the few free Android app that combines a full-featured offline music player and HD video player in one. Whether you need an MP3 player with equalizer or a smooth MKV video player with subtitles - X1 Player does it all.   \n  \n🎵 All-in-one music player & video player   \n🎵 Offline music player - no internet needed   \n🎵 Supports all audio formats & video formats   \n🎵 Powerful equalizer with bass boost & 3D sound   \n🎵 HD video player with subtitle support   \n🎵 Fast, lightweight & battery efficient   \n  \nMusic Player Features  \n  \n🎵 MP3 player supporting MP3, FLAC, WAV, AAC, MIDI, OGG, WMA, APE, AMR, M4A and more   \n🎵 10 - band graphical equalizer with presets   \n🎵 Bass boost, reverb & immersive 3D sound effects   \n🎵 Music visualizer with party mode   \n🎵 Lyrics display for songs   \n🎵 Browse by albums, artists, genres and folders   \n🎵 Playlist management with queue reorder   \n🎵 Shake to skip songs   \n🎵 Built-in MP3 editor & tag editor   \n🎵 Change album art   \n🎵 Sleep timer   \n  \nVideo Player Features   \n  \n🎬 Supports MP4, MKV, AVI, MOV, FLV, WMV, RMVB, 3GP, TS and all popular video formats   \n🎬 Smooth HD video playback   \n🎬 Subtitle support (.srt, .ass)   \n🎬 Equalizer for video player   \n🎬 Cast to TV via Google Cast (Chromecast)   \n  \nSound & Customisation  \n  \n🔊 10-band equalizer with audio presets   \n🔊 Bass boost & 3D surround sound   \n🔊 Reverb effects for premium listening   \n🎨 Color themes & UI customisation   \n🎨 Home screen widget & lock screen controls   \n  \nSmart Media Management  \n  \n📂 Fast automatic library scan   \n📂 Browse and play music by folder   \n📂 Easy playlist creation & management   \n📂 Clean, simple interface   \n  \nExtra Features  \n  \n⚡ Background playback   \n⚡ Chrome Cast support   \n⚡ DLNA Casting – Stream music and video to compatible Smart TVs   \n⚡ Lightweight & battery efficient   \n⚡ Works fully offline - no wifi required   \n  \nX1 Player is a complete offline media player - combining the best MP3 player, music player, audio player, and video player in one free Android app. Download X1 Player now and enjoy the best music and video experience on your phone.  \n  \nControl your music faster with Wear OS Tiles and Watch Face Complications, providing quick access from your smartwatch and watch face.  \n  \nX1 Player is the best music player for android. Send your feedback and suggestion about X1 Player to mytechnosound@gmail.com.\n",
+  "apk_permissions": [
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_AUDIO",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "WAKE_LOCK",
+    "VIBRATE",
+    "BROADCAST_STICKY",
+    "FOREGROUND_SERVICE",
+    "READ_MEDIA_VIDEO",
+    "MODIFY_AUDIO_SETTINGS",
+    "WRITE_EXTERNAL_STORAGE",
+    "POST_NOTIFICATIONS"
+  ]
+}

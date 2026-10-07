@@ -1,0 +1,107 @@
+{
+  "storage_path": "results/2026-09-06_07-47-15_alarm_clock",
+  "apk_path": "test_apks/alarm_clock.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.timy.alarmclock",
+  "label": "Alarm clock",
+  "description_long": "Timy Alarm Clock will help you avoid accidentally turning off your alarm clock and falling asleep.  \n  \nTo dismiss the alarm you will have to wake up some funny characters.  \n  \n**Main features:**  \nMultiple alarms.  \nCute characters to wake up: Cat, dog, bunny, fox, crocodile, shark, duck, with three difficulty levels.  \nWake up with your tones or songs.  \nRepeat option.  \nSnooze.  \nIndependent volume control.  \n  \nImportant: Device must be on to work.\n",
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "USE_EXACT_ALARM"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "USE_FULL_SCREEN_INTENT",
+      "READ_MEDIA_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "USE_EXACT_ALARM"
+    ]
+  ],
+  "apk_permissions": [
+    "RECEIVE_BOOT_COMPLETED",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "INTERNET",
+    "USE_EXACT_ALARM",
+    "READ_MEDIA_AUDIO",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE",
+    "WAKE_LOCK",
+    "POST_NOTIFICATIONS",
+    "FOREGROUND_SERVICE",
+    "READ_EXTERNAL_STORAGE",
+    "USE_FULL_SCREEN_INTENT"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 7,
+    "features": [
+      {
+        "title": "Gamified Alarm Dismissal Mechanism",
+        "description": "Requires users to interact with or 'wake up' funny characters to successfully dismiss the alarm, preventing accidental turn-offs and ensuring the user fully wakes up.",
+        "reasoning": "The text explicitly states 'To dismiss the alarm you will have to wake up some funny characters' and describes the purpose as helping users 'avoid accidentally turning off your alarm clock'. This directly proves a gamified interaction requirement for alarm dismissal.",
+        "source_quotes": [
+          "To dismiss the alarm you will have to wake up some funny characters.",
+          "Timy Alarm Clock will help you avoid accidentally turning off your alarm clock and falling asleep."
+        ]
+      },
+      {
+        "title": "Character Selection & Difficulty Configuration",
+        "description": "Allows users to choose from specific character options (Cat, dog, bunny, fox, crocodile, shark, duck) with three available difficulty levels for the dismissal task.",
+        "reasoning": "The text explicitly lists the available characters and the existence of 'three difficulty levels' under the main features section, confirming a configurable difficulty and character selection system.",
+        "source_quotes": [
+          "Cute characters to wake up: Cat, dog, bunny, fox, crocodile, shark, duck, with three difficulty levels."
+        ]
+      },
+      {
+        "title": "Custom Audio Source Selection",
+        "description": "Permits users to set their alarm sound using either system tones or personal songs.",
+        "reasoning": "The text explicitly states 'Wake up with your tones or songs', directly confirming support for multiple audio source types.",
+        "source_quotes": [
+          "Wake up with your tones or songs."
+        ]
+      },
+      {
+        "title": "Multiple Alarm Scheduling",
+        "description": "Supports the creation and management of more than one alarm at a time.",
+        "reasoning": "The text explicitly lists 'Multiple alarms' as a main feature, directly proving the capability to schedule multiple distinct alarms.",
+        "source_quotes": [
+          "Multiple alarms."
+        ]
+      },
+      {
+        "title": "Alarm Recurrence Setting",
+        "description": "Provides an option for alarms to repeat on a recurring schedule.",
+        "reasoning": "The text explicitly lists 'Repeat option' as a main feature, directly confirming the existence of a recurring alarm configuration.",
+        "source_quotes": [
+          "Repeat option."
+        ]
+      },
+      {
+        "title": "Snooze Function",
+        "description": "Includes a snooze capability to temporarily silence the alarm and wake up later.",
+        "reasoning": "The text explicitly lists 'Snooze' as a main feature, directly confirming the availability of a snooze function.",
+        "source_quotes": [
+          "Snooze."
+        ]
+      },
+      {
+        "title": "Independent Volume Control",
+        "description": "Allows users to adjust the alarm volume independently of other device or system settings.",
+        "reasoning": "The text explicitly lists 'Independent volume control' as a main feature, directly confirming granular volume management for the alarm.",
+        "source_quotes": [
+          "Independent volume control."
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "pkg": "com.openai.chatgpt",
+  "label": "Q2hhdEdQVA==",
+  "description": {
+    "long": "SW50cm9kdWNpbmcgQ2hhdEdQVCBmb3IgQW5kcm9pZDogT3BlbkFJ4oCZcyBsYXRlc3QgYWR2YW5jZW1lbnRzIGF0IHlvdXIgZmluZ2VydGlwcy48YnI+PGJyPlRoaXMgb2ZmaWNpYWwgYXBwIGlzIGZyZWUsIHN5bmNzIHlvdXIgaGlzdG9yeSBhY3Jvc3MgZGV2aWNlcywgYW5kIGJyaW5ncyB5b3UgdGhlIGxhdGVzdCBmcm9tIE9wZW5BSSwgaW5jbHVkaW5nIHRoZSBuZXcgaW1hZ2UgZ2VuZXJhdG9yLjxicj48YnI+V2l0aCBDaGF0R1BUIGluIHlvdXIgcG9ja2V0LCB5b3XigJlsbCBmaW5kOjxicj48YnI+wrcgSW1hZ2UgZ2VuZXJhdGlvbuKAk0dlbmVyYXRlIG9yaWdpbmFsIGltYWdlcyBmcm9tIGEgZGVzY3JpcHRpb24sIG9yIHRyYW5zZm9ybSBleGlzdGluZyBvbmVzIHdpdGggYSBmZXcgc2ltcGxlIHdvcmRzLiA8YnI+wrcgQWR2YW5jZWQgVm9pY2UgTW9kZeKAk1RhcCB0aGUgc291bmR3YXZlIGljb24gdG8gaGF2ZSBhIHJlYWwtdGltZSBjb252byBvbiB0aGUgZ28uIFNldHRsZSBhIGRpbm5lciB0YWJsZSBkZWJhdGUsIG9yIHByYWN0aWNlIGEgbmV3IGxhbmd1YWdlLiA8YnI+wrcgUGhvdG8gdXBsb2Fk4oCUU25hcCBvciB1cGxvYWQgYSBwaWN0dXJlIHRvIHRyYW5zY3JpYmUgYSBoYW5kd3JpdHRlbiByZWNpcGUgb3IgZ2V0IGluZm8gYWJvdXQgYSBsYW5kbWFyay4gPGJyPsK3IENyZWF0aXZlIGluc3BpcmF0aW9u4oCURmluZCBjdXN0b20gYmlydGhkYXkgZ2lmdCBpZGVhcyBvciBjcmVhdGUgYSBwZXJzb25hbGl6ZWQgZ3JlZXRpbmcgY2FyZC48YnI+wrcgVGFpbG9yZWQgYWR2aWNl4oCUVGFsayB0aHJvdWdoIGEgdG91Z2ggc2l0dWF0aW9uLCBhc2sgZm9yIGEgZGV0YWlsZWQgdHJhdmVsIGl0aW5lcmFyeSwgb3IgZ2V0IGhlbHAgY3JhZnRpbmcgdGhlIHBlcmZlY3QgcmVzcG9uc2UuIDxicj7CtyBQZXJzb25hbGl6ZWQgbGVhcm5pbmfigJRFeHBsYWluIGVsZWN0cmljaXR5IHRvIGEgZGlub3NhdXItbG92aW5nIGtpZCBvciBlYXNpbHkgYnJ1c2ggdXAgeW91cnNlbGYgb24gYSBoaXN0b3JpYyBldmVudC48YnI+wrcgUHJvZmVzc2lvbmFsIGlucHV04oCUQnJhaW5zdG9ybSBtYXJrZXRpbmcgY29weSBvciBtYXAgb3V0IGEgYnVzaW5lc3MgcGxhbi48YnI+wrcgSW5zdGFudCBhbnN3ZXJz4oCUR2V0IHJlY2lwZSBzdWdnZXN0aW9ucyB3aGVuIHlvdSBvbmx5IGhhdmUgYSBmZXcgaW5ncmVkaWVudHMuPGJyPsK3IFNjcmVlbiBzaGFyZSB3aXRoIEFjY2Vzc2liaWxpdHkgU2VydmljZXMg4oCUIEluIGxpbWl0ZWQgYXZhaWxhYmlsaXR5LCB1c2VycyBjYW4gY2hvb3NlIHRvIGxldCBDaGF0R1BUIGhlbHAgYW5zd2VyIHF1ZXN0aW9ucyBhYm91dCBzY3JlZW4gZGV0YWlscyB3aXRob3V0IHJlcXVpcmluZyBzY3JlZW5zaG90IHVwbG9hZHMuPGJyPjxicj5Kb2luIGh1bmRyZWRzIG9mIG1pbGxpb25zIG9mIHVzZXJzIGFuZCB0cnkgdGhlIGFwcCBjYXB0aXZhdGluZyB0aGUgd29ybGQuIERvd25sb2FkIENoYXRHUFQgdG9kYXkuPGJyPjxicj5UZXJtcyBvZiBzZXJ2aWNlICZhbXA7IHByaXZhY3kgcG9saWN5Ojxicj5odHRwczovL29wZW5haS5jb20vcG9saWNpZXMvdGVybXMtb2YtdXNlPGJyPmh0dHBzOi8vb3BlbmFpLmNvbS9wb2xpY2llcy9wcml2YWN5LXBvbGljeQ==",
+    "short": "WW91ciBBSSBhc3Npc3RhbnQgZm9yIHdyaXRpbmcsIHNlYXJjaCwgaW1hZ2UgZ2VuZXJhdGlvbiwgYW5kIG1vcmU="
+  },
+  "version": null,
+  "downloads": 1441959290,
+  "rating": 4.7692833,
+  "review_count": 51315701,
+  "in_app_purchases": "$8.00 - $200.00 per item",
+  "age_rating": "Teen",
+  "contains_ads": true,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "Jul 21, 2023",
+    "timestamp": 1689897600
+  },
+  "updated": {
+    "date": "Aug 1, 2026",
+    "timestamp": 1785556214
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Productivity",
+    "name": "PRODUCTIVITY"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "https://help.openai.com",
+    "email": "support@openai.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "T3BlbkFJ",
+    "name": "/store/apps/dev?id=7577165439232992817",
+    "legal_name": "7577165439232992817",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://openai.com/policies/privacy-policy",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Contacts",
+      "permissions": [
+        "read your contacts"
+      ]
+    },
+    {
+      "category": "Location",
+      "permissions": [
+        "approximate location (network-based)",
+        "precise location (GPS and network-based)"
+      ]
+    },
+    {
+      "category": "Camera",
+      "permissions": [
+        "take pictures and videos"
+      ]
+    },
+    {
+      "category": "Microphone",
+      "permissions": [
+        "record audio"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "change network connectivity",
+        "change your audio settings",
+        "control Near Field Communication",
+        "control vibration",
+        "full network access",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "run at startup",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "receive data from Internet"
+      ]
+    }
+  ]
+}

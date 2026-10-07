@@ -1,0 +1,52 @@
+{
+  "storage_path": "results/2026-09-06_10-34-35_camera_for_android",
+  "apk_path": "test_apks/camera_for_andriod.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION"
+    ],
+    [
+      "CAMERA",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "pkg": "photo.camera.hdcameras",
+  "label": "Camera for Android",
+  "description_long": "Camera for Android will allow you to make excellent pictures，that is a very fast and simple way to capture moments.  \nYou can easily to shoot excellent photos, utilizing all advantage of your phone or tablet.  \nFeatures:  \n\\- Camera, video recorder & panorama features  \n\\- White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)  \n\\- Screen mode settings(Action, Night, Sunset, Play)  \n\\- Dynamic user interface (phone/tablet)  \n\\- Pinch to zoom  \n\\- Smart panorama shooting   \n\\- Wide screen pictures  \n\\- Picture quality setting  \n\\- Exposure  \n\\- Location targeting  \n\\- Configurable volume keys  \n\\- Countdown Timer\n",
+  "apk_permissions": [
+    "GET_ACCOUNTS",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "ACCESS_COARSE_LOCATION",
+    "INTERNET",
+    "CAMERA",
+    "READ_EXTERNAL_STORAGE",
+    "ACCESS_WIFI_STATE",
+    "RECORD_AUDIO",
+    "READ_MEDIA_VIDEO",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_SYNC_SETTINGS",
+    "NFC",
+    "WRITE_SYNC_SETTINGS",
+    "ACCESS_NETWORK_STATE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_FINE_LOCATION",
+    "FOREGROUND_SERVICE",
+    "CHANGE_WIFI_STATE",
+    "SET_WALLPAPER",
+    "RECEIVE_BOOT_COMPLETED",
+    "VIBRATE"
+  ]
+}

@@ -1,0 +1,1003 @@
+{
+  "storage_path": "results/2026-09-07_15-10-07_signal_private_messenger",
+  "apk_path": "test_apks/signal.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "org.thoughtcrime.securesms",
+  "label": "Signal Private Messenger",
+  "description_long": "Signal is a messaging app with privacy at its core. It is free and easy to use, with strong end-to-end encryption that keeps your communication completely private.  \n  \n  \n• Send texts, voice messages, photos, videos, GIFs, and files for free. Signal uses your phone’s data connection, so you avoid SMS and MMS fees.  \n  \n  \n• Call your friends with crystal-clear encrypted voice and video calls. Group calls supported for up to 50 people.  \n  \n  \n• Stay connected with group chats up to 1,000 people. Control who can post and manage group members with admin permission settings.  \n  \n  \n• Share image, text, and video Stories that disappear after 24 hours. Privacy settings keep you in charge of exactly who can see each Story.  \n  \n  \n• Signal is built for your privacy. We know nothing about you or who you’re talking to. Our open source Signal Protocol means that we can’t read your messages or listen to your calls. Neither can anyone else. No back doors, no data collection, no compromises.  \n  \n  \n• Signal is independent and not for profit; a different kind of tech from a different kind of organization. As a 501c3 nonprofit we are supported by your donations, not by advertisers or investors.  \n  \n  \n• For support, questions, or more information please visit https://support.signal.org/  \n  \n  \nTo check out our source code, visit https://github.com/signalapp  \n  \n  \nFollow us on Twitter @signalapp and Instagram @signal_app\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "READ_CONTACTS",
+      "WRITE_CONTACTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "USE_FULL_SCREEN_INTENT",
+      "READ_PHONE_STATE",
+      "MANAGE_OWN_CALLS",
+      "READ_PHONE_NUMBERS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "NEARBY_WIFI_DEVICES",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_CAMERA",
+      "FOREGROUND_SERVICE_DATA_SYNC",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "FOREGROUND_SERVICE_PHONE_CALL",
+      "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+      "RECEIVE_BOOT_COMPLETED",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "USE_BIOMETRIC",
+      "USE_FINGERPRINT",
+      "BLUETOOTH",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "CHANGE_NETWORK_STATE",
+    "READ_PHONE_STATE",
+    "CAMERA",
+    "ACCESS_FINE_LOCATION",
+    "NEARBY_WIFI_DEVICES",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "READ_MEDIA_VIDEO",
+    "POST_NOTIFICATIONS",
+    "READ_EXTERNAL_STORAGE",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "USE_FULL_SCREEN_INTENT",
+    "READ_CONTACTS",
+    "FOREGROUND_SERVICE_CAMERA",
+    "ACCESS_NETWORK_STATE",
+    "READ_MEDIA_IMAGES",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "WAKE_LOCK",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "INTERNET",
+    "BROADCAST_STICKY",
+    "ACCESS_WIFI_STATE",
+    "FOREGROUND_SERVICE_PHONE_CALL",
+    "RECORD_AUDIO",
+    "READ_SYNC_SETTINGS",
+    "BLUETOOTH",
+    "BLUETOOTH_CONNECT",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "USE_FINGERPRINT",
+    "ACCESS_NOTIFICATION_POLICY",
+    "RECEIVE_BOOT_COMPLETED",
+    "CHANGE_WIFI_STATE",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "READ_PHONE_NUMBERS",
+    "USE_BIOMETRIC",
+    "DISABLE_KEYGUARD",
+    "VIBRATE",
+    "WRITE_CONTACTS",
+    "WRITE_EXTERNAL_STORAGE",
+    "INSTALL_SHORTCUT",
+    "MANAGE_OWN_CALLS",
+    "WRITE_SYNC_SETTINGS",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "reasoning": "The text explicitly lists the supported media types for sending and states that the app uses the data connection specifically to avoid SMS/MMS fees, proving a data-based multimedia messaging capability.",
+        "source_quotes": [
+          "Send texts, voice messages, photos, videos, GIFs, and files for free.",
+          "Signal uses your phone’s data connection, so you avoid SMS and MMS fees."
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "reasoning": "The text explicitly mentions 'encrypted voice and video calls' and directly links group call support to a specific participant limit of 50 people.",
+        "source_quotes": [
+          "Call your friends with crystal-clear encrypted voice and video calls.",
+          "Group calls supported for up to 50 people."
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "reasoning": "The text explicitly states the group chat limit is 1,000 people and describes the administrative capability to 'Control who can post and manage group members', proving a granular group management feature.",
+        "source_quotes": [
+          "Stay connected with group chats up to 1,000 people.",
+          "Control who can post and manage group members with admin permission settings."
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "reasoning": "The text explicitly describes 'Stories that disappear after 24 hours' and links this to 'Privacy settings keep you in charge of exactly who can see each Story', proving an ephemeral content sharing feature with granular visibility controls.",
+        "source_quotes": [
+          "Share image, text, and video Stories that disappear after 24 hours.",
+          "Privacy settings keep you in charge of exactly who can see each Story."
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "reasoning": "The text explicitly connects 'strong end-to-end encryption' with the 'open source Signal Protocol' and states the functional result that 'we can’t read your messages or listen to your calls', confirming the security architecture as a core capability.",
+        "source_quotes": [
+          "with strong end-to-end encryption that keeps your communication completely private.",
+          "Our open source Signal Protocol means that we can’t read your messages or listen to your calls."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Feature explicitly uses phone's data connection (internet) to send messages instead of SMS/MMS, requiring network connectivity permissions."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Voice messages require access to the device's microphone for audio recording."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Photos and videos can be captured directly through the app's camera interface for sending."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Photos, videos, and GIFs stored on device need to be read from shared storage for sending as messages."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "General files attachment requires access to shared external storage to browse and select files."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Messaging applications typically require notification permissions to alert users about incoming messages and replies."
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Voice calls require access to the device microphone to capture and transmit the user's voice audio."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Video calls require access to the device camera to capture and transmit video from the user."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "The feature mentions calling 'friends', which implies the app likely needs access to the user's contact list to identify and select call recipients."
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Group chat functionality requires internet connectivity to send/receive messages, sync data, and manage user connections between the app server and the device."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Essential for alerting users about new posts, member join/leave requests, and admin setting changes within the group chat."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Managing 'who are members' typically requires access to the device's contact list to identify, invite, or select existing contacts to join the group."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to cache chat history, download media files posted in the group, and manage attachment storage associated with the 'post' functionality."
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture new images and video content for creating Stories directly within the app."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read existing image and video files from shared storage to upload as Stories."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to record audio or voiceovers during the creation of video Stories."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from storage to add background music or sound effects to Stories."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required to access the user's contact list to configure privacy settings and select exactly who can view the Stories."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to upload the Stories to a server and share them with other users over the internet."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required for caching media files, managing drafts, or accessing non-media files on shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "End-to-end encryption using the Signal Protocol is a cryptographic implementation that operates within the application's data processing. It encrypts and decrypts data the app already possesses through other means. The encryption mechanism itself does not require any special Android permissions to function, as it is purely a software-level security implementation."
+          }
+        ]
+      },
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to use the phone's data connection for sending messages and media."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to record and send voice messages."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture photos and videos for sending."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access files (photos, videos, GIFs, and other files) stored on the device for sending."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files (e.g., voice messages) from shared storage for sending."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files (e.g., photos, videos, GIFs) from shared storage for sending."
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required for capturing video during video calls."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required for capturing audio during voice and video calls."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to enable voice and video calling over the internet."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Potentially required to access contacts for initiating calls with friends."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "May be required to maintain an active call service in the foreground."
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to support real-time group chat communication."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Likely needed to post notifications for new messages in the group chat."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Potentially needed to access user contacts for adding/managing group members."
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image and video files from shared storage for sharing as Stories."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Potentially required if users can capture images/videos directly for Stories."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Potentially required to access user's contacts for privacy controls (who can view Stories)."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required for storing temporary Story data before expiration."
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to send data over the internet via the phone's data connection."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and send image and video files, such as photos and videos."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Needed to read and send audio files, such as voice messages."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and send files from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture video from the device's camera for video calls."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to access the device's microphone for audio during voice and video calls."
+          },
+          {
+            "group_name": "PHONE",
+            "reasoning": "Required for telephony features, such as handling call management and cellular state routing during voice calls."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for handling IP-based data transport and internet routing for voice and video call data transmission."
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required to manage and access the list of members in the group chat, as well as to identify and control permissions for specific users."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for handling the communication and data transfer between the large number of users in the group chat over the internet."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": " Necessary for posting notifications to group members about new messages, updates, or changes in the group settings."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "May be required to inspect and configure account sync settings to ensure that all group members' accounts are properly synchronized and updated in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and share image and video files from shared storage for the Stories feature."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Needed to control exactly who can view the shared Stories, implying access to the user's contacts data."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": " Necessary for storing and accessing the shared image, text, and video Stories, even if temporarily."
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "PHONE",
+            "reasoning": "Required for call management and to ensure encryption for calls."
+          },
+          {
+            "group_name": "SMS",
+            "reasoning": "May be required for handling encrypted SMS messages, depending on the implementation."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Necessary for accessing and encrypting audio from calls."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for handling the internet connection required for encrypted communication."
+          }
+        ]
+      },
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture photos and videos directly within the app for attaching to messages."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to record audio and send voice messages as part of the multimedia feature."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to utilize the device's data connection for internet-based messaging instead of traditional SMS/MMS."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access, read, and save multimedia files such as photos, videos, and audio from shared storage."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to deliver real-time alerts and updates for incoming messages to the user."
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access the camera hardware for capturing live video feeds during video calls."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to access the device microphone for capturing audio input during voice and video calls."
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Potentially required to access the camera or capture images/video from the device, as users often create stories directly through the application."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required for visibility controls to manage exactly who can view the stories, which typically involves accessing the user's contact data."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to be able to read image and video files from shared storage, allowing users to share existing media as stories."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to use exact alarms for scheduling the automatic expiration of stories after 24 hours, as specified in the allowed context."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Used for permissions related to the shared external storage to handle the saving and loading of story files (images, text, video)."
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature specifically mentions using the phone's data connection to send messages and files, requiring internet access."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to record and send voice messages."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture new photos and videos to be sent as part of multimedia messaging."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and read existing images, videos, and GIFs from shared storage to send them."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and read existing audio files from shared storage to send them."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and send general files stored on the device's shared external storage."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Messaging features typically require access to the user's contacts to select recipients for the messages."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Necessary for a messaging application to notify users when they receive new messages or when a message has been successfully sent."
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to capture audio for voice calls."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture video for video calls."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to facilitate encrypted communication over the internet."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain the call connection as a foreground service so the call is not interrupted when the app is not in focus."
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Managing group memberships and admin permissions for a large-scale chat requires communicating with a remote server via the internet to synchronize and update the group state."
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture images and videos to be shared as Stories."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to capture audio for video Stories."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and upload existing image and video files from shared storage for Stories."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read and upload existing audio files or audio components of videos from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for accessing shared external storage to manage and retrieve media files for Stories."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required to implement visibility controls by allowing users to select specific contacts or groups from their address book."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to upload and share Stories over the internet."
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "The feature explicitly mentions ensuring others cannot 'listen to calls', which implies the application handles audio calls and thus requires access to the microphone."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The Signal Protocol is used for transmitting encrypted messages and voice data over the internet, requiring network connectivity and data transport permissions."
+          },
+          {
+            "group_name": "PHONE",
+            "reasoning": "The mention of providing encryption for 'calls' indicates that the app manages call functionality, which typically falls under the phone permission group for call management."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 26,
+    "features": [
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Feature explicitly uses phone's data connection (internet) to send messages instead of SMS/MMS, requiring network connectivity permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Voice messages require access to the device's microphone for audio recording.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Photos and videos can be captured directly through the app's camera interface for sending.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Photos, videos, and GIFs stored on device need to be read from shared storage for sending as messages.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "General files attachment requires access to shared external storage to browse and select files.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Messaging applications typically require notification permissions to alert users about incoming messages and replies.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files (e.g., voice messages) from shared storage for sending.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Voice calls require access to the device microphone to capture and transmit the user's voice audio.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Video calls require access to the device camera to capture and transmit video from the user.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "The feature mentions calling 'friends', which implies the app likely needs access to the user's contact list to identify and select call recipients.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for IP-based data transport to enable voice and video calling over the internet.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "May be required to maintain an active call service in the foreground.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Group chat functionality requires internet connectivity to send/receive messages, sync data, and manage user connections between the app server and the device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Essential for alerting users about new posts, member join/leave requests, and admin setting changes within the group chat.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Managing 'who are members' typically requires access to the device's contact list to identify, invite, or select existing contacts to join the group.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture new images and video content for creating Stories directly within the app.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read existing image and video files from shared storage to upload as Stories.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Required to record audio or voiceovers during the creation of video Stories.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from storage to add background music or sound effects to Stories.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "Required to access the user's contact list to configure privacy settings and select exactly who can view the Stories.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to upload the Stories to a server and share them with other users over the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required for caching media files, managing drafts, or accessing non-media files on shared external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "End-to-end encryption using the Signal Protocol is a cryptographic implementation that operates within the application's data processing. It encrypts and decrypts data the app already possesses through other means. The encryption mechanism itself does not require any special Android permissions to function, as it is purely a software-level security implementation.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "PHONE",
+            "reasoning": "Required for call management and to ensure encryption for calls.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Necessary for accessing and encrypting audio from calls.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for handling the internet connection required for encrypted communication.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

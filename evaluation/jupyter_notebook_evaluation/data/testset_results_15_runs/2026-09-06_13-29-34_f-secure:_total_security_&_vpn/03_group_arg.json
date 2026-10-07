@@ -1,0 +1,1506 @@
+{
+  "storage_path": "results/2026-09-06_13-29-34_f-secure:_total_security_&_vpn",
+  "apk_path": "test_apks/f_secure.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.fsecure.ms.safe",
+  "label": "F-Secure: Total Security & VPN",
+  "description_long": "**F-Secure all-in-one security makes online protection easy**   \nGet antivirus, scam protection, VPN, password management, and identity protection in one app. Choose the protection that matches your needs.   \n  \n**Sign up in the app and get Mobile security subscription 14 days free.**  \n  \n**Mobile security subscription: security on the go**  \n✓ Download apps and files safely to your device with top-rated antivirus.  \n✓ No more guessing – detect phishing websites and fake online stores automatically on Chrome browser.  \n✓ Keep your money safe when banking, browsing, and shopping online.   \n✓ Spot scams with Scam Scanner — upload a screenshot of anything suspicious and find out if it’s a scam.  \n✓ SMS Protection – Filter scam SMS messages instantly with AI-powered SMS protection.  \n✓ Connect to any WiFi hotspot securely with a VPN and make your browsing private.   \n✓ Prevent identity theft with 24/7 dark web monitoring and data breach alerts.  \n✓ Manage your privacy and app permissions easily in one location.  \n✓ Get useful tips on setting up device lock and activating security features.  \n  \n**Total subscription: complete protection on all devices**  \n✓ Everything included in Mobile security plus all the following benefits.  \n✓ Store and access passwords from any device with a password manager.   \n✓ Protect your kids’ safety online with content filtering and healthy screentime limits.  \n✓ Protect all your PC, Mac, Android and iOS devices against cyber threats with one subscription.  \n  \n**F‑Secure VPN subscription**  \nIf you only want to guard your privacy, you can get the F‑Secure VPN subscription. With it you only pay for F‑Secure VPN that allows you to browse privately, join any Wi-Fi hotspot safely, and change your IP address.  \n  \n**Secure everything you do online**  \nF-Secure makes protecting everything you do online easy – whether it’s streaming your favorite show, connecting with family, managing your money, or saving priceless memories. Everything you need is in one app. Get antivirus, VPN, password vault, data breach alerts and more with the subscription that best suits your needs.  \n  \nDATA PRIVACY COMPLIANCE   \nF-Secure always applies strict security measures to protect the confidentiality and integrity of your personal data. See the full privacy policy here: https://www.f-secure.com/en/legal/privacy/consumer/total  \n  \nTHIS APP USES ACCESSIBILITY SERVICES  \nThis app uses Accessibility services. F-Secure uses the respective permissions with active consent from the end user.   \n  \nThe Accessibility permissions are used for the Chrome Protection features, in particular:  \n• To read website addresses for checking their safety on Chrome.  \n  \nWith the Accessibility service   \n• safety checks on Chrome can be performed.\n",
+  "ground_truth_sets": [
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "QUERY_ALL_PACKAGES",
+      "RECEIVE_SMS",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "FOREGROUND_SERVICE"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "RECEIVE_SMS",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_SPECIAL_USE",
+      "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+      "QUERY_ALL_PACKAGES",
+      "REQUEST_DELETE_PACKAGES",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "VIBRATE",
+      "USE_BIOMETRIC",
+      "USE_FINGERPRINT",
+      "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+    ]
+  ],
+  "apk_permissions": [
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+    "USE_BIOMETRIC",
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "CAMERA",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "READ_CONTACTS",
+    "FOREGROUND_SERVICE",
+    "ACCESS_FINE_LOCATION",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE",
+    "RECEIVE_SMS",
+    "REQUEST_DELETE_PACKAGES",
+    "CHANGE_NETWORK_STATE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "POST_NOTIFICATIONS",
+    "USE_FINGERPRINT",
+    "QUERY_ALL_PACKAGES",
+    "CHANGE_WIFI_STATE",
+    "ACCESS_COARSE_LOCATION",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_LOCATION",
+    "ACCESS_WIFI_STATE",
+    "READ_PHONE_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 12,
+    "features": [
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "reasoning": "The text explicitly states the capability to 'Download apps and files safely to your device with top-rated antivirus', directly confirming the presence of an antivirus scanning feature.",
+        "source_quotes": [
+          "Download apps and files safely to your device with top-rated antivirus."
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "reasoning": "The text explicitly mentions the feature to 'detect phishing websites and fake online stores automatically on Chrome browser', providing direct evidence of browser-specific security scanning.",
+        "source_quotes": [
+          "No more guessing – detect phishing websites and fake online stores automatically on Chrome browser."
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "reasoning": "The text explicitly defines the 'Scam Scanner' functionality where you can 'upload a screenshot of anything suspicious and find out if it’s a scam', confirming a visual analysis tool.",
+        "source_quotes": [
+          "Spot scams with Scam Scanner — upload a screenshot of anything suspicious and find out if it’s a scam."
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "reasoning": "The text explicitly describes 'SMS Protection – Filter scam SMS messages instantly with AI-powered SMS protection', directly proving the existence of a message filtering system.",
+        "source_quotes": [
+          "SMS Protection – Filter scam SMS messages instantly with AI-powered SMS protection."
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "reasoning": "The text explicitly states the app can 'Connect to any WiFi hotspot securely with a VPN and make your browsing private' and allows the user to 'change your IP address', confirming core VPN capabilities.",
+        "source_quotes": [
+          "Connect to any WiFi hotspot securely with a VPN and make your browsing private.",
+          "With it you only pay for F‑Secure VPN that allows you to browse privately, join any Wi-Fi hotspot safely, and change your IP address."
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "reasoning": "The text explicitly mentions the ability to 'Prevent identity theft with 24/7 dark web monitoring and data breach alerts', confirming a continuous background monitoring service.",
+        "source_quotes": [
+          "Prevent identity theft with 24/7 dark web monitoring and data breach alerts."
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "reasoning": "The text explicitly states the user can 'Manage your privacy and app permissions easily in one location', confirming a unified control panel for permissions.",
+        "source_quotes": [
+          "Manage your privacy and app permissions easily in one location."
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "reasoning": "The text explicitly mentions the availability of 'useful tips on setting up device lock and activating security features', confirming a built-in guidance system.",
+        "source_quotes": [
+          "Get useful tips on setting up device lock and activating security features."
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "reasoning": "The text explicitly states 'Store and access passwords from any device with a password manager', directly confirming password storage and synchronization capabilities.",
+        "source_quotes": [
+          "Store and access passwords from any device with a password manager."
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "reasoning": "The text explicitly mentions the ability to 'Protect your kids’ safety online with content filtering and healthy screentime limits', confirming parental control tools.",
+        "source_quotes": [
+          "Protect your kids’ safety online with content filtering and healthy screentime limits."
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "reasoning": "The text explicitly states the app can 'Protect all your PC, Mac, Android and iOS devices against cyber threats with one subscription', confirming cross-platform support.",
+        "source_quotes": [
+          "Protect all your PC, Mac, Android and iOS devices against cyber threats with one subscription."
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "reasoning": "The text explicitly states 'THIS APP USES ACCESSIBILITY SERVICES' and clarifies 'The Accessibility permissions are used for the Chrome Protection features... To read website addresses for checking their safety on Chrome', confirming the technical integration of this system permission.",
+        "source_quotes": [
+          "This app uses Accessibility services.",
+          "The Accessibility permissions are used for the Chrome Protection features, in particular: • To read website addresses for checking their safety on Chrome."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and scan files on the shared external storage for malware and viruses."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to download applications, files, and update antivirus definitions over the internet."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to query installed applications and manage package installation states to detect malicious software."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to alert the user about detected security threats or download status."
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to remote threat intelligence databases to verify URLs and check against known phishing lists."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Often required for security apps to read screen content, monitor browser activity, and detect fake login forms or spoofed URLs."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to alert the user immediately when a phishing website or fake store is detected."
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files (screenshots) from shared storage for analysis to verify if they are scams."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where screenshot files are typically saved and can be uploaded by the user."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "The feature filters scam SMS messages, which requires reading and analyzing incoming SMS messages to detect potentially fraudulent content."
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature explicitly involves connecting to Wi-Fi hotspots, routing internet traffic for private browsing, and changing the user's IP address, which directly corresponds to permissions handling IP-based data transport, global internet routing, and Wi-Fi interface states."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Maintaining a persistent secure VPN connection typically requires the application to run a specialized foreground service to prevent the system from terminating the network tunnel when the app is not in the foreground."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "To support the foreground service required for the VPN connection, the application must be permitted to post persistent notifications to display connection status and alert the user."
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The feature explicitly states it 'sends data breach alerts' to users, which requires notification permissions to display breach alert notifications."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The dark web monitoring service requires internet connectivity to communicate with external monitoring services and check for data breaches."
+          },
+          {
+            "group_name": "CONTACTS_AND_PROFILES",
+            "reasoning": "The app may need to access user account information and email addresses to monitor which of the user's credentials appear in data breaches."
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Managing application permissions and privacy settings requires access to control application lifecycle, manage package configurations, and adjust system resource optimization, which falls under application and system management capabilities."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "This feature may need to modify system-level interface elements like settings menus and status bar permissions display to provide centralized privacy management interface."
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature provides informational tips and guidance on security settings. It does not explicitly require accessing sensitive user data, reading device status, or modifying system configurations programmatically, which would necessitate specific permission groups. Displaying text-based guidance and potentially opening system settings via standard intents does not require granted permissions."
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for 'Cross-Device' functionality to synchronize password data across multiple devices via the internet."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Required to secure the password vault using biometric authentication (fingerprint/face) and to prevent screen capturing of sensitive data."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required for the 'integrated' manager to autofill passwords into other apps or read screen content to detect login forms."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required for backing up password data to external files or importing/exporting password lists."
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Content filtering requires monitoring, blocking, or managing IP-based data transport and internet routing to restrict access to specific online content."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Screen time management necessitates retrieving task states and managing package installation states to identify which applications are active and enforce usage limits."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Enforcing screen time limits typically requires setting exact alarms to wake the device, and blocking content may involve drawing window overlays to restrict access."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Advanced content filtering may require reading screen content to detect prohibited text or images, and tracking specific user interactions for granular usage monitoring."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The system needs to post notifications to inform parents or children when time limits are reached or when content has been filtered."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This feature describes cross-platform subscription coverage and does not specify any functionality that requires access to device hardware, data, or system features."
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature explicitly utilizes Accessibility services to read screen content (specifically website addresses), which directly maps to the permissions defined in this group for reading screen content through assistant structures."
+          }
+        ]
+      },
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access downloaded applications and files for scanning."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to inspect or manage installed applications, which is typical for antivirus apps to scan for malware."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to download application/file updates or virus definition databases over the internet."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "May be required for interacting with system security integrations, credential management, or application integrity protections."
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to monitor network traffic and check URLs for phishing/fake store detection."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to access locally stored data (e.g., blacklists or cached detection patterns)."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Potentially required to inspect Chrome's UI or web content for detection purposes."
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access screenshots from the device's shared external storage for upload."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files (screenshots) from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "Required to access and filter SMS messages for scam detection."
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for handling IP-based data transport and global internet routing, which is essential for VPN functionality and IP masking."
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for accessing the internet to monitor the dark web and send breach alerts."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to post data breach alerts to the user."
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Managing application permissions and lifecycle states typically falls under this group."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Handling user privacy settings may require permissions related to system security integrations."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "If privacy settings include account-level controls, this group may be relevant."
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature involves providing guidance for device security configurations, which may require permissions related to system security integrations, credential management, or biometric authentication, all of which fall under this group."
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to store and retrieve password data locally on the device."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for syncing password data across devices over the internet."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Required for managing credentials and ensuring secure access to stored passwords."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Required to configure and manage sync settings for the password manager across devices."
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Screen time limit management may require controlling application lifecycle, scheduling background tasks, or adjusting system resource optimization."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Content filtering may require monitoring or controlling network traffic (e.g., blocking certain websites)."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Parental controls might need to sync settings or restrictions across devices or accounts."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Content filtering may require reading screen content to detect and block inappropriate material."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required to use Accessibility services to read website addresses from the screen."
+          }
+        ]
+      },
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to scan files and applications stored on the device."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to download updates for the antivirus database and to communicate with cloud-based scanning services."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to manage and monitor application installations and system states for potential malware."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Involved in interacting with system security integrations and device protection modes to ensure safe operations."
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to monitor and analyze internet traffic and websites visited within the Chrome browser to detect phishing and fake online stores."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Needed to run a foreground service that can inspect and analyze web traffic in real-time, even when the Chrome browser is in the foreground."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Involved in interacting with system security integrations and application integrity protections to ensure the detection of phishing and fake online stores does not compromise user security or privacy."
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature involves uploading and analyzing screenshots, which requires reading image files from shared storage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature needs to access the device's storage to upload screenshots, which requires permissions related to the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "The feature filters SMS messages, which directly relates to accessing and managing user's SMS messages, requiring permissions from the SMS group."
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to establish and manage VPN connections, handle IP-based data transport, and modify internet routing."
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to handle IP-based data transport and communicate with dark web monitoring services over the internet."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Needed to send data breach alerts to the user."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Used for interacting with system security integrations and protecting application integrity, which is essential for a feature related to identity theft prevention and data breach alerts."
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature is related to managing user privacy settings, which aligns with the group's description of interacting with system security integrations and application integrity protections."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature involves managing application permissions, which is associated with controlling the application lifecycle and managing package installation states."
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature provides guidance on setting up device locks and activating other security features, which likely involves interacting with system security integrations and device protection modes, aligning with the description of the SECURITY_AND_PRIVACY_NORMAL group."
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The password manager needs to store and access passwords, which likely involves reading and writing to shared external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To enable access to passwords from any device, the password manager probably needs to synchronize data across devices, which requires internet connectivity and network communication."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "As a password manager, the app deals with sensitive user data and likely interacts with system security integrations, such as biometric authentication or device protection modes, to ensure secure storage and access to passwords."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "The app may need to inspect background data synchronization statistics and configure account sync settings to ensure seamless password synchronization across devices."
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "ACTIVITY_RECOGNITION",
+            "reasoning": "Required to track screen time and understand the activities the child is performing on the device."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "May be required to filter location-based content or track the child's location for added safety."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to monitor and filter online content, including internet browsing history and app usage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to launch specialized foreground services for continuous monitoring and enforcement of screen time limits and content filtering rules."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Needed to control application lifecycle, manage package installation states, and adjust system resource optimization to enforce parental controls and content filtering."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "May be required to read screen content and capture keyboard input to effectively filter and monitor the child's online activities."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to modify system-level interface elements, such as displaying screen time limits or content filtering alerts."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature is describing a subscription-based service that provides protection across multiple platforms, which does not inherently require any specific Android permissions."
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature uses Accessibility services to read website addresses, which involves reading screen content and potentially interacting with system shortcuts, aligning with the description of the ACCESSIBILITY_AND_INPUT group."
+          }
+        ]
+      },
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to read, scan, and verify downloaded files and application packages stored in shared external storage for malware detection."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to download updated antivirus virus definitions, check file hashes against cloud threat databases, and receive real-time security updates."
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature requires monitoring network connectivity and handling IP-based data transport to verify URLs against remote threat databases (e.g., Google Safe Browsing), download phishing/fake store blocklist updates, and assess active connection states. These operations align with permissions that manage internet routing and interface states."
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The feature requires reading existing image files (screenshots) from the device's shared storage or gallery to analyze them for scam verification."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "The feature filters scam SMS messages, which requires reading and accessing the user's text message content for AI analysis."
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves connecting to Wi-Fi hotspots and altering the device's IP address, which directly requires permissions for handling IP-based data transport, global internet routing, and managing Wi-Fi/Ethernet interface states."
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to monitor the dark web and query external breach databases, which inherently depends on IP-based data transport and internet connectivity."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send 'data breach alerts' to the user, as explicitly stated in the feature description."
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "The feature requires programmatically managing application permissions and privacy settings, which involves interacting with app configurations, package states, and system-level permission controls. This aligns with the APP_AND_SYSTEM_MANAGEMENT group responsible for controlling the application lifecycle and managing package-related states."
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature provides informational tips on how to set up device locks and security features. It does not perform any actions that require accessing sensitive data, hardware components, or system configurations."
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature requires internet connectivity to synchronize password data across multiple devices and communicate with remote cloud servers for cross-device access and backup."
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Screen time limit management requires monitoring application usage statistics, retrieving task states, and enforcing restrictions on app activity to manage user screen time, which directly aligns with permissions for managing app states, retrieving task states, and controlling application lifecycle."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature relies on an Android Accessibility Service to extract website addresses from the browser interface, which involves reading screen content and interacting with UI elements via accessibility structures, directly matching this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for downloading applications and files from the internet."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the downloaded files to the device and to scan these files for viruses."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to manage and ensure the safety of the application installation process."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to perform the downloading and virus scanning processes as foreground services to ensure they complete without being killed by the system."
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with remote servers to verify URLs against phishing databases or analyze website content for authenticity."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required to read the URL and content of the Chrome browser to detect if the user is visiting a phishing or fake store website."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to alert the user in real-time when a phishing or fake store website has been detected."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to ensure the detection process continues to run in the background while the user is browsing in Chrome."
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read the screenshot image files from the device's shared storage for analysis."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where the screenshots are stored."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to upload the screenshot images to a server to verify if they are scams."
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "The feature is designed to filter scam SMS messages, which requires access to the device's SMS messages."
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves establishing a VPN connection, routing internet traffic for private browsing, and modifying the device's IP address, all of which require permissions related to IP-based data transport and network routing."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "A VPN connection must remain active in the background to continuously mask the user's IP address and secure their browsing session, which requires a foreground service to prevent the system from terminating the process."
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send data breach alerts to the user."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with the backend servers that monitor the dark web and transmit alert data to the device."
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Managing application permissions typically requires the ability to query installed packages and manage their states, which falls under application and system management."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Managing user privacy settings involves interacting with system security integrations and device protection configurations."
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature is described as providing tips and guidance for setting up security features. Providing informational content or instructions to the user does not require access to protected system resources or hardware permissions."
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to synchronize password data across multiple devices via the internet."
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Required for credential management and biometric authentication to securely access and protect stored passwords."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Required to manage the synchronization of password data between the device and the cloud account for cross-device access."
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for content filtering to monitor or block network traffic and IP-based data transport."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to manage screen time by tracking application lifecycle and monitoring task states to determine which apps are being used."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to implement screen time limits by displaying window overlays or blocking screens when a time limit is reached."
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Required to read screen content for content filtering and to detect the currently active application for screen time tracking."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to run the filtering and monitoring processes continuously in the background to ensure real-time enforcement of limits."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send alerts to the user or parent when screen time limits are approaching or reached."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature explicitly uses Accessibility services to read website addresses from the screen, which aligns with the group's description of reading screen content."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Performing 'safety checking' on website addresses typically requires communicating with a remote server to verify if a URL is malicious, necessitating network data transport."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 31,
+    "features": [
+      {
+        "title": "Antivirus Protection",
+        "description": "Enables users to download applications and files to their device safely using top-rated antivirus technology.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access and scan files on the shared external storage for malware and viruses.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to download applications, files, and update antivirus definitions over the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Required to query installed applications and manage package installation states to detect malicious software.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "May be required for interacting with system security integrations, credential management, or application integrity protections.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Chrome Browser Phishing & Fake Store Detection",
+        "description": "Automatically detects phishing websites and fake online stores specifically within the Chrome browser.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to remote threat intelligence databases to verify URLs and check against known phishing lists.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Often required for security apps to read screen content, monitor browser activity, and detect fake login forms or spoofed URLs.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to alert the user immediately when a phishing website or fake store is detected.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Needed to run a foreground service that can inspect and analyze web traffic in real-time, even when the Chrome browser is in the foreground.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Scam Scanner (Screenshot Analysis)",
+        "description": "Allows users to upload screenshots of suspicious items to verify if they are scams.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files (screenshots) from shared storage for analysis to verify if they are scams.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage where screenshot files are typically saved and can be uploaded by the user.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "AI-Powered SMS Protection",
+        "description": "Filters scam SMS messages instantly using AI-powered protection.",
+        "inferences": [
+          {
+            "group_name": "SMS",
+            "reasoning": "The feature filters scam SMS messages, which requires reading and analyzing incoming SMS messages to detect potentially fraudulent content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Secure VPN Connection & IP Masking",
+        "description": "Allows users to connect securely to any Wi-Fi hotspot for private browsing and enables changing the user's IP address.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature explicitly involves connecting to Wi-Fi hotspots, routing internet traffic for private browsing, and changing the user's IP address, which directly corresponds to permissions handling IP-based data transport, global internet routing, and Wi-Fi interface states.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Maintaining a persistent secure VPN connection typically requires the application to run a specialized foreground service to prevent the system from terminating the network tunnel when the app is not in the foreground.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Dark Web Monitoring & Breach Alerts",
+        "description": "Provides 24/7 monitoring of the dark web to prevent identity theft and sends data breach alerts.",
+        "inferences": [
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The feature explicitly states it 'sends data breach alerts' to users, which requires notification permissions to display breach alert notifications.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The dark web monitoring service requires internet connectivity to communicate with external monitoring services and check for data breaches.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Privacy & App Permission Management",
+        "description": "Offers a centralized location to manage user privacy settings and application permissions.",
+        "inferences": [
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Managing application permissions and privacy settings requires access to control application lifecycle, manage package configurations, and adjust system resource optimization, which falls under application and system management capabilities.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Handling user privacy settings may require permissions related to system security integrations.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Security Configuration Guidance",
+        "description": "Provides tips for setting up device locks and activating other security features.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature provides informational tips and guidance on security settings. It does not explicitly require accessing sensitive user data, reading device status, or modifying system configurations programmatically, which would necessitate specific permission groups. Displaying text-based guidance and potentially opening system settings via standard intents does not require granted permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature involves providing guidance for device security configurations, which may require permissions related to system security integrations, credential management, or biometric authentication, all of which fall under this group.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Cross-Device Password Manager",
+        "description": "Enables users to store and access passwords from any device using an integrated password manager.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for 'Cross-Device' functionality to synchronize password data across multiple devices via the internet.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Required to secure the password vault using biometric authentication (fingerprint/face) and to prevent screen capturing of sensitive data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required for backing up password data to external files or importing/exporting password lists.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Required to configure and manage sync settings for the password manager across devices.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Parental Controls (Content Filtering & Screen Time)",
+        "description": "Protects children online through content filtering and screen time limit management.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Content filtering requires monitoring, blocking, or managing IP-based data transport and internet routing to restrict access to specific online content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Screen time management necessitates retrieving task states and managing package installation states to identify which applications are active and enforce usage limits.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Enforcing screen time limits typically requires setting exact alarms to wake the device, and blocking content may involve drawing window overlays to restrict access.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Advanced content filtering may require reading screen content to detect prohibited text or images, and tracking specific user interactions for granular usage monitoring.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The system needs to post notifications to inform parents or children when time limits are reached or when content has been filtered.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to launch specialized foreground services for continuous monitoring and enforcement of screen time limits and content filtering rules.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Platform Device Coverage",
+        "description": "Provides protection across PC, Mac, Android, and iOS devices via a single subscription.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This feature describes cross-platform subscription coverage and does not specify any functionality that requires access to device hardware, data, or system features.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Accessibility Service Integration for Safety Checks",
+        "description": "Uses Accessibility services to read website addresses for safety checking on Chrome browsers.",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "The feature explicitly utilizes Accessibility services to read screen content (specifically website addresses), which directly maps to the permissions defined in this group for reading screen content through assistant structures.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

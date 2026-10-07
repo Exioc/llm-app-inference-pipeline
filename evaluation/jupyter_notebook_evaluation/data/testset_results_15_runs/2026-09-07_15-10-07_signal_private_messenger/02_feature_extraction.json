@@ -1,0 +1,160 @@
+{
+  "storage_path": "results/2026-09-07_15-10-07_signal_private_messenger",
+  "apk_path": "test_apks/signal.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "org.thoughtcrime.securesms",
+  "label": "Signal Private Messenger",
+  "description_long": "Signal is a messaging app with privacy at its core. It is free and easy to use, with strong end-to-end encryption that keeps your communication completely private.  \n  \n  \n• Send texts, voice messages, photos, videos, GIFs, and files for free. Signal uses your phone’s data connection, so you avoid SMS and MMS fees.  \n  \n  \n• Call your friends with crystal-clear encrypted voice and video calls. Group calls supported for up to 50 people.  \n  \n  \n• Stay connected with group chats up to 1,000 people. Control who can post and manage group members with admin permission settings.  \n  \n  \n• Share image, text, and video Stories that disappear after 24 hours. Privacy settings keep you in charge of exactly who can see each Story.  \n  \n  \n• Signal is built for your privacy. We know nothing about you or who you’re talking to. Our open source Signal Protocol means that we can’t read your messages or listen to your calls. Neither can anyone else. No back doors, no data collection, no compromises.  \n  \n  \n• Signal is independent and not for profit; a different kind of tech from a different kind of organization. As a 501c3 nonprofit we are supported by your donations, not by advertisers or investors.  \n  \n  \n• For support, questions, or more information please visit https://support.signal.org/  \n  \n  \nTo check out our source code, visit https://github.com/signalapp  \n  \n  \nFollow us on Twitter @signalapp and Instagram @signal_app\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "READ_CONTACTS",
+      "WRITE_CONTACTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "USE_FULL_SCREEN_INTENT",
+      "READ_PHONE_STATE",
+      "MANAGE_OWN_CALLS",
+      "READ_PHONE_NUMBERS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "NEARBY_WIFI_DEVICES",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_CAMERA",
+      "FOREGROUND_SERVICE_DATA_SYNC",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "FOREGROUND_SERVICE_PHONE_CALL",
+      "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+      "RECEIVE_BOOT_COMPLETED",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "USE_BIOMETRIC",
+      "USE_FINGERPRINT",
+      "BLUETOOTH",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "CHANGE_NETWORK_STATE",
+    "READ_PHONE_STATE",
+    "CAMERA",
+    "ACCESS_FINE_LOCATION",
+    "NEARBY_WIFI_DEVICES",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "READ_MEDIA_VIDEO",
+    "POST_NOTIFICATIONS",
+    "READ_EXTERNAL_STORAGE",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "USE_FULL_SCREEN_INTENT",
+    "READ_CONTACTS",
+    "FOREGROUND_SERVICE_CAMERA",
+    "ACCESS_NETWORK_STATE",
+    "READ_MEDIA_IMAGES",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "WAKE_LOCK",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE_CONNECTED_DEVICE",
+    "INTERNET",
+    "BROADCAST_STICKY",
+    "ACCESS_WIFI_STATE",
+    "FOREGROUND_SERVICE_PHONE_CALL",
+    "RECORD_AUDIO",
+    "READ_SYNC_SETTINGS",
+    "BLUETOOTH",
+    "BLUETOOTH_CONNECT",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "USE_FINGERPRINT",
+    "ACCESS_NOTIFICATION_POLICY",
+    "RECEIVE_BOOT_COMPLETED",
+    "CHANGE_WIFI_STATE",
+    "FOREGROUND_SERVICE",
+    "FOREGROUND_SERVICE_REMOTE_MESSAGING",
+    "READ_PHONE_NUMBERS",
+    "USE_BIOMETRIC",
+    "DISABLE_KEYGUARD",
+    "VIBRATE",
+    "WRITE_CONTACTS",
+    "WRITE_EXTERNAL_STORAGE",
+    "INSTALL_SHORTCUT",
+    "MANAGE_OWN_CALLS",
+    "WRITE_SYNC_SETTINGS",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Multimedia Messaging via Data Connection",
+        "description": "Allows users to send texts, voice messages, photos, videos, GIFs, and files for free using the phone's data connection to avoid SMS and MMS fees.",
+        "reasoning": "The text explicitly lists the supported media types for sending and states that the app uses the data connection specifically to avoid SMS/MMS fees, proving a data-based multimedia messaging capability.",
+        "source_quotes": [
+          "Send texts, voice messages, photos, videos, GIFs, and files for free.",
+          "Signal uses your phone’s data connection, so you avoid SMS and MMS fees."
+        ]
+      },
+      {
+        "title": "Encrypted Voice and Video Calling",
+        "description": "Enables encrypted voice and video calls with friends, including group calls that support up to 50 people.",
+        "reasoning": "The text explicitly mentions 'encrypted voice and video calls' and directly links group call support to a specific participant limit of 50 people.",
+        "source_quotes": [
+          "Call your friends with crystal-clear encrypted voice and video calls.",
+          "Group calls supported for up to 50 people."
+        ]
+      },
+      {
+        "title": "Large-Scale Group Chat Management",
+        "description": "Supports group chats of up to 1,000 people with admin permission settings that allow control over who can post and who are members.",
+        "reasoning": "The text explicitly states the group chat limit is 1,000 people and describes the administrative capability to 'Control who can post and manage group members', proving a granular group management feature.",
+        "source_quotes": [
+          "Stay connected with group chats up to 1,000 people.",
+          "Control who can post and manage group members with admin permission settings."
+        ]
+      },
+      {
+        "title": "Disappearing Stories with Visibility Controls",
+        "description": "Users can share image, text, and video Stories that automatically expire after 24 hours, with privacy settings controlling exactly who can view them.",
+        "reasoning": "The text explicitly describes 'Stories that disappear after 24 hours' and links this to 'Privacy settings keep you in charge of exactly who can see each Story', proving an ephemeral content sharing feature with granular visibility controls.",
+        "source_quotes": [
+          "Share image, text, and video Stories that disappear after 24 hours.",
+          "Privacy settings keep you in charge of exactly who can see each Story."
+        ]
+      },
+      {
+        "title": "End-to-End Encryption via Open Source Protocol",
+        "description": "Utilizes the open source Signal Protocol to provide strong end-to-end encryption, ensuring that neither the provider nor others can read messages or listen to calls.",
+        "reasoning": "The text explicitly connects 'strong end-to-end encryption' with the 'open source Signal Protocol' and states the functional result that 'we can’t read your messages or listen to your calls', confirming the security architecture as a core capability.",
+        "source_quotes": [
+          "with strong end-to-end encryption that keeps your communication completely private.",
+          "Our open source Signal Protocol means that we can’t read your messages or listen to your calls."
+        ]
+      }
+    ]
+  }
+}

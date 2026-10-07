@@ -1,0 +1,44 @@
+{
+  "storage_path": "results/2026-09-06_07-47-15_alarm_clock",
+  "apk_path": "test_apks/alarm_clock.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "USE_EXACT_ALARM"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "USE_FULL_SCREEN_INTENT",
+      "READ_MEDIA_AUDIO",
+      "READ_EXTERNAL_STORAGE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "USE_EXACT_ALARM"
+    ]
+  ],
+  "pkg": "com.timy.alarmclock",
+  "label": "Alarm clock",
+  "description_long": "Timy Alarm Clock will help you avoid accidentally turning off your alarm clock and falling asleep.  \n  \nTo dismiss the alarm you will have to wake up some funny characters.  \n  \n**Main features:**  \nMultiple alarms.  \nCute characters to wake up: Cat, dog, bunny, fox, crocodile, shark, duck, with three difficulty levels.  \nWake up with your tones or songs.  \nRepeat option.  \nSnooze.  \nIndependent volume control.  \n  \nImportant: Device must be on to work.\n",
+  "apk_permissions": [
+    "RECEIVE_BOOT_COMPLETED",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "INTERNET",
+    "USE_EXACT_ALARM",
+    "READ_MEDIA_AUDIO",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE",
+    "WAKE_LOCK",
+    "POST_NOTIFICATIONS",
+    "FOREGROUND_SERVICE",
+    "READ_EXTERNAL_STORAGE",
+    "USE_FULL_SCREEN_INTENT"
+  ]
+}

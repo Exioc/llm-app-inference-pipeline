@@ -1,0 +1,2058 @@
+{
+  "storage_path": "results/2026-09-10_17-12-51_waze_navigation_&_live_traffic",
+  "apk_path": "apk_permissions/waze_navigation.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.waze",
+  "label": "Waze Navigation & Live Traffic",
+  "description_long": "Know what's ahead on the road with the help from other drivers. Waze is a live map that harnesses the local knowledge of tens of millions of drivers around the world. Drivers safely and confidently reach their everyday destinations thanks to Waze map’s GPS navigation, live traffic updates, real-time safety alerts (including roadworks, accidents, crashes, police, potholes and more), and accurate ETAs.  \n  \nMake your next drive more predictable and stress-free:  \n• Get there faster with real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures  \n• Even if you know the way, avoid surprises on the road ahead with safety alerts for accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, railway crossings and more  \n• Steer clear of tickets by knowing where police and red light and speed cameras are located  \n• Share what’s happening on the road with other drivers by reporting live incidents and hazards  \n• Stay informed of upcoming speed limit changes, and keep your speedometer in check   \n• Know which lane to be in with multi-lane guidance   \n• See toll pricing and choose to avoid tolls along your routes  \n• Add road passes and vignettes for HOV lanes and restricted traffic zones  \n• Find petrol/fuel stations and prices and EV charging stations along your route  \n• Locate and compare parking lots and their prices near your destination  \n• Use voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities  \n• Plan your next drive by checking ETAs by future departure or arrival times  \n• Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze   \n• Sync Waze to your car’s built-in display through Android Auto  \n  \n* Some features are not available in all countries  \n  \n* Waze navigation is not intended for emergency or oversized vehicles  \n  \nYou can manage your in-app Waze privacy settings at any time. Learn more about the Waze privacy policy here, www.waze.com/legal/privacy.\n",
+  "ground_truth_sets": [
+    [
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "POST_NOTIFICATIONS",
+      "INTERNET"
+    ],
+    [
+      "GET_ACCOUNTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "POST_PROMOTED_NOTIFICATIONS",
+      "READ_PHONE_STATE",
+      "READ_BASIC_PHONE_STATE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_LOCATION",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "MODIFY_AUDIO_SETTINGS",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "VIBRATE",
+      "BLUETOOTH",
+      "BLUETOOTH_ADMIN",
+      "BLUETOOTH_SCAN",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "BROADCAST_STICKY",
+    "ACCESS_BACKGROUND_LOCATION",
+    "BLUETOOTH_SCAN",
+    "BLUETOOTH_CONNECT",
+    "ACCESS_NETWORK_STATE",
+    "ACCESS_FINE_LOCATION",
+    "FOREGROUND_SERVICE",
+    "RECORD_AUDIO",
+    "RECEIVE_BOOT_COMPLETED",
+    "ACCESS_COARSE_LOCATION",
+    "WRITE_SYNC_SETTINGS",
+    "READ_CONTACTS",
+    "ACCESS_LOCATION_EXTRA_COMMANDS",
+    "BLUETOOTH_ADMIN",
+    "READ_SYNC_STATS",
+    "WAKE_LOCK",
+    "VIBRATE",
+    "CAMERA",
+    "FOREGROUND_SERVICE_LOCATION",
+    "INTERNET",
+    "POST_NOTIFICATIONS",
+    "READ_PHONE_STATE",
+    "READ_CALENDAR",
+    "READ_SYNC_SETTINGS",
+    "BLUETOOTH",
+    "MODIFY_AUDIO_SETTINGS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 15,
+    "features": [
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "reasoning": "The text explicitly mentions 'Waze map’s GPS navigation, live traffic updates... and accurate ETAs' in the introduction and further details 'real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures' in the first bullet point, directly proving these core navigation capabilities.",
+        "source_quotes": [
+          "Waze map’s GPS navigation, live traffic updates, real-time safety alerts... and accurate ETAs",
+          "Get there faster with real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures"
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "reasoning": "The text explicitly states the app provides 'real-time safety alerts (including roadworks, accidents, crashes, police, potholes and more)' and elaborates in a bullet point to 'avoid surprises on the road ahead with safety alerts for accidents, crashes, roadworks... and more', confirming a comprehensive safety alert system.",
+        "source_quotes": [
+          "real-time safety alerts (including roadworks, accidents, crashes, police, potholes and more)",
+          "Even if you know the way, avoid surprises on the road ahead with safety alerts for accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, railway crossings and more"
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "reasoning": "The text explicitly states users can 'Steer clear of tickets by knowing where police and red light and speed cameras are located', which directly confirms a specific location-awareness feature for law enforcement and speed enforcement devices.",
+        "source_quotes": [
+          "Steer clear of tickets by knowing where police and red light and speed cameras are located"
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "reasoning": "The text explicitly mentions the ability to 'Share what’s happening on the road with other drivers by reporting live incidents and hazards', proving a user-generated content reporting feature exists.",
+        "source_quotes": [
+          "Share what’s happening on the road with other drivers by reporting live incidents and hazards"
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "reasoning": "The text explicitly states users can 'Stay informed of upcoming speed limit changes, and keep your speedometer in check', directly proving a speed monitoring and limit alert feature.",
+        "source_quotes": [
+          "Stay informed of upcoming speed limit changes, and keep your speedometer in check"
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "reasoning": "The text explicitly states 'Know which lane to be in with multi-lane guidance', which is a direct reference confirming the existence of lane-specific navigation instructions.",
+        "source_quotes": [
+          "Know which lane to be in with multi-lane guidance"
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "reasoning": "The text explicitly mentions the ability to 'See toll pricing and choose to avoid tolls along your routes', directly confirming toll information retrieval and routing logic.",
+        "source_quotes": [
+          "See toll pricing and choose to avoid tolls along your routes"
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "reasoning": "The text explicitly states users can 'Add road passes and vignettes for HOV lanes and restricted traffic zones', directly confirming support for specific traffic zone access management.",
+        "source_quotes": [
+          "Add road passes and vignettes for HOV lanes and restricted traffic zones"
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "reasoning": "The text explicitly states users can 'Find petrol/fuel stations and prices and EV charging stations along your route', directly confirming a point-of-interest search feature for energy sources.",
+        "source_quotes": [
+          "Find petrol/fuel stations and prices and EV charging stations along your route"
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "reasoning": "The text explicitly mentions users can 'Locate and compare parking lots and their prices near your destination', directly confirming a parking search and price comparison feature.",
+        "source_quotes": [
+          "Locate and compare parking lots and their prices near your destination"
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "reasoning": "The text explicitly states users can 'Use voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities', directly confirming a customizable audio guidance feature.",
+        "source_quotes": [
+          "Use voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities"
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "reasoning": "The text explicitly states users can 'Plan your next drive by checking ETAs by future departure or arrival times', directly confirming a trip scheduling and ETA estimation feature.",
+        "source_quotes": [
+          "Plan your next drive by checking ETAs by future departure or arrival times"
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "reasoning": "The text explicitly states users can 'Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze', directly confirming an in-app audio playback integration feature.",
+        "source_quotes": [
+          "Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze"
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "reasoning": "The text explicitly states users can 'Sync Waze to your car’s built-in display through Android Auto', directly confirming compatibility and integration with the Android Auto ecosystem.",
+        "source_quotes": [
+          "Sync Waze to your car’s built-in display through Android Auto"
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "reasoning": "The text explicitly states 'You can manage your in-app Waze privacy settings at any time', directly confirming a user-controlled privacy configuration feature.",
+        "source_quotes": [
+          "You can manage your in-app Waze privacy settings at any time."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature explicitly mentions 'GPS navigation' and 'reroutes users', which fundamentally requires access to the device's precise geographical location to track movement, determine position, and calculate ETAs."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The description specifies 'live traffic updates' and 'Real-Time' data, which implies the app must connect to external servers via the internet to download current traffic conditions and map data."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To maintain 'Real-Time Navigation' and 'automatically reroute' users while the app is potentially running in the background (e.g., during driving), the application typically requires a foreground service to keep the process alive and maintain location tracking privileges."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to know the user's current position and movement to detect proximity to road hazards like accidents, roadworks, and speed bumps."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The core functionality is to 'issue safety alerts', which requires the ability to post notifications to warn the user in real-time."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Real-time data regarding weather, emergency vehicles, and crowdsourced accident reports requires accessing the internet to fetch information from external servers."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To maintain continuous monitoring of hazards and deliver alerts while the user is driving and the app may be in the background, a foreground service is required."
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires knowing the user's current position to locate and alert them about nearby police or speed cameras relative to their movement."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The app must alert the user in real-time about detected hazards (police/cameras) to help them avoid traffic tickets, requiring permission to post notifications."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Real-time location of police and cameras often relies on crowd-sourced data or server updates, requiring internet access to fetch and upload information."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To ensure alerts are received while driving (app potentially in background), the app needs permission to run a foreground service for continuous tracking and synchronization."
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to report the geographic location of live incidents and hazards on the road, enabling other drivers to be informed about their specific area."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to share incident information with other drivers, which necessitates internet connectivity to upload reports and receive incident data from the community."
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Core requirement for speed limit monitoring - the app needs GPS data to track the user's current location and calculate their speed, as well as identify upcoming speed limits based on their position on roads."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Likely required to maintain continuous speed monitoring while driving, especially when the app may be running in the background, preventing the system from killing the monitoring service during vehicle movement."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "May be needed to download map updates, speed limit data, or road information from servers to provide accurate speed limit information for upcoming road segments."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature determines the driver's current lane relative to the road, which fundamentally requires precise access to the device's GPS or network location data."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Navigation guidance must remain active and visible while the user is driving, often requiring a specialized foreground service to prevent the system from suspending the app when it moves to the background."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching real-time map data, route information, and lane-specific details typically requires internet connectivity to download map tiles and traffic data."
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's route, origin, and destination to calculate toll pricing and provide route avoidance options based on geographic position."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time toll pricing data from external services or databases, as toll information needs to be retrieved from online sources."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "May be required to alert users about toll warnings, route changes, or toll avoidance suggestions during navigation."
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "HOV lanes and restricted traffic zones are location-specific. The app needs to determine the user's current location to show relevant passes, identify applicable zones, and determine which vignettes are valid for their area."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Adding road passes and vignettes typically requires downloading pass information from servers, verifying pass validity, and syncing data with the service provider's backend systems."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The app may need to send alerts about approaching restricted zones, pass expiration warnings, or notifications when users enter HOV lane areas."
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Core functionality requires accessing device location to find nearby fuel and EV charging stations and track user's route."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time station data, price information, and map data from remote servers and databases."
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature explicitly allows users to 'locate' parking lots 'near a destination', which requires accessing the device's geographical location (GPS or network-based) to determine proximity."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To 'compare prices' and find current availability, the app likely needs to fetch dynamic data from a remote server, which requires IP-based data transport permissions."
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Navigation functionality fundamentally requires access to the device's real-time location to determine the user's position and provide accurate route guidance."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Providing continuous voice guidance while the user is navigating typically requires the app to run a foreground service to maintain GPS tracking and audio output even when the app is in the background."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature allows customization with various languages and celebrity voices, which implies downloading, storing, and managing audio files or assets in the device's shared storage."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Navigation apps typically utilize persistent notifications to display turn-by-turn instructions and navigation controls on the lock screen or status bar during active use."
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Essential for trip planning and ETA calculation - the app needs to access device location to determine origin, destination, and route information to calculate estimated times of arrival based on departure or arrival times."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to fetch real-time traffic data, route information, and map data from remote servers to provide accurate ETA calculations for future trip planning."
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio playback features typically require launching a specialized foreground service to maintain media playback session integrity, as explicitly mentioned in the group description (e.g., for media playback)."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves integrating audio apps for podcasts and music, which requires permissions to access and read audio files or media data from shared storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Streaming podcasts, news, and music content requires IP-based data transport and internet connectivity to fetch the audio streams."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Media playback applications typically require permissions to post notifications to display playback controls and track information to the user while the app is in use or backgrounded."
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Android Auto requires connecting to the car's built-in display system via Bluetooth, Wi-Fi Direct, or USB for device synchronization and communication."
+          },
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The car's built-in display acts as a companion hardware device that the app needs to interact with, observe presence, and manage connections."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Most Android Auto applications require location access for navigation and location-based features within the car's display system."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio streaming to the car's audio system may require permissions to read and output audio files through the Android Auto integration."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Voice commands and hands-free control through Android Auto typically require microphone access for voice interaction in the vehicle."
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Privacy settings management features typically involve configuring security and privacy-related options, biometric authentication settings, device protection modes, and application integrity protections which fall under this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's GPS for real-time navigation and live traffic updates."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch live traffic updates, incidents, and road closures over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to detect the user's current location to provide relevant real-time safety alerts for road hazards in their vicinity."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time safety alert data from a server or other data sources over the internet."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to post safety alerts to the user's notification panel in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location to locate police and cameras on a map."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Potentially required if the app uses the device camera to detect speed cameras or red light cameras in real-time."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to download/update the database of police and camera locations from a server."
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Reporting live incidents and hazards on the road likely requires access to the device's location to determine where the incident is occurring."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Sharing information with other drivers would require network access to transmit the incident data."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "If the app stores incident reports locally (e.g., for offline reporting or caching), it may need access to shared external storage."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Users might want to attach photos or videos of the incident, which would require camera access."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "If users can attach existing images or videos from their gallery to the report, this group would be needed to read such files from shared storage."
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location to determine current speed and detect speed limit changes based on geographical data."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Potentially required if the app uses sensor data (e.g., GPS or accelerometer) to calculate speed or detect movement."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "May be required if the app fetches speed limit data from an online database or API."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "May be required if the app runs a continuous foreground service to monitor speed and speed limit changes in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app provides visual guidance for drivers, which likely requires access to the device's location to determine the current position and provide relevant lane information."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The app may use the camera to provide augmented reality visual guidance, overlaying lane information on a live view of the road."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "The app might use sensors (e.g., gyroscope, accelerometer) to determine the device's orientation and movement, aiding in accurate lane guidance."
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location to determine routes and toll pricing."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch toll pricing data and route information from online services."
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared external storage to store or retrieve digital copies of road passes or vignettes."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to verify passes/vignettes online or fetch zone data."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Necessary to detect when the user enters HOV lanes or restricted zones to enforce pass requirements."
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No additional permissions are strictly required if passes are stored locally and no real-time checks are performed."
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location and find stations along their route."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time data (e.g., station locations, prices) from the internet."
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location or the destination's location for finding nearby parking lots."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to fetch real-time parking data, prices, and comparisons from an online service."
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Access to microphone may be required if the app needs to listen for voice commands or adjust navigation based on user input."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Downloading voice packs (e.g., celebrity voices or language/accent variations) would require network access."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Storing downloaded voice packs locally would require access to shared external storage."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Reading audio files (e.g., pre-recorded voice instructions) from shared storage may be needed."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Posting navigation alerts or voice guidance notifications may require this permission group."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Navigation inherently requires access to device location to provide directions."
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Checking ETAs for drives typically requires access to location data to calculate travel times."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching ETA data likely requires internet access to retrieve real-time or predicted traffic information."
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Audio apps may require microphone access for voice commands or recording, though the description does not explicitly mention this. However, since it's about audio integration, it's a potential group."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage, which is necessary for playing podcasts, music, news, and audiobooks."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed if the app requires access to stored audio files or caching audio content."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required for streaming audio content (podcasts, music, news, audiobooks) over the internet."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio playback often runs in a foreground service to ensure continuous playback and proper notification handling."
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Android Auto typically requires Bluetooth or Wi-Fi for connecting the app to the car's display, which falls under this permission group."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Android Auto may require network access for data synchronization or communication between the device and the car."
+          },
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "Android Auto integration involves managing and interacting with a companion device (the car's display), which aligns with this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device location for GPS navigation and to provide live traffic updates and directions."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for accessing live traffic updates, incidents, and road closures, which likely involves fetching data from the internet."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to know the user's current location to provide relevant safety alerts for road hazards in their vicinity."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app likely requires internet connectivity to fetch real-time data about road hazards, weather, and other safety-related information."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To provide timely safety alerts, the app might need to run a foreground service to continuously monitor the user's location and fetch updates in real-time."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The app will likely post notifications to alert the user of potential road hazards, requiring permissions associated with posting notifications."
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to access the device's location to provide users with information about nearby police, red light cameras, and speed cameras."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app likely requires internet connectivity to fetch and update the locations of police, red light cameras, and speed cameras, which would involve network communication."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The app might use foreground services to continuously update the user's location and provide real-time information about nearby cameras and police presence."
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to get the user's current location and report incidents or hazards on the road."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to send and receive incident reports over the internet."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "May be required if users can attach images or videos of the incidents or hazards."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be necessary if the app stores incident reports or images locally on the device before sending them."
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the device's current location and provide upcoming speed limit changes."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "可能 required to continuously monitor the user's location and speed in the foreground."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires the device's location to provide accurate lane guidance, which is typically done using GPS or other location-based services."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The app provides visual guidance, which may involve displaying images or videos to help drivers understand which lane to be in, potentially requiring access to visual media files."
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires accessing the device's location to determine the user's current route and provide toll pricing information."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature likely needs to fetch toll pricing data and route information from a server, which requires internet connectivity and network communication."
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location and provide information about nearby HOV lanes and restricted traffic zones."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to store the user's road passes and vignettes, as well as any other relevant data such as vehicle information or route history."
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to access the user's current location to find fuel stations and EV charging stations along their route."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app likely requires internet access to fetch station data, including price information and locations, from remote servers."
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to locate parking lots near a destination, which requires accessing the device's location to provide relevant results."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app likely needs to fetch data about parking lots and their prices from a server, which requires internet connectivity and network communication."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The app might use foreground services to continuously update the user's location and provide real-time parking information."
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves providing navigation instructions via voice guidance, which requires playing audio files. Therefore, permissions related to reading audio files from shared storage are necessary."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To provide voice guidance with various languages, local accents, and celebrity voices, the app might need to download or stream the relevant audio files from the internet, requiring permissions for internet access and data transport."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The voice navigation feature likely runs as a foreground service to provide continuous guidance while the user is navigating, requiring permissions to launch and manage such services."
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to access the user's location to provide ETAs for future trip planning, which requires permissions related to device location."
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to read audio files from shared storage for podcast, music, news, and audiobook playback within the app."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "May be necessary for managing audio playback as a foreground service, ensuring continuous playback even when the app is not in the foreground."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for streaming audio content from the internet, such as podcasts, music, or news, directly within the Waze application."
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "The app needs to display its interface on the car's built-in display, which requires accessing and rendering visual media."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Android Auto integration likely involves playing audio content, such as music or voice commands, which requires reading audio files from shared storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app may need to connect to the car's system via Wi-Fi or other network protocols, which requires handling IP-based data transport and local network socket communication."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Android Auto integration involves discovering and connecting to the car's display, which may use Bluetooth, Wi-Fi Direct, or other proximity-based technologies."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The app may need to launch a foreground service to handle the Android Auto connection, audio playback, and other tasks while the app is in use."
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "The feature involves managing in-app privacy settings, which likely interacts with system security integrations and application integrity protections."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Managing privacy settings might involve inspecting background data synchronization statistics and configuring account sync settings to ensure user data is handled according to their preferences."
+          },
+          {
+            "group_name": "APP_AND_SYSTEM_MANAGEMENT",
+            "reasoning": "Controlling application lifecycle and adjusting system resource optimization might be necessary for effectively managing privacy settings within the app."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires GPS navigation, real-time directions, and live traffic updates, which necessitates access to the device's precise location to calculate routes, track movement, and provide accurate ETAs."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature issues real-time safety alerts for road hazards (e.g., potholes, accidents, sharp curves, speed bumps), which are inherently geographic and distance-dependent. Accessing the device's location is essential to track the user's current position and movement path in order to trigger accurate, context-aware warnings as they travel."
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires accessing the device's current location to accurately display, track, and notify users about the positions of police and traffic cameras on a map."
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to accurately capture and geotag the current position of road incidents and hazards so they can be shared with other drivers in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires continuously tracking the device's geographical position to calculate current speed and match it against nearby road data for accurate speed limit information, which necessitates permissions that allow accessing the device location."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Providing accurate lane and directional guidance requires the application to determine the user's current geographic position, track their route, and map it against road infrastructure, which necessitates access to the device location."
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Calculating routes, displaying toll pricing along a path, and dynamically avoiding tolls inherently requires knowing the user's current or specified geographical coordinates to evaluate the route."
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Managing passes for HOV lanes and restricted traffic zones inherently involves geographic boundaries. Device location access would likely be required to validate pass applicability, detect zone entry/exit events, or enforce geofencing policies."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Adding passes may involve saving photos of physical vignettes, storing downloaded digital documents/receipts, or importing/exporting pass data, which could require access to shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires accessing the device's current location to search for, map, and display nearby fuel and EV charging stations relative to the user's route."
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires locating parking lots near a destination, which necessitates accessing the device's physical location to determine proximity and display nearby options."
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location for determining position and providing navigation directions."
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's current and destination coordinates to calculate routes, evaluate road conditions, and estimate travel times for future trips."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch routing algorithms, historical/future traffic data, and dynamic ETA information from online mapping services or backend APIs."
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The feature involves 'media playback' (music, podcasts, audiobooks). The 'FOREGROUND_SERVICES' permission group explicitly mentions permissions required to launch specialized foreground services for purposes such as 'media playback', which is necessary to keep audio playing in the background or control it while navigating."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To stream audio content like podcasts, music, and news directly within the app, the feature requires accessing the internet. The 'NETWORK_AND_INTERNET_INFRASTRUCTURE' group covers permissions for IP-based data transport."
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Syncing to a car's built-in display via Android Auto requires maintaining an active, uninterrupted session for media playback and UI projection while the app is in use or minimized. This typically necessitates launching a specialized foreground service to prevent the OS from terminating the process in the background, which aligns with this permission group."
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required for GPS navigation to track the user's current position and calculate ETAs."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to receive real-time traffic updates, incidents, and road closure data from remote servers."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to provide continuous navigation and real-time rerouting updates while the app is running in the background or while the user is driving."
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Real-time safety alerts for road hazards depend on knowing the user's current geographical position to trigger alerts as they approach a hazard."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The app needs to issue alerts to the user, which is typically done via system notifications."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Real-time hazard data (accidents, roadworks, weather) must be fetched from a remote server via the internet."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Since this is a safety feature used while driving, the app likely needs to run as a foreground service to continue tracking location and providing alerts while the app is not in the active foreground."
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to access the user's current location to identify and display nearby police and traffic cameras on a map."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to download and update the database of police and camera locations from a remote server."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Necessary to provide real-time location tracking and alerts while the user is driving and the app is running in the background."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to send alerts or warnings to the user when they are approaching a detected police officer or speed camera."
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to identify the precise location of the road incidents and hazards being reported."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to transmit the reported incident data to a server so it can be shared with other drivers."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to alert other users about live incidents and hazards reported in their area."
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to monitor the user's current speed and determine their position to identify upcoming speed limit changes."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to inform users of upcoming speed limit changes via alerts or notifications."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch speed limit data from a remote server or database based on the user's location."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to maintain continuous speed monitoring and provide alerts while the application is running in the background during a trip."
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Providing lane guidance requires real-time access to the device's precise location to determine which lane the driver is currently in and provide accurate navigation instructions."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Lane-level guidance typically relies on downloading detailed map data and real-time traffic updates from a remote server via the internet."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Navigation features must operate continuously as a foreground service to provide uninterrupted guidance and alerts while the user is driving, preventing the system from terminating the app."
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Calculating routes and identifying relevant toll pricing typically requires the device's current location to determine the starting point and optimal paths."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Toll pricing and route data are generally retrieved from remote servers via the internet."
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Users may need to take a photo of their physical road pass or vignette to add it to the app."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the uploaded road passes and vignettes to the device's shared external storage or to access document files."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required if the user chooses to upload an existing image of their pass or vignette from the device's gallery."
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to identify the user's current position and find fuel or EV stations along their specific route."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to a backend server to fetch real-time station locations and pricing information."
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to locate parking lots based on the user's current position or a specified destination."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time data, pricing, and availability of parking lots from online services."
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Navigation requires accessing the device's location to provide real-time turn-by-turn voice guidance."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Navigation apps must run as a foreground service to continue providing voice instructions while the user is driving and the app may not be in the immediate foreground."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching map data, route calculations, and updating traffic information requires internet connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Calculating ETAs for drives requires access to the device's location to determine the starting point and the route."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching traffic data and ETA calculations typically requires communication with a remote server over the internet."
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Required to access and read audio files for podcasts, music, news, and audiobooks."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to ensure that audio playback continues uninterrupted while the application is running in the background or during navigation, as media playback is a specified use case for foreground services."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for streaming audio content from podcasts, music, and news apps over the internet."
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Android Auto requires discovering and connecting to the car's head unit via Bluetooth or Wi-Fi."
+          },
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The car's built-in display acts as companion hardware that the app must interact with and manage."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Apps integrated with Android Auto typically require foreground services to ensure the application remains active and responsive while projecting the interface to the car's display."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required for the data transport and local network communication between the Android device and the vehicle's infotainment system."
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 48,
+    "features": [
+      {
+        "title": "Real-Time Navigation, ETAs & Rerouting",
+        "description": "The app provides GPS navigation with live traffic updates and accurate Estimated Time of Arrival (ETAs). It offers real-time directions and automatically reroutes users based on live traffic, incidents, and road closures to ensure faster travel.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature explicitly mentions 'GPS navigation' and 'reroutes users', which fundamentally requires access to the device's precise geographical location to track movement, determine position, and calculate ETAs.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The description specifies 'live traffic updates' and 'Real-Time' data, which implies the app must connect to external servers via the internet to download current traffic conditions and map data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To maintain 'Real-Time Navigation' and 'automatically reroute' users while the app is potentially running in the background (e.g., during driving), the application typically requires a foreground service to keep the process alive and maintain location tracking privileges.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Real-Time Safety Alerts",
+        "description": "The app issues safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The app needs to know the user's current position and movement to detect proximity to road hazards like accidents, roadworks, and speed bumps.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The core functionality is to 'issue safety alerts', which requires the ability to post notifications to warn the user in real-time.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Real-time data regarding weather, emergency vehicles, and crowdsourced accident reports requires accessing the internet to fetch information from external servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To maintain continuous monitoring of hazards and deliver alerts while the user is driving and the app may be in the background, a foreground service is required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Police & Camera Detection",
+        "description": "The app allows users to locate police, red light cameras, and speed cameras to help avoid traffic tickets.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires knowing the user's current position to locate and alert them about nearby police or speed cameras relative to their movement.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "The app must alert the user in real-time about detected hazards (police/cameras) to help them avoid traffic tickets, requiring permission to post notifications.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Real-time location of police and cameras often relies on crowd-sourced data or server updates, requiring internet access to fetch and upload information.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "To ensure alerts are received while driving (app potentially in background), the app needs permission to run a foreground service for continuous tracking and synchronization.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Users can share information with other drivers by reporting live incidents and hazards on the road.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to report the geographic location of live incidents and hazards on the road, enabling other drivers to be informed about their specific area.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to share incident information with other drivers, which necessitates internet connectivity to upload reports and receive incident data from the community.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "If the app stores incident reports locally (e.g., for offline reporting or caching), it may need access to shared external storage.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "If users can attach existing images or videos from their gallery to the report, this group would be needed to read such files from shared storage.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "The app informs users of upcoming speed limit changes and helps them monitor their current speed.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Core requirement for speed limit monitoring - the app needs GPS data to track the user's current location and calculate their speed, as well as identify upcoming speed limits based on their position on roads.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Likely required to maintain continuous speed monitoring while driving, especially when the app may be running in the background, preventing the system from killing the monitoring service during vehicle movement.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "May be needed to download map updates, speed limit data, or road information from servers to provide accurate speed limit information for upcoming road segments.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "The app provides visual guidance to help drivers know which lane to be in.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature determines the driver's current lane relative to the road, which fundamentally requires precise access to the device's GPS or network location data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Navigation guidance must remain active and visible while the user is driving, often requiring a specialized foreground service to prevent the system from suspending the app when it moves to the background.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching real-time map data, route information, and lane-specific details typically requires internet connectivity to download map tiles and traffic data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Users can view toll pricing for routes and choose to avoid tolls.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's route, origin, and destination to calculate toll pricing and provide route avoidance options based on geographic position.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time toll pricing data from external services or databases, as toll information needs to be retrieved from online sources.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Management",
+        "description": "The app allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "HOV lanes and restricted traffic zones are location-specific. The app needs to determine the user's current location to show relevant passes, identify applicable zones, and determine which vignettes are valid for their area.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Adding road passes and vignettes typically requires downloading pass information from servers, verifying pass validity, and syncing data with the service provider's backend systems.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared external storage to store or retrieve digital copies of road passes or vignettes.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Search",
+        "description": "The app helps users find petrol/fuel stations and EV charging stations along their route, including price information.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Core functionality requires accessing device location to find nearby fuel and EV charging stations and track user's route.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time station data, price information, and map data from remote servers and databases.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Parking Search & Comparison",
+        "description": "The app allows users to locate and compare parking lots and their prices near a destination.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature explicitly allows users to 'locate' parking lots 'near a destination', which requires accessing the device's geographical location (GPS or network-based) to determine proximity.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To 'compare prices' and find current availability, the app likely needs to fetch dynamic data from a remote server, which requires IP-based data transport permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Navigation instructions are provided via voice guidance with options for various languages, local accents, and celebrity voices.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Navigation functionality fundamentally requires access to the device's real-time location to determine the user's position and provide accurate route guidance.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Providing continuous voice guidance while the user is navigating typically requires the app to run a foreground service to maintain GPS tracking and audio output even when the app is in the background.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature allows customization with various languages and celebrity voices, which implies downloading, storing, and managing audio files or assets in the device's shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Navigation apps typically utilize persistent notifications to display turn-by-turn instructions and navigation controls on the lock screen or status bar during active use.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Downloading voice packs (e.g., celebrity voices or language/accent variations) would require network access.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Reading audio files (e.g., pre-recorded voice instructions) from shared storage may be needed.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "The app allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Essential for trip planning and ETA calculation - the app needs to access device location to determine origin, destination, and route information to calculate estimated times of arrival based on departure or arrival times.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to fetch real-time traffic data, route information, and map data from remote servers to provide accurate ETA calculations for future trip planning.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Users can use audio apps for podcasts, music, news, and audiobooks directly within the Waze application.",
+        "inferences": [
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Audio playback features typically require launching a specialized foreground service to maintain media playback session integrity, as explicitly mentioned in the group description (e.g., for media playback).",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "The feature involves integrating audio apps for podcasts and music, which requires permissions to access and read audio files or media data from shared storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Streaming podcasts, news, and music content requires IP-based data transport and internet connectivity to fetch the audio streams.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "The app can be synced to a car's built-in display through Android Auto.",
+        "inferences": [
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Android Auto requires connecting to the car's built-in display system via Bluetooth, Wi-Fi Direct, or USB for device synchronization and communication.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "COMPANION_DEVICES",
+            "reasoning": "The car's built-in display acts as a companion hardware device that the app needs to interact with, observe presence, and manage connections.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "Audio streaming to the car's audio system may require permissions to read and output audio files through the Android Auto integration.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Android Auto may require network access for data synchronization or communication between the device and the car.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "The app may need to launch a foreground service to handle the Android Auto connection, audio playback, and other tasks while the app is in use.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Users can manage their in-app privacy settings at any time.",
+        "inferences": [
+          {
+            "group_name": "SECURITY_AND_PRIVACY_NORMAL",
+            "reasoning": "Privacy settings management features typically involve configuring security and privacy-related options, biometric authentication settings, device protection modes, and application integrity protections which fall under this permission group.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

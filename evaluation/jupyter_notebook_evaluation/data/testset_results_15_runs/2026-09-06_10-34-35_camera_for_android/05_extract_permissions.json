@@ -1,0 +1,2578 @@
+{
+  "storage_path": "results/2026-09-06_10-34-35_camera_for_android",
+  "apk_path": "test_apks/camera_for_andriod.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "photo.camera.hdcameras",
+  "label": "Camera for Android",
+  "description_long": "Camera for Android will allow you to make excellent pictures，that is a very fast and simple way to capture moments.  \nYou can easily to shoot excellent photos, utilizing all advantage of your phone or tablet.  \nFeatures:  \n\\- Camera, video recorder & panorama features  \n\\- White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)  \n\\- Screen mode settings(Action, Night, Sunset, Play)  \n\\- Dynamic user interface (phone/tablet)  \n\\- Pinch to zoom  \n\\- Smart panorama shooting   \n\\- Wide screen pictures  \n\\- Picture quality setting  \n\\- Exposure  \n\\- Location targeting  \n\\- Configurable volume keys  \n\\- Countdown Timer\n",
+  "ground_truth_sets": [
+    [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "ACCESS_FINE_LOCATION",
+      "ACCESS_COARSE_LOCATION"
+    ],
+    [
+      "CAMERA",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "WRITE_EXTERNAL_STORAGE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "GET_ACCOUNTS",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "ACCESS_COARSE_LOCATION",
+    "INTERNET",
+    "CAMERA",
+    "READ_EXTERNAL_STORAGE",
+    "ACCESS_WIFI_STATE",
+    "RECORD_AUDIO",
+    "READ_MEDIA_VIDEO",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_SYNC_SETTINGS",
+    "NFC",
+    "WRITE_SYNC_SETTINGS",
+    "ACCESS_NETWORK_STATE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_FINE_LOCATION",
+    "FOREGROUND_SERVICE",
+    "CHANGE_WIFI_STATE",
+    "SET_WALLPAPER",
+    "RECEIVE_BOOT_COMPLETED",
+    "VIBRATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 12,
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "reasoning": "The text explicitly lists 'Camera, video recorder & panorama features' in the features list, directly proving the existence of these three distinct media capture capabilities bundled together.",
+        "source_quotes": [
+          "- Camera, video recorder & panorama features"
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "reasoning": "The text explicitly states 'White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)', providing direct evidence of a configurable white balance feature with specific options.",
+        "source_quotes": [
+          "- White balance settings(Incandescent, Fluorescent, Auto, Daylight,Cloudy)"
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "reasoning": "The text explicitly lists 'Screen mode settings(Action, Night, Sunset, Play)', directly confirming the availability of these specific scene modes.",
+        "source_quotes": [
+          "- Screen mode settings(Action, Night, Sunset, Play)"
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "reasoning": "The text explicitly mentions 'Dynamic user interface (phone/tablet)', directly proving the interface adapts to or supports both device form factors.",
+        "source_quotes": [
+          "- Dynamic user interface (phone/tablet)"
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "reasoning": "The text explicitly states 'Pinch to zoom', which directly confirms a gesture-based zoom control feature.",
+        "source_quotes": [
+          "- Pinch to zoom"
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "reasoning": "The text explicitly lists 'Smart panorama shooting' as a distinct feature line item, separate from the general panorama mention in the first bullet, proving a specialized panoramic mode exists.",
+        "source_quotes": [
+          "- Smart panorama shooting"
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "reasoning": "The text explicitly states 'Wide screen pictures', directly confirming the capability to produce wide format images.",
+        "source_quotes": [
+          "- Wide screen pictures"
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "reasoning": "The text explicitly mentions 'Picture quality setting', serving as direct evidence that image quality is adjustable.",
+        "source_quotes": [
+          "- Picture quality setting"
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "reasoning": "The text explicitly lists 'Exposure' under the features section, directly confirming exposure control functionality.",
+        "source_quotes": [
+          "- Exposure"
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "reasoning": "The text explicitly lists 'Location targeting' as a feature, directly confirming location-based capabilities.",
+        "source_quotes": [
+          "- Location targeting"
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "reasoning": "The text explicitly states 'Configurable volume keys', directly proving that physical button behavior can be customized within the app.",
+        "source_quotes": [
+          "- Configurable volume keys"
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "reasoning": "The text explicitly lists 'Countdown Timer' as a feature, directly confirming the existence of a timer for shooting photos.",
+        "source_quotes": [
+          "- Countdown Timer"
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required for capturing standard photos, recording videos, and taking panoramic images as these all involve accessing the device camera to capture images and video content."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "White balance control is a camera setting that adjusts color temperature during image/video capture. This feature requires access to camera hardware and camera configuration settings to apply different white balance modes (Incandescent, Fluorescent, Auto, Daylight, Cloudy) to captured content."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Screen modes for different lighting scenarios (Night, Sunset) may require access to ambient light sensors to detect current lighting conditions and automatically adjust the display mode accordingly."
+          },
+          {
+            "group_name": "ACTIVITY_RECOGNITION",
+            "reasoning": "Activity-based screen modes (Action, Play) may require activity recognition permissions to detect the user's current activity or motion state to automatically switch between different screen configurations."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Modifying screen display modes and settings typically involves system-level interface elements and display parameters, which could fall under system UI and peripheral control permissions."
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Zoom control is a UI/gesture interaction feature that allows users to pinch to zoom on content already being displayed in the viewfinder. This does not inherently require any Android permissions - it's purely a touch input gesture handling mechanism. The actual content being viewed (camera feed, images, maps, etc.) may require their own permissions, but the zoom control functionality itself does not."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly describes 'capturing panoramic images', which directly requires access to the device camera hardware to take photos."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature enables capturing pictures/images, which directly requires camera access. The wide screen aspect ratio is a camera capture setting that doesn't change the fundamental permission requirement."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly mentions configuring the quality level of 'captured pictures', which necessitates accessing the device's camera hardware to take photos, fitting the description of the CAMERA permission group."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature provides control over camera exposure settings, which directly requires access to the camera hardware. Adjusting exposure is a camera-specific function that needs the CAMERA permission group to interact with the device's camera system."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location data for tagging photos with location information."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and modify image files in shared storage to add location metadata tags."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Volume key customization involves controlling basic hardware peripherals (physical volume buttons) and modifying system-level interface behavior related to audio policies. This group explicitly includes permissions for controlling hardware peripherals and audio/vibration policies, which directly aligns with the feature's functionality of reconfiguring physical volume key functions."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature involves delayed photo capture functionality, which requires accessing the device camera to take pictures even with a countdown timer."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required for capturing standard photos, recording videos, and taking panoramic images as all these actions involve using the device's camera."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Likely required for recording videos, as video recording typically includes audio capture."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to save the captured photos, videos, and panoramic images to the device's storage."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Adjusting white balance settings is a camera-related feature, which typically requires access to the camera hardware and its settings."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Screen modes may involve modifying system-level display settings like wallpapers, brightness, or other UI elements, which fall under this group."
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture images, which is the primary function of a panorama shooting mode."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to save the captured panoramic images to the device's storage."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "May be required if the 'Smart' mode uses sensors (e.g., gyroscope) for image stabilization or orientation detection during panorama capture."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Capturing pictures (even in wide screen format) requires access to the camera, which falls under the CAMERA permission group."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Saving the captured pictures to the device's storage may require permissions related to shared external storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Reading or writing image files (for wide screen captures) from shared storage may require permissions from this group."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access and control camera settings, including exposure adjustments."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location for tagging photos with location data."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access or save photos with location metadata in shared storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read or write image files (photos) that are being tagged with location data."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Required to modify system-level interface elements or control basic hardware peripherals, which includes reconfiguring the function of physical keys like volume buttons."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture photos after the countdown timer completes."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access the camera for capturing standard photos, recording videos, and taking panoramic images."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "May be required to read image and video files from shared storage after capturing."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Likely required for storing captured photos and videos in the shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature involves adjusting camera settings, specifically white balance, which is a fundamental aspect of camera functionality. Therefore, permissions related to camera access and control are likely required."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature requires modifying system-level interface elements, specifically screen modes, which is a characteristic of the SYSTEM_UI_AND_PERIPHERALS group."
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. The feature only involves handling touch gestures and does not access any sensitive device data or hardware."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access the camera and capture images, which is essential for panoramic shooting."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and write image files from shared storage, which is necessary for saving the captured panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to be able to read and write image files from shared storage, which would be necessary for capturing and saving wide screen format pictures."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Used for permissions that are associated with accessing camera or capturing images from the device, which is essential for the wide screen capture feature."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to access camera settings and configure the quality level of captured pictures."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "May be required to read or write image files from shared storage, depending on the implementation of the image quality settings feature."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to store the captured images or access the device's storage to configure image quality settings."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature is directly related to controlling the camera's exposure settings, which implies accessing and modifying camera properties."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device location for targeting or tagging photos with location data."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read image files from shared storage to tag or target photos."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required for accessing and possibly modifying the stored photos with location data."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature involves modifying system-level interface elements, specifically the behavior of physical hardware peripherals (volume keys), which aligns with the description of the SYSTEM_UI_AND_PERIPHERALS group."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature includes a countdown timer for delayed photo capture, which implies the use of the device's camera to capture images. Therefore, permissions related to accessing the camera are required."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly involves capturing photos, recording videos, and taking panoramic images, which directly requires accessing the device camera hardware."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "White balance control is a core camera API function used to adjust color temperature during live preview or image/video capture. Implementing this feature requires direct access to the device's camera hardware, which falls under the CAMERA permission group."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "The feature modifies the device's display settings and interface appearance to apply different visual modes for various lighting or activity scenarios, which aligns with permissions used to modify system-level interface elements and screen behavior."
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature describes a viewfinder with pinch-to-zoom control, which is characteristic of camera applications used for previewing scenes before capturing images or video. Managing a live viewfinder and adjusting its zoom level (especially when interacting with camera hardware parameters) requires access to the device's camera APIs, falling under the CAMERA permission group."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature involves capturing panoramic images, which directly requires accessing the device's camera hardware to take photos."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature enables the capture of pictures, which directly requires accessing the device's camera hardware to take photos."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature involves configuring parameters for capturing pictures, which necessitates access to the device's camera hardware and imaging pipeline."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to control and adjust the camera's hardware settings, specifically exposure, for capturing images or video."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature requires accessing the device's geographical coordinates to tag or target photos with location data, which necessitates permissions from the LOCATION group."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Customizing physical volume keys involves interacting with and mapping hardware peripherals that directly control system audio output policies. This functionality aligns with permissions granted to modify peripheral behavior and manage audio/vibration policies at the system level."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature implements a countdown timer for delayed photo capture, which directly involves accessing the device's camera hardware and capturing images/video. Therefore, permissions in the CAMERA group are required to enable this functionality."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly mentions capturing photos, recording videos, and taking panoramic images, all of which require camera access."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Recording videos typically involves capturing audio, which requires access to the device's microphone."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "White balance is a fundamental camera setting used to adjust the color temperature of images and videos; therefore, accessing and configuring these settings requires camera permissions."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Screen mode settings (like Action, Night, Sunset, and Play) modify system-level interface elements such as brightness, color temperature, and visual presentation of the display."
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The use of a 'viewfinder' and 'zoom' functionality indicates the app is interacting with the device's camera hardware to display and manipulate a live image feed."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required to capture the images needed to create a panoramic photo."
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "Capturing a panoramic image typically requires access to sensors (like the gyroscope or accelerometer) to track device movement and ensure a smooth stitch."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save the resulting panoramic image file to the device's shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature allows capturing pictures, which requires access to the device's camera."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature allows users to configure the quality of captured pictures, which directly relates to the operation and settings of the device's camera."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Adjusting exposure settings requires access to the camera hardware to control how images are captured."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to obtain the device's location data to target or tag photos with geographic coordinates."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to access and modify image files (photos) in order to add or read location metadata."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access the shared external storage where photos are stored for tagging purposes."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "ACCESSIBILITY_AND_INPUT",
+            "reasoning": "Customizing the function of physical volume keys requires capturing hardware input and system shortcuts to intercept and redefine the button press events."
+          },
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Volume keys are basic hardware peripherals that directly control audio policies; customizing their function involves interacting with these system-level hardware peripherals and audio policies."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature is specifically for delayed photo capture, which requires access to the device's camera."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Capturing a photo typically requires the ability to save the resulting image file to the device's shared visual storage."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 20,
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Required for capturing standard photos, recording videos, and taking panoramic images as these all involve accessing the device camera to capture images and video content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "Likely required for recording videos, as video recording typically includes audio capture.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to save the captured photos, videos, and panoramic images to the device's storage.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "White balance control is a camera setting that adjusts color temperature during image/video capture. This feature requires access to camera hardware and camera configuration settings to apply different white balance modes (Incandescent, Fluorescent, Auto, Daylight, Cloudy) to captured content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Modifying screen display modes and settings typically involves system-level interface elements and display parameters, which could fall under system UI and peripheral control permissions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Adaptive User Interface",
+        "description": "The user interface is designed to be dynamic and compatible across both phone and tablet devices.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "Zoom control is a UI/gesture interaction feature that allows users to pinch to zoom on content already being displayed in the viewfinder. This does not inherently require any Android permissions - it's purely a touch input gesture handling mechanism. The actual content being viewed (camera feed, images, maps, etc.) may require their own permissions, but the zoom control functionality itself does not.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature describes a viewfinder with pinch-to-zoom control, which is characteristic of camera applications used for previewing scenes before capturing images or video. Managing a live viewfinder and adjusting its zoom level (especially when interacting with camera hardware parameters) requires access to the device's camera APIs, falling under the CAMERA permission group.",
+            "models_inferred": [
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly describes 'capturing panoramic images', which directly requires access to the device camera hardware to take photos.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Potentially required to save the captured panoramic images to the device's storage.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "SENSORS",
+            "reasoning": "May be required if the 'Smart' mode uses sensors (e.g., gyroscope) for image stabilization or orientation detection during panorama capture.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature enables capturing pictures/images, which directly requires camera access. The wide screen aspect ratio is a camera capture setting that doesn't change the fundamental permission requirement.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Reading or writing image files (for wide screen captures) from shared storage may require permissions from this group.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature explicitly mentions configuring the quality level of 'captured pictures', which necessitates accessing the device's camera hardware to take photos, fitting the description of the CAMERA permission group.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature provides control over camera exposure settings, which directly requires access to the camera hardware. Adjusting exposure is a camera-specific function that needs the CAMERA permission group to interact with the device's camera system.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location data for tagging photos with location information.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read and modify image files in shared storage to add location metadata tags.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access or save photos with location metadata in shared storage.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferences": [
+          {
+            "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+            "reasoning": "Volume key customization involves controlling basic hardware peripherals (physical volume buttons) and modifying system-level interface behavior related to audio policies. This group explicitly includes permissions for controlling hardware peripherals and audio/vibration policies, which directly aligns with the feature's functionality of reconfiguring physical volume key functions.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferences": [
+          {
+            "group_name": "CAMERA",
+            "reasoning": "The feature involves delayed photo capture functionality, which requires accessing the device camera to take pictures even with a countdown timer.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly supports capturing standard photos, recording videos, and taking panoramic images, all of which require access to the camera device."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Video recording functionality typically requires audio capture along with video, which necessitates the RECORD_AUDIO permission to record audio during video capture."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "The feature involves capturing and saving photos, videos, and panoramic images. These captured media files need to be written to external storage, requiring write access permission."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting white balance settings and preset modes requires access to the camera device to configure capture parameters."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly mentions interaction with a 'viewfinder', which requires access to the camera device to display a live preview. Accessing the camera hardware to render and manipulate the viewfinder necessitates the CAMERA permission."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature involves capturing panoramic images, which requires access to the camera device hardware."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature involves capturing images, which creates the app's own files. According to the provided permission description for WRITE_EXTERNAL_STORAGE, apps do not need to request this permission to access their own files in the MediaStore (where captured images are typically stored), especially on modern Android versions (API 29+). Similarly, READ_EXTERNAL_STORAGE is not required as the feature focuses on capturing new content rather than accessing other apps' media."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SENSORS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "Standard panorama shooting uses camera and basic device motion sensors (gyroscope/accelerometer) which do not require SENSORS group permissions. The 'Smart' mode features like auto-stitching and scene detection are camera functionality handled through CAMERA permission, not specialized sensor data from the SENSORS group. No body sensors, eye/face/hand/head tracking, or scene understanding permissions are required for basic panoramic image capture."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly involves the capture of pictures, which requires accessing the camera device to take photographs."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature allows users to configure the quality level of 'captured pictures', which implies the application performs photo capture using the device's camera hardware, requiring access to the camera device."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting exposure settings requires direct access to the camera device and its configuration parameters, which is authorized by the CAMERA permission."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature allows tagging photos with location data, which requires the app to determine the user's precise physical location (GPS coordinates) at the time of tagging or capture to embed into the photo metadata."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_IMAGES",
+            "reasoning": "The feature requires reading and modifying photos to add location tags. Since the functionality involves working with image files from external storage, READ_MEDIA_IMAGES permission is necessary to access these photos."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read existing photo files from external storage to select them for location tagging."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to modify photo files by writing location metadata tags to external storage."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "Required to modify global audio settings (e.g., volume levels, stream selection, or mute state) when executing the volume-related custom functions configured by the user for the physical volume keys."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature involves delayed photo capture, which inherently requires access to the camera hardware to take the picture."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing photos, recording videos, and taking panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting white balance settings requires direct access to the camera hardware, which is covered by the CAMERA permission."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for the viewfinder, which is necessary for zoom control functionality."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SENSORS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing pictures, including in wide screen format."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Configuring image quality settings inherently requires access to the camera device to apply and test those settings."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device and adjust exposure settings."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to access precise location data for tagging photos with accurate geographic coordinates."
+          },
+          {
+            "permission_name": "ACCESS_MEDIA_LOCATION",
+            "reasoning": "Required to access geographic locations persisted in the user's shared collection (e.g., for tagging photos with stored location metadata)."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "Required to modify the behavior of volume keys, which are tied to audio settings."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for photo capture, which is the core functionality of the Shutter Timer feature."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing standard photos, recording videos, and taking panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required from the STORAGE group, as the feature is primarily related to capturing photos and videos, which does not necessarily involve accessing or modifying external storage directly. The app may store the captured media in its own internal storage or app-specific directories, which does not require explicit STORAGE permissions."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access and control the camera device's white balance settings."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "Not required as the feature only deals with screen modes and does not involve audio settings."
+          },
+          {
+            "permission_name": "SET_WALLPAPER",
+            "reasoning": "Not required as the feature is about screen modes, not setting wallpapers."
+          },
+          {
+            "permission_name": "SET_WALLPAPER_HINTS",
+            "reasoning": "Not required as the feature is about screen modes, not setting wallpaper hints."
+          },
+          {
+            "permission_name": "READ_COLOR_ZONES",
+            "reasoning": "Not required as the feature does not involve reading color zones on the screen."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device, which is necessary for the viewfinder functionality that the zoom control interacts with."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to save the captured panoramic images to external storage."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SENSORS",
+        "inferences": [
+          {
+            "permission_name": "HIGH_SAMPLING_RATE_SENSORS",
+            "reasoning": "The Smart Panorama Shooting feature may require high-speed sensor data to accurately capture and stitch together images for panoramic shots, suggesting the need for high sampling rate sensors."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing pictures in a wide screen format or aspect ratio."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_IMAGES",
+            "reasoning": "Required to access and potentially read the captured image files from external storage, especially if the app needs to handle or process the captured images after taking them."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device in order to configure and apply the quality settings for captured pictures."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device and adjust its exposure settings."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to access precise location data for targeting or tagging photos."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_IMAGES",
+            "reasoning": "Required to read image files from external storage, which is necessary for targeting or tagging photos with location data."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to read photos from external storage that need to be targeted or tagged with location data."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to write or update the photos with location data on external storage."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "Required to modify the global audio settings, which would include customizing the function of the physical volume keys."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The Shutter Timer feature includes a countdown timer for delayed photo capture, which requires access to the camera device to take photos."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly requires capturing photos, recording videos, and taking panoramic images, which directly necessitates access to the device's camera hardware."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The feature description includes 'recording videos', which typically requires capturing ambient sound alongside the visual footage. To enable audio capture during video recording, the app must request the RECORD_AUDIO permission from the MICROPHONE group."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature describes camera-based capture modes (photos, videos, panoramas) but does not mention accessing, reading, or writing files to external storage. Therefore, no STORAGE group permissions are required."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting white balance settings is a camera-specific control used during image capture or live preview. Accessing and modifying these hardware-level parameters requires permission to interact with the device's camera API."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature mentions a 'viewfinder', which indicates the app needs to access the device's camera hardware to display a live preview and apply zoom gestures. Accessing the camera hardware requires the CAMERA permission."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the camera device for capturing panoramic images in the Smart Panorama Shooting mode."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SENSORS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Required to access the device's camera in order to capture pictures in a wide screen format."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature 'Wide Screen Capture' describes the action of capturing (taking) pictures. The provided allowed permissions within the MEDIA_VISUAL group (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO, READ_MEDIA_VISUAL_USER_SELECTED) are exclusively for *reading* existing media files from storage. Capturing media does not inherently require read access to external storage; it would typically require camera-related permissions which are not listed in this specific group."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature allows configuring image quality for captured pictures, which implies the application needs to access the camera device to capture images."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature allows control over camera exposure settings, which requires access to the camera device hardware."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature requires retrieving the device's precise geographic coordinates to accurately attach or tag location metadata onto photos during the targeting process."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "The feature involves configuring physical volume keys, which are primary hardware controls for managing the device's audio output (such as media volume and ringer modes). To customize or modify the behavior of these keys—effectively altering how the system processes audio inputs and streams—the application requires the ability to modify global audio settings."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature involves a countdown timer for delayed photo capture, which inherently requires access to the camera device to function."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The app requires access to the camera device to support capturing standard photos, recording videos, and taking panoramic images."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MICROPHONE",
+        "inferences": [
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "The app supports recording videos, which typically requires the ability to record audio to accompany the video footage."
+          }
+        ]
+      },
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "The app supports capturing photos, recording videos, and taking panoramic images, which requires saving these media files to the device's external storage."
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature allows users to adjust white balance settings, which requires access to the camera device hardware to apply these configuration changes."
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The zoom control feature operates on the viewfinder, which requires access to the camera device to display and manipulate the image stream."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The 'Smart Panorama Shooting' feature is designed to capture panoramic images, which requires direct access to the camera device."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required. Modern Android versions (API level 29 and above) allow apps to save and access their own files in the MediaStore or app-specific directories without requiring READ_EXTERNAL_STORAGE or WRITE_EXTERNAL_STORAGE."
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SENSORS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature 'Wide Screen Capture' allows the user to capture pictures, which requires direct access to the camera device."
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature requires access to the camera device to allow manual or automatic control over the exposure settings."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to obtain precise location data to accurately tag photos with the user's current coordinates."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Required to obtain approximate location data for tagging photos if precise location is not available or requested."
+          },
+          {
+            "permission_name": "ACCESS_MEDIA_LOCATION",
+            "reasoning": "Required to target or access geographic location metadata that is already persisted within the user's shared collection of photos."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "MEDIA_VISUAL",
+        "inferences": [
+          {
+            "permission_name": "READ_MEDIA_IMAGES",
+            "reasoning": "The feature involves targeting or tagging photos with location data, which requires the ability to read image files from external storage."
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "STORAGE",
+        "inferences": [
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read existing photo files from external storage in order to apply location tags to them."
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to save the updated location data/tags back into the photo files stored on external storage."
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "SYSTEM_UI_AND_PERIPHERALS",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "The feature allows users to configure the function of physical volume keys, which necessitates the ability to modify global audio settings on the device."
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "CAMERA",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature is designed for 'photo capture', which requires access to the camera device."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Core Capture Modes",
+        "description": "The app supports capturing standard photos (Camera), recording videos, and taking panoramic images.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly supports capturing standard photos, recording videos, and taking panoramic images, all of which require access to the camera device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "RECORD_AUDIO",
+            "reasoning": "Video recording functionality typically requires audio capture along with video, which necessitates the RECORD_AUDIO permission to record audio during video capture.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "White Balance Control",
+        "description": "Users can adjust white balance settings with specific preset modes including Incandescent, Fluorescent, Auto, Daylight, and Cloudy.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting white balance settings and preset modes requires access to the camera device to configure capture parameters.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Screen Mode Settings",
+        "description": "Provides various pre-configured screen modes for different lighting or activity scenarios, specifically Action, Night, Sunset, and Play.",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Zoom Control",
+        "description": "Allows users to zoom in or out on the viewfinder using a pinch gesture.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly mentions interaction with a 'viewfinder', which requires access to the camera device to display a live preview. Accessing the camera hardware to render and manipulate the viewfinder necessitates the CAMERA permission.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Smart Panorama Shooting",
+        "description": "Provides a specific 'Smart' mode for capturing panoramic images.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature involves capturing panoramic images, which requires access to the camera device hardware.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "Standard panorama shooting uses camera and basic device motion sensors (gyroscope/accelerometer) which do not require SENSORS group permissions. The 'Smart' mode features like auto-stitching and scene detection are camera functionality handled through CAMERA permission, not specialized sensor data from the SENSORS group. No body sensors, eye/face/hand/head tracking, or scene understanding permissions are required for basic panoramic image capture.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Wide Screen Capture",
+        "description": "Enables the capture of pictures in a wide screen format or aspect ratio.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature explicitly involves the capture of pictures, which requires accessing the camera device to take photographs.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Image Quality Settings",
+        "description": "Allows users to configure the quality level of the captured pictures.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature allows users to configure the quality level of 'captured pictures', which implies the application performs photo capture using the device's camera hardware, requiring access to the camera device.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Exposure Adjustment",
+        "description": "Provides manual or automatic control over the exposure settings of the camera.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "Adjusting exposure settings requires direct access to the camera device and its configuration parameters, which is authorized by the CAMERA permission.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Location Targeting",
+        "description": "Includes functionality to target or tag photos with location data.",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature allows tagging photos with location data, which requires the app to determine the user's precise physical location (GPS coordinates) at the time of tagging or capture to embed into the photo metadata.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "READ_MEDIA_IMAGES",
+            "reasoning": "The feature requires reading and modifying photos to add location tags. Since the functionality involves working with image files from external storage, READ_MEDIA_IMAGES permission is necessary to access these photos.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "READ_EXTERNAL_STORAGE",
+            "reasoning": "Required to access and read existing photo files from external storage to select them for location tagging.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "WRITE_EXTERNAL_STORAGE",
+            "reasoning": "Required to modify photo files by writing location metadata tags to external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Volume Key Customization",
+        "description": "Allows users to configure the function of the physical volume keys on the device.",
+        "inferences": [
+          {
+            "permission_name": "MODIFY_AUDIO_SETTINGS",
+            "reasoning": "Required to modify global audio settings (e.g., volume levels, stream selection, or mute state) when executing the volume-related custom functions configured by the user for the physical volume keys.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Shutter Timer",
+        "description": "Includes a countdown timer function for delayed photo capture.",
+        "inferences": [
+          {
+            "permission_name": "CAMERA",
+            "reasoning": "The feature involves delayed photo capture, which inherently requires access to the camera hardware to take the picture.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inferred_permissions": [
+    "ACCESS_FINE_LOCATION",
+    "READ_MEDIA_IMAGES",
+    "RECORD_AUDIO",
+    "CAMERA",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "MODIFY_AUDIO_SETTINGS"
+  ]
+}

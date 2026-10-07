@@ -1,0 +1,43 @@
+{
+  "storage_path": "results/2026-09-07_07-26-22_file_manager",
+  "apk_path": "test_apks/file_manager.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "ground_truth_sets": [
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_LOCAL_NETWORK"
+    ],
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_LOCAL_NETWORK",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "BLUETOOTH",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "pkg": "com.chaozhuo.filemanager",
+  "label": "File Manager",
+  "description_long": "File Manager is a file management tool running on Android system, which supports touch screen, external mouse/keyboard and telecontroller, it provides a easy way to manage files on both your local disks and the file servers in your local network.  \nAt present, the UI is specially tuned for large screen device only.  \n  \nPaid to remove ads supported.\n",
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "READ_EXTERNAL_STORAGE",
+    "SET_WALLPAPER",
+    "FOREGROUND_SERVICE",
+    "ACCESS_WIFI_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "BLUETOOTH",
+    "CHANGE_NETWORK_STATE",
+    "INTERNET",
+    "READ_PHONE_STATE",
+    "CHANGE_WIFI_STATE"
+  ]
+}

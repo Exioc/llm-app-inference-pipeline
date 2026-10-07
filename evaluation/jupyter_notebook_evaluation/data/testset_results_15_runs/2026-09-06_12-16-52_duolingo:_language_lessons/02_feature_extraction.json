@@ -1,0 +1,124 @@
+{
+  "storage_path": "results/2026-09-06_12-16-52_duolingo:_language_lessons",
+  "apk_path": "test_apks/duolingo.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.duolingo",
+  "label": "Duolingo: Language Lessons",
+  "description_long": "Learn a new language, chess & more with the world’s most downloaded education app! Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons. Practice speaking, reading, listening & writing to build your vocabulary & grammar skills.  \n  \nDesigned by learning experts & loved by hundreds of millions worldwide, Duolingo helps you prepare for real conversations in Spanish, French, Chinese, Italian, German, English & more. Whether you want to learn Spanish, learn French, learn German or improve your English, our language lessons make learning effective & fun  \n  \nAnd now, you can learn Math, Music & Chess the Duolingo way, including interactive chess online & fun chess lessons for all levels!  \n  \n♟️**Chess** : Master moves, level up your game & play chess online in our brand new Chess course. Learn chess basics, practice fun chess challenges & improve your strategy with guided chess lessons. Whether you're new to chess or already play online chess, our step-by-step chess lessons help you build real skills. Play online chess matches, solve chess puzzles & experience fun chess training designed to make learning chess engaging & rewarding. Checkmate!  \n  \n🧮 **Math** : Build real-world math skills: from calculating tips to identifying patterns, sharpen your mental math in our Math course. Learn foundational topics like multiplication, fractions, geometry & more & keep your brain sharp with more challenging exercises, games etc.  \n  \n🎵 **Music** : Learn how to read music & play popular songs on your device in our Music course, no instrument needed! Using an on-screen keyboard, you’ll learn bit-by-bit.  \n  \nWhether you’re learning a language for travel, school, career or your brain health, you’ll love learning with Duolingo. You can learn languages like Spanish, French, German & English while also strengthening your logic & focus through chess online & strategic chess practice.  \n  \n**Why Duolingo?**  \n• Duolingo is fun & effective. Game like language lessons & fun characters help you build solid speaking, reading, listening, & writing skills, plus enjoy fun chess & competitive online chess in one app.  \n  \n• Duolingo works. Designed by learning experts, Duolingo has a science-based teaching methodology proven to foster long-term knowledge retention across language lessons & chess lessons alike.  \n  \n• Track your progress. Work toward your learning goals with playful rewards & achievements when you make practicing language lessons or chess online part of your daily habit.  \n  \n• Join millions of learners. Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community.  \n  \n• Every language course is free. Learn Spanish, French, German, Italian, Russian, Portuguese, Turkish, Dutch, Irish, Danish, Swedish, Ukrainian, Esperanto, Polish, Greek, Hungarian, Norwegian, Hebrew, Welsh, Arabic, Latin, Hawaiian, Scottish Gaelic, Vietnamese, Korean, Japanese, English, & even High Valyrian! And now, learn Math, Music & improve your chess online skills with structured chess lessons & fun chess challenges.  \n  \n**What the world is saying about Duolingo ⭐️⭐️⭐️⭐️⭐️:**  \n  \nEditor's Choice & \"\"Best of the Best”- Google Play  \n  \n“Far & away the best language-learning app.”- The Wall Street Journal  \n  \n“This free app & website is among the most effective language-learning methods I’ve tried… lessons come in the form of brief challenges, speaking, translating, answering multiple-choice questions, that keep me coming back for more.”- The New York Times  \n  \n“Duolingo may hold the secret to the future of education.”- TIME Magazine  \n  \n“..Duolingo is cheerful, lighthearted & fun..”- Forbes  \n  \nIf you like Duolingo, try Super Duolingo for 14 days free! Learn a language fast with no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair.  \n  \nSend any feedback to android@duolingo.com  \n  \nUse Duolingo on the Web at https://www.duolingo.com  \n  \nPrivacy Policy: https://www.duolingo.com/privacy\n",
+  "ground_truth_sets": [
+    [
+      "RECORD_AUDIO",
+      "INTERNET"
+    ],
+    [
+      "GET_ACCOUNTS",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_CALENDAR",
+    "WRITE_EXTERNAL_STORAGE",
+    "DETECT_SCREEN_CAPTURE",
+    "VIBRATE",
+    "RECORD_AUDIO",
+    "USE_BIOMETRIC",
+    "RECEIVE_BOOT_COMPLETED",
+    "USE_FINGERPRINT",
+    "MODIFY_AUDIO_SETTINGS",
+    "POST_NOTIFICATIONS",
+    "WRITE_CALENDAR",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "WAKE_LOCK",
+    "GET_ACCOUNTS",
+    "READ_CONTACTS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 8,
+    "features": [
+      {
+        "title": "Multilingual Language Learning",
+        "description": "Learn over 40 languages through bite-sized lessons, focusing on building vocabulary and grammar skills. Covers speaking, reading, listening, and writing. Includes languages such as Spanish, French, Chinese, German, English, and High Valyrian.",
+        "reasoning": "The text explicitly states 'learning 40+ languages through quick, bite-sized lessons' and 'Practice speaking, reading, listening & writing to build your vocabulary & grammar skills', directly confirming a comprehensive language learning capability with specific skill targets.",
+        "source_quotes": [
+          "Duolingo is the fun, free app for learning 40+ languages through quick, bite-sized lessons.",
+          "Practice speaking, reading, listening & writing to build your vocabulary & grammar skills.",
+          "Learn Spanish, French, German & English while also strengthening your logic & focus through chess online & strategic chess practice."
+        ]
+      },
+      {
+        "title": "Interactive Chess Learning & Online Play",
+        "description": "A dedicated course allowing users to master chess basics, strategy, and moves. Features include playing online matches, solving chess puzzles, and engaging in guided lessons and challenges.",
+        "reasoning": "The text explicitly mentions 'play chess online in our brand new Chess course' and 'Play online chess matches, solve chess puzzles & experience fun chess training', proving both educational and multiplayer gameplay capabilities for chess.",
+        "source_quotes": [
+          "Master moves, level up your game & play chess online in our brand new Chess course.",
+          "Play online chess matches, solve chess puzzles & experience fun chess training designed to make learning chess engaging & rewarding."
+        ]
+      },
+      {
+        "title": "Mathematics Skill Development",
+        "description": "Provides a Math course for building real-world skills like calculating tips and identifying patterns. Covers foundational topics including multiplication, fractions, and geometry through exercises and games.",
+        "reasoning": "The text explicitly defines the scope of the Math course with 'Build real-world math skills: from calculating tips to identifying patterns' and lists specific topics like 'multiplication, fractions, geometry', confirming a dedicated math learning feature.",
+        "source_quotes": [
+          "Build real-world math skills: from calculating tips to identifying patterns, sharpen your mental math in our Math course.",
+          "Learn foundational topics like multiplication, fractions, geometry & more & keep your brain sharp with more challenging exercises, games etc."
+        ]
+      },
+      {
+        "title": "Music Literacy & Performance Course",
+        "description": "Allows users to learn how to read music and play popular songs using an on-screen keyboard, requiring no physical instrument.",
+        "reasoning": "The text explicitly states 'Learn how to read music & play popular songs on your device in our Music course, no instrument needed! Using an on-screen keyboard', which directly confirms a music learning feature with specific hardware requirements (on-screen keyboard).",
+        "source_quotes": [
+          "Learn how to read music & play popular songs on your device in our Music course, no instrument needed!",
+          "Using an on-screen keyboard, you’ll learn bit-by-bit."
+        ]
+      },
+      {
+        "title": "Progress Tracking & Achievement System",
+        "description": "Enables users to track learning goals and receive playful rewards and achievements for maintaining daily practice habits.",
+        "reasoning": "The text explicitly instructs users to 'Track your progress' and notes they can 'Work toward your learning goals with playful rewards & achievements', directly proving the existence of a progress monitoring and gamification system.",
+        "source_quotes": [
+          "Track your progress.",
+          "Work toward your learning goals with playful rewards & achievements when you make practicing language lessons or chess online part of your daily habit."
+        ]
+      },
+      {
+        "title": "Competitive Global Leaderboards",
+        "description": "Offers competitive leaderboards to maintain motivation by allowing users to learn alongside a global community.",
+        "reasoning": "The text explicitly mentions 'Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community', confirming a social competition feature.",
+        "source_quotes": [
+          "Stay motivated with competitive Leaderboards as you learn languages & play chess online alongside our global community."
+        ]
+      },
+      {
+        "title": "Super Duolingo Premium Subscription",
+        "description": "Optional paid subscription offering a free 14-day trial, ad-free experience, Unlimited Hearts, and Monthly Streak Repair.",
+        "reasoning": "The text explicitly details the 'Super Duolingo' offer with 'no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair', confirming a monetization feature with specific defined benefits.",
+        "source_quotes": [
+          "If you like Duolingo, try Super Duolingo for 14 days free!",
+          "Learn a language fast with no ads & get fun perks like Unlimited Hearts & Monthly Streak Repair."
+        ]
+      },
+      {
+        "title": "Web Platform Access",
+        "description": "Provides access to the Duolingo platform via a web browser in addition to the mobile application.",
+        "reasoning": "The text explicitly states 'Use Duolingo on the Web at https://www.duolingo.com', confirming cross-platform availability beyond the mobile app.",
+        "source_quotes": [
+          "Use Duolingo on the Web at https://www.duolingo.com"
+        ]
+      }
+    ]
+  }
+}

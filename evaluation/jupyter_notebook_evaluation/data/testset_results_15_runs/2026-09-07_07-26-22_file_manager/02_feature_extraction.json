@@ -1,0 +1,89 @@
+{
+  "storage_path": "results/2026-09-07_07-26-22_file_manager",
+  "apk_path": "test_apks/file_manager.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.chaozhuo.filemanager",
+  "label": "File Manager",
+  "description_long": "File Manager is a file management tool running on Android system, which supports touch screen, external mouse/keyboard and telecontroller, it provides a easy way to manage files on both your local disks and the file servers in your local network.  \nAt present, the UI is specially tuned for large screen device only.  \n  \nPaid to remove ads supported.\n",
+  "ground_truth_sets": [
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_LOCAL_NETWORK"
+    ],
+    [
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_LOCAL_NETWORK",
+      "FOREGROUND_SERVICE",
+      "WAKE_LOCK",
+      "BLUETOOTH",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "READ_EXTERNAL_STORAGE",
+    "SET_WALLPAPER",
+    "FOREGROUND_SERVICE",
+    "ACCESS_WIFI_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "BLUETOOTH",
+    "CHANGE_NETWORK_STATE",
+    "INTERNET",
+    "READ_PHONE_STATE",
+    "CHANGE_WIFI_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Local and Network File Management",
+        "description": "Provides functionality to manage files located on the device's local disks as well as on file servers within the local network.",
+        "reasoning": "The text explicitly states the tool 'provides a easy way to manage files on both your local disks and the file servers in your local network', directly confirming management capabilities for both storage types.",
+        "source_quotes": [
+          "it provides a easy way to manage files on both your local disks and the file servers in your local network."
+        ]
+      },
+      {
+        "title": "Multi-Peripheral Input Support",
+        "description": "The application supports multiple input methods including touch screen, external mouse, keyboard, and telecontroller.",
+        "reasoning": "The text explicitly lists the supported hardware inputs: 'supports touch screen, external mouse/keyboard and telecontroller', which confirms compatibility with these specific control methods.",
+        "source_quotes": [
+          "which supports touch screen, external mouse/keyboard and telecontroller"
+        ]
+      },
+      {
+        "title": "Android System Compatibility",
+        "description": "The file management tool is designed to run on the Android operating system.",
+        "reasoning": "The text explicitly defines the tool as 'running on Android system', establishing the platform dependency.",
+        "source_quotes": [
+          "File Manager is a file management tool running on Android system"
+        ]
+      },
+      {
+        "title": "Large Screen Device UI Optimization",
+        "description": "The user interface is specifically tuned for use on large screen devices only.",
+        "reasoning": "The text explicitly states 'the UI is specially tuned for large screen device only', confirming a specific display optimization and its limitation.",
+        "source_quotes": [
+          "At present, the UI is specially tuned for large screen device only."
+        ]
+      },
+      {
+        "title": "Paid Advertisement Removal",
+        "description": "Offers a payment option to remove advertisements from the application.",
+        "reasoning": "The text explicitly mentions 'Paid to remove ads supported', confirming the existence of a monetization feature for ad removal.",
+        "source_quotes": [
+          "Paid to remove ads supported."
+        ]
+      }
+    ]
+  }
+}

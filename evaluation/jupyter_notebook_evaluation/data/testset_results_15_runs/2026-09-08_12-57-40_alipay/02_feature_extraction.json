@@ -1,0 +1,129 @@
+{
+  "storage_path": "results/2026-09-08_12-57-40_alipay",
+  "apk_path": "test_apks/alipay.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.eg.android.AlipayGphone",
+  "label": "Alipay",
+  "description_long": "Alipay is a leading open platform for payments and digital services in China.  \n  \nUsers with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China as they travel for leisure, business, or study.   \n  \nForeign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country. Alipay is not designed or intended for use by foreign users in their home country or anywhere outside of China.\n",
+  "ground_truth_sets": [
+    [
+      "NFC",
+      "NFC_TRANSACTION_EVENT",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "GET_ACCOUNTS",
+      "NFC",
+      "NFC_TRANSACTION_EVENT",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "WRITE_EXTERNAL_STORAGE",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "HIDE_OVERLAY_WINDOWS",
+      "VIBRATE",
+      "DETECT_SCREEN_CAPTURE",
+      "DETECT_SCREEN_RECORDING",
+      "USE_BIOMETRIC",
+      "USE_FINGERPRINT"
+    ]
+  ],
+  "apk_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "WRITE_SYNC_SETTINGS",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "RECEIVE_BOOT_COMPLETED",
+    "HIDE_OVERLAY_WINDOWS",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "GET_TASKS",
+    "ACCESS_MEDIA_LOCATION",
+    "BLUETOOTH",
+    "BLUETOOTH_ADVERTISE",
+    "WAKE_LOCK",
+    "READ_MEDIA_VIDEO",
+    "FOREGROUND_SERVICE_MEDIA_PROJECTION",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "READ_PHONE_STATE",
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_CONTACTS",
+    "ACCESS_FINE_LOCATION",
+    "READ_EXTERNAL_STORAGE",
+    "BROADCAST_STICKY",
+    "BLUETOOTH_ADMIN",
+    "ACCESS_NOTIFICATION_POLICY",
+    "READ_SYNC_SETTINGS",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_CALENDAR",
+    "ACTIVITY_RECOGNITION",
+    "VIBRATE",
+    "CHANGE_NETWORK_STATE",
+    "WRITE_EXTERNAL_STORAGE",
+    "NEARBY_WIFI_DEVICES",
+    "CHANGE_WIFI_MULTICAST_STATE",
+    "REORDER_TASKS",
+    "POST_NOTIFICATIONS",
+    "READ_MEDIA_AUDIO",
+    "RECORD_AUDIO",
+    "WRITE_CALENDAR",
+    "BLUETOOTH_CONNECT",
+    "INTERNET",
+    "USE_BIOMETRIC",
+    "CAMERA",
+    "USE_FINGERPRINT",
+    "FOREGROUND_SERVICE_LOCATION",
+    "GET_ACCOUNTS",
+    "FOREGROUND_SERVICE",
+    "HIGH_SAMPLING_RATE_SENSORS",
+    "READ_MEDIA_IMAGES",
+    "FOREGROUND_SERVICE_CAMERA",
+    "READ_BASIC_PHONE_STATE",
+    "NFC",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "BLUETOOTH_SCAN",
+    "EXPAND_STATUS_BAR",
+    "CHANGE_WIFI_STATE",
+    "QUERY_ALL_PACKAGES"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 3,
+    "features": [
+      {
+        "title": "International Payments for Chinese ID Holders",
+        "description": "Users possessing a Chinese ID and bank account can utilize the app to execute payments both online and in-person at merchants located outside of China.",
+        "reasoning": "The text explicitly states that 'Users with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China', directly proving a cross-border payment capability for this specific user group.",
+        "source_quotes": [
+          "Users with a Chinese ID and bank account can use Alipay to make payments online and in person at various merchants outside of China as they travel for leisure, business, or study."
+        ]
+      },
+      {
+        "title": "Credit Card Linking for Foreign Visitors in China",
+        "description": "Allows foreign visitors traveling to China to connect external credit cards to the platform to facilitate transactions with the network of merchants within the country.",
+        "reasoning": "The text explicitly grants the capability that 'Foreign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country', confirming a third-party card integration feature for this user segment.",
+        "source_quotes": [
+          "Foreign visitors to China can connect their credit card to take advantage of Alipay’s widespread acceptance by tens of millions of merchants across the country."
+        ]
+      },
+      {
+        "title": "Digital Services Platform",
+        "description": "The application functions as an open platform providing access to payments and unspecified digital services primarily within China.",
+        "reasoning": "The text defines the application as 'a leading open platform for payments and digital services in China', explicitly establishing the general scope of services provided.",
+        "source_quotes": [
+          "Alipay is a leading open platform for payments and digital services in China."
+        ]
+      }
+    ]
+  }
+}

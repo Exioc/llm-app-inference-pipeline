@@ -1,0 +1,759 @@
+{
+  "storage_path": "results/2026-09-06_21-21-13_pinterest",
+  "apk_path": "test_apks/pinterest.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.pinterest",
+  "label": "Pinterest",
+  "description_long": "Pinterest is a place of endless possibilities. You can:  \n\\- Discover everyday inspiration  \n\\- Shop styles you love  \n\\- Try and learn something new  \n  \nCreate boards, save Pins and make collages of all your inspiration. Unlock billions of ideas, from fashion tips 👠 and easy recipes 🍜 to DIY projects 🛠️ and fresh ways to redo your space. Creating the life you love?  \n  \nIt's Possible.\n",
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "WAKE_LOCK",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE",
+    "WAKE_LOCK",
+    "READ_CONTACTS",
+    "NFC",
+    "DETECT_SCREEN_CAPTURE",
+    "POST_NOTIFICATIONS",
+    "ACCESS_FINE_LOCATION",
+    "RECEIVE_BOOT_COMPLETED",
+    "INTERNET",
+    "CAMERA",
+    "ACCESS_WIFI_STATE",
+    "READ_MEDIA_VISUAL_USER_SELECTED",
+    "READ_MEDIA_VIDEO",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_MEDIA_IMAGES",
+    "ACCESS_COARSE_LOCATION",
+    "GET_ACCOUNTS",
+    "ACCESS_NETWORK_STATE",
+    "VIBRATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 6,
+    "features": [
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "reasoning": "The text explicitly states the user can 'Discover everyday inspiration' and 'Unlock billions of ideas, from fashion tips... to DIY projects...', directly confirming a content discovery and browsing capability.",
+        "source_quotes": [
+          "Discover everyday inspiration",
+          "Unlock billions of ideas, from fashion tips 👠 and easy recipes 🍜 to DIY projects 🛠️ and fresh ways to redo your space."
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "reasoning": "The text explicitly lists 'Shop styles you love' as one of the things users can do, proving the existence of a shopping feature.",
+        "source_quotes": [
+          "Shop styles you love"
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "reasoning": "The text explicitly includes 'Try and learn something new' in the list of user capabilities ('You can: ...'), confirming a learning-oriented feature.",
+        "source_quotes": [
+          "Try and learn something new"
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "reasoning": "The text explicitly states users can 'Create boards', which is a direct reference to the board creation functionality.",
+        "source_quotes": [
+          "Create boards"
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "reasoning": "The text explicitly states users can 'save Pins', confirming the capability to bookmark or save content.",
+        "source_quotes": [
+          "save Pins"
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "reasoning": "The text explicitly states users can 'make collages of all your inspiration', directly confirming a content composition or collage tool.",
+        "source_quotes": [
+          "make collages of all your inspiration"
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch and load billions of content items (ideas, recipes, tips, etc.) from remote servers for the browsing and discovery experience."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Content discovery apps typically send notifications about new content, trending ideas, personalized recommendations, or updates to keep users engaged."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to cache images, recipes, and other content for offline viewing, or allow users to save inspiration boards to local storage."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Content likely includes images and videos from categories like fashion, home decor, and DIY that need to be read from shared storage for caching or saved content."
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "The feature description 'shop for specific styles and items directly within the application' describes a core e-commerce UI flow. While network connectivity is inherently required for online shopping, standard internet permissions are typically granted at install time and are not classified as sensitive runtime permission groups requiring user consent in the same context as camera, location, or contacts. The description does not explicitly mandate access to hardware sensors (Camera, Microphone), user data (Contacts, Call Log, SMS), location services, or file storage beyond standard internal operations. Therefore, based strictly on the provided description, no specific sensitive permission groups from the allowed list are explicitly required."
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save and organize user content into boards, as the feature involves curating and structuring saved content that needs to be persisted in external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely needed if boards and saved content are synced across devices or backed up to cloud services, which is common for organizational apps."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "May be required to notify users about board updates, new saved content, or organizational reminders related to their boards."
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Saving Pins to a user's account requires account synchronization and management to associate saved content with the user profile and handle background sync of pinned items."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Saving Pins to an account typically requires network connectivity to communicate with servers and sync the saved content items to the cloud or account backend."
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Collage creation requires reading existing image and video files from the device's shared storage to select and combine them as 'inspiration items'."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Collage creation features often allow users to capture new photos or videos directly within the app to use as source material for the collage."
+          }
+        ]
+      },
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Shopping functionality typically requires internet access to connect to e-commerce servers, retrieve product data, and process transactions."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to cache product images, store user preferences, or save transaction history locally."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Could be used to send order confirmations, promotions, or shipping updates to the user."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Might be needed if the app syncs shopping carts, wishlists, or user accounts across devices."
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared external storage to save Pins locally or cache content."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely requires internet access to sync saved Pins with the user's account on a remote server."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "May need permissions to manage sync settings for keeping Pins up-to-date across devices."
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to read/write images/files for creating and saving collages."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "May require access to read image/video files from shared storage to use as inspiration items in the collage."
+          }
+        ]
+      },
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch and load content from the internet, such as images, videos, and articles, across various categories like fashion, recipes, DIY projects, and home decor."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Needed to read and display image and video files from shared storage or downloaded from the internet for the purpose of content discovery and inspiration browsing."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be necessary to store downloaded content or cache browsing history for faster access and to reduce the need for repeated downloads."
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The app may need to store shopping cart data, order history, or product images, which could require access to shared external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "To facilitate online shopping, the app likely needs to communicate with servers to retrieve product information, process payments, and send order confirmations, which requires internet connectivity and network permissions."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "The app may allow users to save their payment information, shipping addresses, or other account details, which could involve account management and synchronization with external services."
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "ACTIVITY_RECOGNITION",
+            "reasoning": "May be required to track user activities and provide personalized learning recommendations based on their interests and engagement patterns."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Could be necessary to suggest location-based learning activities, provide information about nearby educational resources, or facilitate field trips."
+          },
+          {
+            "group_name": "CAMERA",
+            "reasoning": "Might be needed to access the camera for activities such as scanning QR codes for additional learning resources, capturing images for projects, or video recording for presentation skills practice."
+          },
+          {
+            "group_name": "MICROPHONE",
+            "reasoning": "May be required for speech-to-text functionality, voice assistants, or audio recording for language learning or presentation skills practice."
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Could be necessary to access and display educational images and videos from shared storage for learning purposes."
+          },
+          {
+            "group_name": "MEDIA_AURAL",
+            "reasoning": "May be required to access and play educational audio files from shared storage for learning purposes, such as podcasts or language lessons."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Will likely be necessary to store and retrieve learning materials, such as documents, images, and videos, from shared external storage."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Will probably be required for accessing online educational resources, downloading learning materials, and facilitating communication between learners and instructors."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "May be needed to synchronize user progress across devices, manage account settings for learning platforms, and ensure seamless access to learning resources."
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to read and write data to the shared external storage for saving and structuring content on the boards."
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "The feature involves saving content items, which likely requires accessing the device's shared external storage to store or retrieve the saved Pins."
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Since the Pins are saved to the user's account, this feature may require permissions to manage account settings, inspect account data, or synchronize account information."
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from shared storage to use as inspiration items in the collage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to access and potentially save the created collage to the device's shared external storage."
+          }
+        ]
+      },
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The shopping functionality inherently requires internet connectivity to fetch real-time product catalogs, synchronize cart states, retrieve pricing/inventory data, and process secure transactions."
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch online courses, instructional materials, and interactive content for skill acquisition."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Needed to cache or download lessons, documents, and media files for offline learning capabilities."
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read image files from the device's shared storage or gallery in order to load and combine multiple inspiration items into collage formats."
+          }
+        ]
+      },
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature involves browsing billions of ideas across various categories, which requires fetching data from remote servers via the internet."
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to online stores, browse product catalogs, and process payments via the internet."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to provide users with updates on their order status, shipping notifications, and promotional offers."
+          },
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Potentially required to calculate shipping costs, determine regional product availability, or provide taxes based on the user's location."
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Saving content items to a user's account requires internet connectivity to transmit data to and from a remote server."
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Required to read existing image and video files from shared storage to be used as inspiration items in the collage."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to access shared external storage for reading source files and saving the final created collage."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 18,
+    "features": [
+      {
+        "title": "Content Discovery & Inspiration Browsing",
+        "description": "The app provides access to billions of ideas across various categories such as fashion tips, recipes, DIY projects, and home decor, allowing users to find everyday inspiration.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch and load billions of content items (ideas, recipes, tips, etc.) from remote servers for the browsing and discovery experience.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be needed to cache images, recipes, and other content for offline viewing, or allow users to save inspiration boards to local storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Content likely includes images and videos from categories like fashion, home decor, and DIY that need to be read from shared storage for caching or saved content.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Integrated Shopping Functionality",
+        "description": "Enables users to shop for specific styles and items directly within the application.",
+        "inferences": [
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Shopping functionality typically requires internet access to connect to e-commerce servers, retrieve product data, and process transactions.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May be required to cache product images, store user preferences, or save transaction history locally.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Could be used to send order confirmations, promotions, or shipping updates to the user.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Might be needed if the app syncs shopping carts, wishlists, or user accounts across devices.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Learning & Skill Acquisition",
+        "description": "Provides capabilities for users to try new activities and acquire new knowledge or skills.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Will likely be necessary to store and retrieve learning materials, such as documents, images, and videos, from shared external storage.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Will probably be required for accessing online educational resources, downloading learning materials, and facilitating communication between learners and instructors.",
+            "models_inferred": [
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Board Creation",
+        "description": "Allows users to create organizational boards to curate and structure their saved content.",
+        "inferences": [
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Required to save and organize user content into boards, as the feature involves curating and structuring saved content that needs to be persisted in external storage.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Pin Saving",
+        "description": "Allows users to save specific content items (referred to as Pins) to their account.",
+        "inferences": [
+          {
+            "group_name": "ACCOUNT_AND_SYNC_MANAGEMENT",
+            "reasoning": "Saving Pins to a user's account requires account synchronization and management to associate saved content with the user profile and handle background sync of pinned items.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Saving Pins to an account typically requires network connectivity to communicate with servers and sync the saved content items to the cloud or account backend.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to shared external storage to save Pins locally or cache content.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Collage Creation",
+        "description": "Enables users to combine multiple inspiration items into collage formats.",
+        "inferences": [
+          {
+            "group_name": "MEDIA_VISUAL",
+            "reasoning": "Collage creation requires reading existing image and video files from the device's shared storage to select and combine them as 'inspiration items'.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "May require access to read/write images/files for creating and saving collages.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

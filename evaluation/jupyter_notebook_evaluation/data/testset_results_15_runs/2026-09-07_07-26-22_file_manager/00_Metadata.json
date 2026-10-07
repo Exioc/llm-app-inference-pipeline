@@ -1,0 +1,110 @@
+{
+  "pkg": "com.chaozhuo.filemanager",
+  "label": "RmlsZSBNYW5hZ2Vy",
+  "description": {
+    "long": "RmlsZSBNYW5hZ2VyIGlzIGEgZmlsZSBtYW5hZ2VtZW50IHRvb2wgcnVubmluZyBvbiBBbmRyb2lkIHN5c3RlbSwgd2hpY2ggc3VwcG9ydHMgdG91Y2ggc2NyZWVuLCBleHRlcm5hbCBtb3VzZS9rZXlib2FyZCBhbmQgdGVsZWNvbnRyb2xsZXIsIGl0IHByb3ZpZGVzIGEgZWFzeSB3YXkgdG8gbWFuYWdlIGZpbGVzIG9uIGJvdGggeW91ciBsb2NhbCBkaXNrcyBhbmQgdGhlIGZpbGUgc2VydmVycyBpbiB5b3VyIGxvY2FsIG5ldHdvcmsuPGJyPkF0IHByZXNlbnQsIHRoZSBVSSBpcyBzcGVjaWFsbHkgdHVuZWQgZm9yIGxhcmdlIHNjcmVlbiBkZXZpY2Ugb25seS48YnI+PGJyPlBhaWQgdG8gcmVtb3ZlIGFkcyBzdXBwb3J0ZWQu",
+    "short": "TWFuYWdlIGZpbGVzIG9uIGxvY2FsIGRpc2tzL2ZpbGUgc2VydmVycyxzdXBwb3J0cyBtb3VzZS9rZXlib2FyZCx0ZWxlY29udHJvbGxlci4="
+  },
+  "version": null,
+  "downloads": 20550821,
+  "rating": 3.31,
+  "review_count": 8892,
+  "in_app_purchases": "$0.99 per item",
+  "age_rating": "Everyone",
+  "contains_ads": true,
+  "price": {
+    "amount": 0.0,
+    "currency": "USD"
+  },
+  "published": {
+    "date": "Jun 29, 2015",
+    "timestamp": 1435536000
+  },
+  "updated": {
+    "date": null,
+    "timestamp": null
+  },
+  "sdk": {
+    "target": null,
+    "min": null
+  },
+  "category": {
+    "id": "Tools",
+    "name": "TOOLS"
+  },
+  "available_in_de": true,
+  "support_info": {
+    "website": "https://octopusgame.app",
+    "email": "phoenixchaozhuo@gmail.com",
+    "address": null
+  },
+  "developer_info": {
+    "id": "VG9vbEFwcFN0dWRpbw==",
+    "name": "/store/apps/dev?id=5025635036446305951",
+    "legal_name": "5025635036446305951",
+    "website": null,
+    "email": null,
+    "address": null,
+    "phone": null
+  },
+  "privacy_policy": "https://sites.google.com/view/privacy-policy-of-octopus/home",
+  "data_safety": null,
+  "permissions": [
+    {
+      "category": "Phone",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Photos/Media/Files",
+      "permissions": [
+        "access USB storage filesystem",
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Storage",
+      "permissions": [
+        "modify or delete the contents of your USB storage",
+        "read the contents of your USB storage"
+      ]
+    },
+    {
+      "category": "Wi-Fi connection information",
+      "permissions": [
+        "view Wi-Fi connections"
+      ]
+    },
+    {
+      "category": "Device ID & call information",
+      "permissions": [
+        "read phone status and identity"
+      ]
+    },
+    {
+      "category": "Other",
+      "permissions": [
+        "change network connectivity",
+        "connect and disconnect from Wi-Fi",
+        "draw over other apps",
+        "full network access",
+        "install shortcuts",
+        "modify system settings",
+        "pair with Bluetooth devices",
+        "prevent device from sleeping",
+        "set wallpaper",
+        "uninstall shortcuts",
+        "view network connections"
+      ]
+    },
+    {
+      "category": "Uncategorized",
+      "permissions": [
+        "bind to a notification listener service",
+        "download files without notification"
+      ]
+    }
+  ]
+}

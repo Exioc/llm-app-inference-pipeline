@@ -1,0 +1,195 @@
+{
+  "storage_path": "results/2026-09-07_08-11-12_music_player_-_true_bass",
+  "apk_path": "test_apks/music_player.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.musicplayer.player.mp3player.white",
+  "label": "Music Player - True Bass",
+  "description_long": "X1 Player is the best offline music player and video player for Android. Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality. If you need a powerful MP3 player with equalizer, bass boost, and 3D sound — X1 Player is your perfect free media player.   \n  \nWhy Choose X1 Player?   \n  \nX1 Player is one of the few free Android app that combines a full-featured offline music player and HD video player in one. Whether you need an MP3 player with equalizer or a smooth MKV video player with subtitles - X1 Player does it all.   \n  \n🎵 All-in-one music player & video player   \n🎵 Offline music player - no internet needed   \n🎵 Supports all audio formats & video formats   \n🎵 Powerful equalizer with bass boost & 3D sound   \n🎵 HD video player with subtitle support   \n🎵 Fast, lightweight & battery efficient   \n  \nMusic Player Features  \n  \n🎵 MP3 player supporting MP3, FLAC, WAV, AAC, MIDI, OGG, WMA, APE, AMR, M4A and more   \n🎵 10 - band graphical equalizer with presets   \n🎵 Bass boost, reverb & immersive 3D sound effects   \n🎵 Music visualizer with party mode   \n🎵 Lyrics display for songs   \n🎵 Browse by albums, artists, genres and folders   \n🎵 Playlist management with queue reorder   \n🎵 Shake to skip songs   \n🎵 Built-in MP3 editor & tag editor   \n🎵 Change album art   \n🎵 Sleep timer   \n  \nVideo Player Features   \n  \n🎬 Supports MP4, MKV, AVI, MOV, FLV, WMV, RMVB, 3GP, TS and all popular video formats   \n🎬 Smooth HD video playback   \n🎬 Subtitle support (.srt, .ass)   \n🎬 Equalizer for video player   \n🎬 Cast to TV via Google Cast (Chromecast)   \n  \nSound & Customisation  \n  \n🔊 10-band equalizer with audio presets   \n🔊 Bass boost & 3D surround sound   \n🔊 Reverb effects for premium listening   \n🎨 Color themes & UI customisation   \n🎨 Home screen widget & lock screen controls   \n  \nSmart Media Management  \n  \n📂 Fast automatic library scan   \n📂 Browse and play music by folder   \n📂 Easy playlist creation & management   \n📂 Clean, simple interface   \n  \nExtra Features  \n  \n⚡ Background playback   \n⚡ Chrome Cast support   \n⚡ DLNA Casting – Stream music and video to compatible Smart TVs   \n⚡ Lightweight & battery efficient   \n⚡ Works fully offline - no wifi required   \n  \nX1 Player is a complete offline media player - combining the best MP3 player, music player, audio player, and video player in one free Android app. Download X1 Player now and enjoy the best music and video experience on your phone.  \n  \nControl your music faster with Wear OS Tiles and Watch Face Complications, providing quick access from your smartwatch and watch face.  \n  \nX1 Player is the best music player for android. Send your feedback and suggestion about X1 Player to mytechnosound@gmail.com.\n",
+  "ground_truth_sets": [
+    [
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "READ_MEDIA_AUDIO",
+      "READ_MEDIA_IMAGES",
+      "READ_MEDIA_VIDEO",
+      "READ_MEDIA_VISUAL_USER_SELECTED",
+      "READ_EXTERNAL_STORAGE",
+      "WRITE_EXTERNAL_STORAGE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE"
+    ]
+  ],
+  "apk_permissions": [
+    "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+    "READ_MEDIA_IMAGES",
+    "READ_MEDIA_AUDIO",
+    "ACCESS_WIFI_STATE",
+    "ACCESS_NETWORK_STATE",
+    "INTERNET",
+    "READ_EXTERNAL_STORAGE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
+    "WAKE_LOCK",
+    "VIBRATE",
+    "BROADCAST_STICKY",
+    "FOREGROUND_SERVICE",
+    "READ_MEDIA_VIDEO",
+    "MODIFY_AUDIO_SETTINGS",
+    "WRITE_EXTERNAL_STORAGE",
+    "POST_NOTIFICATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 15,
+    "features": [
+      {
+        "title": "Multi-Format Media Playback",
+        "description": "The app supports playback of a wide range of popular audio and video file formats, including MP3, FLAC, WAV, AAC, MKV, MP4, and others, with high-definition quality.",
+        "reasoning": "The text explicitly states 'Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality', directly confirming support for diverse media containers and codecs.",
+        "source_quotes": [
+          "Play MP3, FLAC, WAV, AAC, MKV, MP4 and all popular audio & video formats with HD quality."
+        ]
+      },
+      {
+        "title": "Audio Signal Processing & Enhancement",
+        "description": "Provides advanced audio customization tools including a 10-band graphical equalizer, bass boost, reverb effects, and immersive 3D sound effects with presets.",
+        "reasoning": "The text explicitly lists 'Powerful equalizer with bass boost & 3D sound' and '10 - band graphical equalizer with presets', confirming a suite of audio processing capabilities.",
+        "source_quotes": [
+          "Powerful equalizer with bass boost & 3D sound",
+          "10 - band graphical equalizer with presets",
+          "Bass boost, reverb & immersive 3D sound effects"
+        ]
+      },
+      {
+        "title": "HD Video Playback & Subtitle Support",
+        "description": "Enables smooth high-definition video playback with specific support for subtitle files such as .srt and .ass formats.",
+        "reasoning": "The text explicitly mentions 'Smooth HD video playback' and 'Subtitle support (.srt, .ass)', directly proving video playback and captioning features.",
+        "source_quotes": [
+          "Smooth HD video playback",
+          "Subtitle support (.srt, .ass)"
+        ]
+      },
+      {
+        "title": "Offline Operation Mode",
+        "description": "The app functions fully without an internet connection, allowing users to play media files offline.",
+        "reasoning": "The text explicitly states 'Offline music player - no internet needed' and 'Works fully offline - no wifi required', confirming offline functionality.",
+        "source_quotes": [
+          "Offline music player - no internet needed",
+          "Works fully offline - no wifi required"
+        ]
+      },
+      {
+        "title": "Media Library & Organization",
+        "description": "Features automatic library scanning and allows browsing music by albums, artists, genres, and folders, along with playlist creation and management.",
+        "reasoning": "The text explicitly mentions 'Fast automatic library scan', 'Browse by albums, artists, genres and folders', and 'Playlist management with queue reorder', confirming organization capabilities.",
+        "source_quotes": [
+          "Fast automatic library scan",
+          "Browse by albums, artists, genres and folders",
+          "Playlist management with queue reorder"
+        ]
+      },
+      {
+        "title": "Audio File & Metadata Editing",
+        "description": "Includes built-in tools to edit MP3 files and modify metadata tags, as well as the ability to change album art.",
+        "reasoning": "The text explicitly mentions 'Built-in MP3 editor & tag editor' and 'Change album art', confirming file and metadata modification features.",
+        "source_quotes": [
+          "Built-in MP3 editor & tag editor",
+          "Change album art"
+        ]
+      },
+      {
+        "title": "Lyrics Display",
+        "description": "Provides the capability to display song lyrics during playback.",
+        "reasoning": "The text explicitly states 'Lyrics display for songs', directly confirming a lyrics feature.",
+        "source_quotes": [
+          "Lyrics display for songs"
+        ]
+      },
+      {
+        "title": "Audio Visualizer",
+        "description": "Offers a music visualizer feature that includes a specific party mode.",
+        "reasoning": "The text explicitly mentions 'Music visualizer with party mode', confirming a visual output feature synchronized to music.",
+        "source_quotes": [
+          "Music visualizer with party mode"
+        ]
+      },
+      {
+        "title": "Gesture Playback Control",
+        "description": "Allows users to skip songs by shaking the device.",
+        "reasoning": "The text explicitly states 'Shake to skip songs', confirming a physical gesture control for playback.",
+        "source_quotes": [
+          "Shake to skip songs"
+        ]
+      },
+      {
+        "title": "Sleep Timer",
+        "description": "Includes a timer function to automatically stop playback after a set duration.",
+        "reasoning": "The text explicitly lists 'Sleep timer' under music player features, confirming the automated stop capability.",
+        "source_quotes": [
+          "Sleep timer"
+        ]
+      },
+      {
+        "title": "External Device Casting (Chromecast & DLNA)",
+        "description": "Supports streaming music and video to compatible external devices including Smart TVs via Google Cast (Chromecast) and DLNA.",
+        "reasoning": "The text explicitly mentions 'Cast to TV via Google Cast (Chromecast)' and 'DLNA Casting – Stream music and video to compatible Smart TVs', confirming dual casting support.",
+        "source_quotes": [
+          "Cast to TV via Google Cast (Chromecast)",
+          "DLNA Casting – Stream music and video to compatible Smart TVs"
+        ]
+      },
+      {
+        "title": "System Integration & Background Playback",
+        "description": "Allows audio playback to continue in the background and provides interface controls on the home screen widget and lock screen.",
+        "reasoning": "The text explicitly states 'Background playback' and 'Home screen widget & lock screen controls', confirming system-level integration features.",
+        "source_quotes": [
+          "Background playback",
+          "Home screen widget & lock screen controls"
+        ]
+      },
+      {
+        "title": "UI Customization",
+        "description": "Allows users to change the visual appearance of the app through color themes and UI customization options.",
+        "reasoning": "The text explicitly mentions 'Color themes & UI customisation', confirming visual personalization capabilities.",
+        "source_quotes": [
+          "Color themes & UI customisation"
+        ]
+      },
+      {
+        "title": "Wear OS Integration",
+        "description": "Provides control via Wear OS Tiles and Watch Face Complications for quick access from smartwatches.",
+        "reasoning": "The text explicitly states 'Control your music faster with Wear OS Tiles and Watch Face Complications', confirming smartwatch integration.",
+        "source_quotes": [
+          "Control your music faster with Wear OS Tiles and Watch Face Complications, providing quick access from your smartwatch and watch face."
+        ]
+      },
+      {
+        "title": "Performance & Efficiency",
+        "description": "Designed to be lightweight and battery efficient for optimal device performance.",
+        "reasoning": "The text explicitly claims the app is 'Fast, lightweight & battery efficient' and 'Lightweight & battery efficient', confirming performance optimization features.",
+        "source_quotes": [
+          "Fast, lightweight & battery efficient",
+          "Lightweight & battery efficient"
+        ]
+      }
+    ]
+  }
+}

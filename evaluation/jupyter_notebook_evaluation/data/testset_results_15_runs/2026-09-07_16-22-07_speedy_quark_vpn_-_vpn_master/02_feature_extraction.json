@@ -1,0 +1,113 @@
+{
+  "storage_path": "results/2026-09-07_16-22-07_speedy_quark_vpn_-_vpn_master",
+  "apk_path": "test_apks/speedy_quark_vpn.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.speedy.vpn",
+  "label": "Speedy Quark VPN - VPN Master",
+  "description_long": "Speedy Quark VPN is the world’s fastest and most secure free VPN proxy app. Protect yourself from cyber threats with a simple tap of the screen.   \n  \nWhen it comes to Internet's safety and security, Speedy Quark VPN is an essential tool. It encrypts your connection so that third parties can’t track your online activity, making it more secure than a typical proxy.  \n  \nWe have built a global VPN proxy network included America, Europe and Asia, and expand to more country soon. You can click the flag and change proxy server as any times as you want.   \n  \n\\- Daily free traffic, fast and free  \n\\- 7-day free trial: free of charge; unlimited traffics; fastest servers.  \n\\- Length of subscription: one year; one month.  \n\\- Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo.   \n\\- No cancellation of the current subscription is allowed during the active subscription period.  \n  \nEmail:   \nquarkteam@outlook.com  \nsupport@quarkvpn.com  \n  \nGroup:  \nTelegram: https://t.me/joinchat/XmYO2LrduPUxMDdl  \nWhatsApp: https://chat.whatsapp.com/JjHvOSUJPuN8wGfMyIwq8N  \n  \nYou can also find us on：  \nhttps://www.quarkvpn.com/  \nhttps://www.facebook.com/QuarkVPN/  \nhttps://twitter.com/QuarkVpn  \nhttps://www.instagram.com/quarkvpn/\n",
+  "ground_truth_sets": [
+    [
+      "INTERNET"
+    ],
+    [
+      "POST_NOTIFICATIONS",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_SPECIAL_USE",
+      "FOREGROUND_SERVICE_SYSTEM_EXEMPTED",
+      "RECEIVE_BOOT_COMPLETED",
+      "WAKE_LOCK",
+      "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+    ]
+  ],
+  "apk_permissions": [
+    "INTERNET",
+    "RECEIVE_BOOT_COMPLETED",
+    "ACCESS_WIFI_STATE",
+    "FOREGROUND_SERVICE",
+    "READ_EXTERNAL_STORAGE",
+    "WRITE_EXTERNAL_STORAGE",
+    "ACCESS_NETWORK_STATE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE_SPECIAL_USE",
+    "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 8,
+    "features": [
+      {
+        "title": "Connection Encryption & Anti-Tracking",
+        "description": "The app encrypts the user's internet connection to prevent third parties from tracking online activity, enhancing security compared to a typical proxy.",
+        "reasoning": "The text explicitly states 'It encrypts your connection so that third parties can’t track your online activity', directly proving the existence of data encryption and privacy protection capabilities.",
+        "source_quotes": [
+          "It encrypts your connection so that third parties can’t track your online activity, making it more secure than a typical proxy."
+        ]
+      },
+      {
+        "title": "One-Tap Activation Interface",
+        "description": "The app allows users to activate protection from cyber threats through a simple screen tap interaction.",
+        "reasoning": "The text explicitly describes the activation method as 'Protect yourself from cyber threats with a simple tap of the screen', confirming a simplified UI connection workflow.",
+        "source_quotes": [
+          "Protect yourself from cyber threats with a simple tap of the screen."
+        ]
+      },
+      {
+        "title": "Global Proxy Server Network",
+        "description": "The service provides access to a global VPN proxy network specifically including regions in America, Europe, and Asia.",
+        "reasoning": "The text explicitly lists the network scope: 'We have built a global VPN proxy network included America, Europe and Asia', confirming the geographical availability of server nodes.",
+        "source_quotes": [
+          "We have built a global VPN proxy network included America, Europe and Asia"
+        ]
+      },
+      {
+        "title": "Manual Server Switching",
+        "description": "Users can manually select and change their proxy server location as many times as desired via a flag interface.",
+        "reasoning": "The text explicitly states 'You can click the flag and change proxy server as any times as you want', proving the existence of a server selection and switching feature.",
+        "source_quotes": [
+          "You can click the flag and change proxy server as any times as you want."
+        ]
+      },
+      {
+        "title": "Daily Free Traffic Access",
+        "description": "The app provides a daily allowance of free data traffic for users.",
+        "reasoning": "The text explicitly lists 'Daily free traffic, fast and free' as a bullet point, confirming a recurring free usage tier.",
+        "source_quotes": [
+          "Daily free traffic, fast and free"
+        ]
+      },
+      {
+        "title": "7-Day Free Trial Access",
+        "description": "Users can access a 7-day free trial period that includes free of charge service, unlimited traffic, and access to the fastest servers.",
+        "reasoning": "The text explicitly details '7-day free trial: free of charge; unlimited traffics; fastest servers', confirming a time-limited premium access feature.",
+        "source_quotes": [
+          "7-day free trial: free of charge; unlimited traffics; fastest servers."
+        ]
+      },
+      {
+        "title": "Paid Subscription Plans",
+        "description": "The app offers one-year and one-month subscription plans with specific pricing tiers.",
+        "reasoning": "The text explicitly lists the subscription options: 'Length of subscription: one year; one month' and 'Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo', confirming the existence of paid service tiers.",
+        "source_quotes": [
+          "Length of subscription: one year; one month.",
+          "Price of subscription: one-year plan: $4.99/mo; monthly plan: $9.99/mo."
+        ]
+      },
+      {
+        "title": "Multi-Channel Customer Support",
+        "description": "The app provides multiple channels for user feedback and support, including email, Telegram, WhatsApp, and social media platforms.",
+        "reasoning": "The text explicitly lists contact methods including 'Email: quarkteam@outlook.com', 'Telegram', 'WhatsApp', and social media links, proving the availability of external support channels.",
+        "source_quotes": [
+          "Email: quarkteam@outlook.com support@quarkvpn.com",
+          "Telegram: https://t.me/joinpat/XmYO2LrduPUxMDdl",
+          "WhatsApp: https://chat.whatsapp.com/JjHvOSUJPuN8wGfMyIwq8N",
+          "You can also find us on： https://www.quarkvpn.com/ https://www.facebook.com/QuarkVPN/ https://twitter.com/QuarkVpn https://www.instagram.com/quarkvpn/"
+        ]
+      }
+    ]
+  }
+}

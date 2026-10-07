@@ -1,0 +1,7 @@
+jupyterlab
+pandas
+matplotlib
+seaborn
+openpyxl
+scikit-learn
+adjustText

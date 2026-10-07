@@ -1,0 +1,1464 @@
+{
+  "storage_path": "results/2026-09-06_22-05-56_lyft",
+  "apk_path": "test_apks/lyft.apk",
+  "group_send_idx": 5,
+  "permission_send_idx": 5,
+  "metadata": null,
+  "pkg": "me.lyft.android",
+  "label": "Lyft",
+  "description_long": "Get where you’re going with Lyft.  \n  \nWhether you’re catching a flight, going out for the night, commuting to the office, or running errands in a rush, the Lyft app offers you multiple ways to get there.  \n  \nEASY TO USE  \nEnter your destination. See your route and ride cost up front. Choose Priority Pickup to get going quick. Boom. Done. Simple  \n  \nCHOOSE YOUR WHEELS  \nChoose from Wait & Save, Priority Pickup, Bikes & Scooters, Lyft XL, Lyft Lux, Transit, or even Rentals.  \n  \nAFFORDABLE RIDES  \nOur Wait & Save option helps you get around for less. And you can find the fastest public transit routes, too.  \n  \n* Lyft ride types may vary by region. Check the app to see what is available in your city.  \n—  \nPrices vary based on market condition.  \n  \nBy downloading the app, you agree to allow Lyft to collect your device's language settings.\n",
+  "ground_truth_sets": [
+    [
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "INTERNET"
+    ],
+    [
+      "CAMERA",
+      "GET_ACCOUNTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "POST_NOTIFICATIONS",
+      "CALL_PHONE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_LOCATION",
+      "WAKE_LOCK",
+      "MODIFY_AUDIO_SETTINGS",
+      "VIBRATE",
+      "BLUETOOTH",
+      "BLUETOOTH_ADMIN",
+      "BLUETOOTH_SCAN",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "POST_NOTIFICATIONS",
+    "CHANGE_WIFI_STATE",
+    "GET_ACCOUNTS",
+    "CHANGE_WIFI_MULTICAST_STATE",
+    "FOREGROUND_SERVICE_MICROPHONE",
+    "VIBRATE",
+    "READ_EXTERNAL_STORAGE",
+    "BLUETOOTH_ADMIN",
+    "CAMERA",
+    "FOREGROUND_SERVICE_LOCATION",
+    "RECORD_AUDIO",
+    "RECEIVE_BOOT_COMPLETED",
+    "BLUETOOTH",
+    "CALL_PHONE",
+    "ACCESS_FINE_LOCATION",
+    "USE_BIOMETRIC",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE",
+    "INTERNET",
+    "ACCESS_WIFI_STATE",
+    "READ_MEDIA_AUDIO",
+    "READ_CALENDAR",
+    "READ_PHONE_STATE",
+    "ACCESS_COARSE_LOCATION",
+    "USE_FINGERPRINT",
+    "FOREGROUND_SERVICE_DATA_SYNC",
+    "BLUETOOTH_SCAN",
+    "WRITE_EXTERNAL_STORAGE",
+    "READ_CONTACTS",
+    "NFC",
+    "ACCESS_NETWORK_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 5,
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "reasoning": "The text explicitly states 'Enter your destination. See your route and ride cost up front', which directly confirms the capability to preview route details and pricing prior to booking.",
+        "source_quotes": [
+          "Enter your destination. See your route and ride cost up front."
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "reasoning": "The text explicitly mentions the ability to 'Choose Priority Pickup to get going quick', directly proving the existence of a speed-optimized pickup feature.",
+        "source_quotes": [
+          "Choose Priority Pickup to get going quick."
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "reasoning": "The text explicitly states 'Our Wait & Save option helps you get around for less', directly confirming a feature dedicated to cost reduction.",
+        "source_quotes": [
+          "Our Wait & Save option helps you get around for less."
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "reasoning": "The text explicitly claims 'you can find the fastest public transit routes, too', which is direct evidence of a public transit navigation feature.",
+        "source_quotes": [
+          "And you can find the fastest public transit routes, too."
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "reasoning": "The text explicitly lists 'Bikes & Scooters, Lyft XL, Lyft Lux... or even Rentals' as selectable choices under the 'Choose from' section, confirming these distinct modes are available.",
+        "source_quotes": [
+          "Choose from Wait & Save, Priority Pickup, Bikes & Scooters, Lyft XL, Lyft Lux, Transit, or even Rentals."
+        ]
+      }
+    ]
+  },
+  "feature_groups_result": {
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "To provide a suggested route and estimated cost, the application must determine the user's current location (pickup point) relative to the input destination, requiring access to device location services."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature involves expediting a pickup process, which fundamentally requires accessing the device's current location to identify the pickup point and match with nearby drivers."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "As an online service tier, the feature requires IP-based data transport to communicate the priority selection to the backend server and update ride status."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "To inform the user about the expedited status and driver arrival times, the app likely needs permission to post notifications."
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This is a pricing configuration feature that allows users to select different ride pricing tiers and waiting periods. It is purely a UI/UX configuration option that does not require access to device hardware, sensitive user data, or system resources. The app may need basic network connectivity to fetch pricing data, but this does not fall within the dangerous permission groups listed."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location for transit route search and to identify destination points within the public transportation network."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time public transit schedules, route data, and traffic information from remote servers to calculate optimal routes."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "May be needed to alert users about upcoming stops, route delays, or transit schedule changes during their journey."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.5:122B",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Ride-sharing and transportation services require location access to determine user pickup location, show nearby available vehicles, and navigate to destinations."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Transportation booking apps need internet connectivity to connect to ride service servers, book rides, and receive real-time vehicle availability and status updates."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Ride-sharing apps use notifications to inform users about ride confirmations, driver arrival, and other transportation-related updates."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location and suggest a route to the destination."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to fetch route data, pricing information, and other dynamic content from a server."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Public transit route finding typically requires access to the device's location to determine the starting point and provide accurate route suggestions."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching real-time transit data (e.g., schedules, delays) from online APIs or services requires network access."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Access to transport modes and vehicle classes may require location data to find available options nearby."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Fetching transport/vehicle options and availability likely requires internet access."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device location for determining the user's current location and suggesting routes."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed for fetching map data, calculating routes, and estimating costs, which typically involves internet connectivity."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The Priority Pickup Service likely requires access to the user's location to expedite the pickup process and provide a quicker ride experience."
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's location to provide route suggestions based on the user's current location."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Needed to fetch public transportation data and network information from online services or APIs."
+          },
+          {
+            "group_name": "STORAGE",
+            "reasoning": "Possibly required to store cached route information or downloaded transit data for offline access."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "llama3.3:70b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "To provide transport options and vehicle classes, the feature likely needs to access the user's location to determine the nearest available vehicles or transportation modes."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The feature probably requires internet connectivity to fetch data about available transport modes, vehicle classes, and their locations, as well as to process requests and updates in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Calculating and displaying a suggested route for a ride booking typically requires access to the device's current location to determine the starting point and compute the path to the entered destination."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to access the device's current location to calculate and display public transit routes starting from the user's position."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.6:35b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Displaying nearby transport options such as bikes, scooters, and ride vehicles fundamentally requires accessing the device's current location to filter results and show what is available in the user's immediate vicinity."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Necessary to determine the user's current starting position to calculate a suggested route and an estimated ride cost to the destination."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with backend servers to fetch routing data, maps, and price estimations based on the input destination."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "To facilitate a pickup service, the app must be able to determine the user's current location to match them with a driver."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "The app needs to communicate the user's selection of the priority service tier to the backend servers and coordinate the ride in real-time."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Notifications are required to alert the user when the expedited ride is arriving or when the status of the priority pickup changes."
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current position to calculate ride distance and provide relevant economical pricing tiers based on the location."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with the backend server to fetch the available pricing options and send the user's selection."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to notify the user when the waiting period is complete or when the ride has been dispatched, which is critical for a 'Wait & Save' service."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current position to calculate the fastest routes from their current location to a destination."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to connect to remote servers to search for and retrieve real-time public transportation schedules and route data."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "gemma4:31b",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to identify the user's current position to find available vehicles (Bikes, Scooters, Lyft XL, etc.) and to determine pickup and destination points."
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to communicate with backend servers to fetch the list of available vehicle classes, check pricing, and request ride or rental services."
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Required to provide real-time updates to the user, such as when a vehicle has arrived or when a rental has been confirmed."
+          },
+          {
+            "group_name": "NEARBY_DEVICES_AND_PROXIMITY",
+            "reasoning": "Required for discovering and unlocking micro-mobility hardware like bikes and scooters using Bluetooth or NFC."
+          },
+          {
+            "group_name": "FOREGROUND_SERVICES",
+            "reasoning": "Required to keep the ride or rental session active and track the trip in the background without the system terminating the application."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_groups_aggregate_result": {
+    "total_number_of_groups": 12,
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "To provide a suggested route and estimated cost, the application must determine the user's current location (pickup point) relative to the input destination, requiring access to device location services.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Likely required to fetch route data, pricing information, and other dynamic content from a server.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "The feature involves expediting a pickup process, which fundamentally requires accessing the device's current location to identify the pickup point and match with nearby drivers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "As an online service tier, the feature requires IP-based data transport to communicate the priority selection to the backend server and update ride status.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "To inform the user about the expedited status and driver arrival times, the app likely needs permission to post notifications.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Wait & Save Option",
+        "description": "A cost-saving service option that helps users reduce their spending on rides by choosing a more economical waiting period or pricing tier.",
+        "inferences": [
+          {
+            "group_name": "NONE",
+            "reasoning": "No permission required. This is a pricing configuration feature that allows users to select different ride pricing tiers and waiting periods. It is purely a UI/UX configuration option that does not require access to device hardware, sensitive user data, or system resources. The app may need basic network connectivity to fetch pricing data, but this does not fall within the dangerous permission groups listed.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Required to determine the user's current location for transit route search and to identify destination points within the public transportation network.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Required to fetch real-time public transit schedules, route data, and traffic information from remote servers to calculate optimal routes.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferences": [
+          {
+            "group_name": "LOCATION",
+            "reasoning": "Ride-sharing and transportation services require location access to determine user pickup location, show nearby available vehicles, and navigate to destinations.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+            "reasoning": "Transportation booking apps need internet connectivity to connect to ride service servers, book rides, and receive real-time vehicle availability and status updates.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "group_name": "NOTIFICATIONS",
+            "reasoning": "Ride-sharing apps use notifications to inform users about ride confirmations, driver arrival, and other transportation-related updates.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "permissions_result": {
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location for pickup point identification, route calculation, and upfront pricing estimation. This feature needs accurate location data to match the user with nearby drivers and calculate distance-based costs before booking confirmation."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires communicating with backend servers to calculate the suggested route and estimated ride cost based on the user's input destination."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "The app needs to check network connectivity status to ensure it can successfully fetch and display the route and pricing information."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The 'Priority Pickup Service' feature involves managing a pickup process for rides, which inherently requires the app to access the user's precise location to match with nearby drivers, calculate proximity-based priorities, and determine accurate pickup times."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves selecting a service tier and coordinating with remote servers to expedite the pickup process, which necessitates opening network sockets to send and receive data."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location to identify nearby transit stops and calculate the fastest routes from the user's actual position."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for fetching real-time public transportation schedules, route data, and map information from remote servers."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature requires precise user location to display available transport options (Bikes, Scooters, Lyft XL, Lyft Lux, Rentals) near the user's current position and to match them with nearby vehicles for pickup."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to fetch real-time availability and details for transport modes from remote servers."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows checking network connectivity status to ensure data can be retrieved for the vehicle options."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.5:122B",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to provide precise location for route calculation and upfront pricing."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to fetch route data and pricing information from remote servers."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to access precise location for accurate public transit route finding, as users typically need exact starting points for routing."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Could be used as an alternative to ACCESS_FINE_LOCATION if approximate location is sufficient, though less likely for precise route planning."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to access online transit data and APIs for route information."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "mistral-medium-3.5:128b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to provide precise location and suggest the most efficient route for the ride, which is essential for upfront pricing."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to fetch the suggested route and estimated cost from a remote server, which involves opening network sockets to send and receive data."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to check the network connectivity state before attempting to fetch the route and estimated cost, ensuring a stable connection."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The Priority Pickup Service likely requires the app to access the user's precise location to expedite the pickup process and get started on the ride quicker, which necessitates the use of fine location data."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "POST_NOTIFICATIONS",
+            "reasoning": "The Priority Pickup Service likely needs to notify users about the status of their pickup, such as when the driver is arriving or if there are any issues with the pickup. Posting notifications is a key part of keeping users informed in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to access precise location, which is necessary for identifying the user's current location and providing the fastest public transit routes."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Alternatively, this permission could also be used to access approximate location, which might be sufficient for finding public transit routes, but ACCESS_FINE_LOCATION is preferred for more accurate results."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and access external data sources, such as public transit APIs, to retrieve route information and calculate the fastest routes."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows the application to access information about networks, ensuring it can detect changes in network connectivity and handle cases where the internet connection is lost or unstable, providing a better user experience."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise location for pickup and drop-off, as well as to provide accurate transport options and estimates based on their location."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Alternatively, this permission could be used if precise location is not strictly necessary, but it's likely that precise location is needed for a smooth user experience with transport services."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and fetch information about the various transport modes and vehicle classes from the server."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Needed to access information about networks, ensuring a stable connection to fetch and update transport options in real-time."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "llama3.3:70b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature allows users to view a suggested route and estimated cost for a ride starting from their current location to an entered destination. To calculate the route distance, time, and pricing accurately, the app must access the device's precise current location."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to establish network connections and fetch real-time route calculations and pricing data from remote servers when the user inputs a destination."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The Priority Pickup Service involves communicating with backend servers to expedite the ride process, which necessitates opening network sockets."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "To calculate and display public transit routes starting from the user's current position, the app requires access to their precise geographic location to determine accurate walking/transit connections and optimize route recommendations."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets and fetch real-time transit route data, schedules, and mapping information from external APIs or online services."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "The feature describes a UI/logic capability for selecting various transport modes and vehicle classes (e.g., Bikes, Scooters, XL, Lux, Rentals). It does not involve making network requests, monitoring or modifying network/Wi-Fi states, discovering local devices, or interacting with loopback interfaces. Therefore, no permissions from the NETWORK_AND_INTERNET_INFRASTRUCTURE group are required for this specific feature."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "qwen3.6:35b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location to calculate an accurate route and provide precise upfront pricing for the ride."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Required to determine the user's approximate location to calculate the suggested route and estimated cost."
+          }
+        ]
+      },
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with the backend server to retrieve suggested routes and estimated pricing based on the user's destination input."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status before attempting to make network requests for routing and pricing data."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "To expedite a pickup process and get a ride started quicker, the app needs the user's precise location to accurately match them with a driver and ensure the driver arrives at the exact pickup point."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Required to provide approximate location data, which is often a prerequisite or a fallback for precise location services used in ride-pickup coordination."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The Priority Pickup Service requires communicating the user's selection to the backend server to coordinate the expedited pickup process."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to verify the device's network connectivity status before attempting to send the service request to the server."
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location to identify the nearest public transit stops and calculate the most accurate and fastest routes."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Required to determine the user's approximate location to provide relevant transit options in their general vicinity."
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to connect to remote servers to fetch public transit schedules, real-time transit data, and routing information."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check if the device has an active internet connection before attempting to request routing data."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "LOCATION",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Precise location is required to accurately match the user with the nearest available vehicles (such as Bikes, Scooters, or specific car classes) and to ensure the driver can pinpoint the exact pickup location."
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Approximate location is necessary to identify which transport modes and vehicle classes are available in the user's general vicinity."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NETWORK_AND_INTERNET_INFRASTRUCTURE",
+        "inferences": [
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to communicate with the service provider's servers to retrieve availability, pricing, and request the specific transport modes and vehicle classes."
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Required to check the device's network connectivity status to ensure the app can connect to the internet before attempting to access the transport options."
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferred_by_model": "gemma4:31b",
+        "group_name": "NOTIFICATIONS",
+        "inferences": [
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required."
+          }
+        ]
+      }
+    ]
+  },
+  "feature_permission_aggregate_result": {
+    "features": [
+      {
+        "title": "Destination Entry and Upfront Pricing",
+        "description": "Users can input a destination and immediately view the suggested route and the estimated cost of the ride before confirming the booking.",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location for pickup point identification, route calculation, and upfront pricing estimation. This feature needs accurate location data to match the user with nearby drivers and calculate distance-based costs before booking confirmation.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature requires communicating with backend servers to calculate the suggested route and estimated ride cost based on the user's input destination.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "The app needs to check network connectivity status to ensure it can successfully fetch and display the route and pricing information.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Priority Pickup Service",
+        "description": "A specific service tier that allows users to select an option designed to expedite the pickup process and get started on the ride quicker.",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The 'Priority Pickup Service' feature involves managing a pickup process for rides, which inherently requires the app to access the user's precise location to match with nearby drivers, calculate proximity-based priorities, and determine accurate pickup times.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "The feature involves selecting a service tier and coordinating with remote servers to expedite the pickup process, which necessitates opening network sockets to send and receive data.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Public Transit Route Finding",
+        "description": "A capability to search for and identify the fastest routes utilizing public transportation networks.",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "Required to determine the user's precise current location to identify nearby transit stops and calculate the fastest routes from the user's actual position.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets for fetching real-time public transportation schedules, route data, and map information from remote servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_COARSE_LOCATION",
+            "reasoning": "Could be used as an alternative to ACCESS_FINE_LOCATION if approximate location is sufficient, though less likely for precise route planning.",
+            "models_inferred": [
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Additional Transport and Vehicle Options",
+        "description": "Access to a variety of transport modes and vehicle classes beyond the standard ride options, including Bikes, Scooters, Lyft XL, Lyft Lux, and Rentals.",
+        "inferences": [
+          {
+            "permission_name": "ACCESS_FINE_LOCATION",
+            "reasoning": "The feature requires precise user location to display available transport options (Bikes, Scooters, Lyft XL, Lyft Lux, Rentals) near the user's current position and to match them with nearby vehicles for pickup.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "INTERNET",
+            "reasoning": "Required to open network sockets to fetch real-time availability and details for transport modes from remote servers.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "ACCESS_NETWORK_STATE",
+            "reasoning": "Allows checking network connectivity status to ensure data can be retrieved for the vehicle options.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "llama3.3:70b",
+              "gemma4:31b"
+            ]
+          },
+          {
+            "permission_name": "NONE",
+            "reasoning": "No permission required.",
+            "models_inferred": [
+              "qwen3.5:122B",
+              "mistral-medium-3.5:128b",
+              "llama3.3:70b",
+              "qwen3.6:35b",
+              "gemma4:31b"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inferred_permissions": [
+    "ACCESS_COARSE_LOCATION",
+    "INTERNET",
+    "ACCESS_FINE_LOCATION",
+    "ACCESS_NETWORK_STATE"
+  ]
+}
