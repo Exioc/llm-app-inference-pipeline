@@ -1,0 +1,199 @@
+{
+  "storage_path": "results/2026-09-11_09-31-20_waze_navigation_&_live_traffic",
+  "apk_path": "apk_permissions/waze_navigation.apk",
+  "group_send_idx": -1,
+  "permission_send_idx": -1,
+  "metadata": null,
+  "pkg": "com.waze",
+  "label": "Waze Navigation & Live Traffic",
+  "description_long": "Know what's ahead on the road with the help from other drivers. Waze is a live map that harnesses the local knowledge of tens of millions of drivers around the world. Drivers safely and confidently reach their everyday destinations thanks to Waze map’s GPS navigation, live traffic updates, real-time safety alerts (including roadworks, accidents, crashes, police, potholes and more), and accurate ETAs.  \n  \nMake your next drive more predictable and stress-free:  \n• Get there faster with real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures  \n• Even if you know the way, avoid surprises on the road ahead with safety alerts for accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, railway crossings and more  \n• Steer clear of tickets by knowing where police and red light and speed cameras are located  \n• Share what’s happening on the road with other drivers by reporting live incidents and hazards  \n• Stay informed of upcoming speed limit changes, and keep your speedometer in check   \n• Know which lane to be in with multi-lane guidance   \n• See toll pricing and choose to avoid tolls along your routes  \n• Add road passes and vignettes for HOV lanes and restricted traffic zones  \n• Find petrol/fuel stations and prices and EV charging stations along your route  \n• Locate and compare parking lots and their prices near your destination  \n• Use voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities  \n• Plan your next drive by checking ETAs by future departure or arrival times  \n• Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze   \n• Sync Waze to your car’s built-in display through Android Auto  \n  \n* Some features are not available in all countries  \n  \n* Waze navigation is not intended for emergency or oversized vehicles  \n  \nYou can manage your in-app Waze privacy settings at any time. Learn more about the Waze privacy policy here, www.waze.com/legal/privacy.\n",
+  "ground_truth_sets": [
+    [
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "POST_NOTIFICATIONS",
+      "INTERNET"
+    ],
+    [
+      "GET_ACCOUNTS",
+      "ACCESS_COARSE_LOCATION",
+      "ACCESS_FINE_LOCATION",
+      "RECORD_AUDIO",
+      "POST_NOTIFICATIONS",
+      "POST_PROMOTED_NOTIFICATIONS",
+      "READ_PHONE_STATE",
+      "READ_BASIC_PHONE_STATE",
+      "INTERNET",
+      "ACCESS_NETWORK_STATE",
+      "ACCESS_WIFI_STATE",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_LOCATION",
+      "FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "FOREGROUND_SERVICE_MICROPHONE",
+      "MODIFY_AUDIO_SETTINGS",
+      "BROADCAST_STICKY",
+      "WAKE_LOCK",
+      "VIBRATE",
+      "BLUETOOTH",
+      "BLUETOOTH_ADMIN",
+      "BLUETOOTH_SCAN",
+      "BLUETOOTH_CONNECT"
+    ]
+  ],
+  "apk_permissions": [
+    "READ_CONTACTS",
+    "FOREGROUND_SERVICE_LOCATION",
+    "INTERNET",
+    "MODIFY_AUDIO_SETTINGS",
+    "READ_SYNC_SETTINGS",
+    "BROADCAST_STICKY",
+    "ACCESS_FINE_LOCATION",
+    "RECORD_AUDIO",
+    "BLUETOOTH_SCAN",
+    "READ_CALENDAR",
+    "READ_PHONE_STATE",
+    "READ_SYNC_STATS",
+    "RECEIVE_BOOT_COMPLETED",
+    "BLUETOOTH_ADMIN",
+    "ACCESS_LOCATION_EXTRA_COMMANDS",
+    "BLUETOOTH_CONNECT",
+    "CAMERA",
+    "POST_NOTIFICATIONS",
+    "WRITE_SYNC_SETTINGS",
+    "VIBRATE",
+    "WAKE_LOCK",
+    "FOREGROUND_SERVICE",
+    "ACCESS_COARSE_LOCATION",
+    "ACCESS_BACKGROUND_LOCATION",
+    "BLUETOOTH",
+    "ACCESS_NETWORK_STATE"
+  ],
+  "feature_result": {
+    "inferred_by_model": "qwen3.5:122B",
+    "number_of_features": 15,
+    "features": [
+      {
+        "title": "Real-Time Navigation & Traffic Rerouting",
+        "description": "Provides GPS navigation with real-time directions, accurate ETAs, and automatic rerouting capabilities based on live traffic conditions, incidents, and road closures.",
+        "reasoning": "The text explicitly states the app offers 'GPS navigation, live traffic updates... and accurate ETAs' and further specifies the ability to 'Get there faster with real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures'. These direct statements confirm the existence of a real-time routing and navigation system.",
+        "source_quotes": [
+          "Drivers safely and confidently reach their everyday destinations thanks to Waze map’s GPS navigation, live traffic updates, and accurate ETAs.",
+          "Get there faster with real-time directions, accurate ETAs and automatic rerouting based on live traffic, incidents and road closures"
+        ]
+      },
+      {
+        "title": "Comprehensive Safety Alert System",
+        "description": "Delivers real-time safety alerts for various road hazards including accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, and railway crossings.",
+        "reasoning": "The text explicitly lists 'real-time safety alerts' and details specific triggers such as 'accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, railway crossings and more'. This combination proves a multi-faceted safety alert feature.",
+        "source_quotes": [
+          "real-time safety alerts (including roadworks, accidents, crashes, police, potholes and more)",
+          "avoid surprises on the road ahead with safety alerts for accidents, crashes, roadworks, objects on the road, potholes, speed bumps, sharp curves, bad weather, emergency vehicles, railway crossings and more"
+        ]
+      },
+      {
+        "title": "Law Enforcement & Camera Detection",
+        "description": "Notifies users of police locations and red light and speed cameras to help avoid tickets.",
+        "reasoning": "The text explicitly states users can 'Steer clear of tickets by knowing where police and red light and speed cameras are located', which directly confirms this detection capability.",
+        "source_quotes": [
+          "Steer clear of tickets by knowing where police and red light and speed cameras are located"
+        ]
+      },
+      {
+        "title": "Community Incident Reporting",
+        "description": "Enables users to report live incidents and hazards to share information with other drivers.",
+        "reasoning": "The text explicitly mentions the ability to 'Share what’s happening on the road with other drivers by reporting live incidents and hazards', proving the existence of a user reporting feature.",
+        "source_quotes": [
+          "Share what’s happening on the road with other drivers by reporting live incidents and hazards"
+        ]
+      },
+      {
+        "title": "Speed Limit Monitoring",
+        "description": "Informs users of upcoming speed limit changes and assists in monitoring current speed.",
+        "reasoning": "The text explicitly states the feature allows users to 'Stay informed of upcoming speed limit changes, and keep your speedometer in check', directly confirming a speed monitoring and warning system.",
+        "source_quotes": [
+          "Stay informed of upcoming speed limit changes, and keep your speedometer in check"
+        ]
+      },
+      {
+        "title": "Multi-Lane Guidance",
+        "description": "Provides guidance on which lane to be in for complex navigation scenarios.",
+        "reasoning": "The text explicitly mentions the capability to 'Know which lane to be in with multi-lane guidance', serving as direct evidence for this navigation feature.",
+        "source_quotes": [
+          "Know which lane to be in with multi-lane guidance"
+        ]
+      },
+      {
+        "title": "Toll Pricing & Avoidance",
+        "description": "Displays toll pricing and allows users to choose routes that avoid tolls.",
+        "reasoning": "The text explicitly states users can 'See toll pricing and choose to avoid tolls along your routes', which directly confirms a toll management feature.",
+        "source_quotes": [
+          "See toll pricing and choose to avoid tolls along your routes"
+        ]
+      },
+      {
+        "title": "HOV & Restricted Zone Pass Management",
+        "description": "Allows users to add road passes and vignettes for HOV lanes and restricted traffic zones.",
+        "reasoning": "The text explicitly mentions the ability to 'Add road passes and vignettes for HOV lanes and restricted traffic zones', proving this specific regulatory compliance feature exists.",
+        "source_quotes": [
+          "Add road passes and vignettes for HOV lanes and restricted traffic zones"
+        ]
+      },
+      {
+        "title": "Fuel & EV Station Locator",
+        "description": "Locates petrol/fuel stations with prices and EV charging stations along the user's route.",
+        "reasoning": "The text explicitly states the app can 'Find petrol/fuel stations and prices and EV charging stations along your route', confirming both fuel and EV infrastructure search capabilities.",
+        "source_quotes": [
+          "Find petrol/fuel stations and prices and EV charging stations along your route"
+        ]
+      },
+      {
+        "title": "Parking Location & Price Comparison",
+        "description": "Locates parking lots near the destination and allows comparison of their prices.",
+        "reasoning": "The text explicitly mentions users can 'Locate and compare parking lots and their prices near your destination', directly confirming a parking search and comparison feature.",
+        "source_quotes": [
+          "Locate and compare parking lots and their prices near your destination"
+        ]
+      },
+      {
+        "title": "Customizable Voice Navigation",
+        "description": "Provides voice-guided turn-by-turn navigation using various languages, local accents, and celebrity voices.",
+        "reasoning": "The text explicitly states the app supports 'voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities', proving a customizable audio guide system.",
+        "source_quotes": [
+          "Use voice-guided turn-by-turn navigation from a variety of languages, local accents and your favourite celebrities"
+        ]
+      },
+      {
+        "title": "Future Trip Planning",
+        "description": "Allows users to plan drives by checking ETAs based on future departure or arrival times.",
+        "reasoning": "The text explicitly mentions the ability to 'Plan your next drive by checking ETAs by future departure or arrival times', confirming a scheduling feature.",
+        "source_quotes": [
+          "Plan your next drive by checking ETAs by future departure or arrival times"
+        ]
+      },
+      {
+        "title": "In-App Audio Integration",
+        "description": "Enables the use of favorite audio apps for podcasts, music, news, and audiobooks directly within Waze.",
+        "reasoning": "The text explicitly states users can 'Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze', proving internal audio app integration.",
+        "source_quotes": [
+          "Use your favourite audio apps (for podcasts, music, news, audiobooks) directly within Waze"
+        ]
+      },
+      {
+        "title": "Android Auto Integration",
+        "description": "Supports syncing the Waze app to a car’s built-in display via Android Auto.",
+        "reasoning": "The text explicitly mentions the ability to 'Sync Waze to your car’s built-in display through Android Auto', confirming external hardware integration support.",
+        "source_quotes": [
+          "Sync Waze to your car’s built-in display through Android Auto"
+        ]
+      },
+      {
+        "title": "Privacy Settings Management",
+        "description": "Allows users to manage their in-app privacy settings at any time.",
+        "reasoning": "The text explicitly states 'You can manage your in-app Waze privacy settings at any time', directly confirming the existence of user-configurable privacy controls.",
+        "source_quotes": [
+          "You can manage your in-app Waze privacy settings at any time."
+        ]
+      }
+    ]
+  }
+}
