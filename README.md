@@ -1,52 +1,58 @@
-# Project Setup Instructions
+# Project Description
+
+This project was developed as part of my bachelor's thesis and consists of a prototype for a modular, LLM-based pipeline. Through a multi-step process, the pipeline analyzes app metadata to systematically infer the required permissions and potential data collection practices of an app.
+
+---
+
+# Setting Up the Project and Running the Pipeline
 
 ## Prerequisites
 
-* **Python:** `>= 3.10`
-
----
+* **Python:** Version `>= 3.10`
 
 ## 1. Setup & Installation
 
 ### 1.1 Create and Activate a Virtual Environment
 
-Set up an isolated environment:
+It is highly recommended to set up an isolated environment to prevent dependency conflicts. Run the following commands based on your operating system:
 
 * **Linux / macOS:**
-  ```bash
+
+  ```
   python3 -m venv .venv
   source .venv/bin/activate
   ```
 
 * **Windows:**
-  ```bash
+
+  ```
   python -m venv .venv
   .venv\Scripts\activate
   ```
 
 ### 1.2 Install Dependencies
 
-Install all required packages from `requirements.txt` into the activated environment:
+Once the virtual environment is activated, install all required packages from the `requirements.txt` file:
 
-```bash
+```
 pip install -r requirements.txt
 ```
 
 ### 1.3 Configure Environment Variables
 
-Create a file named **`.env`** in the project root directory:
+In order to send LLM requests to an external Ollama server, the pipeline requires an authentication token and a base URL. Create a file named **`.env`** in the root directory of the project and populate it with your specific credentials:
 
-```env
+```
+OLLAMA_BASE_URL=<YOUR_API_URL>
+AUTH_TOKEN=<YOUR_AUTH_TOKEN>
 LANGSMITH_TRACING=false
-OLLAMA_API_KEY=<KEY>
-OLLAMA_BASE_URL=<URL>
 ```
 
----
+**Note:** The environment variable `LANGSMITH_TRACING=false` is listed here because it was used for debugging purposes during development and must be included in the file.
 
 ## 2. Run the Application
 
-Start the analysis pipeline with the following command:
+To run the pipeline, use the following command:
 
 ```bash
 python main.py <PATH_TO_JSONL> <LINE_NUMBER> <PATH_TO_APK> [PATH_TO_MD]
@@ -54,34 +60,43 @@ python main.py <PATH_TO_JSONL> <LINE_NUMBER> <PATH_TO_APK> [PATH_TO_MD]
 
 ### Arguments
 
-* `<PATH_TO_JSONL>`: Path to the JSONL dataset file.
-* `<LINE_NUMBER>`: Line number to read from the JSONL file (indexing starts at **1**).
-* `<PATH_TO_APK>`: Path to your local APK file to be analyzed.
-* `[PATH_TO_MD]` *(optional)*: Path to a Markdown file containing manually extracted information and 2 ground truth sets for pipeline validation. Reference examples are located in the `ground_truth/` directory.
+* `<PATH_TO_JSONL>`: The file path to the JSONL dataset containing the app metadata to be analyzed.
 
-### Datasets & Files
+* `<LINE_NUMBER>`: The specific line number to read from the JSONL file (Note: indexing starts at **1**).
 
-* **`dataset/`**: Contains JSON / JSONL files with app metadata and evaluation entries.
-* **APK Files**: APK files are **not** tracked in this repository and must be provided locally.
-* **`ground_truth/`**: Contains reference Markdown files with manually extracted ground-truth data for evaluation.
+* `<PATH_TO_APK>`: The local file path to the APK file you intend to analyze.
 
-### Examples
+* `[PATH_TO_MD]` *(optional)*: The path to a Markdown file containing two reference records consisting of permissions and formatted as JSON.
 
-**Standard execution:**
-```bash
-python main.py dataset/apps.jsonl 1 /path/to/your_app.apk
+### Execution Examples
+
 ```
+python main.py dataset/alarm_clock.jsonl 1 /desk/apks/alarm_clock.apk /ground_truth/alarm_clock.md
 
-**With ground truth / validation Markdown file:**
-```bash
-python main.py dataset/apps.jsonl 1 /path/to/your_app.apk ground_truth/sample_gt.md
 ```
-
----
 
 ## 3. Output & Results
 
-Every execution generates a dedicated output directory under **`results/`**. It contains:
+For each run, a dedicated subfolder is created within the results/ directory. This folder contains:
 
-* **JSON Files:** Intermediate outputs from each pipeline stage and the final evaluation result.
-* **Plots & Visualizations:** Evaluation metrics, diagrams, and performance plots.
+* **JSON Files:** Input data, intermediate outputs from each pipeline stage, and the final results.
+
+* **Visualizations:** Generated plots for simple presentation of the results.
+
+---
+
+# Additional Data and Information
+
+## Data for Testing 
+
+To run the pipeline, you can use a JSONL file from the `dataset/` folder and an MD file from the `ground_truth/`   folder. Note that you must provide the APK file yourself.
+
+## evalulation
+
+* `pipeline_output_test_set`: Contains all pipeline results for the 15 tested apps.
+
+* `pipeline_outputs_waze`: Contains all pipeline results for the 10 runs of the Waze app.
+
+* `sq1_ tabular_comparison`: Contains a tabular mapping for each app, detailing the extracted features used to evaluate Subquestion 1 and make the process traceable.
+
+* `jupyter_notebook_evaluation`: Contains a standalone project consisting of two Jupyter Notebooks, which were used to evaluate and visualize the pipeline results.
